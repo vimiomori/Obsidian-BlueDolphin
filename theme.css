@@ -320,28 +320,10 @@ settings:
     level: 2
     collapsed: true
   -
-    id: style-options-for-kanban-plugin-static
-    title: Static
-    type: class-select
-    allowEmpty: false
-    default: style-options-for-kanban-plugin-static-default
-    options:
-      -
-        label: Little color
-        value: style-options-for-kanban-plugin-static-little-color
-  -
-    id: style-options-for-kanban-plugin-dynamic
-    title: Dynamic
-    type: class-select
-    allowEmpty: false
-    default: style-options-for-kanban-plugin-dynamic-default
-    options:
-      -
-        label: None
-        value: style-options-for-kanban-plugin-dynamic-default
-      -
-        label: Neon-2
-        value: style-options-for-kanban-plugin-dynamic-neon-two
+    id: rainbow-kanban
+    title: Rainbow kanban
+    type: class-toggle
+    default: true
   -
     id: style-options-for-buttons-plugin-heading
     title: 3.5 Buttons
@@ -1128,7 +1110,7 @@ settings:
   --cerulean: #016986ff;
   --cerulean-2: #00739d;
   --sky-blue: #2596be;
-  --dark-sky-blue: #083d54;
+  --dark-sky-blue: #004062;
   --teal: #007989;
   --teal-translucent: #0079898d;
   --blue-munsell: #018eb1;
@@ -1171,7 +1153,7 @@ settings:
   --peach-yellow: #ffdd94ff;
   --peach: #fee7b7ff;
   --papaya-whip: #fcf1d9ff;
-  --dark-vanilla: #4e5300;
+  --dark-vanilla: #6a69007e;
   /* oranges and reds */
   --sandy-brown: #ffaf64ff;
   --apricot: #ffccabff;
@@ -1189,7 +1171,7 @@ settings:
   --lavender-pink: #ffc3ec;
   --fairy-tale: #ffcbe6;
   --heliotrope: #d75effff;
-  --dark-heliotrope: rgb(66, 38, 106);
+  --dark-heliotrope: rgba(85, 33, 128, 0.578);
   --violet-web-color: #e38effff;
   --mauve: #edb6ffff;
   --thistle: #eed4ffff;
@@ -1676,8 +1658,8 @@ body.theme-dark {
 
   --kanban-color-1: #00b9f767;
   --kanban-color-2: #3dfdfd5c;
-  --kanban-color-3: #62ff9767;
-  --kanban-color-4: #fcff605f;
+  --kanban-color-3: #62ff965b;
+  --kanban-color-4: #fcff6046;
   --kanban-color-5: #ffb26a6e;
   --kanban-color-6: #ff7b7b75;
   --kanban-color-7: var(--background-purple);
@@ -8522,6 +8504,7 @@ button.copy-code-button:hover {
 .kanban-plugin__item {
   border: none !important;
   z-index: 100 !important;
+  border-radius: var(--radius-xs);
 }
 
 .kanban-plugin__item-title {
@@ -8598,28 +8581,6 @@ button.kanban-plugin__new-item-button:hover {
   filter: hue-rotate(var(--theme-color)) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+1) {
-  background: linear-gradient(to bottom, var(--kanban-color-1) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+2) {
-  background: linear-gradient(to bottom, var(--kanban-color-2) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+3) {
-  background: linear-gradient(to bottom, var(--kanban-color-3) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+4) {
-  background: linear-gradient(to bottom, var(--kanban-color-4) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+5) {
-  background: linear-gradient(to bottom, var(--kanban-color-5) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+6) {
-  background: linear-gradient(to bottom, var(--kanban-color-6) 60%, transparent);
-}
-.kanban-plugin__lane-wrapper:nth-child(7n+0) {
-  background: linear-gradient(to bottom, var(--kanban-color-7) 60%, transparent);
-}
-
 .kanban-plugin__lane {
   border: none !important;
 }
@@ -8640,144 +8601,166 @@ button.kanban-plugin__new-item-button:hover {
   background-color: transparent !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
+
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-1) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
+
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-1) !important;
+}
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-2) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-3) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-4) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-5) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-6) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-7) !important;
 }
 
 /* Kanban Cards */
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-title-wrapper {
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-sky-blue) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-sky-blue) !important;
+}
+
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-title-wrapper {
   background-color: var(--midnight-green) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-aquamarine) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-vanilla);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-atomic-tangerine);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-melon);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-title-wrapper {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-heliotrope);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button span {
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-content-wrapper p,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-title-text p,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-title-count,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-grip > svg,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button,
+body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button span {
   color: var(--electric-blue) !important;
   border-color: var(--electric-blue) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button span {
+  color: var(--electric-blue) !important;
+  border-color: var(--electric-blue) !important;
+}
+
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button span {
   color: var(--electric-blue-3) !important;
   border-color: var(--electric-blue-3) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button span {
   color: var(--aquamarine-1) !important;
   border-color: var(--aquamarine-1) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button span {
   color: var(--lemon-chiffon) !important;
   border-color: var(--lemon-chiffon) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button span {
   color: var(--champagne-pink) !important;
   border-color: var(--champagne-pink);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button span {
   color: var(--fairy-tale) !important;
   border-color: var(--fairy-tale) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-content-wrapper p,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-text p,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-count,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-grip > svg,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button,
-.kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button span {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-content-wrapper p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-text p,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-count,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-grip > svg,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button,
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button span {
   color: var(--lavender-pink) !important;
   border-color: var(--lavender-pink);
 }
@@ -8802,33 +8785,37 @@ body {
 
 .kanban-plugin__lane-wrapper:nth-child(n) {
   position: relative;
-  border-radius: 10px;
+  border-radius: var(--radius-xs);
   overflow: hidden;
   cursor: pointer;
   transition: .3s;
   box-shadow: 0px 0px 5px 1px var(--kanban-shadow);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+1) > .kanban-plugin__lane {
+body:not(.rainbow-kanban) .kanban-plugin__lane {
+  background-color: var(--midnight-green-2) !important;
+}
+
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) > .kanban-plugin__lane {
   background-color: var(--kanban-color-1) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+2) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) > .kanban-plugin__lane {
   background-color: var(--kanban-color-2) !important;
 }
 
-.kanban-plugin__lane-wrapper:nth-child(7n+3) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) > .kanban-plugin__lane {
   background-color: var(--kanban-color-3) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+4) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) > .kanban-plugin__lane {
   background-color: var(--kanban-color-4) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+5) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) > .kanban-plugin__lane {
   background-color: var(--kanban-color-5) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n+6) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) > .kanban-plugin__lane {
   background-color: var(--kanban-color-6) !important;
 }
-.kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin__lane {
+body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin__lane {
   background-color: var(--kanban-color-7) !important;
 }
 
@@ -12572,7 +12559,8 @@ body.theme-dark .progress-bar {
   font-size: initial;
   /* filter: sepia(88%) saturate(1028%) hue-rotate(150.7deg) brightness(85%) contrast(160%); */
   /* filter: sepia(88%) saturate(580%) hue-rotate(149.8deg) brightness(73%) contrast(130%); */
-  filter: sepia(88%) saturate(1300%) hue-rotate(158.4deg) brightness(65.4%) contrast(155%);
+  /* FIXME: background color too dark */
+  filter: sepia(88%) saturate(1300%) hue-rotate(156.4deg) brightness(75.4%) contrast(155%);
   position: initial;
   animation: unset;
 }
