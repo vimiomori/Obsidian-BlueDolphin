@@ -368,26 +368,35 @@ settings:
         value: dialogue-style-chat
   -
     id: builtin-style-settings
-    title: Builtin Styles
+    title: Built-in Styles
     description: There are some built-in CSS classes that can be manually declared in the YAML area.
     type: heading
     level: 1
     collapsed: true
+  - 
+    id: builtin-style-info
+    title: About Built-in Styles
+    description: Some styles can be enabled by specifying certain CSS class names at the `cssClass` field in the frontmatter. Multiple CSS classes can be combined. (eg. `cssClass： kanban wide-page`)
+    type: info-text
+    markdown: true
   -
     id: built-in-style-kanban
     title: Pseudo-kanban
-    title.zh: 伪看板 kanban
     type: heading
     level: 2
     collapsed: false
-    description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
-    description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
+  - 
+    id: pseudo-kanban-info
+    title: About Pseudo Kanban
+    description: Turn unordered lists into columns by adding `cssclass： kanban` to the frontmatter. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
+    type: info-text
+    markdown: true
   -
     id: p-kanban-style
     title: Pseudo Kanban Style
     type: class-select
     allowEmpty: false
-    default: p-kanban-style-simple
+    default: p-kanban-style-blue-cards
     options:
       -
         label: Simple 
@@ -433,180 +442,47 @@ settings:
     type: class-toggle
     default: false
   -
-    id: built-in-style-code-wrap
-    title:  Code Wrap
-    title.zh: 代码行自动换行 code-wrap
-    type: heading
-    level: 2
-    collapsed: true
-    description.zh:  ❗cssclass：code-wrap❗实现代码块中的代码行自动换行。
-    description:  ❗cssclass：code-wrap❗ Can be used to wrap code in code blocks for individual .md file
-  -
-    id: built-in-style-inline-list
-    title:  List in a horizontal row (inline list)
-    title.zh: 行内列表 inline-list
-    type: heading
-    level: 2
-    collapsed: true
-    description.zh:  ❗cssclass：inline-list❗列表项横向排布。
-    description:  ❗cssclass：inline-list❗ To make the list show in a horizontal row. Meanwhile, it makes the list show inline which can be used with inline images (like ![[xxx.jpg|inlineR]])
-  -
-    id: built-in-style-img-grid
-    title:  Image Grid
-    title.zh: 图片自适应横排显示 img-grid
-    type: heading
-    level: 2
-    collapsed: true
-    description.zh:  ❗cssclass：img-grid❗实现图片类似网格一样自适应横排显示。也可以使用类似格式单独调整![[obsidian_image.png|inl|100]]  (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
-    description: ❗cssclass：img-grid❗ To make images arrange in a grid in the preview mode. (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
-  -
-    id: built-in-style-matrix
-    title: Eisenhower Matrix
-    title.zh: 表格四象图分布 matrix
-    type: heading
-    level: 2
-    collapsed: true
-    description:  ❗cssclass：matrix❗ Usage https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34 (Adapted from Spectrum theme by @Wiktoria Mielcarek)
-    description.zh:  ❗cssclass：matrix❗ 实现N*2表格四象限分布。表格内容使用![[XXX]]引入 见 https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34。改自Spectrum theme by @Wiktoria Mielcarek
-  -
     id: built-in-style-full-width
-    title: full-width layout
-    title.zh: 全宽显示元素 (i.e. wide-dataview, wide-table, wide-callout and wide-backlinks)
+    title: Modular CSS
     type: heading
     level: 2
     collapsed: true
-    description:  ❗cssclass：fullwidth  wide-dataview wide-table wide-callout  wide-backlinks❗ (Adapted from https://github.com/efemkay @ Faiz Khuzaimah)
-    description.zh:  ❗cssclass：fullwidth wide-dataview wide-table wide-callout  wide-backlinks❗ 分别实现整页，dv表格 md表格 callout  反链面板全宽度布局。改自https://github.com/efemkay @ Faiz Khuzaimah
-  -
-    id: topaz-community
-    title: Supported by Topaz Community 😁
-    title.zh: 感谢Topaz社区支持😁，欢迎来访，QQ群:908688452
-    type: heading
-    level: 1
-    collapsed: true
-*/
-
-/* @settings
-name: 🥑Blue Topaz Codebox Settings
-id: Blue-Topaz-Codebox-Highlight
-settings:
-  -
-    id: code-header-theme
-    title: Codebox Highlighting Theme
-    title.zh: 代码框高亮语法设置
-    type: heading
-    level: 1
-    collapsed: false
+  - 
+    id: modular-css-info
+    title: About Modular CSS
+    description: This theme uses snippets from https://github.com/efemkay/obsidian-modular-css-layout (by Faiz Khuzaimah, twitter： @faizkhuzaimah)
+    type: info-text
+    markdown: true
+  - 
+    id: modular-css-styles
+    title: Available classes for modular CSS
+    description: 　**wide-page** expands the page to the full width, **wide-dataview** expands the dataview render to the full width, **wide-table** expands regular tables to full width, **wide-callout** expands callouts to full width
+    type: info-text
+    markdown: true
   -
     id: code-style-settings
     title: Codebox style settings
-    title.zh: 代码框样式设置
     type: heading
     level: 1
     collapsed: true
   -
-    id: mute-code-indent-line
-    title: Mute Codebox indent Line
-    title.zh: 取消代码块缩进参考线
-    type: class-toggle
-    default: false
-  -
     id: code-line-number
-    title: Code box showing line numbers (Editing Mode)
-    title.zh: 代码显示行号 （编辑模式）
-    description: csslass declares code-line-number to be available for the current document
-    description.zh:  csslass 声明code-line-number 可对单篇note生效
-    type: class-toggle
-    default: false
-  -
-    id: whole-code-wrap
-    title: Code Wrap (Reading Mode)
-    title.zh: 代码换行 （阅读模式）
+    title: Display line numbers in code blocks
+    description: Enable to display line numbers in code blocks.
     type: class-toggle
     default: true
   -
-    id: remove-language-type
-    title: Toggle showing types of code languages
-    title.zh: 移除阅读模式下代码名称
+    id: whole-code-wrap
+    title: Wrap code in reading mode.
+    description: Enable to wrap long lines of code in reading mode. A scrollbar is displayed when this setting disabled.
     type: class-toggle
-    default: false
+    default: true
   -
-    id: nowrap-edit-codebox
-    title: Non-wrap Codebox (Live Preview)
-    title.zh: 代码不换行 （Live Preview）
+    id: replace-code-mirror-theme
+    title: Use Blue Dolphin theme in code blocks.
+    description: If you have the Code Mirror Options theme enabled, enable this setting to replace the Code Mirror theme and syntax highlighting with the Blue Dolphin theme.
     type: class-toggle
-    default: false
-  -
-    id: letter-space-code
-    title: Letter Spacing for Code
-    title.zh: 代码字间距
-    type: variable-number-slider
-    default: 0
-    min: 0
-    max: 2
-    step: 0.1
-  -
-    id: code-box-style-option
-    title: Codebox Style
-    type: class-select
-    allowEmpty: false
-    default: codebox-default-style
-    options:
-      -
-        label: Default
-        value: codebox-default-style
-      -
-        label: Frosted Glass
-        value: codebox-frosted-glass
-  -
-    id: blur-codebox-frosted-glass
-    title: Blur Radius (For Frosted Glass Style)
-    title.zh: 模糊程度 (毛玻璃效果)
-    type: variable-number-slider
-    default: 2
-    min: 0
-    max: 8
-    step: 1
-  -
-    id: code-background-colors
-    title: Codebox Highlighting background Colors
-    title.zh: 代码框高亮背景色设置
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: background-code
-    title: Codebox  Background Color
-    title.zh: 代码块背景色
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#292d3e'
-    default-dark: '#292d3e'
-  -
-    id: muted-code-activeline-bg
-    title: Mute Codebox Active Line
-    title.zh: 取消代码块当前行高亮
-    type: class-toggle
-    default: false
-  -
-    id: code-active-line-background-color
-    title: Codebox Active Line Background-Color
-    title.zh: 代码块当前行背景色
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#353a50'
-    default-dark: '#353a50'
-  -
-    id: code-selection-background
-    title: Codebox  Selection Line Background-Color
-    title.zh: 代码块选中背景色
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#353a50'
-    default-dark: '#353a50'
+    default: true
   -
     id: code-block-colors
     title: Custom Codebox Syntax Highlighting  Colors
@@ -1113,7 +989,6 @@ body {
   --cursor-color-temp: var(--electric-blue-3);
 
   --paragraph-spacing: 1;
-  --blur-codebox-frosted-glass: 2;
 
   --status-bar-bg: var(--midnight-green);
   --status-bar-text-color: var(--electric-blue);
@@ -1183,6 +1058,24 @@ body {
   --tab-width: 150px;
   --tab-max-width: 150px;
   --background-modifier-border-checkbox: var(--electric-blue-2);
+
+  --callout-min-width: 200px;
+	--callout-nowrap-min-width: 250px;
+	--callout-gap: 0.5rem;
+	--callout-margin: 5px;
+	--float-small-width: 300px;
+	--float-medium-width: 400px;
+	--float-large-width: 600px;
+	/* for list column, grid and card */
+	--list-min-width: 200px;
+	--col-rule-color: var(--background-modifier-border); /* #b3b3b3; */
+	--col-rule-width: 1px;
+	--list-grid-min-width: 250px;
+	--mcl-card-header-border-width: 1px;
+	--mcl-card-bg-color: var(--background-secondary);
+	--mcl-card-gap: 0.2em;
+	--mcl-card-border-width: 1px;
+	--mcl-card-border-color: var(--background-modifier-border);
 }
 
 body.theme-dark {
@@ -1214,6 +1107,7 @@ body.theme-dark {
   --color-purple: var(--thistle);
   --color-blue-rgb: 27, 190, 255; /* bleu de france 1 */
   --color-blue: var(--bleu-de-france-1);
+  --color-red-1-rgb: 255, 147, 156;
 
   --callout-default: var(--color-cyan-rgb);
   --callout-error: var(--color-red-rgb);
@@ -1235,6 +1129,7 @@ body.theme-dark {
   --background-modifier-border: var(--transparent-blue);
   --background-modifier-success: var(--aquamarine);
   --background-modifier-error: var(--melon);
+  --background-modifier-error-rgb: #ff8e8e8c;
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
   --text-highlight: var(--text-normal);
@@ -1324,8 +1219,8 @@ body.theme-dark {
   --background-blockquote: #00779b39;
   --background-code: var(--rich-black-2);
   --background-code-2: var(--rich-black-2);
-  --text-color-code: var(--aquamarine-2);
-  --code-normal: var(--aquamarine-2);
+  --text-color-code: var(--celeste);
+  --code-normal: var(--aquamarine-1);
   --list-ul-block-color: #e19742a9;
   --list-ul-disc-color: #eb9563;
   --green-1: var(--spring-green-2);
@@ -1620,6 +1515,8 @@ body.theme-dark {
   --canvas-color-5: var(--rainbow-rgb-7);
   --canvas-color-6: var(--rainbow-rgb-8);
   --canvas-card-opacity: 0.2;
+
+  --code-active-line-background-color: var(--rich-black-0);
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -1716,86 +1613,10 @@ body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord
 /*===============================*/
 /*=============YAML==============*/
 /*===============================*/
-/* cssclass: inline-list */
-/* can change list from block to inline; can be used with inline images */
-.inline-list ul,
-.inline-list ol {
-  display: inline-block;
-  margin-top: 0.3em;
-}
 
-/* cssclass: code-wrap */
-/* as implied by the name, to wrap texts for code boxes */
-.code-wrap pre>code>span {
-  word-wrap: break-word;
-  word-break: break-all;
-  white-space: pre-wrap;
-}
-.code-wrap code.language-yaml.is-loaded {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-  white-space: pre-wrap !important;
-}
-.code-wrap code.language-md.is-loaded {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-  white-space: break-spaces !important;
-}
-
-/* cssclass: image-grid */
-/* image-grid-2 */
-/* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
-
-.img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."]:last-child {
-  padding-right: 0;
-}
-.img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."]:first-child {
-  padding-left: 0;
-}
-.img-grid :is(.markdown-preview-section,.markdown-rendered)>div hr {
-  width: 100%;
-}
-.img-grid span.image-embed[alt*="."] {
-  display: table-cell;
-}
-.img-grid img[alt*="."] {
-  max-height: 100vh;
-  object-fit: cover;
-}
-
-.img-grid .markdown-preview-section .el-embed-image img:not([width]),.img-grid .markdown-preview-section video{
-  width:100%
-}
-.img-grid .markdown-preview-section>.el-embed-image>p{
-  display:grid;
-  grid-column-gap:0.5rem;
-  grid-row-gap:0;
-  grid-template-columns:repeat(auto-fit,minmax(0,1fr))
-}
-.img-grid .markdown-preview-section>.el-embed-image>p>br{
-  display:none
-}
-.img-grid .markdown-preview-section>.el-embed-image>p>img{
-  object-fit:cover;
-  align-self:stretch
-}
-.img-grid .markdown-preview-section>.el-embed-image>p>.internal-embed img{
-  object-fit:cover;
-  height:100%
-}
-
-.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img
-,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
-  object-fit:contain;
-  height:100%;
-  align-self:center
-}
 @media (max-width:400pt){
   .el-embed-image{
     margin-top:.25rem
-  }
-  .img-grid .markdown-preview-section>.el-embed-image>p{
-    grid-column-gap:0.25rem
   }
 }
 
@@ -1807,7 +1628,7 @@ body.p-kanban-lane-borders .kanban div.el-ul>ul>li {
 }
 
 body.p-kanban-dividers .kanban div.el-ul>ul>li {
-  padding: 0.5em 1.5em;
+  padding: 0em 1.5em;
 }
 
 body.p-kanban-dividers .kanban div.el-ul>ul>li:not(:first-child) {
@@ -1822,6 +1643,7 @@ body.p-kanban-dividers .kanban div.el-ul>ul>li:not(:first-child) {
 .kanban div.el-ul>ul>li {
   font-size: var(--h5-size);
   font-family: var(--font-heading);
+  color: var(--h1-color);
   font-weight: 600;
 }
 
@@ -1932,6 +1754,13 @@ body:not(.p-kanban-headers) .kanban div.ul > ul>li {
   border-radius: 0;
   border: 0;
   background: none;
+}
+
+.kanban ol li {
+  color: var(--text-normal);
+}
+.kanban ul ul li {
+  color: var(--text-normal);
 }
 
 .kanban ul ul li:not(.task-list-item) {
@@ -3129,6 +2958,12 @@ input.search-input {
   margin: -2px 0px -3px 0px;
 }
 
+input.document-search-input.mod-no-match,
+input.document-replace-input.mod-no-match {
+  background-color: var(--background-pink);
+  color: var(--fairy-tale);
+}
+
 .nav-action-button {
   margin: 0px 5px 0px 5px !important;
 }
@@ -4161,11 +3996,11 @@ body:not(.font-family-change-to-default) {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width:not(.matrix) .markdown-preview-sizer,
-.markdown-source-view.is-readable-line-width:not(.matrix) .CodeMirror,
-:is(.markdown-preview-view,.markdown-rendered):not(.matrix) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered),
-:is(.markdown-preview-view,.markdown-rendered):not(.matrix) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) > div,
-:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width:not(.matrix) :is(.markdown-preview-section,.markdown-rendered) {
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width .CodeMirror,
+:is(.markdown-preview-view,.markdown-rendered) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered),
+:is(.markdown-preview-view,.markdown-rendered) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) > div,
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) {
   width: var(--file-line-width);
   max-width: 100%;
   margin: 0 auto;
@@ -4311,248 +4146,75 @@ div.math.math-block mjx-math{
 body.theme-dark {
   --code-tag: var(--red);
 }
+
 body {
-  --code-selection-background: var(--text-selection);
-  --code-selection-color: var(--code-normal);
-  --code-type: var(--code-function);
+  --code-selection-background: var(--midnight-green-2);
   --code-qualifier: var(--aqua);
-  --code-property: var(--blue);
   --code-value: var(--green);
   --code-tag: var( --purple);
   --code-operator: var(--code-property);
+  --code-punctuation: var(--lemon-chiffon);
+  --code-parameter: #c2c3ff;
   --code-hr: var(--code-punctuation);
-  --code-string-2: var(--code-string);
+  --code-string-2: var(--aquamarine-1);
   --code-language: var(--text-muted);
-  --code-attribute: var(--code-function);
+  --code-attribute: var(--lavender-pink);
   --code-atom: var(--orange-1);
   --code-comment: var(--darkgreen);
-}
-
-
-:root,
-.code-theme-custom {
-  /* material: palenight theme */
-  --code-keyword: #c792ea;
-  --code-atom: #f78c6c;
-  --code-number: #ff5370;
-  --code-type: #decb6b;
-  --code-def: #82aaff;
-  --code-property: #c792ea;
-  --code-variable: #f07178;
-  --code-variable-2: #53ada3;
-  --code-variable-3: #e7852fe7;
-  --code-definition: #82aaff;
-  --code-callee: #89ddff;
-  --code-qualifier: #decb6b;
-  --code-operator: #89ddff;
-  --code-hr: #98e342;
-  --code-link: #696d70;
-  --code-error-bg: #ff5370;
-  --code-header: #da7dae;
-  --code-builtin: #ffcb6b;
-  --code-meta: #ffcb6b;
-  --code-matching-bracket: #ffffff;
-  --code-tag: #ff5370;
-  --code-tag-in-comment: #ff5370;
-  --code-string-2: #f07178;
-  --code-bracket: #ff5370;
-  --code-comment: #676e95;
-  --code-string: #c3e88d;
-  --code-attribute: #c792ea;
-  --code-attribute-in-comment: #c792ea;
-  --background-code: #292d3e;
-  --code-normal: #d4d4d4;
-}
-
-.theme-dark {
-  --code-active-line-background-color: var(--activeline-background);
-}
-
-.code-theme-custom {
-  --code-active-line-background-color: #353a50c2;
-}
-
-body.theme-light.code-theme-material-palenight,
-body.theme-dark.code-theme-material-palenight {
-  /* material: palenight theme */
-  --code-keyword: #c792ea;
-  --code-atom: #f78c6c;
-  --code-number: #ff5370;
-  --code-type: #decb6b;
-  --code-def: #82aaff;
-  --code-property: #c792ea;
-  --code-variable: #f07178;
-  --code-variable-2: #eeffff;
-  --code-variable-3: #f07178;
-  --code-definition: #82aaff;
-  --code-callee: #89ddff;
-  --code-qualifier: #decb6b;
-  --code-operator: #89ddff;
-  --code-hr: #98e342;
-  --code-link: #696d70;
-  --code-error-bg: #ff5370;
-  --code-header: #da7dae;
-  --code-builtin: #ffcb6b;
-  --code-meta: #ffcb6b;
-  --code-matching-bracket: #ffffff;
-  --code-tag: #ff5370;
-  --code-tag-in-comment: #ff5370;
-  --code-string-2: #f07178;
-  --code-bracket: #ff5370;
-  --code-comment: #676e95;
-  --code-string: #c3e88d;
-  --code-attribute: #c792ea;
-  --code-attribute-in-comment: #c792ea;
-  --background-code: #292d3eba;
-  --code-active-line-background-color: #353a50;
-  --code-normal: #d4d4d4;
-}
-
-body.theme-light.code-theme-solarized-light,
-body.theme-dark.code-theme-solarized-light {
-  /* solarized */
-  --code-keyword: #cb4b16;
-  --code-atom: #d33682;
-  --code-number: #d33682;
-  --code-type: #6c71c4;
+  --code-control: #4ac4fc;
+  --code-keyword: var(--bleu-de-france-1);
+  --code-atom: var(--melon);
+  --code-number: var(--melon);
+  --code-type: #43ffb7;
+  --code-class: #6AFFB4;
   --code-def: #2aa198;
-  --code-property: #2aa198;
-  --code-variable: #839496;
-  --code-variable-2: #b58900;
-  --code-variable-3: #6c71c4;
-  --code-function: var(--code-def) ;
-  --code-definition: #82aaff;
+  --code-variable: var(--vanilla);
+  --code-variable-2: var(--fairy-tale);
+  --code-variable-3: var(--lavender-pink);
+  --code-function: #50e5ff;
   --code-callee: #89ddff;
-  --code-qualifier: #b58900;
-  --code-operator: #6c71c4;
+  --code-operator: var(--aquamarine-1);
   --code-hr: #98e342;
-  --code-link: #93a1a1;
-  --code-error-bg: #ff5370;
-  --code-header: #586e75;
-  --code-builtin: #d33682;
-  --code-meta: #859900;
-  --code-matching-bracket: #859900;
-  --code-tag: #93a1a1;
-  --code-tag-in-comment: #ff5370;
-  --code-string-2: #b58900;
-  --code-bracket: #cb4b16;
-  --code-comment: #586e75;
-  --code-string: #859900;
-  --code-attribute: #2aa198;
+  --code-link: var(--doger);
+  --code-error-bg: var(--apricot);
+  --code-header: var(--bleu-de-france);
+  --code-builtin: var(--electric-blue-3);
+  --code-meta: var(--thistle);
+  --code-matching-bracket: var(--spring-green);
+  --code-tag: var(--melon);
+  --code-tag-in-comment: var(--electric-blue-2);
+  --code-bracket: var(--vanilla);
+  --code-comment: #c0f6ff4c;
+  --code-string: var(--spring-green-2);
   --code-attribute-in-comment: #c792ea;
   --background-code: #fdf6e3e1;
   --code-active-line-background-color: #fffcf4;
-  --code-normal: #657b83;
+  --code-property: var(--code-variable-2);
 }
 
-body.theme-dark.code-theme-bt-default {
-  --background-code: #1111118c;
-  --code-variable: var(--red) ;
-  --code-normal: #ebdbb2;
-  --code-comment: var(--darkgreen) ;
-  --code-function: var(--light-yellow) ;
-  --code-important:  var(--darkblue);
-  --code-keyword: var(--darkblue);;
-  --code-operator: #a89984;
-  --code-property: var(--blue) ;
-  --code-punctuation: var(--gray-2) ;
-  --code-string: var(--green) ;
-  --code-tag: var(--red) ;
-  --code-value:  var(--green) ;
-  --code-string-2:var(--yellow) ;
-  --code-active-line-background-color: #111111eb;
-}
-body.theme-light.code-theme-bt-default {
-  --code-keyword:var(--blue-green);
-  --code-tag: var(--purple);
-  --code-function: var(--red);
-  --code-important:  var(--blue-green);
-  --code-active-line-background-color: var(--activeline-background);
-  --code-string-2: var(--orange-1);
-  --code-variable-2: var(--light-purple);
-  --code-meta: var(--text-faint);
+body.replace-code-mirror-theme {
+  --cm-background-color: var(--code-background) !important;
+  --cm-foreground-color: var(--celeste) !important;
+  --cm-font-monospace: var(--font-monospace-theme) !important;
+  --cm-variable: var(--code-variable) !important;
+  --cm-operator: var(--code-operator) !important;
+  --cm-keyword: var(--code-keyword) !important;
+  --cm-number: var(--code-number) !important;
+  --cm-def: var(--code-function) !important;
+  --cm-type: var(--code-type) !important;
+  --cm-property: var(--code-property) !important;
+  --cm-string: var(--code-string) !important;
+  --cm-meta: var(--code-meta) !important;
+  --cm-comment: var(--code-comment) !important;
+  --cm-builtin: var(--code-builtin) !important;
+  --cm-attribute: var(--code-attribute) !important;
+  --cm-variable-2: var(--code-variable-2) !important;
+  --cm-string-2: var(--code-string-2) !important;
 }
 
-body.code-theme-Gruvbox-dark {
-  --code-selection-color: #fbf1c7;
-  --code-selection-background: #7c6f6456;
-  --code-active-line-background-color: #533c3cee;
-  --background-code: #1d2021c6;
-  --code-variable:  var(--code-property);
-  --code-normal: #ebdbb2;
-  --code-comment: #a89984;
-  --code-function: #fabd2f;
-  --code-important:  #fb4934;
-  --code-keyword: #fb4934;
-  --code-operator: #a89984;
-  --code-property: #fb4934;
-  --code-punctuation: #a89984;
-  --code-string: #b8bb26;
-  --code-tag: #fabd2f;
-  --code-value:  #d3869b;
-  --code-meta:var(--code-comment);
+code span {
+  font-weight: 400;
 }
-
-body.theme-light.code-theme-dracula {
-  --background-code: #e6e6e671;
-  --code-normal: var(--tex-normal);
-  --code-string: var(--orange) ;
-  --code-string-2: var(--orange-1) ;
-  --code-variable: var(--blue-green);
-  --code-variable-2: var(--light-purple) ;
-  --code-meta: var(--text-faint);
-  --code-active-line-background-color:#dee1b9a5;
-}
-body.code-theme-dracula {
-  --background-code: #282a36c0;
-  --code-normal: #f8f8f2;
-  --code-comment: #6272a4;
-  --code-string: #f1fa8c;
-  --code-string-2: #ffb86c;;
-  --code-number: #bd93f9;
-  --code-variable: #50fa7b;
-  --code-variable-2: #ffffff;
-  --code-def: #50fa7b;
-  --code-operator: #8be9fd;
-  --code-keyword: #ff79c6;
-  --code-atom: #bd93f9;
-  --code-meta: #f8f8f2;
-  --code-tag: #ff79c6;
-  --code-attribute: #50fa7b;
-  --code-qualifier: #50fa7b;
-  --code-property: #66d9ef;
-  --code-builtin: #50fa7b;
-  --code-variable-3: #dc8e3b;
-  --code-type: #ffb86c;
-  --code-active-line-background-color: #414458;
-  --code-matchingbracket: #fffff;
-}
-body.theme-light.code-theme-monokai
-{
-  --code-comment: #aca47a;
-
-}
-body.code-theme-monokai {
-  --background-code: #272822d9;
-  --code-normal: #F8F8F2;
-  --code-keyword:#F92772;
-  --code-value: #AE81FF;
-  --code-string-2:#E6DB74;
-  --code-comment: #75715E;
-  --code-active-line-background-color: #17013f9f;
-}
-body.code-theme-sublime
-{
-  --code-operator: #9a6e3a;
-  --code-variable: #5180de;
-  --code-keyword: #EA5E66;
-  --code-string: #40bf31;
-  --code-function: #F9AE58;
-  --code-string-2: #F9AE58;
- --code-type: #F9AE58;
- --code-def: #F9AE58;
-}
-
 
 .cm-s-obsidian span.cm-variable {
   color: var(--code-variable);
@@ -4563,10 +4225,6 @@ body.code-theme-sublime
 
 .cm-s-obsidian span.cm-variable-3 {
   color: var(---code-variable-3);
-}
-.token.class,
-.token.class-name {
-  color: var(--code-string-2) ;
 }
 
 span.cm-variable + .cm-hmd-codeblock + span.cm-variable
@@ -4579,7 +4237,9 @@ span.cm-variable + .cm-hmd-codeblock + span.cm-variable + .cm-hmd-codeblock + sp
   color: var(--code-variable-3);
 }
 span.cm-type {
-  color: var(--code-keyword);
+  color: var(--code-type);
+  font-style: italic;
+  font-weight: bold;
 }
 span.cm-def {
   color:var(--code-function);
@@ -4587,22 +4247,25 @@ span.cm-def {
 
 .cm-type {
   color: var(--code-type);
+  font-weight: 800;
 }
 .token.atrule,
 .token.attr-value,
-.cm-property,
 .cm-attribute {
   color: var(--code-attribute);
 }
 
-.cm-qualifier
-{
+.cm-qualifier {
   color: var(--code-qualifier);
 }
 
 .cm-operator
 {
   color:var(--code-operator);
+}
+
+.cm-property {
+  color: var(--code-property) !important;
 }
 
 .cm-hr {
@@ -4636,15 +4299,16 @@ span.cm-def {
 .markdown-preview-view pre.cm-s-obsidian .cm-builtin,
 .markdown-preview-view pre code span.builtin  {
   color: var(--code-builtin);
+  font-style: italic;
 }
 
 
 .markdown-preview-view pre code span.class {
-  color: var(--code-qualifier);
+  color: var(--code-class);
 }
 
 .markdown-preview-view pre code span.function {
-  color: var(--code-function);
+  color: var(--code-property);
 }
 
 .markdown-preview-view pre code span.punctuation {
@@ -4661,7 +4325,7 @@ span.cm-def {
 }
 
 .markdown-preview-view pre code span.parameter {
-  color: var(--code-property);
+  color: var(--code-parameter);
 }
 
 .markdown-preview-view pre code span.property {
@@ -4682,6 +4346,7 @@ span.cm-def {
 
 .markdown-preview-view pre code span.builtin {
   color: var(--code-builtin);
+  font-style: italic;
 }
 
 .markdown-preview-view pre code span.unit {
@@ -4699,31 +4364,24 @@ span.token.directive-hash {
   color: var(--code-comment);
 }
 
-.muted-code-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg  {
-  background-color: var(--background-code) !important;
-}
-.muted-code-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg::before  {
-  background-color: unset !important;
-}
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg::before {
   display: none;
 }
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg {
   background-color: var(--code-active-line-background-color);
-  --text-selection: var(--code-selection-background);
+  --text-selection: var(--code-selection-background) !important;
   z-index: -1;
 }
 
-
 pre code[class*="language-"] {
   padding: 1em 0.5em;
+  --code-normal: var(--papaya-whip) !important;
 }
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
-  color: var(--code-selection-color);
-  background: var(--code-active-line-background-color);
+  background: var(--midnight-green);
 }
 
 /*Advanced Codeblock */
@@ -5758,7 +5416,7 @@ body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-co
 
 /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width,
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) {
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks)	div.markdown-preview-view:not(.wide-page) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) {
   max-width: var(--file-line-width);
   margin-inline: auto;
 }
@@ -6093,15 +5751,6 @@ body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 
-body.codebox-frosted-glass  .canvas-node-container  pre[class*='language-'] {
-  backdrop-filter: none;
-}
-body.codebox-frosted-glass .cm-s-obsidian div.HyperMD-codeblock-bg,
-body.codebox-frosted-glass :not(pre)>code[class*='language-'],
-body.codebox-frosted-glass pre[class*='language-'] {
-  backdrop-filter: blur(calc(var(--blur-codebox-frosted-glass)*2px));
-}
-
 code[class*="language-"] {
   padding: 1em 0.5em;
 }
@@ -6227,11 +5876,6 @@ body.whole-code-wrap pre[class*='language-'] {
   word-break: normal;
 }
 
-body.nowrap-edit-codebox .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
-  white-space: nowrap;
-  overflow: auto;
-}
-
 /* Inline code */
 :not(pre)>code[class*='language-'] {
   padding: .1em !important;
@@ -6254,9 +5898,9 @@ body.nowrap-edit-codebox .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
 
 /*show language type in preview mode*/
 /*Thanks to elutao from https://snippets.cacher.io/snippet/018387c872dc39277996 */
-body:not(.remove-language-type) pre::before {
+pre::before {
   font-family: var(--font-default);
-  color: #95a3b5;
+  color: var(--aquamarine-1);
   opacity: 0.7;
   font-size: 0.85em;
   font-weight: 600;
@@ -6269,73 +5913,83 @@ pre {
   position: relative;
 }
 
-body:not(.remove-language-type) pre[class~='language-c']::before {
+pre[class~='language-c']::before {
   content: "C";
 }
-body:not(.remove-language-type) pre[class~='language-py']::before,
-body:not(.remove-language-type) pre[class~='language-python']::before {
+pre[class~='language-py']::before,
+pre[class~='language-python']::before {
   content: "PYTHON";
 }
-body:not(.remove-language-type) pre[class~='language-nginx']::before {
+pre[class~='language-nginx']::before {
   content: "NGINX";
 }
-body:not(.remove-language-type) pre[class~='language-css']::before {
+pre[class~='language-css']::before {
   content: "CSS";
 }
-body:not(.remove-language-type) pre[class~='language-javascript']::before {
+pre[class~='language-javascript']::before {
   content: "JS";
 }
-body:not(.remove-language-type) pre[class~='language-js']::before {
+pre[class~='language-js']::before {
   content: "JS";
 }
-body:not(.remove-language-type) pre[class~='language-php']::before {
+pre[class~='language-php']::before {
   content: "PHP";
 }
-body:not(.remove-language-type) pre[class~='language-shell']::before,
-body:not(.remove-language-type) pre[class~='language-bash']::before {
+pre[class~='language-shell']::before,
+pre[class~='language-sh']::before,
+pre[class~='language-bash']::before {
   content: "SHELL";
 }
-body:not(.remove-language-type) pre[class~='language-flow']::before {
+pre[class~='language-flow']::before {
   content: "FLOW";
 }
-body:not(.remove-language-type) pre[class~='language-sequence']::before {
+pre[class~='language-sequence']::before {
   content: "SEQUENCE";
 }
-body:not(.remove-language-type) pre[class~='language-sql']::before {
+pre[class~='language-sql']::before {
   content: "SQL";
 }
-body:not(.remove-language-type) pre[class~='language-yaml']::before {
+pre[class~='language-yaml']::before {
   content: "YAML";
 }
-body:not(.remove-language-type) pre[class~='language-ini']::before {
+pre[class~='language-ini']::before {
   content: "INI";
 }
-body:not(.remove-language-type) pre[class~='language-xml']::before {
+pre[class~='language-xml']::before {
   content: "XML";
 }
-body:not(.remove-language-type) pre[class~='language-git']::before {
+pre[class~='language-git']::before {
   content: "GIT";
 }
-body:not(.remove-language-type) pre[class~='language-cs']::before {
+pre[class~='language-cs']::before {
   content: "C#";
 }
-body:not(.remove-language-type) pre[class~='language-cpp']::before {
+pre[class~='language-cpp']::before {
   content: "C++";
 }
-body:not(.remove-language-type) pre[class~='language-java']::before {
+pre[class~='language-java']::before {
   content: "JAVA";
 }
-body:not(.remove-language-type) pre[class~='language-html']::before {
+pre[class~='language-html']::before {
   content: "HTML";
 }
-body:not(.remove-language-type) pre[class~='language-txt']::before {
+pre[class~='language-txt']::before {
   content: "TXT";
 }
-body:not(.remove-language-type) pre[class~='language-r']::before {
+pre[class~='language-r']::before {
   content: "R";
 }
-body:not(.remove-language-type) pre[class~='language-matlab']::before {
+pre[class~='language-matlab']::before {
   content: "MATLAB";
+}
+pre[class~='language-rust']::before {
+  content: "RUST";
+}
+pre[class~='language-go']::before {
+  content: "GO";
+}
+pre[class~='language-clojure']::before {
+  content: "CLOJURE";
 }
 
 /* ==== fold icons ==== */
@@ -6446,11 +6100,6 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
   height: calc(100% + (var(--paragraph-spacing) - 1)*1em);
   background-color: var(--activeline-background) !important;
   z-index: -1;
-}
-
-.mute-code-indent-line .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indent::before
-{
-  display:none;
 }
 
 .CodeMirror pre.CodeMirror-line,
@@ -8178,7 +7827,7 @@ body.plugin-sliding-panes.plugin-sliding-panes.transparent-panes.theme-light .wo
 /*===========================*/
 /*copy button for code blocks*/
 /*===========================*/
-/* button.copy-code-button:not([style="right: 32pt"]) {
+button.copy-code-button:not([style="right: 32pt"]) {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVRYhe2WMU4CQRSG/2eMjQRptQB7j8AJnIbKEq/A2qg0SjRROgauYGljTMALLN7AA7Ak1oRIY7HPYt0IuzPLMgxggK97u2/e/PPv25kBNh0yGSSavQqYqkHEDx2n0FqaANH0SmC8RIqU2k7+1YqAs9rH3uggcw+iMoBD7UDyi75PRESuLoeBT4CeMoPhzXPt5FuVsxt98JXL3hH4cpryduX4HQCE9LQ5BBwBfDXKZRlANZUAgMtAsMJwkt+JGAA6Tn7CtTBWvT9t9IpE5DL4XCdgR636b4Xz8HZR6I7XVKFwIJlwpbaIObBsUjsQ/fa2WLkDWwEz/wWzMq13Vu6AsQAh+10hPdc0nlsAwEwAm8cahPTY9m6XxPr0gGm+xR6wlL/tgbQsrAeCi2RwnUouaacHYvu0kP1HgK91ZWzfC2IO7A+GtwDVQyf+Let7FmwcPzCZvMtlTU3QAAAAAElFTkSuQmCC);
   background-repeat: no-repeat;
   background-size: contain;
@@ -8186,7 +7835,11 @@ body.plugin-sliding-panes.plugin-sliding-panes.transparent-panes.theme-light .wo
   background-color: transparent;
   color: transparent;
   height: 1.6em;
-} */
+  width: 1.2em;
+  padding: 8px 10px;
+  margin: 0.5em 1em;
+  border-color: var(--doger);
+}
 
 button.copy-code-button:hover {
   background-color: var(--bleu-de-france);
@@ -9652,6 +9305,11 @@ body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-bt
 
 body:not(.top-bottom-style) .setting-item[data-id="background-titlebar-inner"]  {
   display: none;
+}
+
+.style-settings-error {
+  background: var(--background-pink);
+  color: var(--fairy-tale) !important;
 }
 
 /********/
@@ -11965,106 +11623,6 @@ body.background-image-settings-command-palette-switch .modal-container .prompt::
   position: absolute;
 }
 
-/*-------- Eisenhower Matrix start--- */
-/* Eisenhower Matrix from Spectrum themes */
-
-/*for Blue Topaz theme-表格四象图分布 Modified  by cuman 2021-11-29*/
-/* 用法 yaml区域声明
-cssclass: matrix
-内容如下形式(表格内容最好使用嵌入形式)：
-
-|                   |             |
-| ----------------- | ----------- |
-| ![[#To-Do]]       | ![[#Doing]] |
-| ![[#Considering]] | ![[#Maybe]] |
-
-*/
-
-:root,
-.theme-dark,
-.theme-light {
-  --matrix-1: var(--p-kanban-color-2);
-  --matrix-2: var(--p-kanban-color-3);
-  --matrix-4: var(--p-kanban-color-5);
-  --matrix-5: var(--p-kanban-color-6);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr {
-  display: flex;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix table th {
-  background-color: transparent;
-  background-image: none;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix table tbody>tr {
-  background-color: transparent;
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix .internal-embed:not(.image-embed) {
-  border: 1px solid;
-  border-radius: 10px;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix thead {
-  background-color: transparent;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr th,
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr td {
-  background-color: transparent;
-  padding-right: 0;
-  border: 0px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix .markdown-embed {
-  background-color: transparent;
-}
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr th > *,
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr td > * {
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-secondary);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr td {
-  background-color: transparent;
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(1n) td:nth-child(1) > * {
-  border-color: var(--matrix-1);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(1n) td:nth-child(1):hover {
-  background-color: var(--matrix-1);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(1n) td:nth-child(2) > * {
-  border-color: var(--matrix-2);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(1n) td:nth-child(2):hover {
-  background-color: var(--matrix-2);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(2n) td:nth-child(1) > * {
-  border-color: var(--matrix-4);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(2n) td:nth-child(1):hover {
-  background-color: var(--matrix-4);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(2n) td:nth-child(2) > * {
-  border-color: var(--matrix-5);
-}
-
-:is(.markdown-preview-view,.markdown-rendered).matrix table tr:nth-child(2n) td:nth-child(2):hover {
-  background-color: var(--matrix-5);
-}
-/*-------- Eisenhower Matrix end--- */
-
 .recent-vaults-list-item:hover {
   color: var(--theme-color) !important;
 }
@@ -12245,13 +11803,13 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 
 /* ================================== */
 /* ======= custom cssclass ======= */
-/* ========fullwidth  noyaml noscroll================ */
+/* ========wide-page  noyaml noscroll================ */
 /*主页预览宽度*/
-:is(.markdown-preview-view,.markdown-rendered).fullwidth.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.is-readable-line-width.fullwidth .CodeMirror,
-.is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered),
-.is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) > div,
-:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) {
+:is(.markdown-preview-view,.markdown-rendered).wide-page.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width.wide-page .CodeMirror,
+.is-readable-line-width.wide-page :is(.markdown-preview-section,.markdown-rendered),
+.is-readable-line-width.wide-page :is(.markdown-preview-section,.markdown-rendered) > div,
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.wide-page :is(.markdown-preview-section,.markdown-rendered) {
   width: 100% !important;
   max-width: 100% !important;
   /* margin: 0 auto; */
@@ -15539,14 +15097,16 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
 }
 
 /* Syntax highlighting */
+.token.namespace {
+  opacity: 1;
+  color: var(--fairy-tale);
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: var(--code-comment);
-}
-.token.namespace {
-  opacity: 0.7;
 }
 .token.tag,
 .token.constant,
@@ -15559,7 +15119,7 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
 }
 .token.boolean,
 .token.number {
-  color: var(--code-value);
+  color: var(--code-number);
 }
 .token.selector,
 .token.attr-name,
@@ -15571,8 +15131,10 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
 .token.operator {
   color: var(--code-operator);
 }
+.token.parameter {
+  color: var(--code-parameter);
+}
 .token.entity,
-.token.parameter,
 .token.property,
 .token.url,
 .language-css .token.string,
@@ -15580,16 +15142,34 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
 .token.variable {
   color: var(--code-property);
 }
-.token.atrule,
-.token.attr-value,
-.token.builtin,
-.token.function,
-.token.class-name,
-.token.property-access {
+
+.token.function {
   color: var(--code-function);
 }
-.token.keyword {
+
+.token.function-variable {
+  color: var(--thistle);
+}
+
+.token.class-name, .token.class{
+  color: var(--code-class);
+  font-weight: bold;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.property-access {
+  color: var(--code-builtin);
+  font-weight: bold;
+}
+
+.token.control-flow{
+  color: var(--code-control);
+}
+
+.token.keyword:not(.control-flow) {
   color: var(--code-keyword);
+  font-style: italic;
 }
 .token.regex,
 .token.important {
@@ -15628,10 +15208,12 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
 .cm-variable-3 {
   color: var(--code-property);
 }
-.cm-builtin,
+.cm-builtin {
+  color: var(--code-builtin);
+  font-style: italic;
+}
 .cm-property,
-.cm-attribute,
-.cm-type {
+.cm-attribute {
   color: var(--code-function);
 }
 .cm-keyword {
@@ -15785,3 +15367,289 @@ pre.frontmatter:hover {
   visibility: visible;
 }
 */
+
+/* Multi Column CSS from https://github.com/efemkay/obsidian-modular-css-layout */
+/* Snippet: MCL Multi Column / Author: Faiz Khuzaimah / twitter: @faizkhuzaimah / github: https://github.com/efemkay
+Version 0.8.1 (updated 2023-01-10) */
+/* === Multi Column "DIV"'s Using Callout === */
+/* 	some issues still persists
+	(2) some theme uses transparency to affect .callout-title */
+
+	/* -- Main multi-column snippet using Callout */
+
+	/* remove callout-title and make callout-content as part of main callout for box formatting */
+	div[data-callout="multi-column"].callout > .callout-title { display: none; }
+	div[data-callout="multi-column"].callout > .callout-content { display: contents; }
+	/* make the main callout a flex and remove box formatting */
+	/* --columns: unset to undo Sanctum's mod */
+	div[data-callout="multi-column"].callout
+		{ display: flex; flex-wrap: wrap; gap: var(--callout-gap); background: unset; border: unset; margin: unset; padding: unset; clear: both; --columns: unset;}
+	/* make the subcallout in flex column to allow growing vertically */
+	div[data-callout="multi-column"].callout .callout { display: flex; flex-direction: column; }
+	div[data-callout="multi-column"].callout:not(.is-collapsed) .callout { margin: 0 var(--callout-margin) var(--callout-margin); } /* to allow spacing for box shadow */
+	div[data-callout="multi-column"].callout .callout .callout-content { flex-grow: 1}
+
+	div[data-callout="multi-column"].callout > .callout-content > *:is(div,ul) { flex: 1 1 var(--callout-min-width); margin: 0;}
+
+	/* metadata "wide-x" to control subcallout flexible max width. only discrete 2,4,8,16 */
+	div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="min-0"] { flex-basis: 0; }
+	div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="wide-2"] { flex-grow: 2; }
+	div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="wide-3"] { flex-grow: 3; }
+	div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="wide-4"] { flex-grow: 4; }
+	div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="wide-5"] { flex-grow: 5; }
+
+
+	@media (min-width: 500px) {
+		/* .is-collapsed is used to draw the border-left only when it's collapsed */
+		/* adjusted for Obsidian 0.16.x, removed a number of previous adjustment as no longer required */
+		div[data-callout="multi-column"].callout > div.callout-content .callout.is-collapsed { box-shadow: unset; height: min-content;}
+	}
+
+	 /* Special Adjustment -- for theme with negative margin & box shadow. (e.g. Prism) */
+	div[data-callout="multi-column"].callout > .callout-content { margin-top: unset;}
+	div[data-callout="multi-column"].callout:not(.is-collapsed) { box-shadow: unset;}
+
+	/* Special Adjustment -- for Sanctum because it has "column" callout, Obsidian v0.16.x. Not required for multi-flex as it Sanctum expects the name ends with *=column */
+	.callout[data-callout*=column] .callout-title { display: flex; }
+	.callout[data-callout*=column] .callout-content { display: unset; }
+
+	/* Special Adjustment -- for minimal left margin *//*
+	.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > div[data-callout="multi-column"].callout
+		{ width: 100%; max-width: 100%; margin-inline: 0 !important; }
+	/* Special Adjustment -- for Minimal .dataview.list-view-ul width - Minimal set the width with --line-width-adaptive (40rem by default) */
+	body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) div[data-callout="multi-column"].callout .dataview.list-view-ul {width: auto;}
+
+
+/* === Multi Column "DIV"'s Using Callout -- No-Wrap Option === */
+		div[data-callout="multi-column"][data-callout-metadata*="no-wrap"].callout {flex-wrap: nowrap; overflow-x: scroll;}
+		div[data-callout="multi-column"][data-callout-metadata*="no-wrap"].callout > .callout-content > *:is(div,ul) { flex-shrink: 0; flex-basis: var(--callout-nowrap-min-width) }
+
+
+/* === Multi Column Flex "DIV"'s Using Callout === */
+	/* - Still EXPERIMENTAL, different theme approach border and background differently, but 0.16.x seems to align most */
+
+	/* adjusted for Obsidian 0.16.x */
+	div[data-callout="multi-column-flex-height"].callout > .callout-title { display: none; }
+	div[data-callout="multi-column-flex-height"].callout > .callout-content { display: contents; }
+	div[data-callout="multi-column-flex-height"].callout
+		{ display: flex; flex-wrap: wrap; gap: var(--callout-gap); background: unset; border: unset; margin: unset; padding: unset; clear: both; }
+
+	div[data-callout="multi-column-flex-height"].callout > .callout-content > *:is(div,ul) {flex: 1 1 var(--callout-min-width); margin: 0; }
+	div[data-callout="multi-column-flex-height"].callout .callout { border: unset; box-shadow: unset; }
+	/* need to reintroduce border-left as original callout put border on the parent callout */
+	div[data-callout="multi-column-flex-height"].callout > .callout-content .callout .callout-title { border-top-left-radius: 3px;}
+	div[data-callout="multi-column-flex-height"].callout > .callout-content .callout .callout-content { margin: 0; border-bottom-left-radius: 3px; height: min-height;}
+
+	 /* "fix" for theme with negative margin & box shadow. Applicable for Prism theme */
+	 div[data-callout="multi-column-flex-height"].callout > .callout-content { margin-top: unset;}
+	 div[data-callout="multi-column-flex-height"].callout:not(.is-collapsed) { box-shadow: unset; }
+
+
+/* === Blank Container "DIV"'s - can be used with Main Multi-Column layout above === */
+
+	/* "blank-container" - no bg, no border, no title, no nothing, and remove the ligthen effect */
+	div[data-callout*="blank"].callout {--callout-blend-mode: normal;}
+	div[data-callout*="blank"].callout > .callout-title { display: none; }
+	div[data-callout*="blank"].callout > .callout-content {display: contents;}
+	div[data-callout*="blank"].callout { border: 0; padding-top: 0; padding-inline: 5px; background: unset; box-shadow: unset; }
+
+	/* -- No Margin -- */
+	/* issues still persists
+	   - headers font size not same
+	   - "no-margin" not fully workable in editing view due to wide-page override for Minimal theme
+	*/
+	div[data-callout-metadata*="no-margin"]:is(.cm-callout, .callout.callout, .callout.callout .callout-content) {margin: 0; padding: 0;}
+
+	/* Special Adjustment for Themes */
+
+		/* Shimmering Focus. Differing font size in callout *//* no longer required as of v3.272
+		div[data-callout*="blank"] .callout-content :is(p,ul,li) { font-size: unset; line-height: inherit; }
+		div[data-callout*="blank"] .callout-content :is(li) { margin: unset; }
+
+		/* Mado. Remove  theme's pseudo left border */
+		div[data-callout*="blank"] .callout-content::before { display: none; }
+
+
+/* === Text Justify === */
+
+	.text-justify :is(.markdown-preview-view p,.markdown-source-view .cm-line) { text-align: justify; }
+
+
+/* === Floating Callout - Base === */
+	/* variables */
+	body {
+		--float-left-callout-margin: 0 15px 0 0;
+		--float-right-callout-margin: 0 0 0 15px;
+		--float-callout-snw-display: none;
+	}
+
+	/* use media query so that floats only works when there's enough width */
+	@media (min-width: 500px){
+		.markdown-source-view [data-callout-metadata*="float-left"].cm-embed-block.cm-callout {float: left; padding-top: 0.8em; }
+		.markdown-reading-view div[data-callout-metadata*="left"].callout {float: left;}
+
+		.markdown-source-view [data-callout-metadata*="float-right"].cm-embed-block.cm-callout {float: right; padding-top: 0.8em; }
+		.markdown-reading-view div[data-callout-metadata*="right"].callout {float: right; }
+
+		.markdown-source-view.mod-cm6 .cm-embed-block.cm-callout :is(.callout[data-callout-metadata*="left"], .callout[data-callout-metadata*="right"]) .callout-content > p:last-of-type { margin-bottom: auto;}
+
+		[data-callout-metadata*="float-right"].cm-embed-block.cm-callout {width: auto !important;}
+		/* doing the gap */
+		div[data-callout*="blank"].callout:is(div[data-callout-metadata*="left"]) { margin: var(--float-left-callout-margin); }
+		div[data-callout*="blank"].callout:is(div[data-callout-metadata*="right"]) {margin: var(--float-right-callout-margin); }
+	}
+
+
+	/* Special Adjustment for Plugins / Markdown Elements */
+
+		/* Option for Caption */
+		div:is([data-callout-metadata*="caption"]).callout > .callout-content > p .image-embed[alt]:not([alt$=".png"], [alt$=".jpg"], [alt$=".jpeg"], [alt$=".tiff"])::after {content: attr(alt); text-align: center; display: block; font-style: italic; color: var(--text-muted); }
+		div:is([data-callout-metadata*="caption"]).callout > .callout-content > p img:not(.emoji) { display: block; margin-right: auto; margin-left: auto;}
+
+		/* Introduce clear to break the float */
+			/* .markdown-preview-view h2, *//* remove this as it has weird spacing effect */
+			.embedded-backlinks { clear: both; }
+
+		/* fix for blockquote underlap the float layout */
+			.markdown-preview-view :is(blockquote) { overflow-x: auto; } /* fix for blockquote underlap */
+			.markdown-preview-view :is(p) { overflow: unset; } /* fix for para not wrapping around float. applicable for Willemstad */
+
+		/* Special Adjustment for SNW plugin */
+		div:is([data-callout-metadata*="caption"],[data-callout-metadata*="left"],[data-callout-metadata*="right"]).callout > .callout-content > p .snw-embed-preview { display: var(--float-callout-snw-display); width: min-content; height: min-content; }
+		div:is([data-callout-metadata*="caption"],[data-callout-metadata*="left"],[data-callout-metadata*="right"]).callout > .callout-content > p .internal-embed.image-embed ~ br {display: none;}
+
+
+	/* Special Adjustment for Themes */
+
+		/* Special Adjustment for Minimal theme. Undo the theme flex layout by default. To apply per note basis */
+			body[class*="minimal-tab-title"].contextual-typography .minimal-float.markdown-preview-view.markdown-preview-view .markdown-preview-sizer { display: unset; }
+		/* Special Adjustment for Minimal theme Live Preview float support. Need to revert cm-content width to default theme but cm-embed to auto */
+			body[class*="minimal-tab-title"] .minimal-float:not([class*="wide-"]).markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { width: calc(var(--line-width-adaptive) - var(--folding-offset)); max-width: calc(var(--max-width) - var(--folding-offset)); margin-right: auto; margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2), calc(50% + var(--folding-offset) - var(--max-width)/ 2))!important; }
+			.minimal-float:not([class*="wide-"]).markdown-source-view.mod-cm6.is-readable-line-width .cm-line { width: auto; max-width: 100%; margin-left: 0 !important; }
+			body[class*="minimal-tab-title"] .minimal-float:not([class*="wide-"]).markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout> :is(.callout[data-callout-metadata*="left"], .callout[data-callout-metadata*="right"]) { max-width: none; margin-left: 0 !important;}
+			.minimal-float:not([class*="wide-"]).markdown-source-view.mod-cm6 .cm-embed-block.cm-callout > .callout { width: auto; }
+		/* Special Adjustment for Minimal theme Live Preview float support. Undo margin-left for Image */
+			.minimal-float:not([class*="wide-"]).markdown-source-view.mod-cm6 .cm-embed-block.cm-callout :is(.callout[data-callout-metadata*="left"], .callout[data-callout-metadata*="right"]) .internal-embed.image-embed { margin-left: auto !important; }
+
+			/* fix to support Breadcrumbs plugin */
+			body[class*="minimal-tab-title"].contextual-typography .minimal-float.markdown-preview-view.markdown-preview-view .BC-trail.markdown-preview-sizer { display: flex; }
+
+
+		/* Minimal. For gaps adjustment */
+		body[class*="minimal-tab-title"] .minimal-float div[data-callout*="blank"].cm-callout:is(div[data-callout-metadata*="left"]) { margin: var(--float-left-callout-margin) !important; }
+		body[class*="minimal-tab-title"] .minimal-float div[data-callout*="blank"].cm-callout:is(div[data-callout-metadata*="right"]) {margin: var(--float-right-callout-margin) !important; }
+		body[class*="minimal-tab-title"] .minimal-float.wide-page div[data-callout*="blank"].cm-callout:is(div[data-callout-metadata*="left"]) { margin-left: 20px !important; }
+
+/* === Floating Callout - Size Option === */
+	/* Main Code. Set the width for live preview and reading view */
+	@media (min-width: 500px){
+		div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block:is(.cm-callout, .admonition-parent) > div[data-callout-metadata*="-small"].callout,
+		div[data-callout-metadata*="-small"].callout {width: var(--float-small-width);}
+		div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block:is(.cm-callout, .admonition-parent) > div[data-callout-metadata*="-medium"].callout,
+		div[data-callout-metadata*="-medium"].callout {width: var(--float-medium-width);}
+	}
+	@media (min-width: 750px){
+		div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block:is(.cm-callout, .admonition-parent) > div[data-callout-metadata*="-large"].callout,
+		div[data-callout-metadata$="large"].callout {width: var(--float-large-width);}
+	}
+
+
+	/* Special Adjustment for Themes */
+
+		/* Minimal. Uses body[class*="minimal-tab-title"] as identifier. To override (have higher specificity) the width param. Can be merged to main code later on */
+		@media (min-width: 500px){
+			body[class*="minimal-tab-title"] .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > div[data-callout-metadata$="medium"].callout { width: var(--float-medium-width); margin-left: 0 !important; }
+			body[class*="minimal-tab-title"] .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > div[data-callout-metadata$="small"].callout { width: var(--float-small-width); margin-left: 0 !important; }
+		}
+		@media (min-width: 750px){
+			body[class*="minimal-tab-title"] .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > div[data-callout-metadata$="large"].callout { width: var(--float-large-width); margin-left: 0 !important; }
+		}
+
+
+/* === Multi Column Lists (require Markdown Attributes) === */
+
+	/* - xx-column-list for first level only list, but apply anywhere */
+	/* - xx-column-list-block apply at block level - but require JV's Markdown Attributes plugin */
+
+	@media (min-width: 500px ){
+		.two-column-list div > ul,   .two-column-list-block {columns: 2; column-gap: 3rem;}
+		.three-column-list div > ul,  .three-column-list-block {columns: 3; column-gap: 3rem;}
+	}
+
+
+	/* - dashboard style, page level only, apply to any first level */
+	/* -- applicable only when width > 400pt, else just single column */
+	/* grid list block level cannot be done, it breaks formatting */
+	@media (min-width: 500px) {
+		.two-column-grid-list div > ul { display: grid; grid-column-gap:3em; grid-template-columns:repeat(2,1fr);}
+	}
+	@media (min-width: 600px) {
+		.three-column-grid-list div > ul { display: grid; grid-column-gap:3em; grid-template-columns:repeat(3,1fr);}
+	}
+
+	.multi-column-list div > ul,  .multi-column-list-block { column-width: var(--list-min-width); column-gap: 3rem; column-rule: var(--col-rule-width) solid var(--col-rule-color); }
+
+	/* Special adjustment for footnotes applied with -colum-list-block -- obsidian creates a <br> tag at the last <li> */
+	.footnotes [class$="-column-list-block"] li:last-of-type br:last-of-type {display: none;}
+
+	/* Special adjustment for misaligned bullets (this is a hack, need to find better solution later) */
+	ul[class*="column-list"] li > .list-bullet::after { position: relative; }
+	.markdown-preview-view[class*="column-list"] li > .list-bullet::after { position: relative; }
+
+/* ========================================================================== */
+/* === Multi Column List using Tags (require Contextual Typography) === */
+
+	/* hide tag in rendered view, dim it in edit mode */
+	:is(div[class*="mcl"].markdown-rendered, .markdown-rendered div[class*="mcl"]) a[href*="#mcl"] {display: none;}
+	span[class*="mcl"]	{background-color: var(--background-primary) !important; color: var(--text-faint) !important;}
+
+	/* this is direct alternative to .multi-column-list and .multi-column-list-block */
+	.tag-mcllist-column > .callout[data-callout*="blank"],
+	.tag-mcllist-column > .callout > .callout-content,
+	.tag-mcllist-column:not([data-callout]) { column-width: var(--list-min-width); column-gap: 1rem; column-rule: var(--col-rule-width) solid var(--col-rule-color); }
+	.tag-mcllist-column.cm-callout {padding-block: 1em;} /* add block padding only for the one in callout */
+	.tag-mcllist-column .callout:first-of-type { margin-top: 0; }
+	.tag-mcllist-column ul:first-of-type { margin-top: 0; }
+	/* */
+	/* -- MCL Grid, alpha */
+	.tag-mcllist-grid ul:first-child { display: grid; grid-template-columns: repeat(auto-fit,minmax(var(--list-grid-min-width),1fr));}
+	.tag-mcllist-grid ul:first-child > li { border: px solid Gray; border-radius: 0.5em;}
+	.tag-mcllist-grid ul:first-child > li:not(:last-of-type) {padding-right: 1.6em;}
+
+
+	/* -- MCL Grid, alpha */
+	.tag-mcllist-card ul:first-child
+		{ display: grid; grid-template-columns: repeat(auto-fit,minmax(var(--list-grid-min-width),1fr));}
+	.tag-mcllist-card ul ul:not(ul ul ul) { padding-left: 0.1em; }
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul { padding-left: 0; }
+	:is(.is-mobile .markdown-rendered) .tag-mcllist-card :is(ol:not(ol ol ol),  ul:not(ul ul ul)) {padding-left: 0;}
+	/* reposition the collapse indicator and hover behaviour */
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li {position: relative;}
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li:hover > .collapse-indicator,
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li > ul > li:hover > .collapse-indicator {opacity: 1;}
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li > .collapse-indicator,
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li > ul > li > .collapse-indicator {position: absolute; right: 0;}
+	.tag-mcllist-card ul::before {display: none;}
+	/* decorate the first heading for cards */
+	:is(.tag-mcllist-card, .tag-mcllist-card .callout-content) > ul > li:not(.is-collapsed) > [data-heading] {border-bottom: var(--mcl-card-header-border-width) solid var(--mcl-card-border-color); margin-bottom: 0.2em;}
+	/* hide the list bullet for list-card for first and second level */
+	.tag-mcllist-card > div > div > ul > li > .list-bullet::after,
+	.tag-mcllist-card > div > div > ul > li > ul > li > .list-bullet::after,
+	.tag-mcllist-card > ul > li::before,
+	.tag-mcllist-card > ul > li > ul > li::before,
+	.tag-mcllist-card > ul > li > .list-bullet::after,
+	.tag-mcllist-card > ul > li > ul > li > .list-bullet::after {visibility: hidden;}
+	/* remove the indentation guide */
+	.tag-mcllist-card ul:not(ul ul ul ul)::before {--indentation-guide-width: 0;}
+	.markdown-rendered.show-indentation-guide .tag-mcllist-card li > ul::before,
+	.markdown-rendered.show-indentation-guide .tag-mcllist-card li > ol::before {border-right: 0;}
+	.tag-mcllist-card li {list-style: none;}
+	.tag-mcllist-card li li li {list-style: circle;}
+	.tag-mcllist-card .callout ul:not(ul ul) > li,
+	.tag-mcllist-card ul:not(ul ul) > li
+		{ margin-inline: var(--mcl-card-gap); margin-bottom: calc(var(--mcl-card-gap)*2); padding: 0.3em 0.5em; outline: var(--mcl-card-border-width) solid var(--mcl-card-border-color); border-radius: 0.5em; background-color: var(--mcl-card-bg-color);}
+	.tag-mcllist-card ul:not(ul ul) > li img {width: 100%;}
+	.tag-mcllist-card ul img {margin: 0; float: none;}
+
+	/* special adjustment for Sanctum */
+	.markdown-rendered .tag-mcllist-card ul img[alt*=right] {margin: 0;}
