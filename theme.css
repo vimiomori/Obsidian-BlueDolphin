@@ -314,10 +314,17 @@ settings:
         label: Obsidian default
         value: tag-default
   -
-    id: style-options-for-kanban-plugin-header
-    title: 3.4 Kanban
+    id: plugin-settings
+    title: Plugins
     type: heading
     level: 2
+    collapsed: true
+  -
+    id: kanban-settings
+    title: Kanban
+    description: Styles for the kanban plugin. (https://github.com/mgmeyers/obsidian-kanban)
+    type: heading
+    level: 3
     collapsed: true
   -
     id: rainbow-kanban
@@ -325,211 +332,44 @@ settings:
     type: class-toggle
     default: true
   -
-    id: style-options-for-buttons-plugin-heading
-    title: 3.5 Buttons
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: style-options-for-buttons-plugin
-    title: Buttons special style support
-    title.zh: 是否开启Buttons特别样式支持
-    type: class-toggle
-    default: true
-    description : 目前内置class：🔸circle_btn 圆形按钮🔸blank 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
-  -
-    id: style-options-for-buttons-plugin-heading
-    title: 3.6 Dataview
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: style-options-for-dataview-plugin-heading
-    title: 3.6.1 Dataview List
+    id: dataview-settings
+    title: Dataview
     type: heading
     level: 3
     collapsed: true
-  -
-    id: folder-dataview-list-style
-    title: Style
-    title.zh: 样式
-    type: class-select
-    allowEmpty: false
-    default: dataview-list-style-pacman
-    options:
-      -
-        label: Pac-man
-        value: dataview-list-style-pacman
-      -
-        label: Normal
-        value: dataview-list-style-normal
   -
     id: dolphin-dataview-list
     title: Enable dataview dolphin list style
     type: class-toggle
     default: true
   -
-    id: style-options-for-dataview-table-plugin-heading
-    title: 3.6.2 Dataview Table
+    id: auto-serial-number-dvtable
+    title: Automatically add index numbers to dataview tables
+    type: class-toggle
+    default: false
+  -
+    id: dialogue-settings
+    title: Dialogue
     type: heading
     level: 3
     collapsed: true
   -
-    id: dvtable-style-options
-    title: Dataview Table Format
-    title.zh: Dataview 表格格式
-    type: class-select
-    allowEmpty: false
-    default: default-dvtable
-    options:
-      -
-        label: Defaut table
-        value: default-dvtable
-      -
-        label: Wrapped table (break all)
-        value: wrapped-dvtable
-      -
-        label: Non-wrapped table (limited cell width)
-        value: no-wrapped-dvtable-cell
-      -
-        label: Non-wrapped table
-        value: no-wrapped-dvtable
-  -
-    id: auto-serial-number-dvtable
-    title: Automatically add serial numbers to tables
-    title.zh: Dataview表格自动添加序号
-    type: class-toggle
-    default: false
-  -
-    id: full-width-dvtable
-    title: Full-width dvtable display
-    title.zh: dataview表格全宽显示
-    description: for Reading View, require Contextual Typography plugin
-    description.zh: 阅读模式下，实现效果需要安装Contextual Typography插件
-    type: class-toggle
-    default: false
-  -
-    id: style-options-for-dialogue-plugin-heading
-    title: 3.7 Dialogue & Chatview
-    type: heading
-    level: 2
-    collapsed: true
-  -
     id: dialogue-style
-    title: Dialogue & Chatview Style
-    title.zh: 聊天框样式
+    title: Dialogue Style
     type: class-select
     allowEmpty: false
-    default: dialogue-style-default
-    description.zh: Wechat样式适合titleMode：all ，chat样式适合 titleMode：first
-    description: Wechat options is for ’titleMode：all‘ ，chat options is for  ‘titleMode：first’
+    default: dialogue-style-chat
     options:
       -
         label: Default
         value: dialogue-style-default
       -
-        label: Wechat
-        value: dialogue-style-wechat
-      -
         label: Chat
         value: dialogue-style-chat
   -
-    id: style-options-for-dialogue-plugin-heading
-    title: 3.9 Obsidian Memos
-    description: Adapted from @Quorafind's CSS snippet
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: memos-inputbox
-    title: Put input box to bottom
-    title.zh: PC端memos输入框置于页面底部
-    type: class-toggle
-    default: false
-  -
-    id: heatmap-light
-    title: Heatmap in Light mode
-    description: Change the color of heatmap
-    type: class-select
-    allowEmpty: false
-    default: memos-default-light
-    options:
-      -
-        label: Theme color
-        value: memos-default-light
-      -
-        label: Grass
-        value: grass-light
-      -
-        label: olive
-        value: olive-light
-      -
-        label: Frame
-        value: frame-light
-      -
-        label: Ice
-        value: ice-light
-      -
-        label: Magenta
-        value: magenta-light
-  -
-    title: Heatmap in Dark mode
-    description: Change the color of heatmap
-    id: heatmap-dark
-    type: class-select
-    allowEmpty: false
-    default: memos-default-dark
-    options:
-      -
-        label: Theme color
-        value: memos-default-dark
-      -
-        label: Grass
-        value: grass-dark
-      -
-        label: Olive
-        value: olive-dark
-      -
-        label: Frame
-        value: frame-dark
-      -
-        label: Ice
-        value: ice-dark
-      -
-        label: Magenta
-        value: magenta-dark
-  -
-    id: style-options-for-backlinks-panel
-    title: 3.10 backlinks panel
-    title.zh: 3.10 反链面板
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: full-width-backlinks
-    title: Full-width backlinks panel display
-    title.zh: 笔记中的反链面板全宽度显示
-    type: class-toggle
-    default: false
-  -
-    id: style-options-for-quiet-outline
-    title: 3.11 Quiet outline
-    title.zh: 3.11 Quiet Outline
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: quiet-outline-optimize
-    title: Optimize  quiet-outline plugin
-    title.zh: 美化 quiet-outline 插件
-    type: class-toggle
-    default: true
-  -
-    id: build-in-style-folder
-    title: 4. Built-in Style Intro
-    title.zh: 4. 内置样式介绍
-    description: There are some built-in CSS classes that should be manually declared in the YAML area. Details refer to the TIPS demo vault for Blue Topaz on Github.
-    description.zh: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库，可以在主题QQ群（社区）获取。
+    id: builtin-style-settings
+    title: Builtin Styles
+    description: There are some built-in CSS classes that can be manually declared in the YAML area.
     type: heading
     level: 1
     collapsed: true
@@ -543,116 +383,55 @@ settings:
     description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
     description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
   -
-    id: simple-p-kanban
-    title: Simple pseudo-kanban
-    title.zh: 单色伪看板
-    description: Remove colors of pseudo-kanban
-    description.zh: 移除伪看板头部颜色
+    id: p-kanban-style
+    title: Pseudo Kanban Style
+    type: class-select
+    allowEmpty: false
+    default: p-kanban-style-simple
+    options:
+      -
+        label: Simple 
+        value: p-kanban-style-simple
+      -
+        label: Transparent
+        value: p-kanban-style-transparent
+      -
+        label: Rainbow Lanes
+        value: p-kanban-style-rainbow-lanes
+      -
+        label: Rainbow Cards
+        value: p-kanban-style-rainbow-cards
+      -
+        label: Blue Cards
+        value: p-kanban-style-blue-cards
+  -
+    id: p-kanban-lane-style
+    title: Kanban lane border style
+    type: class-select
+    allowEmpty: false
+    default: p-kanban-border-none
+    options:
+      -
+        label: None
+        value: p-kanban-border-none
+      -
+        label: Borders 
+        value: p-kanban-lane-borders
+      -
+        label: Dividers
+        value: p-kanban-dividers
+  -
+    id: p-kanban-card-borders
+    title: Enable kanban card borders
+    description: Enable for borders on cards
     type: class-toggle
     default: false
   -
-    id: remove-shadow-p-kanban
-    title: Remove shadow of pseudo-kanban
-    title.zh: 移除伪看板触发阴影
+    id: p-kanban-headers
+    title: Enable kanban header colors
+    description: Enable for header colors on lanes
     type: class-toggle
     default: false
-  -
-    id: colorful-p-kanban
-    title: Colorful pseudo-kanban
-    title.zh: 多彩伪看板
-    type: class-toggle
-    default: false
-  -
-    id: blur-p-kanban-frosted-glass
-    title: Blur Radius (For Frosted Glass Style)
-    title.zh: 模糊程度 (毛玻璃效果)
-    type: variable-number-slider
-    default: 2
-    min: 0
-    max: 8
-    step: 1
-  -
-    id: p-kanban-color-1
-    title: pseudo-kanban color 1
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#52aaf365'
-    default-dark: '#3496e652'
-  -
-    id: p-kanban-color-2
-    title: pseudo-kanban color 2
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#84ecec65'
-    default-dark: '#2ec4c452'
-  -
-    id: p-kanban-color-3
-    title: pseudo-kanban color 3
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#94ec8c65'
-    default-dark: '#38ce2a52'
-  -
-    id: p-kanban-color-4
-    title: pseudo-kanban color 4
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#dce28765'
-    default-dark: '#d2dd3852'
-  -
-    id: p-kanban-color-5
-    title: pseudo-kanban color 5
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#eeb36f65'
-    default-dark: '#eb973752'
-  -
-    id: p-kanban-color-6
-    title: pseudo-kanban color 6
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#f18e8e65'
-    default-dark: '#f3424252'
-  -
-    id: p-kanban-color-7
-    title: pseudo-kanban color 7
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#e677e065'
-    default-dark: '#e45bdd52'
-  -
-    id: p-kanban-color-8
-    title: pseudo-kanban color 8
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#ba8be165'
-    default-dark: '#b962ff52'
-  -
-    id: p-kanban-card-color-1
-    title: pseudo-kanban-card subitem color
-    title.zh: 伪看板子项背景色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#f9f9f99b'
-    default-dark: '#0000003f'
-  -
-    id: p-kanban-border-color
-    title: pseudo-kanban-border color
-    title.zh: 伪看板边框颜色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#a0a0a060'
-    default-dark: '#00000000'
   -
     id: built-in-style-code-wrap
     title:  Code Wrap
@@ -1153,7 +932,7 @@ settings:
   --peach-yellow: #ffdd94ff;
   --peach: #fee7b7ff;
   --papaya-whip: #fcf1d9ff;
-  --dark-vanilla: #6a69007e;
+  --dark-vanilla: #8d8a0053;
   /* oranges and reds */
   --sandy-brown: #ffaf64ff;
   --apricot: #ffccabff;
@@ -1187,6 +966,7 @@ settings:
   --transparent-blue: #00283cce;
 
   --bookinfo-color: rgba(42, 181, 42, 0.749);
+  --button-border: var(--sky-blue);
 }
 
 body {
@@ -1334,7 +1114,6 @@ body {
 
   --paragraph-spacing: 1;
   --blur-codebox-frosted-glass: 2;
-  --blur-p-kanban-frosted-glass: 5;
 
   --status-bar-bg: var(--midnight-green);
   --status-bar-text-color: var(--electric-blue);
@@ -1498,7 +1277,7 @@ body.theme-dark {
   --background-modifier-border-hr: var(--theme-color);
   --background-transparent-black-or-white-1: #1b1b1b9a;
   --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
+  --background-transparent-black-or-white-3: #2f2f2f51;
   --background-transparent-black-or-white-4: #7e7e7e65;
   --background-transparent-black-or-white-5: #0f0f0f6c;
   --background-black-or-white-1: #353535;
@@ -1664,6 +1443,24 @@ body.theme-dark {
   --kanban-color-6: #ff7b7b75;
   --kanban-color-7: var(--background-purple);
 
+  --kanban-card-color-1: #00b9f767;
+  --kanban-card-color-blue-2: #0072ac6f;
+  --kanban-card-color-2: #3dfdfd5c;
+  --kanban-card-color-3: #00ecc561;
+  --kanban-card-color-4: #b2c4708d;
+  --kanban-card-color-5: #ffb26a6e;
+  --kanban-card-color-6: #ff7b7b75;
+  --kanban-card-color-7: #6b80f793;
+
+  --kanban-card-border-color-1: #00b9f73c;
+  --kanban-card-border-color-2: #3dfdfd2e;
+  --kanban-card-border-color-blue-2: #3db3fd2e;
+  --kanban-card-border-color-3: #3effaf31;
+  --kanban-card-border-color-4: #fdffa224;
+  --kanban-card-border-color-5: #ffb26a39;
+  --kanban-card-border-color-6: #ff7b7b2e;
+  --kanban-card-border-color-7: #5971ca5c;
+
   /* backgrounds */
   --background-gray: #358aa4;
   --background-brown: #8c5252ba;
@@ -1718,10 +1515,10 @@ body.theme-dark {
   --activeline-background: var(--rich-black-1);
 
   /*pseudo-kanban*/
-  --p-kanban-bg-color: #6c6c6c42;
+  --p-kanban-bg-color: var(--cerulean);
   --p-kanban-border-color: transparent;
-  --p-kanban-card-color-1: #0000003f;
-  --p-kanban-card-color-2: #41414136;
+  --p-kanban-card-color-1: #00171f3f;
+  --p-kanban-card-color-2: #00456036;
   --p-kanban-color-6: #f3424252;
   --p-kanban-color-5: #eb973752;
   --p-kanban-color-4: #d2dd3852;
@@ -1730,8 +1527,7 @@ body.theme-dark {
   --p-kanban-color-1: #3496e652;
   --p-kanban-color-8: #b962ff52;
   --p-kanban-color-7: #e45bdd52;
-  --p-kanban-color-simple: #8e8e8e41;
-  --p-kanban-color-shadow: #0000004d;
+  --p-kanban-color-simple: var(--cerulean);
 
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
@@ -2006,14 +1802,38 @@ body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord
 /* cssclass: kanban */
 /* adapted from spectrum theme, thanks to @Braweria. https://github.com/Braweria/Spectrum */
 /* a kind of css-based pseudo-kanban feature */
+body.p-kanban-lane-borders .kanban div.el-ul>ul>li {
+  border: 1px solid var(--sky-blue);
+}
+
+body.p-kanban-dividers .kanban div.el-ul>ul>li {
+  padding: 0.5em 1.5em;
+}
+
+body.p-kanban-dividers .kanban div.el-ul>ul>li:not(:first-child) {
+  border-radius: 0px;
+  border-left: 2px inset var(--vivid-sky-blue-2);
+}
+
+.kanban div.el-ul>ul>li {
+  padding-top: 0.7em;
+}
+
+.kanban div.el-ul>ul>li {
+  font-size: var(--h5-size);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
 .kanban ul {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  border: 0px solid var(--p-kanban-border-color);
   padding: 0rem;
   border-radius: var(--radius-m);
   flex-wrap: wrap;
 }
+
 .kanban ul>li .list-bullet:after {
   display: none;
 }
@@ -2023,8 +1843,7 @@ body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord
   padding: 0.1em 1em 0.1em 0.8em;
   margin: 0 0.3em 0.3em 0 !important;
   list-style: none;
-  border: 1px solid var(--p-kanban-border-color);
-  border-left: 1px solid var(--p-kanban-border-color) !important;
+  border: 1px solid transparent;
   border-radius: var(--radius-s);
   word-wrap: break-word;
   word-break: break-word;
@@ -2034,75 +1853,74 @@ body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord
   margin-left: auto;
 }
 
-
 .kanban ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: var(--text-accent);
   transition: transform 10ms linear 0s
 }
 
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+1) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+2) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+3) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+4) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+5) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+6) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+7) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
 }
-body.colorful-p-kanban .kanban ul>li:nth-of-type(8n) {
+body.p-kanban-style-rainbow-lanes .kanban ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
 }
 .canvas-node-container .kanban ul>li:nth-of-type(n) {
   backdrop-filter:none;
 }
+
 .kanban ul>li:nth-of-type(n) {
-  background-color: var(--p-kanban-color-simple);
   padding-left: 1em;
-  backdrop-filter: blur(calc(var(--blur-p-kanban-frosted-glass)*2px));
-}
-.kanban ul:first-child>li:nth-of-type(8n+1) {
-  border-top: 6px solid var(--p-kanban-color-1) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+2) {
-  border-top: 6px solid var(--p-kanban-color-2) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+3) {
-  border-top: 6px solid var(--p-kanban-color-3) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+4) {
-  border-top: 6px solid var(--p-kanban-color-4) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+5) {
-  border-top: 6px solid var(--p-kanban-color-5) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+6) {
-  border-top: 6px solid var(--p-kanban-color-6) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n+7) {
-  border-top: 6px solid var(--p-kanban-color-7) !important;
-}
-.kanban ul:first-child>li:nth-of-type(8n) {
-  border-top: 6px solid var(--p-kanban-color-8) !important;
-}
-body.simple-p-kanban .kanban ul:first-child>li:nth-of-type(n) {
-  border-top: none !important;
 }
 
-body:not(.remove-shadow-p-kanban) .kanban ul>li:hover {
-  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
-  box-shadow: 0 3px 5px 0 var(--p-kanban-color-shadow), 0 3px 1px -3px var(--p-kanban-color-shadow), 2px 3px 3px 0 var(--p-kanban-color-shadow);
+body.p-kanban-style-simple .kanban div.el-ul>ul>li {
+  background-color: var(--p-kanban-color-simple);
+}
+
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+1) {
+  border-top: 6px solid var(--p-kanban-color-1) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+2) {
+  border-top: 6px solid var(--p-kanban-color-2) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+3) {
+  border-top: 6px solid var(--p-kanban-color-3) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+4) {
+  border-top: 6px solid var(--p-kanban-color-4) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+5) {
+  border-top: 6px solid var(--p-kanban-color-5) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+6) {
+  border-top: 6px solid var(--p-kanban-color-6) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+7) {
+  border-top: 6px solid var(--p-kanban-color-7) !important;
+}
+body.p-kanban-headers .kanban div.el-ul>ul>li:nth-of-type(8n+8) {
+  border-top: 6px solid var(--p-kanban-color-8) !important;
+}
+
+body:not(.p-kanban-headers) .kanban div.ul > ul>li {
+  border-top: none !important;
 }
 
 .kanban ul ul {
@@ -2119,18 +1937,122 @@ body:not(.remove-shadow-p-kanban) .kanban ul>li:hover {
 .kanban ul ul li:not(.task-list-item) {
   width: 100%;
   display: block;
+  font-weight: normal;
+  font-size: 0.85rem !important;
+  font-family: var(--font-default);
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-body.remove-shadow-p-kanban .kanban ul ul li:hover {
-  background: var(--p-kanban-card-color-2) !important;
-  border-color: var(--p-kanban-border-color) !important;
-  border-left: 1px solid var(--p-kanban-border-color) !important;
+body:is(.p-kanban-style-rainbow-cards, .p-kanban-style-blue-cards) .kanban ul ul li:not(.task-list-item) {
+  border-width: 2px;
 }
 
-body.remove-shadow-p-kanban.theme-dark .kanban ul ul li:hover {
-  border-color: #696969e1 !important;
-  border-left: 1px solid #696969e1 !important;
+body.p-kanban-style-blue-cards .kanban ul ul li:not(.task-list-item):nth-of-type(2n+1)::before {
+  color: var(--electric-blue-2) !important;
+}
+body.p-kanban-style-blue-cards .kanban ul ul li:not(.task-list-item):nth-of-type(2n+2)::before {
+  color: var(--electric-blue-3) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+1)::before {
+  color: var(--electric-blue-2) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+2)::before {
+  color: var(--electric-blue-3) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+3)::before {
+  color: var(--aquamarine-1) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+4)::before {
+  color: var(--peach) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+5)::before {
+  color: var(--apricot) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+6)::before {
+  color: var(--fairy-tale) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+7)::before {
+  color: var(--thistle) !important;
+}
+
+body.p-kanban-style-blue-cards .kanban ul ul li:not(.task-list-item):nth-of-type(2n+1) {
+  background: var(--kanban-card-color-1) !important;
+  color: var(--electric-blue-3);
+  --internal-link-color: var(--electric-blue-3);
+  --link-color: var(--electric-blue-3);
+  border-color: var(--kanban-card-border-color-1);
+}
+
+body.p-kanban-style-blue-cards .kanban ul ul li:not(.task-list-item):nth-of-type(2n+2) {
+  background: var(--kanban-card-color-blue-2) !important;
+  color: var(--electric-blue-2);
+  --internal-link-color: var(--electric-blue-2);
+  --link-color: var(--electric-blue-2);
+  border-color: var(--kanban-card-border-color-blue-2);
+}
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+1) {
+  background: var(--kanban-card-color-1) !important;
+  color: var(--electric-blue-2);
+  --internal-link-color: var(--electric-blue-2);
+  --link-color: var(--electric-blue-2);
+  border-color: var(--kanban-card-border-color-1);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+2) {
+  background: var(--kanban-card-color-2) !important;
+  color: var(--electric-blue-3);
+  --internal-link-color: var(--electric-blue-3);
+  --link-color: var(--electric-blue-3);
+  border-color: var(--kanban-card-border-color-2);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+3) {
+  background: var(--kanban-card-color-3) !important;
+  color: var(--aquamarine-1);
+  --internal-link-color: var(--aquamarine-1);
+  --link-color: var(--aquamarine-1);
+  border-color: var(--kanban-card-border-color-3);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+4) {
+  background: var(--kanban-card-color-4) !important;
+  color: var(--peach);
+  --internal-link-color: var(--peach);
+  --link-color: var(--peach);
+  border-color: var(--kanban-card-border-color-4);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+5) {
+  background: var(--kanban-card-color-5) !important;
+  color: var(--apricot);
+  --internal-link-color: var(--apricot);
+  --link-color: var(--apricot);
+  border-color: var(--kanban-card-border-color-5);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+6) {
+  background: var(--kanban-card-color-6) !important;
+  color: var(--fairy-tale) !important;
+  --internal-link-color: var(--fairy-tale);
+  --link-color: var(--fairy-tale);
+  border-color: var(--kanban-card-border-color-6);
+}
+
+body.p-kanban-style-rainbow-cards .kanban ul ul li:not(.task-list-item):nth-of-type(7n+7) {
+  background: var(--kanban-card-color-7) !important;
+  color: var(--thistle) !important;
+  --internal-link-color: var(--thistle);
+  --link-color: var(--thistle);
+  border-color: var(--kanban-card-border-color-7);
+}
+
+body .kanban ul ul li:hover {
+  background: var(--p-kanban-card-color-2) !important;
+  border-color: var(--sky-blue);
+}
+
+body.p-kanban-card-borders .kanban ul ul li {
+  border-color: var(--sky-blue);
 }
 
 .kanban ul ul li .task-list-item-checkbox {
@@ -2162,7 +2084,6 @@ body.remove-shadow-p-kanban.theme-dark .kanban ul ul li:hover {
   padding: 0.1em 1em;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
-  border-left: 1px solid var(--p-kanban-border-color) !important;
   border-radius: var(--radius-s);
   word-wrap: break-word;
   word-break: break-word;
@@ -2174,6 +2095,9 @@ body.remove-shadow-p-kanban.theme-dark .kanban ul ul li:hover {
   display: block;
   padding-left: 2em;
   text-indent: -3em;
+  font-weight: normal;
+  font-size: 0.85rem !important;
+  font-family: var(--font-default);
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
@@ -4195,7 +4119,7 @@ body:not(.font-family-change-to-default) {
   --font-family-list: ;
   --font-text-theme: nunito,'Inter', "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji";
   --font-heading: quicksand;
-  --font-interface: nunito;
+  --font-interface: quicksand;
   --inline-title-font: var(--font-default);
   --font-family-h1: var(--font-heading);
   --font-family-h2: var(--font-heading);
@@ -5100,7 +5024,7 @@ body.colorful-indentation-lines .kanban :is(ol,ul) ul::before {
   display: none;
 }
 
-body.colorful-indentation-lines ul>li:not(.task-list-item) {
+body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul>li:not(.task-list-item) {
   border-left: none !important;
 }
 
@@ -5661,8 +5585,8 @@ body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.tab
   content:counter(section) ". ";
 }
 
-body:not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td,
-body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
+:is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td,
+.markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
   max-width: 18em;
 }
 
@@ -6095,7 +6019,7 @@ body :is(.markdown-preview-view,.markdown-rendered) mark .internal-link.is-unres
 a.internal-link,
 .cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--internal-link-color) !important;
+  color: var(--internal-link-color);
 }
 /* internal link in highlight
 .cm-highlight.cm-hmd-internal-link,
@@ -6811,104 +6735,6 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   height: 1.45rem;
 }
 
-/*****from https://www.yuque.com/fanmofeng/obsidian/ioifq0 *******/
-
-body .workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon {
-  padding-inline-end: var(--size-2-3);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon::before {
-  content: "" !important;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item {
-  position: relative;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
-  position: relative;
-  margin-bottom: 0;
-  white-space: nowrap;
-  margin-top: -1px; /* fix item gap */
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
-  padding-left: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: calc(var(--nav-item-size) * 1.8);
-  line-height: calc(var(--nav-item-size) * 1.8);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
-  content: "";
-  width: var(--size-4-1);
-  height: var(--size-4-1);
-  border: 2px solid hsla(var(--color-accent-hsl), 0.9);
-  border-radius: 50%;
-  position: absolute;
-  left: 7px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner {
-  padding-left: 4px;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner::before {
-  content: none;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
-  box-shadow: 0 0 0 4px var(--background-modifier-hover);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
-  content: "";
-  width: 1.5px;
-  position: absolute;
-  background-color: transparent;
-  top: calc(calc(var(--nav-item-size) * 1.8) / 2 * -1);
-  left: -10px;
-  height: calc(100% - calc(var(--nav-item-size) * 1.8) + var(--size-4-8));
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
-  cursor: pointer;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
-  width: var(--size-4-2);
-  height: var(--size-4-2);
-  background-color: hsla(var(--color-accent-hsl), 0.9);
-  border-radius: 50%;
-  position: absolute;
-  left: 7px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg {
-  display: block;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
-  display: none;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item::after {
-  background-color: hsla(var(--color-accent-hsl), 0.9);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-self:hover + .tree-item-children .tree-item::after {
-  background-color: transparent;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::after, body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover ~ .tree-item::after {
-  background-color: transparent;
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::before {
-  content: "";
-  position: absolute;
-  top: calc(calc(var(--nav-item-size) * 1.8) / 2 * -1);
-  left: -10px;
-  bottom: calc(100% - (calc(var(--nav-item-size) * 1.8) + var(--size-4-2)) / 2 - 1px);
-  width: 16px;
-  border-bottom-left-radius: var(--radius-m);
-  border-bottom: 1.5px solid hsla(var(--color-accent-hsl), 0.9);
-  border-left: 2px solid hsla(var(--color-accent-hsl), 0.9);
-}
-body .workspace-leaf-content[data-type=outline] .view-content .outline :is(.tree-item-children, .tree-item-self .tree-item-self) {
-  padding-left: 0;
-  margin-left: var(--size-4-5);
-  border-left: none;
-}
-
 /*tag collapse indicator*/
 .tag-container .tree-item-children {
   border-left: 1px solid #94949433;
@@ -6997,6 +6823,10 @@ body .workspace-leaf-content[data-type=outline] .view-content .outline :is(.tree
 }
 .community-theme-container .clickable-icon {
   color: var(--electric-blue)
+}
+
+.community-item.is-selected {
+  background-color: var(--sky-blue);
 }
 
 .dropdown {
@@ -8561,7 +8391,7 @@ button.kanban-plugin__new-item-button:hover {
 }
 
 .kanban-plugin__item-metadata-wrapper:not(:empty) {
-  background: var(--background-transparent-black-or-white-3) !important;
+  background: var(--dark-sky-blue) !important;
 }
 
 .kanban-plugin__lane-wrapper {
@@ -9309,7 +9139,7 @@ span.dataview.small-text {
   font-size:0.88em;
 }
 
-ul.dataview.list-view-ul>li:not(.task-list-item) {
+:is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul.dataview.list-view-ul>li:not(.task-list-item) {
   border-left: none !important;
   margin-left: -1em;
 }
@@ -10329,58 +10159,6 @@ body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) .memolist-wrap
   flex-direction: column-reverse;
 }
 
-
-body:is(.grass-light.theme-light,.grass-dark.theme-dark) {
-  --stat-day-L1: #9be9a8;
-  --stat-day-L2: #40c463;
-  --stat-day-L3: #30a14e;
-  --stat-day-L4: #216e39;
-}
-body:is(.frame-light.theme-light,.frame-dark.theme-dark) {
-  --stat-day-L1: #f75205;
-  --stat-day-L2: #e03a07;
-  --stat-day-L3: #bf2104;
-  --stat-day-L4: #940b01;
-}
-body:is(.olive-light.theme-light,.olive-dark.theme-dark) {
-  --stat-day-L1: #9cc069;
-  --stat-day-L2: #78a851;
-  --stat-day-L3: #648b3f;
-  --stat-day-L4: #4f6e30;
-}
-body:is(.ice-light.theme-light,.ice-dark.theme-dark) {
-  --stat-day-L1: #82bbf0;
-  --stat-day-L2: #5da2eb;
-  --stat-day-L3: #3889e6;
-  --stat-day-L4: #126fe0;
-}
-body:is(.magenta-light.theme-light,.magenta-dark.theme-dark) {
-  --stat-day-L1: #fa9fb5;
-  --stat-day-L2: #ea4e9c;
-  --stat-day-L3: #ae017e;
-  --stat-day-L4: #610070;
-}
-
-.theme-dark,
-.theme-light {
-  --stat-day-L1: hsla(var(--interactive-accent-hsl),0.35);
-  --stat-day-L2: hsla(var(--interactive-accent-hsl),0.6);
-  --stat-day-L3: hsla(var(--interactive-accent-hsl),0.8);
-  --stat-day-L4: hsla(var(--interactive-accent-hsl),1);
-}
-
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
-  background-color: var(--stat-day-L1) !important;
-}
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
-  background-color: var(--stat-day-L2) !important;
-}
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
-  background-color: var(--stat-day-L3) !important;
-}
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
-  background-color: var(--stat-day-L4) !important;
-}
 /* ==============Commander================ */
 
 .cmdr.titlebar-button{
@@ -11055,33 +10833,34 @@ body.is-mobile .markdown-reading-view img:not([class*="emoji"]):active {
 button:not(.clickable-icon) {
   box-shadow: none;
   border: 1px solid var(--sky-blue);
+  background-color: var(--prussian-blue-3);
 }
 
 button.mod-cta {
-  background-color: var(--cerulean-2);
-  border: 2px solid var(--vivid-sky-blue-2);
+  background-color: var(--midnight-green);
+  border: 1px solid var(--vivid-sky-blue-2);
   color: var(--electric-blue-2);
 }
 
 button.mod-cta:hover {
-  background-color: var(--doger-0);
+  background-color: var(--cerulean);
   color: var(--electric-blue-3);
 }
 
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
-  background-color: var(--cerulean-2);
-  border: 2px solid var(--vivid-sky-blue-2);
+  background-color: var(--midnight-green);
+  border: 1px solid var(--vivid-sky-blue-2);
   color: var(--electric-blue-2);
-  padding: 5px 6px 5px 12px;
+  padding: 5px 6px 5px 13px;
 }
 
 .horizontal-tab-nav-item.is-active:hover, .vertical-tab-nav-item.is-active:hover {
-  background-color: var(--cerulean-2);
+  background-color: var(--midnight-green);
   color: var(--electric-blue-3);
 }
 
 .horizontal-tab-nav-item:hover, .vertical-tab-nav-item:hover {
-  background-color: var(--cerulean-2);
+  background-color: var(--midnight-green);
   color: var(--electric-blue-3);
 }
 
@@ -11506,289 +11285,49 @@ body.is-mobile .nav-folder-collapse-indicator::after {
 .projects-container div.rowHeader {
   backdrop-filter: blur(10px);
 }
-/*=======================
-===  dialogue by cuman====
-========================*/
-body.dialogue-style-wechat .dialogue-plugin-block-wrapper {
-  margin-bottom: 15px;
-  position: relative;
-  display: flex;
-}
-body.dialogue-style-wechat .dialogue-plugin-message {
-  background-color:unset;
-  padding: 1px;
-}
-
-body.dialogue-style-wechat.is-mobile .dialogue-plugin-message {
-  max-width: calc(100% - 2em) !important;
-}
-body.dialogue-style-wechat.is-mobile .dialogue-plugin-message .dialogue-plugin-message-content {
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
-body.dialogue-style-wechat.is-mobile .dialogue-plugin-message .dialogue-plugin-message-title {
-  min-width:unset;
-  margin-left: -1em;
-  margin-right: -1em;
-}
-
-body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment {
-  margin: 7px;
-  width: fit-content;
-  max-width: 75%;
-  margin: 24px auto;
-  line-height: 1.8;
-  text-align: center;
-  opacity: var(--opacity);
-}
-
-body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-title {
-  min-width: 6.8em;
-  font-size: 18px;
-  height: 50px;
-  background: #f1f1f1;
-  border-radius: 8px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-position: center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  background-color: unset;
-}
-
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message-title {
-  justify-content:left;
-  margin-left: 2em;
-  right: 0;
-}
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message .dialogue-plugin-message-content {
-  margin-right: 0px;
-}
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message-content:after {
-  box-shadow: -1px 2px 0px 0 rgb(178 178 178 / 23%)
-}
-
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content {
-  color: black;
-  background: #98e970;
-  margin-left: 0;
-}
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content:after {
-  background: #98e970;
-  left: auto;
-  right: -5px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 0;
-}
-body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-content {
-  background: #fff;
-  padding: 12px 18px;
-  font-size: large;
-  border-radius: 8px;
-  margin-right: 7em;
-  word-break: break-all;
-  margin-left: 7em;
-  display: inline-block;
-  position: relative;
-  line-height: normal;
-  min-height: 50px;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-}
-.dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content {
-  background: #343434;
-}
-
-body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-content:after {
-  content: '';
-  background: #fff;
-  width: 12px;
-  height: 12px;
-  border-bottom-left-radius: 2px;
-  top: 20px;
-  left: -6px;
-  position: absolute;
-  transform: rotate(45deg);
-}
-
-.dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content:after {
-  background: #343434;
-}
-
-/*chatview-style-wechat*/
-body.dialogue-style-wechat  div.chat-view-bubble {
-  background-color: transparent;
-  border: 0px;
-}
-body.dialogue-style-wechat .chat-view-message .chat-view-header {
-  font-size: 18px;
-  height: 55px;
-  background: #f1f1f1;
-  border-radius: 8px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-position: center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color:unset;
-}
-
-body.dialogue-style-wechat .chat-view-align-right .chat-view-header {
-  text-align: right;
-  margin-right: 0.5em;
-}
-
-body.dialogue-style-wechat div.chat-view-align-left .chat-view-message {
-  margin-right: 0;
-
-}
-body.dialogue-style-wechat .chat-view-align-right .chat-view-message {
-  color: black;
-  background: #98e970;
-  float: right;
-}
-body.dialogue-style-wechat div.chat-view-align-center .chat-view-message {
-  background: #e4effc;
-  padding: 12px 18px;
-  font-size: large;
-  border-radius: 8px;
-  word-break: break-all;
-  display: inline-block;
-  position: relative;
-  line-height: normal;
-  min-height: 50px;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-}
-body.dialogue-style-wechat div.chat-view-align-center .chat-view-message:after {
-  content: '';
-  background: #e4effc;
-  width: 12px;
-  height: 12px;
-  border-bottom-left-radius: 2px;
-  top: -5px;
-  left: 10%;
-  position: absolute;
-  transform: rotate(45deg);
-}
-
-body.dialogue-style-wechat div.chat-view-align-left .chat-view-message:after {
-  box-shadow: -1px 2px 0px 0 rgb(178 178 178 / 23%)
-}
-
-body.dialogue-style-wechat .chat-view-align-right .chat-view-message:after {
-  background: #98e970;
-  left: auto;
-  right: -5px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 0;
-}
-body.dialogue-style-wechat .chat-view-message,
-body.dialogue-style-wechat .chat-view-bubble> :not(:is(h1,h2,h3,h4,h5,h6,sub)) {
-  background: #fff;
-  padding: 12px 18px;
-  font-size: large;
-  border-radius: 8px;
-  word-break: break-all;
-  display: inline-block;
-  position: relative;
-  line-height: normal;
-  min-height: 50px;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-}
-body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message {
-  background: #343434;
-}
-body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message {
-  background: #3cb676;
-  color:black;
-}
-body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message:after {
-  background: #3cb676;
-}
-
-body.dialogue-style-wechat .chat-view-bubble> :not(:is(h1,h2,h3,h4,h5,h6,sub)):after {
-  content: '';
-  background: #fff;
-  width: 12px;
-  height: 12px;
-  border-bottom-left-radius: 2px;
-  top: 20px;
-  left: -6px;
-  position: absolute;
-  transform: rotate(45deg);
-}
-
-body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message:after {
-  background: #343434;
-}
-
-body.dialogue-style-wechat .chat-view-bubble .chat-view-subtext {
-  display:block;
-}
-body.dialogue-style-wechat .chat-view-align-right .chat-view-subtext {
-  float: right;
-}
-body.dialogue-style-wechat div.chat-view-align-right {
-  overflow: hidden;
-}
-body.dialogue-style-wechat h4.chat-view-header {
-  margin-bottom: 2px;
-  margin-top: 0 !important;
-}
-body.dialogue-style-wechat div.chat-view-align-center  h4.chat-view-header {
-  text-align: left;
-  margin-bottom: 8px;
-}
 
 /*dialogue-style-chat*/
-.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
-  color: #cccccc;
-  background: #343434;
-  box-shadow: 0px 2px 1px 0px #191818,0px 2px 1px 0px #343434;
+body.dialogue-style-chat .dialogue-plugin-wrapper{
+  font-family: nunito;
+  letter-spacing: 1.1px;
+  font-size: 1.1em;
 }
-.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-right .dialogue-plugin-message {
-  color: #333333;
-  background-image: -webkit-linear-gradient(left, #cccccc,#cccccc);
-}
+
 body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
-  font-size: 15px;
-  background: #f5f8ff;
-  letter-spacing: 1.5px;
-  color: #333;
   border-radius:12px;
   border-bottom-left-radius: 0px;
   margin-left: 6px;
-  box-shadow: 0px 2px 1px 0px #f3f3f3,0px 2px 1px 0px #f3f3f3;
   margin-right: 3em;
   align-self: flex-end;
+  color: var(--robin-egg);
+  background: var(--rich-black-1);
+  box-shadow: 0px 2px 1px 0px var(--prussian-blue),0px 2px 1px 0px var(--prussian-blue);
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message{
-  font-size: 15px;
-  letter-spacing: 1.5px;
-  color: #333;
+body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message {
   border-radius: 12px;
   border-bottom-right-radius: 0px;
-  background-image: -webkit-linear-gradient(left, #cee4ff,#d7eaff);
   margin-right: 6px;
   align-self: flex-end;
   margin-left: 3em;
+  color: var(--electric-blue-2);
+  background-image: -webkit-linear-gradient(left, var(--cerulean),var(--cerulean));
+}
+
+body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message-title {
+  color: var(--vivid-sky-blue-2);
+  background-color: var(--rich-black-0);
+}
+
+body.dialogue-style-chat .dialogue-plugin-message-wrapper-right.dialogue-plugin-message-title {
+  color: var(--electric-blue);
+  background-color: var(--midnight-green);
 }
 
 body.dialogue-style-chat .dialogue-plugin-message-title {
   font-size: 16px;
   letter-spacing: 2px;
   text-align: center;
-  color: rgb(236, 236, 236);
   font-weight: bold;
 }
 
@@ -13717,13 +13256,9 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-typ
 .callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n) {
   border-top: 6px solid var(--p-kanban-color-8) !important;
 }
-body.simple-p-kanban .callout.callout[data-callout*="kanban"] ul:first-child>li:nth-of-type(n) {
-  border-top: none !important;
-}
 
-body:not(.remove-shadow-p-kanban) .callout.callout[data-callout*="kanban"] ul>li:hover {
-  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
-  box-shadow: 0 3px 5px 0 var(--p-kanban-color-shadow), 0 3px 1px -3px var(--p-kanban-color-shadow), 2px 3px 3px 0 var(--p-kanban-color-shadow);
+body:not(.p-kanban-headers) .callout.callout[data-callout*="kanban"] ul:first-child>li:nth-of-type(n) {
+  border-top: none !important;
 }
 
 .callout.callout[data-callout*="kanban"] ul ul {
@@ -13740,16 +13275,19 @@ body:not(.remove-shadow-p-kanban) .callout.callout[data-callout*="kanban"] ul>li
 .callout.callout[data-callout*="kanban"] ul ul li:not(.task-list-item) {
   width: 100%;
   display: block;
+  font-weight: normal;
+  font-size: 0.85rem;
+  font-family: var(--font-default);
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-body.remove-shadow-p-kanban .callout.callout[data-callout*="kanban"] ul ul li:hover {
+body .callout.callout[data-callout*="kanban"] ul ul li:hover {
   background: var(--p-kanban-card-color-2) !important;
   border-color: var(--p-kanban-border-color) !important;
   border-left: 1px solid var(--p-kanban-border-color) !important;
 }
 
-body.remove-shadow-p-kanban.theme-dark .callout.callout[data-callout*="kanban"] ul ul li:hover {
+body .callout.callout[data-callout*="kanban"] ul ul li:hover {
   border-color: #696969e1 !important;
   border-left: 1px solid #696969e1 !important;
 }
@@ -13796,6 +13334,9 @@ body.remove-shadow-p-kanban.theme-dark .callout.callout[data-callout*="kanban"] 
   display: block;
   padding-left: 2em;
   text-indent: -3em;
+  font-weight: normal;
+  font-size: 0.85rem;
+  font-family: var(--font-default);
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
@@ -15479,7 +15020,7 @@ body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
 }
 
 select.dropdown {
-  border: 1px solid var(--cerulean);
+  border: 1px solid var(--cerulean-2);
   border-radius: var(--radius-s);
   box-shadow: none;
 }
