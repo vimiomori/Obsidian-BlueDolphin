@@ -20,7 +20,7 @@ TODO: add choice to put status bar in the middle (floating)
 
 /* @settings
 name: 🐬 Blue Dolphin Theme
-id: blue-topaz-theme
+id: blue-dolphin-theme
 settings:
   - id: vault-settings
     title: Vault Settings
@@ -461,7 +461,7 @@ settings:
     markdown: true
   -
     id: code-style-settings
-    title: Codebox style settings
+    title: Code block styles
     type: heading
     level: 1
     collapsed: true
@@ -483,183 +483,6 @@ settings:
     description: If you have the Code Mirror Options theme enabled, enable this setting to replace the Code Mirror theme and syntax highlighting with the Blue Dolphin theme.
     type: class-toggle
     default: true
-  -
-    id: code-block-colors
-    title: Custom Codebox Syntax Highlighting  Colors
-    title.zh: 自定义语法高亮颜色
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: code-normal
-    title: Code Block normal Color
-    description: Code Normal Font Color
-    description.zh: 代码框普通字体颜色
-    type: variable-themed-color
-    format: hex
-    opacity: true
-    default-light: '#d4d4d4'
-    default-dark: '#d4d4d4'
-  -
-    id: code-keyword
-    title: Code Block Keyword Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c792ea'
-    default-dark: '#c792ea'
-  -
-    id: code-value
-    title: Code Block Number Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ff5370'
-    default-dark: '#ff5370'
-  -
-    id: code-type
-    title: Code Block Type Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#decb6b'
-    default-dark: '#decb6b'
-  -
-    id: code-property
-    title: Code Block Property Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c792ea'
-    default-dark: '#c792ea'
-  -
-    id: code-variable
-    title: Code Block Variable Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#f07178'
-    default-dark: '#f07178'
-  -
-    id: code-variable-2
-    title: Code Block Variable-2 Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#eeffff'
-    default-dark: '#eeffff'
-  -
-    id: code-variable-3
-    title: Code Block Variable-3 Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#f07178'
-    default-dark: '#f07178'
-  -
-    id: code-qualifier
-    title: Code Block Qualifier Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#decb6b'
-    default-dark: '#decb6b'
-  -
-    id: code-operator
-    title: Code Block Operator Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#89ddff'
-    default-dark: '#89ddff'
-  -
-    id: code-hr
-    title: Code Block HR Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#98e342'
-    default-dark: '#98e342'
-  -
-    id: code-builtin
-    title: Code Block Builtin Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ffcb6b'
-    default-dark: '#ffcb6b'
-  -
-    id: code-tag
-    title: Code Block Tag Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ff5370'
-    default-dark: '#ff5370'
-  -
-    id: code-string-2
-    title: Code Block String-2 Color
-    description: class-name
-    type: variable-themed-color
-    format: hex
-    default-light: '#f07178'
-    default-dark: '#f07178'
-  -
-    id: code-punctuation
-    title: Code Block punctuation Color
-    description: code punctuation,bracket color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ff5370'
-    default-dark: '#ff5370'
-  -
-    id: code-comment
-    title: Code Block Comment Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#676e95'
-    default-dark: '#676e95'
-  -
-    id: code-string
-    title: Code Block String Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c3e88d'
-    default-dark: '#c3e88d'
-  -
-    id: code-attribute
-    title: Code Block Attribute Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c792ea'
-    default-dark: '#c792ea'
-  -
-    id: code-function
-    title: Code Block function Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c792ea'
-    default-dark: '#c792ea'
-  -
-    id: code-important
-    title: Code Block important Color
-    type: variable-themed-color
-    format: hex
-    default-light: '#c792ea'
-    default-dark: '#c792ea'
-  -
-    id: cm-atom
-    title: Code Block Atom Color
-    description: Frontmatter keys color
-    type: variable-themed-color
-    format: hex
-    default-light: '#f78c6c'
-    default-dark: '#f78c6c'
-  -
-    id: code-meta
-    title: Code Block Meta Color
-    description: Frontmatter punctuation color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ffcb6b'
-    default-dark: '#ffcb6b'
-  -
-    id: code-language
-    title: Code Block language Color
-    description: code block language color
-    type: variable-themed-color
-    format: hex
-    default-light: '#ff5370'
-    default-dark: '#ff5370'
-  -
 */
 
 @font-face { 
@@ -747,6 +570,7 @@ settings:
 }
 
 :root {
+  --theme-info: "🐬　0.1.0";
   /* black */
   --rich-black: #001722;
   --rich-black-0: #001f2e;
@@ -1126,7 +950,7 @@ body.theme-dark {
   --background-primary-alt: var(--background-primary-alt-bg-4-bt);
   --background-secondary: var(--background-secondary-bg-4-bt);
   --background-secondary-alt: var(--background-secondary-alt-bg-4-bt);
-  --background-modifier-border: var(--transparent-blue);
+  --background-modifier-border: transparent;
   --background-modifier-success: var(--aquamarine);
   --background-modifier-error: var(--melon);
   --background-modifier-error-rgb: #ff8e8e8c;
@@ -1517,6 +1341,34 @@ body.theme-dark {
   --canvas-card-opacity: 0.2;
 
   --code-active-line-background-color: var(--rich-black-0);
+  --window-border: var(--cerulean);
+  --modal-border-color: var(--cerulean);
+  --modal-border-width: 1px;
+
+  --size-2-1: 2px;
+  --size-2-2: 4px;
+  --size-2-3: 6px;
+  --size-4-1: 4px;
+  --size-4-2: 8px;
+  --size-4-3: 12px;
+  --size-4-4: 16px;
+  --size-4-5: 20px;
+  --size-4-6: 24px;
+  --size-4-8: 32px;
+  --size-4-9: 36px;
+  --size-4-12: 48px;
+  --size-4-16: 64px;
+  --size-4-18: 72px;
+}
+
+div.workspace-leaf-content[data-type=style-settings] div.view-content {
+  padding: var(--file-margins);
+}
+body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-content {
+  padding: 32px 16px;
+}
+body:not(.is-mobile) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -6431,8 +6283,8 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   min-width: var(--dialog-width);
 }
 
-.modal.mod-settings {
-  border: none;
+.modal-container.mod-dim .modal {
+  box-shadow: var(--shadow-l);
 }
 
 .modal.mod-narrow .modal-content {
@@ -6449,12 +6301,59 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   padding: 0;
 }
 
-.modal-content .cmdr-setting-content {
-  height: auto;
+.vertical-tab-content-container::before {
+  position: relative;
+  z-index: var(--layer-status-bar);
+  display: block;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 1.7em;
+  content: "Blue Dolphin Theme";
+  text-align: center;
+  padding-top: 0.5em;
+  background: var(--background-secondary-alt);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
 }
 
-.vertical-tab-content .setting-item {
-  padding: 8px 0;
+.modal.mod-settings .vertical-tab-header::before {
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-cover);
+  display: block;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 2.2em;
+  margin-bottom: -1px;
+  content: "";
+}
+
+.is-phone .modal.mod-settings .modal-title::after,
+.modal.mod-settings .vertical-tab-header::after {
+  position: absolute;
+  top: var(--size-4-2);
+  left: var(--size-4-2);
+  z-index: var(--layer-sidedock);
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+  height: 24px;
+  padding: 4px 8px 0px 8px;
+  margin: 0.3em 0.3em;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-monospace-theme);
+  color: var(--pacific-blue);
+  border: 1px solid var(--midnight-green-2);
+  content: var(--theme-info);
+  background: var(--indigo-blue);
+  border-radius: var(--radius-m);
+}
+
+.modal-content .cmdr-setting-content {
+  height: auto;
 }
 
 .is-phone .setting-item-heading {
@@ -9043,261 +8942,249 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 /* ================================== */
 /* ========= Style Settings ========= */
 /* ================================== */
-/* .style-settings-heading {
-  border-bottom: none !important;
-}
-.setting-item.setting-item-heading.style-settings-heading[data-level="2"],
-.style-settings-container[data-level="2"],
-.setting-item.setting-item-heading.style-settings-heading[data-level="3"],
-.style-settings-container[data-level="3"],
-.setting-item.setting-item-heading.style-settings-heading[data-level="4"],
-.style-settings-container[data-level="4"] {
-  padding-left: 20px;
+
+.vertical-tab-header-group {
+  padding: var(--size-2-3) 0;
 }
 
-.setting-item-description,
-.setting-item-info {
-  word-wrap: break-word;
-  word-break: break-word;
+.vertical-tab-header-group-title {
+  font-size: var(--font-ui-medium);
+  color: var(--moonstone);
+  text-align: center;
+  background-color: var(--background-secondary);
+  padding: var(--size-4-1);
+  font-family: var(--font-default);
 }
 
-.setting-item.setting-item-heading.style-settings-heading[data-level="1"] .setting-item-name {
-  color: var(--h2-color) !important;
+.setting-item {
+  padding: var(--size-4-2) 0;
+  border-top: unset;
 }
-.setting-item.setting-item-heading.style-settings-heading[data-level="2"] .setting-item-name {
-  color: var(--h3-color)!important;
-}
-.setting-item.setting-item-heading.style-settings-heading[data-level="3"] .setting-item-name {
-  color: var(--h4-color) !important;
-}
-.setting-item.setting-item-heading.style-settings-heading[data-level="4"] .setting-item-name {
-  color: var(--h5-color) !important;
-}
-.style-settings-collapse-indicator {
-  color: var(--theme-color) !important;
+.setting-item.setting-item-heading {
+  margin-bottom: var(--size-4-1);
+  border-bottom: 2px solid var(--window-border);
 }
 
-.setting-item.setting-item-heading.style-settings-heading.is-collapsed .style-settings-collapse-indicator {
-  opacity: 0.4;
+.setting-item.setting-item-heading .setting-item-name {
+  color: var(--h1-color);
+  font-weight: 600;
+}
+
+.setting-item-name {
+  font-weight: 500;
+}
+
+.setting-item.setting-item-heading.style-settings-heading {
+  padding: var(--size-4-2);
+}
+.setting-item.setting-item-heading.style-settings-heading:hover {
+  color: var(--highlight-text-normal);
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-m);
 }
 
 .style-settings-container {
-  padding-bottom: 5px !important;
+  padding-bottom: unset;
+}
+.style-settings-container .setting-item {
+  padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
+}
+.is-phone .style-settings-container .setting-item {
+  margin-top: unset;
 }
 
-.style-settings-container .setting-item-control select {
-  max-width: 330px;
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+  margin-left: unset;
 }
 
-.workspace-leaf-content .style-settings-container .setting-item:first-child {
-  margin-top: 20px;
-}
-
-div.style-settings-heading[data-level="0"] {
-  position: relative;
-  padding: 8px;
-  margin-bottom: 0;
-  background-color: var(--background-primary);
-  border-radius: var(--radius-l);
-  box-shadow: 0 3px 5px var(--background-modifier-box-shadow);
-}
-
-.is-mobile div.style-settings-heading[data-level="0"] {
-  padding: 4px;
-}
-
-div.style-settings-heading[data-level="0"] + .style-settings-container {
-  padding: 20px 30px;
-  margin-top: -10px;
-  margin-bottom: 0;
-  margin-left: 0;
-  border: 0px;
-  border-radius: var(--radius-l);
-}
-
-div.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
-  margin-left: 0;
-}
-
-
-div.style-settings-heading[data-level="0"].is-collapsed {
-  margin-bottom: 15px;
-  border-radius: var(--radius-l);
-  box-shadow: 0 3px 5px var( --background-modifier-box-shadow);
-}
-
-div.style-settings-heading[data-level="0"].is-collapsed {
-  background-color: var(--background-primary-alt);
-}
-
-
-div.style-settings-heading[data-level="1"] .setting-item-description {
-  padding-left: 2em;
-}
-
-div.style-settings-heading:not([data-level="0"]):not([data-level="1"]) .setting-item-description {
-  padding-left: 2em;
-}
-
-div.style-settings-heading {
-  padding: 8px 0;
-  margin-bottom: 5px;
-}
-
-div.style-settings-container[data-level="0"] {
-  margin-left: 4px;
-}
-
-div.style-settings-container[data-level] {
-  padding-bottom: 0;
-  margin-left: 0.5em;
-}
-
-.setting-item.setting-item-heading.style-settings-heading .setting-item-name {
-  width: fit-content;
-  padding: 0 8px;
-  border-radius: var(--radius-l);
-}
-
-.setting-item.setting-item-heading.style-settings-heading:hover .style-settings-collapse-indicator {
-  color: var(--text-accent-hover)!important;
-}
-
-.setting-item.setting-item-heading.style-settings-heading:hover .setting-item-name {
-  color: var(--text-accent-hover)!important;
-}
-
-div.workspace-leaf-content[data-type="style-settings"] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
-  flex-flow: wrap;
-}
-
-div.workspace-leaf-content[data-type="style-settings"] .setting-item-description {
-  font-size:12px;
-}
-
-div.workspace-leaf-content[data-type="style-settings"]  div.setting-item,
-div.workspace-leaf-content[data-type="style-settings"]  div.style-settings-heading {
+:is(.setting-item.setting-item-heading.style-settings-heading, .style-settings-container .style-settings-heading) {
   border-bottom: unset;
-  border-top: 1px inset #ffffff24;
-} */
-
-
-/*
-.theme-light div.setting-item {
-  border-bottom: 1px dotted #e1e1e199;
-  border-top: 1.5px solid  #cfcfcf42;
-
 }
 
-
-.theme-dark div.setting-item {
-  border-bottom: 1px solid var(--background-modifier-border);
-  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 45%),
-                        inset 0 -2px 0 rgb(0 0 0 / 10%)
+.setting-item-heading .setting-item-description {
+  padding-left: var(--size-4-4);
 }
-*/
 
+.setting-item.setting-item-heading.is-collapsed {
+  margin-bottom: unset;
+}
 
-div.workspace-leaf-content[data-type="style-settings"] div.style-settings-heading[data-id="topaz-community"] {
-  margin-top: 10px;
+.style-settings-container > .setting-item:last-of-type {
+  padding-bottom: unset;
+  margin-bottom: var(--size-4-2);
+}
+
+:is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
+  padding-left: var(--size-4-1);
+  margin-left: var(--size-4-3);
+  border-left: 1px solid var(--window-border);
+}
+
+.setting-item.style-settings-heading[data-id=appearance] .style-settings-collapse-indicator::after {
+  margin-left: var(--size-4-2);
+  content: "🎨";
+}
+
+.setting-item.style-settings-heading[data-id=editor] .style-settings-collapse-indicator::after {
+  margin-left: var(--size-4-2);
+  content: "📝";
+}
+
+.setting-item.style-settings-heading[data-id=user-interface] .style-settings-collapse-indicator::after {
+  margin-left: var(--size-4-2);
+  content: "👆";
+}
+
+.setting-item.style-settings-heading[data-id=plugins] .style-settings-collapse-indicator::after {
+  margin-left: var(--size-4-2);
+  content: "🧩";
+}
+
+.setting-item.style-settings-heading[data-id=feature-toggles] {
+  margin-bottom: var(--size-4-2);
+}
+.setting-item.style-settings-heading[data-id=feature-toggles] .style-settings-collapse-indicator::after {
+  margin-left: var(--size-4-2);
+  content: "🪠";
+}
+
+.setting-item.style-settings-heading[data-id=theme-info],
+.style-settings-heading[data-id=support] {
   margin-bottom: 0;
   pointer-events: none;
-  cursor: text;
-  border-top: 2px solid var(--background-modifier-border);
-  pointer-events: none;
 }
-
-.style-settings-heading[data-id="topaz-community"] .setting-item-control,
-.style-settings-heading[data-id="topaz-community"] .style-settings-collapse-indicator {
+.setting-item.style-settings-heading[data-id=theme-info] :is(.setting-item-control, .style-settings-collapse-indicator),
+.style-settings-heading[data-id=support] :is(.setting-item-control, .style-settings-collapse-indicator) {
   display: none;
 }
-
-.style-settings-heading[data-id="topaz-community"] .setting-item-name::before {
+.setting-item.style-settings-heading[data-id=theme-info] .setting-item-name::before,
+.style-settings-heading[data-id=support] .setting-item-name::before {
   display: inline-block;
   width: 20px;
   height: fit-content;
   padding-right: 8px;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", sans-serif;
   font-weight: initial;
   color: unset;
+}
+.setting-item.style-settings-heading[data-id=theme-info] .setting-item-description,
+.style-settings-heading[data-id=support] .setting-item-description {
+  padding-left: var(--size-4-1);
+}
+
+.setting-item.style-settings-heading[data-id=theme-info] {
+  padding-top: var(--size-4-4);
+  border-top: 2px solid var(--window-border);
+}
+.setting-item.style-settings-heading[data-id=theme-info] .setting-item-name::before {
+  content: "📖";
+}
+
+.style-settings-heading[data-id=support] .setting-item-name::before {
   content: "❤️";
 }
 
-.setting-item.style-settings-heading[data-id="topaz-github"] {
-  cursor: default;
+.setting-item.style-settings-info-text[data-id=theme-info-buttons],
+.setting-item.style-settings-info-text[data-id=support-buttons] {
+  padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-4);
 }
-
-.setting-item.style-settings-heading[data-id="topaz-github"]:hover div.setting-item-name {
-  color: var(--text-normal);
-}
-
-.setting-item.style-settings-heading[data-id="topaz-github"] .setting-item-name::before {
-  display: inline-block;
-  width: 20px;
-  height: fit-content;
-  padding-right: 8px;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-  font-weight: initial;
-  color: unset;
-  content: "⭐";
-}
-
-.setting-item.style-settings-heading[data-id="topaz-github"] .setting-item-description {
-  color: var(--interactive-accent);
-  cursor: text;
-  user-select: all;
-}
-
-.setting-item.style-settings-heading[data-id="topaz-example-github"] {
-  cursor: default;
-}
-
-.setting-item.style-settings-heading[data-id="topaz-example-github"]:hover div.setting-item-name {
-  color: var(--text-normal);
-}
-
-.setting-item.style-settings-heading[data-id="topaz-example-github"] .setting-item-name::before {
-  display: inline-block;
-  width: 20px;
-  height: fit-content;
-  padding-right: 8px;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-  font-weight: initial;
-  color: unset;
-  content: "⚠️";
-}
-
-.setting-item.style-settings-heading[data-id="topaz-example-github"] .setting-item-description {
-  color: var(--interactive-accent);
-  cursor: text;
-  user-select: all;
-}
-
-.style-settings-container .setting-item:is([data-id*="interactive-accent"], [data-id*="text-accent"]) .setting-item-control::before {
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 8px;
-  content: " ";
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-l);
-}
-
-
-.style-settings-container .setting-item:is([data-id^="interactive-accent"]) .setting-item-control::before {
-  background-color: var(--interactive-accent);
-}
-.style-settings-container .setting-item:is([data-id^="text-accent"]) .setting-item-control::before {
-  background-color: var(--text-accent);
-}
-/**style setting logic  ******/
-.setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child) {
-  /* display: none; */
-}
-
-body .setting-item[data-id="customised-colorful-tag"],
-body .setting-item[data-id="outlined-style"] {
+.setting-item.style-settings-info-text[data-id=theme-info-buttons] .setting-item-name,
+.setting-item.style-settings-info-text[data-id=theme-info-buttons] .setting-item-control,
+.setting-item.style-settings-info-text[data-id=support-buttons] .setting-item-name,
+.setting-item.style-settings-info-text[data-id=support-buttons] .setting-item-control {
   display: none;
 }
+.setting-item.style-settings-info-text[data-id=theme-info-buttons] .setting-item-description.style-settings-markdown,
+.setting-item.style-settings-info-text[data-id=support-buttons] .setting-item-description.style-settings-markdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-4-2);
+}
+.setting-item.style-settings-info-text[data-id=theme-info-buttons] .styleSettingsButtonEmoji,
+.setting-item.style-settings-info-text[data-id=support-buttons] .styleSettingsButtonEmoji {
+  margin-right: var(--size-4-2);
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", sans-serif;
+}
+
+.styleSettingsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: var(--font-ui-medium);
+  font-weight: var(--input-font-weight);
+  border: var(--accent-border-width) solid;
+  border-radius: var(--radius-s);
+}
+.styleSettingsButton a {
+  width: 100%;
+  height: 100%;
+  padding: var(--size-4-1) var(--size-4-3);
+  text-decoration-line: unset;
+  vertical-align: baseline;
+}
+.styleSettingsButton.prism-wiki {
+  background-color: var(--color-blue-base);
+  border-color: var(--color-blue-tint);
+}
+.styleSettingsButton.prism-wiki a {
+  color: var(--color-blue-text);
+}
+.styleSettingsButton.prism-wiki a:hover {
+  color: var(--color-blue-tint);
+}
+.styleSettingsButton.prism-roadmap {
+  background-color: var(--color-green-base);
+  border-color: var(--color-green-tint);
+}
+.styleSettingsButton.prism-roadmap a {
+  color: var(--color-green-text);
+}
+.styleSettingsButton.prism-roadmap a:hover {
+  color: var(--color-green-tint);
+}
+.styleSettingsButton.prism-releases {
+  background-color: var(--color-orange-base);
+  border-color: var(--color-orange-tint);
+}
+.styleSettingsButton.prism-releases a {
+  color: var(--color-orange-text);
+}
+.styleSettingsButton.prism-releases a:hover {
+  color: var(--color-orange-tint);
+}
+.styleSettingsButton.prism-star {
+  background-color: var(--color-grey-base);
+  border-color: var(--color-grey-tint);
+}
+.styleSettingsButton.prism-star a {
+  color: var(--color-grey-text);
+}
+.styleSettingsButton.prism-star a:hover {
+  color: var(--color-grey-tint);
+}
+.styleSettingsButton.prism-issue {
+  background-color: var(--color-red-base);
+  border-color: var(--color-red-tint);
+}
+.styleSettingsButton.prism-issue a {
+  color: var(--color-red-text);
+}
+.styleSettingsButton.prism-issue a:hover {
+  color: var(--color-red-tint);
+}
+.styleSettingsButton.prism-coffee {
+  background-color: var(--color-yellow-base);
+  border-color: var(--color-yellow-tint);
+}
+.styleSettingsButton.prism-coffee a {
+  color: var(--color-yellow-text);
+}
+.styleSettingsButton.prism-coffee a:hover {
+  color: var(--color-yellow-tint);
+}
+
+
 
 body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"]) {
   display: none;
