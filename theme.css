@@ -6324,10 +6324,14 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   display: block;
   width: -webkit-fill-available;
   width: fill-available;
-  height: 1.7em;
+  height: 1.5em;
   content: "Blue Dolphin Theme";
   text-align: center;
-  padding-top: 0.5em;
+  padding: 1.1em 0 0.8em 0;
+  font-family: var(--font-interface);
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--electric-blue-2);
   background: var(--background-secondary-alt);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
@@ -6335,14 +6339,16 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
 
 .modal.mod-settings .vertical-tab-header::before {
   position: sticky;
-  top: 0;
+  top: -1em;
   z-index: var(--layer-cover);
   display: block;
   width: -webkit-fill-available;
   width: fill-available;
-  height: 2.2em;
-  margin-bottom: -1px;
+  height: 2.5em;
+  /* margin-bottom: -1px; */
+  padding-bottom: 1em;
   content: "";
+  background: var(--background-secondary-alt);
 }
 
 .is-phone .modal.mod-settings .modal-title::after,
@@ -10413,7 +10419,7 @@ button.mod-cta:hover {
   background-color: var(--midnight-green);
   border: 1px solid var(--vivid-sky-blue-2);
   color: var(--electric-blue-2);
-  padding: 5px 6px 5px 13px;
+  padding: 4px 6px 4px 13px;
 }
 
 .horizontal-tab-nav-item.is-active:hover, .vertical-tab-nav-item.is-active:hover {
