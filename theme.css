@@ -1253,8 +1253,8 @@ body.theme-dark {
   --note-cloze: #ffffff;
 
   /* stickies */
-  --stickies-color-1: #84c584;
-  --stickies-color-2: #c7a3cf;
+  --stickies-color-1: var(--sky-blue);
+  --stickies-color-2: var(--doger-2);
   --tape-color: #99999967;
 
   /*Sliding panes*/
@@ -1315,12 +1315,12 @@ body.theme-dark {
   --background-leaf-resize-handle: var(--background-secondary-alt-bg-4-bt);
   --text-folder-file-icon: var(--bleu-de-france);
 
-  --color-highlight-1: var(--text-normal);
-  --color-highlight-2: var(--text-normal);
-  --color-highlight-3: var(--text-normal);
-  --bg-color-highlight-1: var(--zomp);
-  --bg-color-highlight-2: var(--old-rose);
-  --bg-color-highlight-3: var(--amethyst);
+  --color-highlight-1: var(--electric-blue-3);
+  --color-highlight-2: var(--aquamarine-1);
+  --color-highlight-3: var(--fairy-tale);
+  --bg-color-highlight-1: var(--background-blue);
+  --bg-color-highlight-2: var(--background-green);
+  --bg-color-highlight-3: var(--background-red);
 
   --background-popover: var(--prussian-blue);
 
@@ -1415,97 +1415,6 @@ body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-con
 }
 body:not(.is-mobile) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
-  color: var(--nord4);
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.unit {
-  color: var(--nord10) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-math.cm-qualifier,
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-qualifier,
-body.color-scheme-options-topaz-nord.theme-dark .token.class {
-  color: var(--nord7) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.number,
-body.color-scheme-options-topaz-nord.theme-dark .cm-number {
-  color: var(--nord15) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.operator,
-body.color-scheme-options-topaz-nord.theme-dark .token.entity,
-body.color-scheme-options-topaz-nord.theme-dark .token.url,
-body.color-scheme-options-topaz-nord.theme-dark .language-css .token.string,
-body.color-scheme-options-topaz-nord.theme-dark .style .token.string,
-body.color-scheme-options-topaz-nord.theme-dark .cm-string,
-body.color-scheme-options-topaz-nord.theme-dark .token.string,
-body.color-scheme-options-topaz-nord.theme-dark .token.char,
-body.color-scheme-options-topaz-nord.theme-dark .token.attr-value,
-body.color-scheme-options-topaz-nord.theme-dark .token.builtin,
-body.color-scheme-options-topaz-nord.theme-dark .token.inserted {
-  color: var(--nord14) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.selector,
-body.color-scheme-options-topaz-nord.theme-dark .token.tag,
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-3 {
-  color: var(--nord10) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.regex,
-body.color-scheme-options-topaz-nord.theme-dark .token.variable,
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-2 {
-  color: var(--nord12) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.macro.property,
-body.color-scheme-options-topaz-nord.theme-dark .markdown-source-view.cm-s-obsidian .cm-hmd-codeblock.cm-property,
-body.color-scheme-options-topaz-nord.theme-dark .token.property,
-body.color-scheme-options-topaz-nord.theme-dark .token.boolean,
-body.color-scheme-options-topaz-nord.theme-dark .token.constant,
-body.color-scheme-options-topaz-nord.theme-dark .token.symbol,
-body.color-scheme-options-topaz-nord.theme-dark .token.attr-name,
-body.color-scheme-options-topaz-nord.theme-dark .token.deleted {
-  color: var(--nord9) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.function,
-body.color-scheme-options-topaz-nord.theme-dark .markdown-source-view.cm-s-obsidian .cm-variable {
-  color: var(--nord13) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.comment,
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-comment {
-  color: var(--nord3-1) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.atrule,
-body.color-scheme-options-topaz-nord.theme-dark .token.keyword {
-  color: var(--nord13) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.tag,
-body.color-scheme-options-topaz-nord.theme-dark .token.constant,
-body.color-scheme-options-topaz-nord.theme-dark .token.symbol,
-body.color-scheme-options-topaz-nord.theme-dark .token.deleted,
-body.color-scheme-options-topaz-nord.theme-dark .cm-tag {
-  color: var(--nord11) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark .token.color,
-body.color-scheme-options-topaz-nord.theme-dark .token.hexcode.color {
-  color: var(--nord8) !important;
-}
-
-body.color-scheme-options-topaz-nord.theme-dark #calendar-container,
-body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord.theme-dark #calendar-container {
-  --color-tr: var(--nord0);
-  --color-calendar-weekends: var(--nord11);
 }
 
 button:not(.clickable-icon) {
@@ -1882,7 +1791,7 @@ body .kanban > div:not([data-callout="multi-column"]) li.task-list-item .task-li
 
 /* cssclass: colorful-highlight */
 body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight.cm-strong,
-.markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight.cm-strong {
+.markdown-source-view.is-live-preview .cm-em.cm-highlight.cm-strong {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
   -webkit-text-fill-color: unset;
@@ -1890,13 +1799,13 @@ body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight
   font-weight: var(--font-weight-highlight-3);
 }
 body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-strong"])~.cm-highlight.cm-strong,
-.markdown-source-view.is-live-preview.colorful-highlight .cm-highlight.cm-strong {
+.markdown-source-view.is-live-preview .cm-highlight.cm-strong {
   background-color: var(--bg-color-highlight-2) !important;
   color: var(--color-highlight-2) !important;
   font-weight: var(--font-weight-highlight-2);
 }
 body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight,
-.markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight {
+.markdown-source-view.is-live-preview .cm-em.cm-highlight {
   background-color: var(--bg-color-highlight-1) !important;
   color: var(--color-highlight-1) !important;
   font-style: normal;
@@ -2696,7 +2605,7 @@ body :is(.markdown-preview-view,.markdown-rendered) mark > del,
 body :is(.markdown-preview-view,.markdown-rendered) mark,
 :is(.markdown-preview-view,
 .markdown-rendered).cloze mark {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 body .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
@@ -5432,10 +5341,10 @@ div[class*="-backlinks"].markdown-preview-view .markdown-preview-sizer.markdown-
 
 body .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
 body .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
-.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
-.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
 body:is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark,
-:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font):not(strong)>em>mark {
+:is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
   background-color: var(--bg-color-highlight-1);
   color: var(--color-highlight-1);
   font-style: normal;
@@ -5447,10 +5356,10 @@ body :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>ma
 
 body.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
 body.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
-.markdown-source-view.colorful-highlight .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
-.markdown-source-view.colorful-highlight .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+.markdown-source-view .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
 body:is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark,
-:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font):not(em)>strong>mark {
+:is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark {
   background-color: var(--bg-color-highlight-2) !important;
   color: var(--color-highlight-2) !important;
   font-weight: var(--font-weight-highlight-2);
@@ -5458,10 +5367,10 @@ body:is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mar
 
 body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
 body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
-.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
-.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
 body:is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark,
-:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font)>strong>em>mark {
+:is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
   font-style: normal;
@@ -8325,7 +8234,7 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 0;
-  color: black;
+  color: var(--electric-blue-3);
 }
 
 .stickies::after {
@@ -8335,7 +8244,7 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   height: 40px;
   width: 15px;
   border-radius: var(--radius-l);
-  border: 3px solid #979797;
+  border: 3px solid var(--electric-blue);
   display: inline-block;
   position: absolute;
   -webkit-transform: rotate(0deg);
@@ -8355,7 +8264,7 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   left: -3.5%;
   top: -2px;
   border-radius: var(--radius-l);
-  border: 3px solid #979797;
+  border: 3px solid var(--electric-blue);
   border-bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -8370,7 +8279,7 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
 .stickies2 {
   position: relative;
   float: left;
-  box-shadow: 0 10px 10px 2px #9191912d;
+  box-shadow: 0 10px 10px 2px #00283a65;
   width: max(180px, 30%);
   max-width: 50%;
   background-color: var(--stickies-color-2);
@@ -8383,7 +8292,7 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   z-index: 1;
   padding: 20px;
   margin: 10px;
-  color: black;
+  color: var(--electric-blue);
 }
 
 .stickies2::after {
@@ -8400,14 +8309,14 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   height: 15px;
   width: 15px;
   border: 1px;
-  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
+  box-shadow: inset -10px -10px 10px var(--aquamarine-1), inset 3px 3px 5px;
 }
 
 .to-recall {
   position: relative;
   float: left;
   max-width: 30%;
-  background-color: var(--text-normal);
+  background-color: var(--pacific-blue);
   border-radius: var(--radius-xs);
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -8419,8 +8328,8 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   margin-right: 8px;
   margin-top: 20px;
   font-weight: bold;
-  font-family: Cooper;
-  color: var(--text-normal);
+  font-family: nunito;
+  color: var(--pacific-blue);
 }
 
 .to-recall:hover {
@@ -8430,12 +8339,13 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
 .to-recall:active {
   background-color: transparent;
   transition: all 300ms ease;
+  color: var(--electric-blue-2);
 }
 
 .to-recall::after {
-  content: "Click";
+  content: "🐬";
   position: absolute;
-  font-size: 12px;
+  font-size: 14px;
   top: 1px;
   right: 5px;
   font-weight: 600;
@@ -8456,8 +8366,8 @@ body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin_
   border-radius: var(--radius-l);
   font-size: 14px;
   font-weight: bold;
-  font-family: OCR A;
-  color: #858585;
+  font-family: quicksand; 
+  color: var(--sky-blue);
   white-space: pre;
 }
 
@@ -8659,6 +8569,7 @@ section.footnotes ol>li:not(.task-list-item) {
   right: 0px;
   padding: 0px;
   overflow: hidden;
+  box-shadow: none;
 }
 
 /* ================================== */
@@ -10508,7 +10419,7 @@ body.is-mobile .markdown-reading-view img:not([class*="emoji"]):active {
   background-color: var(--midnight-green);
   border: 1px solid var(--vivid-sky-blue-2);
   color: var(--electric-blue-2);
-  padding: 4px 6px 4px 13px;
+  padding: 3px 6px 3px 11px;
 }
 
 .horizontal-tab-nav-item.is-active:hover, .vertical-tab-nav-item.is-active:hover {
@@ -10522,7 +10433,8 @@ body.is-mobile .markdown-reading-view img:not([class*="emoji"]):active {
 }
 
 .vertical-tab-nav-item {
-  padding: 5px 6px 5px 14px;
+  font-size: 0.9em;
+  padding: 4px 6px 4px 12px;
   margin-bottom: 0;
 }
 
