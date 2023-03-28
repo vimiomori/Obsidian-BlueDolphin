@@ -665,7 +665,9 @@ settings:
   --dark-aquamarine: rgb(0, 85, 77);
   /* yellows */
   --jasmine: #f7e37e;
+  --jasmine-1: #ffe97b;
   --vanilla: #fff1b5ff;
+  --vanilla-2: rgb(255, 252, 163);
   --lemon-chiffon: #fff5cbff;
   --peach-yellow: #ffdd94ff;
   --peach: #fee7b7ff;
@@ -702,6 +704,8 @@ settings:
   --amethyst: #8b62b5ff;
   --transparent-blue: #019DA31F;
   --transparent-blue: #00283cce;
+  --transparent-1: #003b5833;
+  --transparent-2: #89cef015;
 
   --bookinfo-color: rgba(42, 181, 42, 0.749);
   --button-border: var(--sky-blue);
@@ -955,10 +959,11 @@ body.theme-dark {
   --color-base-100: #87ecff;
 
   --color-cyan-rgb: 0, 255, 255;   /* electric blue 3 */
+  --color-gray-rgb: 53, 138, 164;
   --color-cyan: var(--electric-blue-3);
   --color-green-rgb: 0, 255, 174; /* aquamarine */
   --color-green: var(--aquamarine);
-  --color-yellow-rgb: 247, 227, 126; /* vanilla */
+  --color-yellow-rgb: 255, 252, 163; /* vanilla */
   --color-yellow: var(--vanilla);
   --color-orange-rgb: 255, 204, 171; /* apricot */
   --color-orange: var(--apricot);
@@ -984,6 +989,8 @@ body.theme-dark {
   --callout-tip: var(--color-cyan-rgb);
   --callout-todo: var(--color-blue-rgb);
   --callout-warning: var(--color-orange-rgb);
+  --callout-quote: var(--color-gray-rgb);
+  --callout-title-color: var(--celeste);
 
   --background-primary: var(--background-primary-bg-4-bt);
   --background-primary-alt: var(--background-primary-alt-bg-4-bt);
@@ -1499,6 +1506,23 @@ body.color-scheme-options-topaz-nord.theme-dark #calendar-container,
 body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord.theme-dark #calendar-container {
   --color-tr: var(--nord0);
   --color-calendar-weekends: var(--nord11);
+}
+
+button:not(.clickable-icon) {
+  box-shadow: none;
+  border: 1px solid var(--sky-blue);
+  background-color: var(--prussian-blue-3);
+}
+
+button.mod-cta {
+  background-color: var(--midnight-green);
+  border: 1px solid var(--vivid-sky-blue-2);
+  color: var(--electric-blue-2);
+}
+
+button.mod-cta:hover {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-3);
 }
 
 /*===============================*/
@@ -3853,7 +3877,7 @@ body.three-dolphins-hr .markdown-rendered hr {
   margin-inline-end: 2.5%;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) blockquote p {
+:is(.markdown-preview-view,.markdown-rendered) blockquote > p {
   margin-left: 1px;
   margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
@@ -4069,7 +4093,7 @@ body {
   --code-value: var(--green);
   --code-tag: var( --purple);
   --code-operator: var(--code-property);
-  --code-punctuation: var(--lemon-chiffon);
+  --code-punctuation: var(--jasmine-1);
   --code-parameter: #c2c3ff;
   --code-hr: var(--code-punctuation);
   --code-string-2: var(--aquamarine-1);
@@ -5678,10 +5702,11 @@ code[class*="language-"] {
 }
 
 body .markdown-embed:not(.canvas-node-content),
-body .popover.hover-popover .markdown-embed .markdown-embed
-{
+body .popover.hover-popover .markdown-embed .markdown-embed {
   padding:  0 0 0 1em;
+  margin-left: 0.5em;
 }
+
 .markdown-embed:not(.canvas-node-content),
 .popover.hover-popover .markdown-embed .markdown-embed {
   background-color: var(--background-popover);
@@ -5691,6 +5716,7 @@ body .popover.hover-popover .markdown-embed .markdown-embed
   padding: 0  0.5em  0 1em;
   margin-top: 0;
 }
+
 .popover.hover-popover,
 .popover.hover-popover .markdown-embed {
   background-color: var(--background-popover);
@@ -7981,6 +8007,7 @@ button.copy-code-button:hover {
 }
 
 button.kanban-plugin__new-item-button {
+  background-color: var(--transparent-2);
   color: var(--text-muted) !important;
   font-weight: bold;
   font-size: 0.8em;
@@ -7989,6 +8016,8 @@ button.kanban-plugin__new-item-button {
 
 button.kanban-plugin__new-item-button:hover {
   color: var(--accent-strong) !important;
+  box-shadow: none !important;
+  background-color: var(--transparent-1) !important;
 }
 
 .kanban-plugin__lane {
@@ -10474,22 +10503,6 @@ body.is-mobile .markdown-reading-view img:not([class*="emoji"]):active {
 
 /*按钮颜色*/
 /*图标按钮*/
-button:not(.clickable-icon) {
-  box-shadow: none;
-  border: 1px solid var(--sky-blue);
-  background-color: var(--prussian-blue-3);
-}
-
-button.mod-cta {
-  background-color: var(--midnight-green);
-  border: 1px solid var(--vivid-sky-blue-2);
-  color: var(--electric-blue-2);
-}
-
-button.mod-cta:hover {
-  background-color: var(--cerulean);
-  color: var(--electric-blue-3);
-}
 
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
   background-color: var(--midnight-green);
@@ -11441,14 +11454,14 @@ body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-render
   border-left-width: 0px;
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote p {
+body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote > p {
   position: relative;
   margin-left: 0.7em;
   margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote p:first-of-type::before {
+body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote > p:first-of-type::before {
   content: '\ee81';
   font-size: 2em;
   font-family: boxicons;
@@ -11508,14 +11521,14 @@ body.blockquote-style-dolphin :is(.markdown-preview-view,.markdown-rendered) blo
   border-left-width: 0px;
 }
 
-body.blockquote-style-dolphin :is(.markdown-preview-view,.markdown-rendered) blockquote p {
+body.blockquote-style-dolphin :is(.markdown-preview-view,.markdown-rendered) blockquote > p {
   position: relative;
   margin-left: 0.7em;
   margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
 }
 
-body.blockquote-style-dolphin :is(.markdown-preview-view,.markdown-rendered) blockquote p:first-of-type::before {
+body.blockquote-style-dolphin :is(.markdown-preview-view,.markdown-rendered) blockquote > p:first-of-type::before {
   content: '\e168';
   font-size: 1.7em;
   font-family: 'fa-light';
@@ -11999,7 +12012,7 @@ body.shade-callout-style .callout {
   background-color: rgba(var(--callout-color), 0.2);
 }
 
-body.shade-callout-style div:not([data-callout="multi-column"], [data-callout*=blank]).callout {
+body.shade-callout-style div:not([data-callout="multi-column"], [data-callout*=blank], [data-callout*=noborder]).callout {
   box-shadow: inset 0 0 0 2px rgba(var(--callout-color), 0.25), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -12048,8 +12061,8 @@ body.admonition-bg-color-same .callout-title {
 }
 .callout-title {
   padding: 12px 0 12px 12px;
-  color: unset;
 }
+
 .admonition-title .admonition-title-icon
 {
   color: rgb(var(--callout-color));
@@ -12454,7 +12467,7 @@ div[data-callout*=blank].callout > .callout-title {
 
 
 .callout.callout:is([data-callout-metadata^="noicon"],
-[data-callout*=noicon]) .callout-title {
+[data-callout*=noicon]):is([data-callout*=blank]) .callout-title {
   padding-left: 0px;
 }
 
@@ -12510,6 +12523,8 @@ div[data-callout*=blank].callout > .callout-title {
 .callout.callout[data-callout-metadata*="banner"] .callout-title h3::before {
   display: none;
 }
+
+
 /* ===隐藏标题============ */
 .callout.callout:is([data-callout-metadata*="notitle"],
 [data-callout*=notitle]) .callout-title {
@@ -12978,7 +12993,6 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
 
 /******callout bookinfo*****/
 .callout.callout[data-callout*="bookinfo"] {
-  overflow: unset;
   border: 0;
   width: auto;
   padding: 0;
@@ -13017,7 +13031,7 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
 }
 /******callout timeline*****/
 .callout.callout[data-callout="timeline"] {
-  --callout-color: 31, 172, 139;
+  --callout-color: var(--color-green-rgb);
   --callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
   border-left: none;
   background-color: transparent;
@@ -13029,10 +13043,10 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
   display: grid;
   -ms-grid-columns: auto auto 1fr;
   grid-template-columns: 0.3fr auto 1fr;
-  -webkit-column-gap: 1.5rem;
-  column-gap: 1.5rem;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
   row-gap: 0.25rem;
-  margin: 2.3rem 1rem 0 0;
+  margin: 1.3rem 1rem 0 1rem;
   padding: 0;
 }
 .callout.callout[data-callout="timeline"] .callout-content hr::before {
@@ -13040,14 +13054,14 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
 }
 .callout.callout[data-callout="timeline"] .callout-content hr {
   height: 100%;
-  width: 0.5rem;
+  width: 0.2rem;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / span 1;
   -ms-grid-row: 1;
   grid-row-start: 1;
-  background-color: var(--text-normal);
-  opacity: 0.1;
+  background-color: var(--sky-blue);
+  opacity: 0.2;
   grid-row-end: 9;
   margin:auto;
   border: none;
@@ -13055,7 +13069,7 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
   border-radius: 10px;
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote {
-  color: var(--text-on-accent);
+  color: var(--electric-blue-2);
   display: block;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -13069,9 +13083,9 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
   margin: 0;
   border: none;
   padding: 0;
-  background-color: var(--interactive-accent);
+  background-color: var(--indigo-blue);
 }
-.callout.callout[data-callout="timeline"] .callout-content blockquote p::before {
+.callout.callout[data-callout="timeline"] .callout-content blockquote > p::before {
   display: none;
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote,
@@ -13084,10 +13098,10 @@ body .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.
   color: var(--text-on-accent);
   left:0;
 }
-.callout.callout[data-callout="timeline"] .callout-content blockquote p {
+.callout.callout[data-callout="timeline"] .callout-content blockquote > p {
   display: block;
-  color: var(--text-on-accent);
-  background-color: var(--interactive-accent);
+  color: var(--electric-blue-2);
+  background-color: var(--indigo-blue);
   font-style: normal;
   border-radius: 5px;
 }
@@ -15468,8 +15482,8 @@ Version 0.8.1 (updated 2023-01-10) */
 			.embedded-backlinks { clear: both; }
 
 		/* fix for blockquote underlap the float layout */
-			.markdown-preview-view :is(blockquote) { overflow-x: auto; } /* fix for blockquote underlap */
-			.markdown-preview-view :is(p) { overflow: unset; } /* fix for para not wrapping around float. applicable for Willemstad */
+			.markdown-preview-view .callout :is(blockquote) { overflow-x: auto; } /* fix for blockquote underlap */
+			.markdown-preview-view .callout :is(p) { overflow: unset; } /* fix for para not wrapping around float. applicable for Willemstad */
 
 		/* Special Adjustment for SNW plugin */
 		div:is([data-callout-metadata*="caption"],[data-callout-metadata*="left"],[data-callout-metadata*="right"]).callout > .callout-content > p .snw-embed-preview { display: var(--float-callout-snw-display); width: min-content; height: min-content; }
