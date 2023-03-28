@@ -708,6 +708,7 @@ settings:
 }
 
 body {
+  --list-indent: 1.5em;
   --font-size-vault-name: 0.95em;
   --font-size-file-header-title: 0.9em;
   --font-size-embed-title-size: 1.3em;
@@ -2867,10 +2868,16 @@ input.search-input {
   margin: -2px 0px -3px 0px;
 }
 
+/* input.document-search-input {
+  border
+} */
+
+
 input.document-search-input.mod-no-match,
 input.document-replace-input.mod-no-match {
-  background-color: var(--background-pink);
-  color: var(--fairy-tale);
+  background-color: var(--background-red);
+  border: 1px solid var(--atomic-tangerine);
+  color: var(--melon);
 }
 
 .nav-action-button {
@@ -14575,6 +14582,7 @@ input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 input[type='number']:focus-visible {
   box-shadow: none;
+  border: 1px solid var(--sky-blue);
 }
 
 .prompt {
