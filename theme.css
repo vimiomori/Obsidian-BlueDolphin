@@ -12452,12 +12452,12 @@ div[data-callout*=blank].callout > .callout-title {
   display: none;
 }
 
-/* 
+
 .callout.callout:is([data-callout-metadata^="noicon"],
 [data-callout*=noicon]) .callout-title {
   padding-left: 0px;
 }
-*/
+
 
 /* ===隐藏边框============ */
 .callout.callout:is([data-callout-metadata*="noborder"],
