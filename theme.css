@@ -15110,21 +15110,29 @@ body.dolphin-metadata .frontmatter-container * {
   z-index: 1000;
 }
 
+body.dolphin-metadata {
+  --right-normal: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
+  --right-add: 4em;
+  --top-add: 1em;
+  --dolphin-position-right: calc(var(--right-normal) + var(--right-add));
+  --dolphin-position-right-wide: calc(var(--file-margins) + var(--right-add));
+  --dolphin-position-top: calc(var(--file-margins) - var(--top-add));
+}
 
 body.dolphin-metadata :not(.wide-page) .frontmatter-container {
   float: right;
   position: absolute;
-  right: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
+  right: var(--dolphin-position-right);
   width: 50px;
   height: 50px;
-  top: var(--file-margins);
+  top: var(--dolphin-position-top);
   overflow: hidden;
   padding: 6px 40px 7px 9px;
   border: none !important;
 }
 
 body.dolphin-metadata .wide-page .frontmatter-container {
-  right: var(--file-margins);
+  right: var(--dolphin-position-right-wide);
 }
 
 body.dolphin-metadata .frontmatter-container::before {
@@ -15162,7 +15170,7 @@ body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data {
 
 body.dolphin-metadata .frontmatter-container:hover::before {
   position: absolute;
-  right: 0;
+  right: 0px;
   top: -5px;
   padding: 9px 9px 2px 16px;
 }
@@ -15172,8 +15180,8 @@ body.dolphin-metadata .frontmatter-container:hover {
   position: absolute;
   margin-left: 1.3em;
   margin-bottom: 0.5em;
-  right: var(--file-margins);
-  top: var(--file-margins);
+  right: var(--dolphin-position-right);
+  top: var(--dolphin-position-top);
   background-color: var(--prussian-blue-1);
   width: 300px;
   height: unset;
@@ -15185,6 +15193,10 @@ body.dolphin-metadata .frontmatter-container:hover {
   transition-property: width;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
+}
+
+body.dolphin-metadata .wide-page .frontmatter-container:hover {
+  right: var(--dolphin-position-right-wide);
 }
 
 pre.frontmatter.language-yaml::before {
