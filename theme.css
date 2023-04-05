@@ -639,9 +639,11 @@ settings:
   --robin-egg: #2CC6DB;
   --robin-egg-translucent: #2cc7dba6;
   --vivid-sky-blue: #47d2eaff;
+  --vivid-sky-blue-0: rgb(100, 227, 255);
   --vivid-sky-blue-1: #47d2eaff;
   --vivid-sky-blue-2: #00D4FF;
-  --non-photo-blue: #87ecff;
+  --non-photo-blue: #81E8FD;
+  --non-photo-blue-1: #6ee7ff;
   --celeste: #aef8ffff;
   --celeste-translucent: rgba(174, 248, 255, 0.54);
   --electric-blue: #63ecec;
@@ -672,6 +674,7 @@ settings:
   --peach-yellow: #ffdd94ff;
   --peach: #fee7b7ff;
   --papaya-whip: #fcf1d9ff;
+  --papaya-whip-2: rgb(255, 253, 239);
   --dark-vanilla: #8d8a0053;
   /* oranges and reds */
   --sandy-brown: #ffaf64ff;
@@ -712,6 +715,7 @@ settings:
 }
 
 body {
+  --file-margins: 4em;
   --list-indent: 1.5em;
   --font-size-vault-name: 0.95em;
   --font-size-file-header-title: 0.9em;
@@ -770,10 +774,8 @@ body {
 
   --checkbox-size: 0.9rem;
 
-  --text-normal: var(--vivid-sky-blue);
+  --text-normal: var(--vivid-sky-blue-0);
 
-  --loading-diy-text: "快乐摸鱼又一天，人生还剩多少天？";
-  --loading-diy-text-color: var(--text-normal);
   --loading-page-custom-gif-caption: " ";
   --loading-page-custom-gif-caption-alt: " ";
   --loading-page-custom-gif-url: url(https://);
@@ -925,6 +927,7 @@ body {
   --tab-width: 150px;
   --tab-max-width: 150px;
   --background-modifier-border-checkbox: var(--electric-blue-2);
+  --background-modifier-border-focus: var(--sky-blue);
 
   --callout-min-width: 200px;
 	--callout-nowrap-min-width: 250px;
@@ -1350,7 +1353,7 @@ body.theme-dark {
 
   --background-black-or-white-1: var(--nord2);
 
-  --text-normal: var(--non-photo-blue);
+  /* --text-normal: var(--non-photo-blue); */
   --text-muted: var(--robin-egg);
 
   --interactive-accent-rgb: 129, 161, 193;
@@ -5920,7 +5923,8 @@ body .markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
   cursor: help;
 }
 
-body .nav-folder * {
+body .nav-folder *,
+body .nav-file * {
   transition: all .15s;
 }
 
@@ -6024,13 +6028,16 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
 }
 
 /*rename*/
+.nav-file-title-content.is-being-renamed {
+  margin-left: 1em;
+}
+
 .nav-file-title-content.is-being-renamed,
 .nav-folder-title-content.is-being-renamed {
   cursor: text;
   border: 1px solid var(--electric-blue-2);
   background-color: var(--midnight-green-2);
   color: var(--celeste);
-  margin-left: 2.3rem;
 }
 
 .nav-file-title-content.is-being-renamed::selection,
@@ -8976,7 +8983,7 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 }
 
 .setting-item.setting-item-heading .setting-item-name {
-  color: var(--h1-color);
+  color: var(--pacific-blue-1);
   font-weight: 600;
 }
 
@@ -9569,7 +9576,7 @@ div[data-type="memos_view"] .search-bar-container > .search-bar-inputer {
 .mod-left-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input,
 .mod-right-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input {
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--electric-blue-2);
   border-radius: 0;
 }
 div.mod-right-split div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper,
@@ -9724,6 +9731,10 @@ body.is-popout-window div[data-type='memos_view'] .memos-header-container > .tit
   }
 }
 
+
+body.theme-dark div[data-type='memos_view'] .user-banner-container > .userinfo-header-container > .username-text {
+  color: var(--electric-blue-2);
+}
 
 /**memos 输入框移到下方***/
 body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) #page-wrapper .memo-editor-wrapper {
@@ -10765,9 +10776,6 @@ body.is-mobile .safe-area-top-cover {
 }
 */
 
-body.is-mobile.theme-light .menu {
-  background-color: var(--background-primary-alt);
-}
 body.is-mobile .menu {
   color:var(--text-muted);
 }
@@ -11251,11 +11259,6 @@ body .workspace-leaf-content .view-header .view-actions svg.svg-icon.lucide-book
 .site-body-left-column,
 .site-body-left-column:before {
   background-color: var(--background-secondary);
-}
-
-.theme-light .site-body-left-column,
-.theme-light .site-body-left-column:before {
-  background-color: var(--background-secondary-alt-bg-4-bt-publish);
 }
 
 .nav-view-outer .tree-item .tree-item .tree-item-children {
@@ -14508,7 +14511,6 @@ input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 input[type='number']:focus-visible {
   box-shadow: none;
-  border: 1px solid var(--sky-blue);
 }
 
 .prompt {
@@ -14702,7 +14704,7 @@ body .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.m
 body .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner,
 body .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button,
 body .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
-  color: var(--electric-blue);
+  color: var(--electric-blue-2);
 }
 
 body .workspace .mod-root .workspace-tab-header-inner::after {
@@ -14753,10 +14755,6 @@ body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-a
 .is-mobile .app-container,
 .is-mobile .horizontal-main-container {
   background-color: var(--background-secondary);
-}
-
-.is-mobile.theme-light .mobile-toolbar {
-  background-color: var(--background-primary-alt);
 }
 
 .is-frameless:is(.is-mobile,.is-tablet).mod-windows {
@@ -15108,17 +15106,25 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
  https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/Mini%20Snippet%20Store/Hover%20Frontmatter.css
 */
 
-body.dolphin-metadata .frontmatter-container {
+body.dolphin-metadata .frontmatter-container * {
+  z-index: 1000;
+}
+
+
+body.dolphin-metadata :not(.wide-page) .frontmatter-container {
   float: right;
-  position: relative;
-  width: 5em;
-  height: 5em;
-  right: -30px;
-  top: -50px;
+  position: absolute;
+  right: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
+  width: 50px;
+  height: 50px;
+  top: var(--file-margins);
   overflow: hidden;
-  padding: 0.6em;
-  padding-top: 1.5em;
+  padding: 6px 40px 7px 9px;
   border: none !important;
+}
+
+body.dolphin-metadata .wide-page .frontmatter-container {
+  right: var(--file-margins);
 }
 
 body.dolphin-metadata .frontmatter-container::before {
@@ -15129,44 +15135,56 @@ body.dolphin-metadata .frontmatter-container::before {
   font-size: 30px;
 }
 
-body.dolphin-metadata .frontmatter-container:hover::before {
-  font-size: 30px !important;
-  float: right;
-  margin-top: -15px;
-  /* transition: all 200ms ease-in-out; */
+body.dolphin-metadata .frontmatter-container:hover .frontmatter-section {
+  align-items: stretch;
 }
 
-body.dolphin-metadata .frontmatter-container:hover>.frontmatter-container-header {
-  font-size: 15px;
+body.dolphin-metadata .frontmatter-container:hover .frontmatter-container-header {
+  font-size: 1em;
   font-family: var(--font-space-header);
   color: var(--h2-color);
   margin-top: -4px;
   border-bottom: none;
   background: none !important;
+  transition: all 100ms ease-out;
 }
+
 body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-label {
   color: var(--bleu-de-france-1);
   font-size: 0.8em;
-  flex-basis: 4em;
+  flex-basis: 7em;
 }
-body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data{
+
+body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data {
   font-size: 0.8em;
   color: var(--electric-blue);
 }
 
+body.dolphin-metadata .frontmatter-container:hover::before {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  padding: 9px 9px 2px 16px;
+}
+
+
 body.dolphin-metadata .frontmatter-container:hover {
-  margin-left: 20px;
-  margin-bottom: 10px;
-  font-size: 16px;
+  position: absolute;
+  margin-left: 1.3em;
+  margin-bottom: 0.5em;
+  right: var(--file-margins);
+  top: var(--file-margins);
+  background-color: var(--prussian-blue-1);
   width: 300px;
   height: unset;
-  background-color: var(--prussian-blue-1);
   padding: 1.2em;
   padding-top: 1.5em;
-  z-index: 3;
+  z-index: 1;
   border: 2px var(--theme-color) inset !important;
   border-radius: 1.5em;
-  transition: all 100ms ease-in-out;
+  transition-property: width;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
 }
 
 pre.frontmatter.language-yaml::before {
@@ -15175,11 +15193,6 @@ pre.frontmatter.language-yaml::before {
   top: 1px;
   right: 36px;
   color: var(--color-specification);
-}
-
-.frontmatter-container {
-  margin: 0 0 1.2em 0;
-  background-color: transparent;
 }
 
 .frontmatter-container .frontmatter-alias {
