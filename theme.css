@@ -1499,7 +1499,7 @@ body.p-kanban-dividers .kanban > div:not([data-callout="multi-column"]) > div.el
 }
 
 .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul>li {
-  flex: 1 1 20%;
+  flex: 1 1 10%;
   padding: 0.1em 1em 0.1em 0.8em;
   margin: 0 0.3em 0.3em 0 !important;
   list-style: none;
@@ -6277,12 +6277,13 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
 /*setting panel*/
 
 .modal  .modal-title {
-  margin-left: 1em;
+  margin-left: 0.2em;
 }
-.modal-content .cmdr-setting-content
-{
+
+.modal-content .cmdr-setting-content {
   height: auto;
 }
+
 [class='modal']{
   max-width: unset ;
   width: unset;
@@ -15113,7 +15114,7 @@ body.dolphin-metadata .frontmatter-container * {
 body.dolphin-metadata {
   --right-normal: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
   --right-add: 4em;
-  --top-add: 1em;
+  --top-add: 0.8em;
   --dolphin-position-right: calc(var(--right-normal) + var(--right-add));
   --dolphin-position-right-wide: calc(var(--file-margins) + var(--right-add));
   --dolphin-position-top: calc(var(--file-margins) - var(--top-add));
@@ -15141,6 +15142,7 @@ body.dolphin-metadata .frontmatter-container::before {
   content: '\e168';
   color: var(--theme-color) ;
   font-size: 30px;
+  text-shadow: 2px 2px 1px var(--cerulean);
 }
 
 body.dolphin-metadata .frontmatter-container:hover .frontmatter-section {
@@ -15154,7 +15156,6 @@ body.dolphin-metadata .frontmatter-container:hover .frontmatter-container-header
   margin-top: -4px;
   border-bottom: none;
   background: none !important;
-  transition: all 100ms ease-out;
 }
 
 body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-label {
@@ -15163,9 +15164,20 @@ body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-label {
   flex-basis: 7em;
 }
 
+body.dolphin-metadata .frontmatter-container .frontmatter-section-data {
+  max-height: 0px;
+  visibility: hidden;
+}
+
 body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data {
+  max-height: 1000px;
+  visibility: visible;
   font-size: 0.8em;
   color: var(--electric-blue);
+  transition-property: max-height, visibility;
+  transition-duration: 300ms;
+  transition-delay: 100ms, 200ms;
+  transition-timing-function: ease-in, ease-in;
 }
 
 body.dolphin-metadata .frontmatter-container:hover::before {
@@ -15191,7 +15203,7 @@ body.dolphin-metadata .frontmatter-container:hover {
   border: 2px var(--theme-color) inset !important;
   border-radius: 1.5em;
   transition-property: width;
-  transition-duration: 200ms;
+  transition-duration: 100ms;
   transition-timing-function: ease-out;
 }
 
