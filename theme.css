@@ -1252,6 +1252,7 @@ body.theme-dark {
   --text-purple: var(--mauve);
   --text-pink: var(--fairy-tale);
   --text-red: rgb(255, 155, 155);
+  --text-cyan: var(--electric-blue-3);
 
   --note-important: var(--electric-blue-3);
   --note-cloze: #ffffff;
@@ -4431,32 +4432,59 @@ li>p:not(.task-list-item) {
   padding-bottom: calc(var(--list-spacing-bt) * 0.075em);
 }
 
-ul,
-ol ul,
-ol ol ul,
-ol ol ol ul {
-  list-style: disc;
+body ul,
+body ol ul,
+body ol ol ul,
+body ol ol ol ul {
+  list-style-type: disc;
 }
-ul ul,
-ol ul ul,
-ul ol ul,
-ol ol ul ul {
-  list-style: circle;
+body ul ul,
+body ol ul ul,
+body ul ol ul,
+body ol ol ul ul {
+  list-style-type: circle;
 }
-ul ul ul,
-ol ul ul ul,
-ul ol ul ul,
-ul ul ol ul {
+body ul ul ul,
+body ol ul ul ul,
+body ul ol ul ul,
+body ul ul ol ul {
   list-style: square;
 }
-ul ul ul ul,
-ol ul ul ul ul,
-ul ol ul ul ul,
-ul ul ol ul ul,
-ul ul ul ol ul {
+body ul ul ul ul,
+body ol ul ul ul ul,
+body ul ol ul ul ul,
+body ul ul ol ul ul,
+body ul ul ul ol ul {
   list-style: circle;
 }
 
+@counter-style decimal-lv2 {
+  system: extends decimal;
+  suffix: ") ";
+}
+@counter-style lower-latin-lv2 {
+  system: extends lower-latin;
+  suffix: ") ";
+}
+@counter-style lower-roman-lv2 {
+  system: extends lower-roman;
+  suffix: ") ";
+}
+@counter-style decimal-lv3 {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-latin-lv3 {
+  system: extends lower-latin;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-roman-lv3 {
+  system: extends lower-roman;
+  prefix: "(";
+  suffix: ") ";
+}
 
 body ol {
   list-style: var(--list-ol-marker-1);
@@ -4465,23 +4493,279 @@ body ul ol,
 body ol ol {
   list-style: var(--list-ol-marker-2);
 }
-body ul ol ol,
 body ul ul ol,
+body ul ol ol,
 body ol ol ol,
 body ol ul ol {
   list-style: var(--list-ol-marker-3);
 }
-body ul ul ul ol,
-body ul ul ol ol,
-body ul ol ul ol,
-body ul ol ol ol,
+
 body ol ol ol ol,
 body ol ol ul ol,
-body ol ul ol ol {
-  list-style: var(--list-ol-marker-4);
+body ol ul ol ol,
+body ul ol ol ol,
+body ol ul ul ol,
+body ul ol ul ol,
+body ul ul ol ol,
+body ul ul ul ol {
+  /* list-style: var(--list-ol-marker-4); */
+  list-style-type: decimal-lv2;
 }
 
+body ol ol ol ol ol,
+body ol ol ol ul ol,
+body ol ol ul ol ol,
+body ol ul ol ol ol,
+body ol ol ul ul ol,
+body ol ul ol ul ol,
+body ol ul ul ol ol,
+body ol ul ul ul ol,
+body ul ol ol ol ol,
+body ul ol ol ul ol,
+body ul ol ul ol ol,
+body ul ul ol ol ol,
+body ul ol ul ul ol,
+body ul ul ol ul ol,
+body ul ul ul ol ol,
+body ul ul ul ul ol
+{
+  /* list-style: var(--list-ol-marker-1); */
+  list-style-type: lower-latin-lv2;
+}
 
+body ol ol ol ol ol ol,
+body ol ol ol ol ul ol,
+body ol ol ol ul ol ol,
+body ol ol ul ol ol ol,
+body ol ol ol ul ul ol,
+body ol ol ul ol ul ol,
+body ol ol ul ul ol ol,
+body ol ol ul ul ul ol,
+body ol ul ol ol ol ol,
+body ol ul ol ol ul ol,
+body ol ul ol ul ol ol,
+body ol ul ul ol ol ol,
+body ol ul ol ul ul ol,
+body ol ul ul ol ul ol,
+body ol ul ul ul ol ol,
+body ol ul ul ul ul ol,
+body ul ol ol ol ol ol,
+body ul ol ol ol ul ol,
+body ul ol ol ul ol ol,
+body ul ol ul ol ol ol,
+body ul ol ol ul ul ol,
+body ul ol ul ol ul ol,
+body ul ol ul ul ol ol,
+body ul ol ul ul ul ol,
+body ul ul ol ol ol ol,
+body ul ul ol ol ul ol,
+body ul ul ol ul ol ol,
+body ul ul ul ol ol ol,
+body ul ul ol ul ul ol,
+body ul ul ul ol ul ol,
+body ul ul ul ul ol ol,
+body ul ul ul ul ul ol
+{
+  list-style-type: lower-roman-lv2;
+}
+body ol ol ol ol ol ol ol,
+body ol ol ol ol ol ul ol,
+body ol ol ol ol ul ol ol,
+body ol ol ol ul ol ol ol,
+body ol ol ol ol ul ul ol,
+body ol ol ol ul ol ul ol,
+body ol ol ol ul ul ol ol,
+body ol ol ol ul ul ul ol,
+body ol ol ul ol ol ol ol,
+body ol ol ul ol ol ul ol,
+body ol ol ul ol ul ol ol,
+body ol ol ul ul ol ol ol,
+body ol ol ul ol ul ul ol,
+body ol ol ul ul ol ul ol,
+body ol ol ul ul ul ol ol,
+body ol ol ul ul ul ul ol,
+body ol ul ol ol ol ol ol,
+body ol ul ol ol ol ul ol,
+body ol ul ol ol ul ol ol,
+body ol ul ol ul ol ol ol,
+body ol ul ol ol ul ul ol,
+body ol ul ol ul ol ul ol,
+body ol ul ol ul ul ol ol,
+body ol ul ol ul ul ul ol,
+body ol ul ul ol ol ol ol,
+body ol ul ul ol ol ul ol,
+body ol ul ul ol ul ol ol,
+body ol ul ul ul ol ol ol,
+body ol ul ul ol ul ul ol,
+body ol ul ul ul ol ul ol,
+body ol ul ul ul ul ol ol,
+body ol ul ul ul ul ul ol,
+body ul ol ol ol ol ol ol,
+body ul ol ol ol ol ul ol,
+body ul ol ol ol ul ol ol,
+body ul ol ol ul ol ol ol,
+body ul ol ol ol ul ul ol,
+body ul ol ol ul ol ul ol,
+body ul ol ol ul ul ol ol,
+body ul ol ol ul ul ul ol,
+body ul ol ul ol ol ol ol,
+body ul ol ul ol ol ul ol,
+body ul ol ul ol ul ol ol,
+body ul ol ul ul ol ol ol,
+body ul ol ul ol ul ul ol,
+body ul ol ul ul ol ul ol,
+body ul ol ul ul ul ol ol,
+body ul ol ul ul ul ul ol,
+body ul ul ol ol ol ol ol,
+body ul ul ol ol ol ul ol,
+body ul ul ol ol ul ol ol,
+body ul ul ol ul ol ol ol,
+body ul ul ol ol ul ul ol,
+body ul ul ol ul ol ul ol,
+body ul ul ol ul ul ol ol,
+body ul ul ol ul ul ul ol,
+body ul ul ul ol ol ol ol,
+body ul ul ul ol ol ul ol,
+body ul ul ul ol ul ol ol,
+body ul ul ul ul ol ol ol,
+body ul ul ul ol ul ul ol,
+body ul ul ul ul ol ul ol,
+body ul ul ul ul ul ol ol,
+body ul ul ul ul ul ul ol
+{
+  list-style-type: decimal-lv3;
+}
+body ol ol ol ol ol ol ol ol,
+body ol ol ol ol ol ol ul ol,
+body ol ol ol ol ol ul ol ol,
+body ol ol ol ol ul ol ol ol,
+body ol ol ol ol ol ul ul ol,
+body ol ol ol ol ul ol ul ol,
+body ol ol ol ol ul ul ol ol,
+body ol ol ol ol ul ul ul ol,
+body ol ol ol ul ol ol ol ol,
+body ol ol ol ul ol ol ul ol,
+body ol ol ol ul ol ul ol ol,
+body ol ol ol ul ul ol ol ol,
+body ol ol ol ul ol ul ul ol,
+body ol ol ol ul ul ol ul ol,
+body ol ol ol ul ul ul ol ol,
+body ol ol ol ul ul ul ul ol,
+body ol ol ul ol ol ol ol ol,
+body ol ol ul ol ol ol ul ol,
+body ol ol ul ol ol ul ol ol,
+body ol ol ul ol ul ol ol ol,
+body ol ol ul ol ol ul ul ol,
+body ol ol ul ol ul ol ul ol,
+body ol ol ul ol ul ul ol ol,
+body ol ol ul ol ul ul ul ol,
+body ol ol ul ul ol ol ol ol,
+body ol ol ul ul ol ol ul ol,
+body ol ol ul ul ol ul ol ol,
+body ol ol ul ul ul ol ol ol,
+body ol ol ul ul ol ul ul ol,
+body ol ol ul ul ul ol ul ol,
+body ol ol ul ul ul ul ol ol,
+body ol ol ul ul ul ul ul ol,
+body ol ul ol ol ol ol ol ol,
+body ol ul ol ol ol ol ul ol,
+body ol ul ol ol ol ul ol ol,
+body ol ul ol ol ul ol ol ol,
+body ol ul ol ol ol ul ul ol,
+body ol ul ol ol ul ol ul ol,
+body ol ul ol ol ul ul ol ol,
+body ol ul ol ol ul ul ul ol,
+body ol ul ol ul ol ol ol ol,
+body ol ul ol ul ol ol ul ol,
+body ol ul ol ul ol ul ol ol,
+body ol ul ol ul ul ol ol ol,
+body ol ul ol ul ol ul ul ol,
+body ol ul ol ul ul ol ul ol,
+body ol ul ol ul ul ul ol ol,
+body ol ul ol ul ul ul ul ol,
+body ol ul ul ol ol ol ol ol,
+body ol ul ul ol ol ol ul ol,
+body ol ul ul ol ol ul ol ol,
+body ol ul ul ol ul ol ol ol,
+body ol ul ul ol ol ul ul ol,
+body ol ul ul ol ul ol ul ol,
+body ol ul ul ol ul ul ol ol,
+body ol ul ul ol ul ul ul ol,
+body ol ul ul ul ol ol ol ol,
+body ol ul ul ul ol ol ul ol,
+body ol ul ul ul ol ul ol ol,
+body ol ul ul ul ul ol ol ol,
+body ol ul ul ul ol ul ul ol,
+body ol ul ul ul ul ol ul ol,
+body ol ul ul ul ul ul ol ol,
+body ol ul ul ul ul ul ul ol,
+body ul ol ol ol ol ol ol ol,
+body ul ol ol ol ol ol ul ol,
+body ul ol ol ol ol ul ol ol,
+body ul ol ol ol ul ol ol ol,
+body ul ol ol ol ol ul ul ol,
+body ul ol ol ol ul ol ul ol,
+body ul ol ol ol ul ul ol ol,
+body ul ol ol ol ul ul ul ol,
+body ul ol ol ul ol ol ol ol,
+body ul ol ol ul ol ol ul ol,
+body ul ol ol ul ol ul ol ol,
+body ul ol ol ul ul ol ol ol,
+body ul ol ol ul ol ul ul ol,
+body ul ol ol ul ul ol ul ol,
+body ul ol ol ul ul ul ol ol,
+body ul ol ol ul ul ul ul ol,
+body ul ol ul ol ol ol ol ol,
+body ul ol ul ol ol ol ul ol,
+body ul ol ul ol ol ul ol ol,
+body ul ol ul ol ul ol ol ol,
+body ul ol ul ol ol ul ul ol,
+body ul ol ul ol ul ol ul ol,
+body ul ol ul ol ul ul ol ol,
+body ul ol ul ol ul ul ul ol,
+body ul ol ul ul ol ol ol ol,
+body ul ol ul ul ol ol ul ol,
+body ul ol ul ul ol ul ol ol,
+body ul ol ul ul ul ol ol ol,
+body ul ol ul ul ol ul ul ol,
+body ul ol ul ul ul ol ul ol,
+body ul ol ul ul ul ul ol ol,
+body ul ol ul ul ul ul ul ol,
+body ul ul ol ol ol ol ol ol,
+body ul ul ol ol ol ol ul ol,
+body ul ul ol ol ol ul ol ol,
+body ul ul ol ol ul ol ol ol,
+body ul ul ol ol ol ul ul ol,
+body ul ul ol ol ul ol ul ol,
+body ul ul ol ol ul ul ol ol,
+body ul ul ol ol ul ul ul ol,
+body ul ul ol ul ol ol ol ol,
+body ul ul ol ul ol ol ul ol,
+body ul ul ol ul ol ul ol ol,
+body ul ul ol ul ul ol ol ol,
+body ul ul ol ul ol ul ul ol,
+body ul ul ol ul ul ol ul ol,
+body ul ul ol ul ul ul ol ol,
+body ul ul ol ul ul ul ul ol,
+body ul ul ul ol ol ol ol ol,
+body ul ul ul ol ol ol ul ol,
+body ul ul ul ol ol ul ol ol,
+body ul ul ul ol ul ol ol ol,
+body ul ul ul ol ol ul ul ol,
+body ul ul ul ol ul ol ul ol,
+body ul ul ul ol ul ul ol ol,
+body ul ul ul ol ul ul ul ol,
+body ul ul ul ul ol ol ol ol,
+body ul ul ul ul ol ol ul ol,
+body ul ul ul ul ol ul ol ol,
+body ul ul ul ul ul ol ol ol,
+body ul ul ul ul ol ul ul ol,
+body ul ul ul ul ul ol ul ol,
+body ul ul ul ul ul ul ol ol,
+body ul ul ul ul ul ul ul ol
+{
+  list-style-type: lower-latin-lv3;
+}
 
 body ol>li::marker {
   font-weight: 600;
@@ -4542,16 +4826,6 @@ body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered):n
 
 body.colorful-indentation-lines ol>li {
   border-left: none !important;
-}
-
-body.colorful-indentation-lines ol,
-body.colorful-indentation-lines ol ol,
-body.colorful-indentation-lines ol ol ol,
-body.colorful-indentation-lines ol ul ol,
-body.colorful-indentation-lines ol ol ol ol,
-body.colorful-indentation-lines ol ol ul ol,
-body.colorful-indentation-lines ol ul ol ol {
-  list-style: decimal;
 }
 
 body.colorful-indentation-lines ol>li::marker {
@@ -4667,6 +4941,9 @@ body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
 } */
 
 /*无序列表 大纲线*/
+body.colorful-indentation-lines ol::before {
+  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+}
 body.colorful-indentation-lines ul ul::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
 }
@@ -4696,6 +4973,9 @@ body.colorful-indentation-lines li ul ul ul ul ul ul ul ul ul::before {
 }
 
 /*任务有序列表 大纲线*/
+body.colorful-indentation-lines ul::before {
+  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+}
 body.colorful-indentation-lines ol ol::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
 }
@@ -6717,6 +6997,7 @@ pre.language-note-imp::before {
  :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple,
  :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink,
  :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan,
 .print pre.language-note-gray,
 .print pre.language-note-brown,
 .print pre.language-note-orange,
@@ -6726,6 +7007,7 @@ pre.language-note-imp::before {
 .print pre.language-note-purple,
 .print pre.language-note-pink,
 .print pre.language-note-red,
+.print pre.language-note-cyan,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange,
@@ -6734,6 +7016,7 @@ pre.language-note-imp::before {
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red {
   font-family: var(--font-default);
   background-color: transparent  !important;
@@ -6793,6 +7076,13 @@ pre.language-note-imp::before {
 .print code.language-note-red,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red code.language-note-red {
   color: var(--text-red) !important;
+  background: unset !important;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan code.language-note-cyan,
+.print code.language-note-cyan,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan code.language-note-cyan {
+  color: var(--text-cyan) !important;
   background: unset !important;
 }
 
@@ -13736,6 +14026,17 @@ body.list-bracket-style .markdown-rendered.show-indentation-guide li:not(.task-l
   border: none;
 }
 
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+  content: "\200B";
+  position: absolute;
+  display: block;
+  left: -1em;
+  top: 0;
+  bottom: 0;
+  border-right: var(--indentation-guide-width) solid var(--indentation-guide-color);
+}
+
 body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ul>li:not(.task-list-item)::marker {
   font-size: 0.9em;
 }
@@ -14344,7 +14645,7 @@ body.colorful-ordered-list ul ul ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-8);
+  color: var(--list-colorful-marker-1);
 }
 
 
