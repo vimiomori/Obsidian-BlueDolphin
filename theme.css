@@ -4942,7 +4942,7 @@ body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
 
 /*无序列表 大纲线*/
 body.colorful-indentation-lines ol::before {
-  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+  border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
 body.colorful-indentation-lines ul ul::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
@@ -4974,7 +4974,7 @@ body.colorful-indentation-lines li ul ul ul ul ul ul ul ul ul::before {
 
 /*任务有序列表 大纲线*/
 body.colorful-indentation-lines ul::before {
-  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+  border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
 body.colorful-indentation-lines ol ol::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
@@ -14089,7 +14089,7 @@ body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 
 body.colorful-ordered-list ol ol li::marker,
 body.colorful-ordered-list ul ol li::marker {
-  color: var(--list-colorful-marker-1);
+  color: var(--list-colorful-marker-2);
 }
 body.colorful-ordered-list ol ol li::before,
 body.colorful-ordered-list ul ol li::before,
@@ -14102,7 +14102,7 @@ body.colorful-ordered-list ol ol ol li::marker,
 body.colorful-ordered-list ol ul ol li::marker,
 body.colorful-ordered-list ul ul ol li::marker,
 body.colorful-ordered-list ul ol ol li::marker {
-  color: var(--list-colorful-marker-2);
+  color: var(--list-colorful-marker-3);
 }
 body.colorful-ordered-list ol ol ol li::before,
 body.colorful-ordered-list ol ul ol li::before,
@@ -14121,7 +14121,7 @@ body.colorful-ordered-list ol ul ul ol li::marker,
 body.colorful-ordered-list ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-3);
+  color: var(--list-colorful-marker-4);
 }
 body.colorful-ordered-list ol ol ol ol li::before,
 body.colorful-ordered-list ol ol ul ol li::before,
@@ -14152,7 +14152,7 @@ body.colorful-ordered-list ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-4);
+  color: var(--list-colorful-marker-5);
 }
 body.colorful-ordered-list ol ol ol ol ol li::before,
 body.colorful-ordered-list ol ol ol ul ol li::before,
@@ -14207,7 +14207,7 @@ body.colorful-ordered-list ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-5);
+  color: var(--list-colorful-marker-6);
 }
 
 body.colorful-ordered-list ol ol ol ol ol ol li::before,
@@ -14311,7 +14311,7 @@ body.colorful-ordered-list ul ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-6);
+  color: var(--list-colorful-marker-7);
 }
 
 
@@ -14514,7 +14514,7 @@ body.colorful-ordered-list ul ul ul ul ul ul ol ol li::before,
 body.colorful-ordered-list ul ul ul ul ul ul ul ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
-  color: var(--list-colorful-marker-7);
+  color: var(--list-colorful-marker-1);
 }
 
 body.colorful-ordered-list ol ol ol ol ol ol ol ol li::marker,
