@@ -1,0 +1,108 @@
+body {
+  --theme-info: "🐬　0.1.0";
+  /* black */
+  --rich-black: #001722;
+  --rich-black-0: #001f2e;
+  --rich-black-1: #002638;
+  --rich-black-2: #002a3e;
+  /* blues */
+  --prussian-blue: #00283f;
+  --prussian-blue-1: #002a42;
+  /* --prussian-blue-1: #002d42bd; */
+  --prussian-blue-2: #00354B;
+  --prussian-blue-2-b: #00314b;
+  --prussian-blue-3: #003955;
+  --indigo-blue: #01435eff;
+  --indigo-blue-2: #003f58;
+  --indigo-blue-3: #013e5e;
+  --midnight-green: #004f6b;
+  --midnight-green-2: #006082;
+  --cerulean: #016986ff;
+  --cerulean-2: #00739d;
+  --sky-blue: #2596be;
+  --dark-sky-blue: #004062;
+  --teal: #007989;
+  --teal-translucent: #0079898d;
+  --blue-munsell: #018eb1;
+  --blue-green: #00A0C1;
+  --pacific-blue: #03b3d6;
+  --pacific-blue-1: #32d9ff;
+  --pacific-cyan: #11B4D5;
+  --moonstone: #00bcd4ff;
+  --robin-egg: #2CC6DB;
+  --robin-egg-translucent: #2cc7dba6;
+  --vivid-sky-blue: #47d2eaff;
+  --vivid-sky-blue-0: rgb(100, 227, 255);
+  --vivid-sky-blue-1: #47d2eaff;
+  --vivid-sky-blue-2: #00D4FF;
+  --non-photo-blue: #81E8FD;
+  --non-photo-blue-1: #6ee7ff;
+  --celeste: #aef8ffff;
+  --celeste-translucent: rgba(174, 248, 255, 0.54);
+  --electric-blue: #63ecec;
+  --electric-blue-2: #00f2ff;
+  --electric-blue-3: #00ffff;
+  --doger: #279AFF;
+  --doger-0: #018dc4;
+  --doger-1: rgba(0, 24, 63, 0.54);
+  --doger-2: #005cad;
+  --bleu-de-france: #0089DF;
+  --bleu-de-france-1: #1bbeff;
+  --bleu-de-france-2: #129ed5;
+  /* greens */
+  --aquamarine: #00ffaeff;
+  --aquamarine-1: #30ffc8;
+  --aquamarine-2: #5fffc4ff;
+  --aquamarine-3: #a3ffddff;
+  --spring-green: #06ff87ff;
+  --spring-green-2: #5fffb2ff;
+  --spring-green-3: #aeffd8ff;
+  --dark-aquamarine: rgb(0, 85, 77);
+  /* yellows */
+  --jasmine: #f7e37e;
+  --jasmine-1: #ffe97b;
+  --vanilla: #fff1b5ff;
+  --vanilla-2: rgb(255, 252, 163);
+  --lemon-chiffon: #fff5cbff;
+  --peach-yellow: #ffdd94ff;
+  --peach: #fee7b7ff;
+  --papaya-whip: #fcf1d9ff;
+  --papaya-whip-2: rgb(255, 253, 239);
+  --dark-vanilla: #8d8a0053;
+  /* oranges and reds */
+  --sandy-brown: #ffaf64ff;
+  --apricot: #ffccabff;
+  --champagne-pink: #ffe4d2ff;
+  --atomic-tangerine: #ff9c81ff;
+  --dark-atomic-tangerine: rgb(96, 70, 63);
+  --melon: #ffbdabff;
+  --dark-melon: #583229;
+  --pale-dogwood: #ffd2c6ff;
+  --tea-rose: #ffc6c6;
+  --misty-rose: #ffe3e0ff;
+  /* pinks and purples */
+  --purple-pizzazz: #ff68e3ff;
+  --persian-pink: #ff92ddff;
+  --lavender-pink: #ffc3ec;
+  --fairy-tale: #ffcbe6;
+  --heliotrope: #d75effff;
+  --dark-heliotrope: rgba(85, 33, 128, 0.578);
+  --violet-web-color: #e38effff;
+  --mauve: #edb6ffff;
+  --thistle: #eed4ffff;
+  /* darks */
+  --air-force-blue: #5390aeff;
+  --zomp: #57a686ff;
+  --ecru: #a59c6eff;
+  --old-rose: #a5716eff;
+  --china-rose: #ae6172ff;
+  --china-rose-2: #aa5a6cff;
+  --amethyst: #8b62b5ff;
+  --transparent-blue: #019DA31F;
+  --transparent-blue: #00283cce;
+  --transparent-1: #003b5833;
+  --transparent-2: #89cef015;
+
+  --bookinfo-color: rgba(42, 181, 42, 0.749);
+  --button-border: var(--sky-blue);
+}

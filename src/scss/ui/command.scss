@@ -1,0 +1,12 @@
+// Search
+
+.suggestion-item.is-selected {
+  background-color: var(--prussian-blue-2-b) !important;
+  color: var(--electric-blue-3) !important;
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+.suggestion-item.mod-complex .suggestion-title {
+  color: var(--vivid-sky-blue);
+}

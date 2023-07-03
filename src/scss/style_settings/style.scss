@@ -1,0 +1,11 @@
+// Styling for Style Settings
+
+div.workspace-leaf-content[data-type=style-settings] div.view-content {
+  padding: var(--file-margins);
+}
+body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-content {
+  padding: 32px 16px;
+}
+body:not(.is-mobile) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
+}

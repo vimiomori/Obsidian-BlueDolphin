@@ -1,0 +1,165 @@
+// Cloze
+// (eg. ==~~words~~==, *==~~words~~==*)
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body .markdown-source-view.is-live-preview .cm-highlight.cm-strikethrough:not([class*="formatting"]) {
+  background-color: var(--cloze-bg-color) !important;
+  color: var(--cloze-bg-color);
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+}
+
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:hover,
+body .markdown-source-view.is-live-preview .cm-highlight.cm-strikethrough:hover {
+  background-color: transparent !important;
+  color: var(--text-normal) !important;
+  transition: all 400ms ease-in-out;
+}
+
+body .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
+body .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough,
+.markdown-source-view.cloze .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
+.markdown-source-view.cloze *:not([class*="cm-formatting-em"]).cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough {
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+  background-color: transparent !important;
+}
+
+
+body :is(.markdown-preview-view,.markdown-rendered) mark > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze mark > del {
+  background-color: var(--cloze-bg-color);
+  color: var(--cloze-bg-color);
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+}
+
+body :is(.markdown-preview-view,
+.markdown-rendered) mark > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze mark > del:hover {
+  background-color: transparent;
+  color: var(--accent-strong);
+  transition: all 400ms ease-in-out;
+}
+
+// (eg. *==~~words~~==*)
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body .markdown-source-view.is-live-preview .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]) {
+  color: transparent !important;
+  background-color: transparent !important;
+  padding: 0 2px;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
+body .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-formatting-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em):hover,
+.markdown-source-view.cloze .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-formatting-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
+  transition: all 400ms ease-in-out;
+}
+
+body .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough:not([class*="formatting"]),
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough {
+  color: var(--accent-strong) !important;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
+body :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del {
+  color: transparent;
+  background-color: transparent;
+  padding: 0 2px;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
+body .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
+body .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough{
+  background-color: transparent !important;
+}
+body .markdown-source-view:not([class*="cm5"]) .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+.markdown-source-view:not([class*="cm5"]).cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight {
+  background-color: var(--bg-color-highlight-1) !important;
+  color: var(--color-highlight-1);
+  font-style: normal;
+}
+
+
+body :is(.markdown-preview-view,.markdown-rendered) mark,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze mark {
+  background-color: transparent;
+}
+
+
+body :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del:hover {
+  cursor: pointer;
+  color: transparent;
+}
+
+body :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del:active,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del:active {
+  color: var(--accent-strong);
+  background-color: transparent;
+  transition: all 400ms ease-in-out;
+}
+
+body :is(.markdown-preview-view,
+.markdown-rendered) em > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > del {
+  background-color: var(--cloze-bg-color-3);
+  color: var(--cloze-bg-color-3);
+  font-style: normal;
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+body :is(.markdown-preview-view,
+.markdown-rendered) em > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > del:hover {
+  background-color: transparent;
+  color: var(--text-normal);
+  transition: all 400ms ease-in-out;
+}
+
+body .markdown-source-view.is-live-preview .cm-em.cm-strikethrough,
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough {
+  background-color: var(--cloze-bg-color-3);
+  color: var(--cloze-bg-color-3);
+  font-style: normal;
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+body .markdown-source-view.is-live-preview .cm-em.cm-strikethrough:hover,
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough:hover {
+  background-color: transparent !important;
+  color: var(--text-normal) !important;
+  transition: all 400ms ease-in-out;
+}
+
+body .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+body .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough:not([class*="formatting"]),
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough:not([class*="formatting"]) {
+  font-style: normal;
+  color: var(--accent-strong);
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+span.cm-strong.cm-em.cm-highlight {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: var(--strong-em-highlight-color);
+  background-color: var(--text-highlight-bg);
+}

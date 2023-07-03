@@ -1,0 +1,20 @@
+{
+  "name": "obsidian-bluedolphin",
+  "version": "0.0.1",
+  "description": "A blue and pastels theme inspired by Palenight.",
+  "author": "Vivian Hsieh",
+  "license": "MIT",
+  "homepage": "https://github.com/vimiomori/Obsidian-BlueDolphin",
+  "scripts": {
+    "dev": "sass --watch --no-charset --no-source-map --color \"src/scss/index.scss\" \"C:/Users/vhyoh/src/github.com/vimiomori/theme-dev-vault/.obsidian/themes/blueDolphinDev.css\"",
+    "build": "node ./build/buildTheme.config.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.1",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recommended": "^11.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "stylelint-no-unsupported-browser-features": "^6.1.0"
+  }
+}

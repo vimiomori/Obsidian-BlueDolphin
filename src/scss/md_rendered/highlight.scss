@@ -1,0 +1,80 @@
+// Highlighter simulation
+
+body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight.cm-strong,
+.markdown-source-view.is-live-preview .cm-em.cm-highlight.cm-strong {
+  background-color: var(--bg-color-highlight-3) !important;
+  color: var(--color-highlight-3) !important;
+  -webkit-text-fill-color: unset;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-3);
+}
+body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-strong"])~.cm-highlight.cm-strong,
+.markdown-source-view.is-live-preview .cm-highlight.cm-strong {
+  background-color: var(--bg-color-highlight-2) !important;
+  color: var(--color-highlight-2) !important;
+  font-weight: var(--font-weight-highlight-2);
+}
+body.markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight,
+.markdown-source-view.is-live-preview .cm-em.cm-highlight {
+  background-color: var(--bg-color-highlight-1) !important;
+  color: var(--color-highlight-1) !important;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-1);
+}
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-em"]~span.cm-highlight[class*="cm-em"],
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-strong"]~span.cm-highlight[class*="cm-strong"],
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-em"]:not([class*="cm-formatting-highlight"]),
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-strong"]:not([class*="cm-formatting-highlight"]) {
+  background-color: var(--text-highlight-bg) !important;
+}
+
+/* highlight */
+:is(.markdown-preview-view,.markdown-rendered) :not(.cloze) mark {
+  background-color: var(--text-highlight-bg);
+  padding: 1px 3px;
+  color: var(--text-highlight);
+  border-radius: var(--radius-xs);
+}
+
+.cm-s-obsidian span.cm-highlight,
+.cm-highlight.cm-quote {
+  color: var(--text-highlight);
+  padding: 2px 0 1px 0;
+}
+
+.cm-s-obsidian span.cm-formatting-highlight {
+  border-radius: 3px 0 0 3px;
+}
+
+.cm-s-obsidian span[class="cm-highlight"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-list"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-quote"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-header"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-formatting-code"][class*="cm-inline-code"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-formatting-link"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-hmd-internal-link"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-strong"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="cm-em"]+span.cm-formatting-highlight,
+.cm-s-obsidian span[class*="cm-highlight"][class*="strikethrough"]+span.cm-formatting-highlight {
+  border-radius: 0 3px 3px 0;
+}
+
+span.cm-formatting.cm-formatting-code.cm-highlight.cm-inline-code,
+span.cm-highlight.cm-inline-code {
+  border-radius: 0;
+  padding: 2px 0 1px !important;
+}
+
+.theme-light.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
+.theme-dark .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: var(--text-highlight-bg);
+  color: var(--text-highlight);
+}
+
+.CodeMirror-lines span.cm-strong.cm-em.cm-highlight {
+  padding: 0 1px 1px;
+}

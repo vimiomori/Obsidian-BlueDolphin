@@ -1,0 +1,464 @@
+/* @settings
+name: 🐬 Blue Dolphin Theme
+id: blue-dolphin-theme
+collapsed: false
+settings:
+  - id: vault-settings
+    title: Vault Settings
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: hide-vault-name
+    title: Hide vault name
+    description: Hide vault name. When turned off, the vault name is displayed at the bottom left.
+    type: class-toggle
+    default: true
+  -
+    id: enable-divider-lines
+    title: Enable interface borders
+    type: class-toggle
+    default: false
+  -
+    id: font-family-change-to-default
+    title: Use Obsidian fonts instead of theme fonts
+    description: By default, this theme uses its own fonts. Turn on to use fonts configured in Obsidian Settings > Options > Appearance > Font.
+    type: class-toggle
+    default: false
+  -
+    id: colorful-graph
+    title: Colorful graph
+    description: Enable for more colorful nodes in graph view.
+    type: class-toggle
+    default: false
+  -
+    id: tab-head-style
+    title: Tab style
+    type: class-select
+    allowEmpty: false
+    default: safari-tab-style
+    options:
+      -
+        label: Obsidian Default
+        value: default-tab
+      -
+        label: Safari Style
+        value: safari-tab-style
+  - id: titlebar-settings
+    title: Titlebar settings for Windows
+    description: These settings have no effect on MacOS.
+    type: heading
+    level: 3
+    collapsed: true  
+  -
+    id: simple-titlebar
+    title:  Simple title bar
+    description: To remove the background image of title bar
+    type: class-toggle
+    default: false
+  -
+    id: reversal-titlebar
+    title: Reverse title bar close button
+    type: class-toggle
+    default: false
+  -
+    id: hide-titlebar-text
+    title: Hide text in Title Bar
+    type: class-toggle
+    default: false
+  -
+    id: hide-titlebar-close-btn
+    title: Auto-hide title bar close button
+    type: class-toggle
+    default: false
+  -
+    id: top-bottom-style
+    title: Top-bottom style
+    type: class-toggle
+    default: false
+  -
+    id: background-titlebar-inner
+    title: Top titlebar background color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  - id: editor-settings
+    title: Editor Settings
+    type: heading
+    level: 1
+    collapsed: true  
+  -
+    id: justify-align
+    title: Justify align note content
+    description: Enable global effect, local effect only need to  declare "cssclass：justify" in the YAML area. Requires the Contextual Typography plugin.
+    type: class-toggle
+    default: false
+  -
+    id: vim-monospace
+    title: Enable monospace font in editing mode
+    description: Recommended for vim keybindings.
+    type: class-toggle
+    default: true
+  - id: markdown-settings
+    title: Markdown Rendering Settings
+    type: heading
+    level: 1
+    collapsed: true  
+  -
+    id: dolphin-metadata
+    title: Hide metadata in dolphin
+    description: Enabled by default. Enable to hide metadata behind a dolphin in reading mode. The metadata will be displayed when hovering over the dolphin. Inspired by Bubble-Space-Theme. https://github.com/Emrie-Candera/Bubble-Space-Theme
+    type: class-toggle
+    default: true
+  -
+    id: hr-options
+    title: Select hr style (---)
+    description: Choose a thematic break (horizontal rule) style in preview mode.
+    type: class-select
+    allowEmpty: false
+    default: fancy-dolphin-hr
+    options:
+      - 
+        label: Fancy Dolphin
+        value: fancy-dolphin-hr
+      -
+        label: Three Dolphins
+        value: three-dolphins-hr
+      -
+        label: Obsidian Default
+        value: obsidian-default-hr
+  -
+    id: blockquote-style-change-options
+    title: Select Blockquote Style
+    type: class-select
+    allowEmpty: false
+    default: blockquote-style-dolphin
+    options:
+      - 
+        label: Dolphin
+        value: blockquote-style-dolphin
+      -
+        label: With quotation mark
+        value: blockquote-style-quotation-mark
+      -
+        label: Basic
+        value: blockquote-style-default
+      -
+        label: Border left
+        value: blockquote-style-border-left
+  -
+    id: callout-style-settings
+    title: callout style settings
+    type: class-select
+    allowEmpty: false
+    default: shade-callout-style
+    options:
+      -
+        label: Shade
+        value: shade-callout-style
+      -
+        label: Simple
+        value: admonition-bg-color-same
+      -
+        label: Border
+        value: border-callout-style
+  - id: heading-settings
+    title: Headings
+    type: heading
+    level: 2
+    collapsed: true  
+  -
+    id: clutter-free-headings
+    title: Display H1 instead of # In Preview
+    description: Adapted from https://github.com/deathau/obsidian-snippets/blob/main/clutter-free-headings.css
+    type: class-toggle
+    default: true
+  -
+    id: head-tag-style
+    title: Superscript tags in headings
+    Description: Tags in headings will be superscripted.
+    type: class-toggle
+    default: true
+  - id: list-settings
+    title: Lists and Checkboxes
+    type: heading
+    level: 2
+    collapsed: true  
+  -
+    id: colorful-unordered-list
+    title: Toggle colorful unordered list marker
+    type: class-toggle
+    default: true
+  -
+    id: colorful-ordered-list
+    title: Toggle colorful ordered list marker
+    type: class-toggle
+    default: true
+  -
+    id: colorful-indentation-lines
+    title: Enable colorful indentation lines (preview mode)
+    type: class-toggle
+    default: true
+  -
+    id: colorful-indentation-lines-source
+    title: Enable colorful indentation lines (editing mode)
+    type: class-toggle
+    default: true
+  -
+    id: rainbow-checkbox
+    title:  Enable rainbow checkbox
+    type: class-toggle
+    default: false
+  -
+    id: checkbox-animation
+    title: Enable checkbox animation
+    type: class-toggle
+    default: true
+  - id: table-settings
+    title: Tables
+    type: heading
+    level: 2
+    collapsed: true  
+  -
+    id: enable-table-animation
+    title: Enable table row animation on hover
+    description: When enabled, table rows have a "zoom" effect on hover.
+    type: class-toggle
+    default: true
+  -
+    id: table-style-options
+    title: Table Style
+    type: class-select
+    allowEmpty: false
+    default: table-style-one
+    options:
+      -
+        label: Obsidian Default
+        value: table-style-default
+      -
+        label: Dark
+        value: table-style-one
+      -
+        label: Dark Accent
+        value: table-style-two
+      -
+        label: No Background
+        value: table-style-three
+  - id: link-settings
+    title: Links
+    type: heading
+    level: 2
+    collapsed: true  
+  -
+    id: link-underline-internal
+    title: Underline Internal Links
+    type: class-toggle
+    default: false
+  -
+    id: link-underline-external
+    title: Underline external Links
+    type: class-toggle
+    default: false
+  -
+    id: link-underline-unresolved
+    title: Underline unresolved Links
+    type: class-toggle
+    default: false
+  -
+    id: colorful-link-animation
+    title: Enable colorful link on hover
+    type: class-toggle
+    default: false
+  -
+    id: remove-external-link-icon
+    title: Remove external link icon
+    type: class-toggle
+    default: false
+  - id: tag-settings
+    title: Tags
+    type: heading
+    level: 3
+    collapsed: true  
+  -
+    id: tag-style-option
+    title: Tag Style
+    type: class-select
+    allowEmpty: false
+    default: rainbow-tag
+    options:
+      -
+        label: Rainbow tag
+        value: rainbow-tag
+      -
+        label: Obsidian default
+        value: tag-default
+  -
+    id: plugin-settings
+    title: Plugins
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: kanban-settings
+    title: Kanban
+    description: Styles for the kanban plugin. (https://github.com/mgmeyers/obsidian-kanban)
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rainbow-kanban
+    title: Rainbow kanban
+    type: class-toggle
+    default: true
+  -
+    id: dataview-settings
+    title: Dataview
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: dolphin-dataview-list
+    title: Enable dataview dolphin list style
+    type: class-toggle
+    default: true
+  -
+    id: auto-serial-number-dvtable
+    title: Automatically add index numbers to dataview tables
+    type: class-toggle
+    default: false
+  -
+    id: dialogue-settings
+    title: Dialogue
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: dialogue-style
+    title: Dialogue Style
+    type: class-select
+    allowEmpty: false
+    default: dialogue-style-chat
+    options:
+      -
+        label: Default
+        value: dialogue-style-default
+      -
+        label: Chat
+        value: dialogue-style-chat
+  -
+    id: builtin-style-settings
+    title: Built-in Styles
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: builtin-style-info
+    title: About Built-in Styles
+    description: Some styles can be enabled by specifying certain CSS class names at the `cssClass` field in the frontmatter. Multiple CSS classes can be combined. (eg. `cssClass： kanban wide-page`). **Requires the Contextual Typography Plugin.**
+    type: info-text
+    markdown: true
+  -
+    id: built-in-style-kanban
+    title: Pseudo-kanban
+    type: heading
+    level: 2
+    collapsed: false
+  - 
+    id: pseudo-kanban-info
+    title: About Pseudo Kanban
+    description: Turn unordered lists into columns by adding `cssclass： kanban` to the frontmatter. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
+    type: info-text
+    markdown: true
+  -
+    id: p-kanban-style
+    title: Pseudo Kanban Style
+    type: class-select
+    allowEmpty: false
+    default: p-kanban-style-blue-cards
+    options:
+      -
+        label: Simple 
+        value: p-kanban-style-simple
+      -
+        label: Transparent
+        value: p-kanban-style-transparent
+      -
+        label: Rainbow Lanes
+        value: p-kanban-style-rainbow-lanes
+      -
+        label: Rainbow Cards
+        value: p-kanban-style-rainbow-cards
+      -
+        label: Blue Cards
+        value: p-kanban-style-blue-cards
+  -
+    id: p-kanban-lane-borders
+    title: Enable kanban lane borders 
+    description: Enable for borders on lanes
+    type: class-toggle
+    default: false
+  -
+    id: p-kanban-dividers
+    title: Enable kanban lane dividers
+    description: Only available for transparent kanban style
+    type: class-toggle
+    default: false
+  -
+    id: p-kanban-card-borders
+    title: Enable kanban card borders
+    description: Enable for borders on cards
+    type: class-toggle
+    default: false
+  -
+    id: p-kanban-headers
+    title: Enable kanban header colors
+    description: Enable for header colors on lanes
+    type: class-toggle
+    default: false
+  -
+    id: built-in-style-full-width
+    title: Modular CSS
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: modular-css-info
+    title: About Modular CSS
+    description: This theme uses snippets from https://github.com/efemkay/obsidian-modular-css-layout (by Faiz Khuzaimah, twitter： @faizkhuzaimah)
+    type: info-text
+    markdown: true
+  - 
+    id: modular-css-styles
+    title: Available classes for modular CSS
+    description: 　**wide-page** expands the page to the full width, **wide-dataview** expands the dataview render to the full width, **wide-table** expands regular tables to full width, **wide-callout** expands callouts to full width
+    type: info-text
+    markdown: true
+  -
+    id: code-style-settings
+    title: Code Block Styles
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: code-line-number
+    title: Display line numbers in code blocks
+    description: Enable to display line numbers in code blocks.
+    type: class-toggle
+    default: true
+  -
+    id: whole-code-wrap
+    title: Wrap code in reading mode.
+    description: Enable to wrap long lines of code in reading mode. A scrollbar is displayed when this setting disabled.
+    type: class-toggle
+    default: true
+  -
+    id: replace-code-mirror-theme
+    title: Use Blue Dolphin theme in code blocks.
+    description: If you have the Code Mirror Options theme enabled, enable this setting to replace the Code Mirror theme and syntax highlighting with the Blue Dolphin theme.
+    type: class-toggle
+    default: true
+*/
+
+

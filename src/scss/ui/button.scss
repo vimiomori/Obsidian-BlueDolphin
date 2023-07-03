@@ -1,0 +1,18 @@
+// [UI] - Buttons
+
+button:not(.clickable-icon) {
+  box-shadow: none;
+  border: 1px solid var(--sky-blue);
+  background-color: var(--prussian-blue-3);
+}
+
+button.mod-cta {
+  background-color: var(--midnight-green);
+  border: 1px solid var(--vivid-sky-blue-2);
+  color: var(--electric-blue-2);
+}
+
+button.mod-cta:hover {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-3);
+}

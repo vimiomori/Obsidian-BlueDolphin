@@ -1,0 +1,75 @@
+// [Plugin] - Buttons
+
+button.button-default {
+  border-width: 1px !important;
+  /* border: 1px solid var(--button-border, var(--sky-blue)) !important; */
+  background-color: var(--prussian-blue-3);
+}
+
+button.button-default:hover {
+  box-shadow: unset !important;
+  transform: unset !important;
+  background-color: var(--cerulean-2);
+  border: 1px solid var(--robin-egg);
+  color: var(--electric-blue-3);
+}
+
+button.blue {
+  background-color: var(--background-blue);
+  color: var(--text-cyan);
+  border-color: var(--text-cyan) !important;
+}
+
+button.blue:hover {
+  background-color: var(--kanban-card-border-color-1);
+  color: var(--text-cyan);
+  border-color: var(--text-cyan) !important;
+}
+
+button.red {
+  background-color: var(--background-red-2);
+  color: var(--tea-rose);
+  border-color: var(--text-red) !important;
+}
+
+button.red:hover {
+  background-color: var(--kanban-card-border-color-8);
+  color: var(--text-red);
+  border-color: var(--text-red) !important;
+}
+
+button.green {
+  background-color: var(--background-green);
+  color: var(--text-green);
+  border-color: var(--text-green) !important;
+}
+
+button.green:hover {
+  background-color: var(--kanban-card-border-color-3);
+  color: var(--text-green);
+  border-color: var(--text-green) !important;
+}
+
+button.yellow {
+  background-color: var(--background-yellow-2);
+  color: var(--text-yellow);
+  border-color: var(--text-yellow) !important;
+}
+
+button.yellow:hover {
+  background-color: var(--background-yellow-3);
+  color: var(--text-yellow);
+  border-color: var(--text-yellow) !important;
+}
+
+button.purple {
+  background-color: var(--background-purple);
+  color: var(--thistle);
+  border-color: var(--thistle) !important;
+}
+
+button.purple:hover {
+  background-color: var(--background-purple-2);
+  color: var(--text-purple);
+  border-color: var(--text-purple) !important;
+}

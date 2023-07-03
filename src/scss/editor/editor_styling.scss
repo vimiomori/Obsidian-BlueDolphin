@@ -1,0 +1,69 @@
+// [Editor] - Styling
+
+:is(.markdown-preview-view,.markdown-rendered):not([class*="kanban-plugin"]) {
+  position: relative;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: var(--text-normal);
+  user-select: text;
+}
+
+/*edit mode font size*/
+pre.CodeMirror-line {
+  font-size: var(--font-size-edit-normal) !important;
+}
+
+/*preview mode font size*/
+p {
+  font-size: var(--font-size-preview-normal);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) p {
+  margin-block-start: calc(var(--paragraph-spacing)*1em);
+  margin-block-end: calc(var(--paragraph-spacing)*1em);
+}
+
+
+:is(.markdown-preview-view,.markdown-rendered) :is(ol,ul) {
+  margin-block-start: calc((var(--paragraph-spacing) - 1)*1em);
+  margin-block-end: calc((var(--paragraph-spacing) - 1)*1em);
+}
+
+.markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-codeblock) {
+  padding-bottom: calc((var(--paragraph-spacing) - 1)*1em) ;
+}
+
+body.justify-align .markdown-source-view.mod-cm6 div[class="cm-line"]:not(.HyperMD-header),
+.markdown-source-view.mod-cm6.justify div[class="cm-line"]:not(.HyperMD-header) {
+  text-align: justify;
+    hyphens: auto;
+}
+
+body.justify-align [data-type="markdown"] div[class="el-p"]:not(blockquote) > p,
+[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).justify div[class="el-p"]:not(blockquote) > p {
+  text-align: justify;
+    hyphens: auto;
+}
+body.justify-align [data-type="markdown"] div.el-p.callout-content:not(blockquote) > p,
+[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).justify div.el-p.callout-content:not(blockquote) > p {
+  text-align: justify;
+    hyphens: auto;
+}
+
+.markdown-source-view.mod-cm6 ::selection {
+  background-color: var(--cerulean);
+}
+
+.markdown-source-view.mod-cm6 .cm-line .cm-selection,
+.markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-2);
+}
+.markdown-source-view.mod-cm6 .cm-selectionBackground {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-2);
+}
+.markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-2);
+}

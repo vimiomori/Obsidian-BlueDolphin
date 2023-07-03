@@ -1,0 +1,344 @@
+// Pseudo Kanban
+/* cssclass: kanban */
+/* adapted from  @Braweria's spectrum theme: https://github.com/Braweria/Spectrum */
+
+body.p-kanban-lane-borders .kanban div:not([data-callout="multi-column"]) > div.el-ul>ul>li {
+  border: 1px solid var(--sky-blue);
+}
+
+body.p-kanban-dividers .kanban > div:not([data-callout="multi-column"]) > div.el-ul>ul>li {
+  padding: 0em 1.5em;
+}
+
+body.p-kanban-dividers .kanban > div:not([data-callout="multi-column"]) > div.el-ul>ul>li {
+  border-radius: 0px;
+}
+
+body.p-kanban-dividers .kanban > div:not([data-callout="multi-column"]) > div.el-ul>ul>li:not(:first-child) {
+  border-left: 2px inset var(--vivid-sky-blue-2);
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul>ul>li {
+  padding-top: 0.7em;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul > li {
+  font-size: var(--h5-size);
+  font-family: var(--font-heading);
+  color: var(--h1-color);
+  font-weight: 600;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul > li > * {
+  font-size: var(--font-size-edit-normal);
+  font-family: var(--font-default);
+  color: var(--text-normal);
+  font-weight: 400;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0rem;
+  border-radius: var(--radius-m);
+  flex-wrap: wrap;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul > li .list-bullet:after {
+  display: none;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul>li {
+  flex: 1 1 10%;
+  padding: 0.1em 1em 0.1em 0.8em;
+  margin: 0 0.3em 0.3em 0 !important;
+  list-style: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul>li.is-collapsed > :is(ul, li, ol) {
+  display: none;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul li.task-list-item .task-list-item-checkbox {
+  margin-left: auto;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul .list-collapse-indicator{
+  padding-right: 0;
+  margin-left: -1.9em;
+  margin-top: 0.3em;
+  width: 2em;
+  height: 1.2em;
+}
+
+.kanban > div:not([data-callout="multi-column"]) ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transition: transform 10ms linear 0s
+}
+
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+1) {
+  background-color: var(--p-kanban-color-1);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+2) {
+  background-color: var(--p-kanban-color-2);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+3) {
+  background-color: var(--p-kanban-color-3);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+4) {
+  background-color: var(--p-kanban-color-4);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+5) {
+  background-color: var(--p-kanban-color-5);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+6) {
+  background-color: var(--p-kanban-color-6);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n+7) {
+  background-color: var(--p-kanban-color-7);
+}
+body.p-kanban-style-rainbow-lanes .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul>li:nth-of-type(8n) {
+  background-color: var(--p-kanban-color-8);
+}
+
+.canvas-node-container .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul>li:nth-of-type(n) {
+  backdrop-filter:none;
+}
+
+.kanban > div:not([data-callout="multi-column"]).el-ul ul>li:nth-of-type(n) {
+  padding-left: 1em;
+}
+
+body.p-kanban-style-simple .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li {
+  background-color: var(--p-kanban-color-simple);
+}
+
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li {
+  padding-top: 8px;
+}
+
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+1) {
+  border-top: 6px solid var(--p-kanban-color-1) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+2) {
+  border-top: 6px solid var(--p-kanban-color-2) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+3) {
+  border-top: 6px solid var(--p-kanban-color-3) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+4) {
+  border-top: 6px solid var(--p-kanban-color-4) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+5) {
+  border-top: 6px solid var(--p-kanban-color-5) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+6) {
+  border-top: 6px solid var(--p-kanban-color-6) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+7) {
+  border-top: 6px solid var(--p-kanban-color-7) !important;
+}
+body.p-kanban-headers .kanban > div:not([data-callout="multi-column"]) div.el-ul>ul>li:nth-of-type(8n+8) {
+  border-top: 6px solid var(--p-kanban-color-8) !important;
+}
+
+body:not(.p-kanban-headers) .kanban > div:not([data-callout="multi-column"]) div.ul > ul>li {
+  border-top: none !important;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem;
+  margin-top: 0.5rem;
+  border-radius: 0;
+  border: 0;
+  background: none;
+}
+
+.kanban > div:not([data-callout="multi-column"]) ol li {
+  color: var(--text-normal);
+}
+.kanban > div:not([data-callout="multi-column"]) ul ul li {
+  color: var(--text-normal);
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item) {
+  width: 100%;
+  display: block;
+  font-weight: normal;
+  font-size: 0.85rem !important;
+  font-family: var(--font-default);
+  background-color: var(--indigo-blue-2);
+}
+
+body:is(.p-kanban-style-rainbow-cards, .p-kanban-style-blue-cards) .kanban > div:not([data-callout="multi-column"]) div.el-ul ul ul li:not(.task-list-item) {
+  border-width: 2px;
+}
+
+body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+1)::before {
+  color: var(--electric-blue-2) !important;
+}
+body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+2)::before {
+  color: var(--electric-blue-3) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+1)::before {
+  color: var(--electric-blue-2) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+2)::before {
+  color: var(--electric-blue-3) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+3)::before {
+  color: var(--aquamarine-1) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+4)::before {
+  color: var(--peach) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+5)::before {
+  color: var(--apricot) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+6)::before {
+  color: var(--fairy-tale) !important;
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+7)::before {
+  color: var(--thistle) !important;
+}
+
+body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(2n+1) {
+  background: var(--kanban-card-color-1) !important;
+  color: var(--electric-blue-3);
+  --internal-link-color: var(--electric-blue-3);
+  --link-color: var(--electric-blue-3);
+  border-color: var(--kanban-card-border-color-1);
+}
+
+body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(2n+2) {
+  background: var(--kanban-card-color-blue-2) !important;
+  color: var(--electric-blue-2);
+  --internal-link-color: var(--electric-blue-2);
+  --link-color: var(--electric-blue-2);
+  border-color: var(--kanban-card-border-color-blue-2);
+}
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+1) {
+  background: var(--kanban-card-color-1) !important;
+  color: var(--electric-blue-2);
+  --internal-link-color: var(--electric-blue-2);
+  --link-color: var(--electric-blue-2);
+  border-color: var(--kanban-card-border-color-1);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+2) {
+  background: var(--kanban-card-color-2) !important;
+  color: var(--electric-blue-3);
+  --internal-link-color: var(--electric-blue-3);
+  --link-color: var(--electric-blue-3);
+  border-color: var(--kanban-card-border-color-2);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+3) {
+  background: var(--kanban-card-color-3) !important;
+  color: var(--aquamarine-1);
+  --internal-link-color: var(--aquamarine-1);
+  --link-color: var(--aquamarine-1);
+  border-color: var(--kanban-card-border-color-3);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+4) {
+  background: var(--kanban-card-color-4) !important;
+  color: var(--peach);
+  --internal-link-color: var(--peach);
+  --link-color: var(--peach);
+  border-color: var(--kanban-card-border-color-4);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+5) {
+  background: var(--kanban-card-color-5) !important;
+  color: var(--apricot);
+  --internal-link-color: var(--apricot);
+  --link-color: var(--apricot);
+  border-color: var(--kanban-card-border-color-5);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+6) {
+  background: var(--kanban-card-color-6) !important;
+  color: var(--fairy-tale) !important;
+  --internal-link-color: var(--fairy-tale);
+  --link-color: var(--fairy-tale);
+  border-color: var(--kanban-card-border-color-6);
+}
+
+body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul ul li:not(.task-list-item):nth-of-type(7n+7) {
+  background: var(--kanban-card-color-7) !important;
+  color: var(--thistle) !important;
+  --internal-link-color: var(--thistle);
+  --link-color: var(--thistle);
+  border-color: var(--kanban-card-border-color-7);
+}
+
+body.p-kanban-style-simple .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul ul li {
+  background-color: var(--midnight-green);
+}
+
+body .kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul ul li:hover {
+  background: var(--p-kanban-card-color-2) !important;
+  border-color: var(--sky-blue);
+  filter: brightness(110%);
+}
+
+body.p-kanban-card-borders .kanban > div:not([data-callout="multi-column"]) ul ul li {
+  border-color: var(--sky-blue);
+}
+
+.kanban > div:not([data-callout="multi-column"]) ul ul li .task-list-item-checkbox {
+  margin-left: 1.5rem !important;
+}
+
+.kanban > div:not([data-callout="multi-column"]) ul ul ul {
+  margin-right: 0;
+}
+
+.kanban > div:not([data-callout="multi-column"]) ul ul::before {
+  border-left: 0;
+}
+
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.kanban > div:not([data-callout="multi-column"]) .markdown-preview-sizer>div>ul {
+  max-width: 100%;
+}
+
+.kanban > div:not([data-callout="multi-column"]).el-ul :is(ol,ul).contains-task-list :is(ol,ul) {
+  position: initial;
+}
+
+.kanban > div:not([data-callout="multi-column"]) :is(ol,ul).contains-task-list :is(ol,ul)::before {
+  all: initial;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul > li.task-list-item {
+  flex: 1 1 20%;
+  padding: 0.1em 1em;
+  list-style: none;
+  border: 1px solid var(--p-kanban-border-color);
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+  text-indent: 0.01em;
+}
+
+.kanban > div:not([data-callout="multi-column"]) > div.el-ul > ul ul li.task-list-item {
+  width: 100%;
+  display: block;
+  padding-left: 2em;
+  text-indent: -3em;
+  font-weight: normal;
+  font-size: 0.85rem !important;
+  font-family: var(--font-default);
+}
+
+body .kanban > div:not([data-callout="multi-column"]) li.task-list-item .task-list-item.is-collapsed .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transform: translateX(-0.9em) translateY(-1em) rotate(-90deg);
+}
