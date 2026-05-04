@@ -1,22 +1,3 @@
-/* 
-TODO: remove this line
-TODO: Update the credits on the top of this file
-TODO: Convert to sass and modularize
-TODO: Fix height for first file/folder
-TODO: check title bar on windows
-TODO: add credits to README
-*/
-
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20230102] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20230102] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
-
-/* 致谢 Credits：
-Many thanks to @Cuman
-@LillianWho @成雙酱 @嘴上云 @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan @GeoffreyOuO (WooYoo~~~) @锋华 @CZ-15/YZ-10 */
-
-/* 
-TODO: add choice to put status bar in the middle (floating)
-*/
 
 // Style Settings
 @use "style_settings/config.scss";
@@ -1123,7 +1104,7 @@ body:not(.font-family-change-to-default) .markdown-source-view {
 body:not(.font-family-change-to-default) {
   --font-default: nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei", sans-serif;
   --font-family-list: ;
-  --font-text-theme: nunito,'Inter', "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji";
+  --font-text-theme: nunito,"Inter", "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji";
   --font-heading: quicksand;
   --font-interface: quicksand;
   --inline-title-font: var(--font-default);
@@ -1135,20 +1116,20 @@ body:not(.font-family-change-to-default) {
   --font-family-h6: var(--font-heading);
   --font-family-title: nunito;
   --font-family-folder-file-title: nunito, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;
-  --font-monospace-theme: 'Anonymous Pro', 'JetBrains Mono',Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
+  --font-monospace-theme: "Anonymous Pro", "JetBrains Mono",Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
   --font-family-inline-code: var(--font-monospace-theme);
-  --font-family-tag: 'nunito','Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
-  --font-family-vault: 'Shantell';
+  --font-family-tag: "nunito","Inter", "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
+  --font-family-vault: "Shantell";
   --font-family-special-tag: quicksand, "nunito", "Segoe UI Emoji";
   --font-family-YAML: "nunito";
 
   --mermaid-font-family: nunito, Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: nunito, Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: nunito,'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
+  --font-family-strong: nunito,"Inter", "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
   --font-family-em: nunito;
   --font-loading-text: var(--font-monospace-theme);
-  --font-family-em-mono: 'Anonymous Pro';
-  --font-family-strong-mono: 'Anonymous Pro';
+  --font-family-em-mono: "Anonymous Pro";
+  --font-family-strong-mono: "Anonymous Pro";
   font-weight: 400;
 }
 

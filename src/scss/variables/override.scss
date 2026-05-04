@@ -40,8 +40,8 @@ body {
   --toggle-radius: var(--radius-m);
   --toggle-thumb-radius: var(--radius-s);
 
-  --fancy-dolphin-hr: '🐬';
-  --three-dolphins-hr: '\e168 \0020\0020\0020\0020 \e168 \0020\0020\0020\0020 \e168';
+  --fancy-dolphin-hr: "🐬";
+  --three-dolphins-hr: "        ";
   --fancy-hr-rotate: 0deg;
   --line-height-main: 1.5;
   --line-height-list: 1.4;
@@ -152,14 +152,14 @@ body {
   --list-ol-marker-2: lower-latin;
   --list-ol-marker-3: lower-roman;
   --list-ol-marker-4: decimal;
-  --list-ul-marker-1: '\2022';
-  --list-ul-marker-2: '\25E6';
-  --list-ul-marker-3: '\25AA';
-  --list-ul-marker-4: '\25E6';
+  --list-ul-marker-1: "•";
+  --list-ul-marker-2: "◦";
+  --list-ul-marker-3: "▪";
+  --list-ul-marker-4: "◦";
   --list-ul-marker-color: var(--electric-blue-3);
   --list-marker-color-collapsed: var(--pacific-cyan);
 
-  --list-ul-colorful-marker-content: '\2022';
+  --list-ul-colorful-marker-content: "•";
   --list-colorful-marker-1: var(--electric-blue-3);
   --list-colorful-marker-2: var(--aquamarine);
   --list-colorful-marker-3: var(--vanilla);
@@ -364,7 +364,7 @@ body {
 
   --interactive-accent-hsl: 195.69, 67.4%, 44.51%;
 
-  --embed-color: 'hsl'a(calc(var(--accent-h)*1),calc(var(--accent-s)*1.2),calc(var(--accent-l)*2),0.055);
+  --embed-color: "hsl"a(calc(var(--accent-h)*1),calc(var(--accent-s)*1.2),calc(var(--accent-l)*2),0.055);
   --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent-06: hsla(var(--interactive-accent-hsl),0.6);
