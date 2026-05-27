@@ -79,7 +79,7 @@ body.theme-dark {
   --text-selection: var(--cerulean);
   --text-on-accent: var(--prussian-blue-3);
   --text-muted: var(--robin-egg);
-  --text-search-highlight-bg: var(--nord9-1);
+  --text-search-highlight-bg: #81a1c16c;
   --text-highlight-bg: var(--cerulean);
 
   // ── Accent / interactive ─────────────────────────────────────────────────
@@ -147,7 +147,7 @@ body.theme-dark {
   --nav-item-parent-padding: 2px 5px 2px 23px;
   --nav-item-background-hover: var(--dark-sky-blue);
   --nav-item-font-weight-hover: bold;
-  --folder-title: var(--nord4);
+  --folder-title: #d8dee9;
 
   // ── Mermaid ──────────────────────────────────────────────────────────────
   --mermaid-active-task-color: #187ef1;
@@ -319,13 +319,13 @@ body.theme-dark {
   --code-active-line-background-color: var(--rich-black-0);
 
   // ── List color overrides ──────────────────────────────────────────────────
-  --list-ul-block-color: var(--nord12);
-  --list-ul-disc-color: var(--nord12);
-  --green-1: var(--nord14);
-  --list-ul-hover: var(--nord13);
-  --list-ol-block-color: var(--nord9);
-  --list-ol-number-color: var(--nord9);
-  --list-ol-hover: var(--nord7);
+  --list-ul-block-color: #D08770;
+  --list-ul-disc-color: #D08770;
+  --green-1: #A3BE8C;
+  --list-ul-hover: #EBCB8B;
+  --list-ol-block-color: #81a1c1;
+  --list-ol-number-color: #81a1c1;
+  --list-ol-hover: #8fbcbb;
 
   // ── Heading colors ────────────────────────────────────────────────────────
   --h1-color: var(--electric-blue-3);
@@ -356,10 +356,10 @@ body.theme-dark {
   --strong-em-highlight-color: var(--electric-blue-2);
 
   // ── Embed ────────────────────────────────────────────────────────────────
-  --embed-color: var(--nord1-1);
+  --embed-color: #3B425251;
 
   // ── Tag colors ────────────────────────────────────────────────────────────
-  --tag-text: var(--nord7);
+  --tag-text: #8fbcbb;
   --tag-background: #0027389f;
   --tag-dailynote: var(--electric-blue-3);
   --tag-dailynote-bg: var(--cerulean);
@@ -427,7 +427,7 @@ body.theme-dark {
   --background-transparent-black-or-white-3: #2f2f2f51;
   --background-transparent-black-or-white-4: #7e7e7e65;
   --background-transparent-black-or-white-5: #0f0f0f6c;
-  --background-black-or-white-1: var(--nord2);
+  --background-black-or-white-1: #434C5E;
   --background-transparent-blue: #003e759a;
   --scrollbar-thumb: var(--cerulean);
   --scrollbar-thumb-active: var(--cerulean);

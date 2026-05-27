@@ -194,3 +194,31 @@ body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-a
 }
 
 
+
+// ── Web-browser plugin header bar ─────────────────────────────────────────────
+.theme-dark .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar) {
+  background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 4px 7.5px;
+  background-size: 14px;
+  opacity: 0.6;
+  padding: 0 0 0 22px;
+  border: none;
+  background-color: transparent;
+}
+.view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar):focus {
+  opacity: 1;
+}
+.view-header .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar):hover {
+  border:none;
+}
+
+.view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  .view-header-title-parent:before {
+  content: ' ';
+  margin-left: 10px;
+  color: var(--text-faint);
+  width:10px;
+  height: 6px;
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+}

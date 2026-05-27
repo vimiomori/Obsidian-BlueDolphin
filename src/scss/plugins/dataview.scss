@@ -94,3 +94,28 @@ body .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
   background-color:  transparent;
 }
 
+// ── Image caption via inline field ───────────────────────────────────────────
+// Usage: add `img-caption:: Your caption text` below an image in a note.
+[data-dv-key="img-caption"] + span.dataview > span {
+  margin: 0.5rem 0;
+  display: block;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.dataview.inline-field-key[data-dv-key="img-caption"] + .dataview.inline-field-value {
+  background-color: unset;
+  border-radius: 0;
+  padding: 0;
+  font-family: var(--font-text);
+}
+
+.dataview.inline-field-key[data-dv-key="img-caption"] {
+  display: none;
+  background-color: unset;
+  font-size: 0;
+  padding: 0;
+  border-radius: 0;
+}
+

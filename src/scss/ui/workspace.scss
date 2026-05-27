@@ -236,3 +236,76 @@ span.obsidian-search-match-highlight {
   background-color: transparent;
 }
 
+
+// ── Titlebar, forms, search, progress, dropdowns ─────────────────────────────
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right:hover {
+  background-color: var(--titlebar-background-focused);
+}
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+  background-color: transparent;
+}
+.is-hidden-frameless.mod-windows .titlebar-button {
+  background-color: transparent;
+}
+
+.markdown-preview-view progress, .markdown-rendered progress, .markdown-source-view.is-live-preview progress {
+  overflow: unset;
+  vertical-align:top;
+}
+
+.search-input-container input {
+  border: none;
+  background: var(--background-secondary);
+}
+.search-input-container input:hover {
+  box-shadow: var(--window-shadow-hover);
+}
+.menu{
+  background-color:var(--color-base-10);
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  box-shadow: none;
+}
+
+select.dropdown {
+  border: 1px solid var(--cerulean-2);
+  border-radius: var(--radius-s);
+  box-shadow: none;
+}
+
+select:hover,
+.dropdown:hover {
+  box-shadow: none;
+  border: 1px solid var(--sky-blue);
+  color: var(--electric-blue-2);
+}
+select:focus,
+.dropdown:focus {
+  box-shadow: none;
+}
+
+textarea:active,
+input[type='text']:active,
+input[type='search']:active,
+input[type='email']:active,
+input[type='password']:active,
+input[type='number']:active,
+textarea:focus,
+input[type='text']:focus,
+input[type='search']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+textarea:focus-visible,
+input[type='text']:focus-visible,
+input[type='search']:focus-visible,
+input[type='email']:focus-visible,
+input[type='password']:focus-visible,
+input[type='number']:focus-visible {
+  box-shadow: none;
+}
+
+.prompt {
+  border: 1px solid var(--midnight-green);
+}
