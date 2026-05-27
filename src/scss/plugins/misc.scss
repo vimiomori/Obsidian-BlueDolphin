@@ -1,0 +1,264 @@
+/* ================================== */
+/* ====== markdown assitance ======== */
+/* ================================== */
+.command-list-view-row-selected {
+  background-color: gray !important;
+}
+
+
+/*
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
+  color: var(--gray-2);
+}
+*/
+
+/* ================================== */
+/* ============ comments ============ */
+/* ================================== */
+.theme-light .ob-comment {
+  position: relative;
+  border-bottom: 1px dotted black;
+  color: var(--text-normal) !important;
+  background-color: #57b2ee77 !important;
+  border-radius: 10% !important;
+}
+
+.theme-dark .ob-comment {
+  position: relative;
+  border-bottom: 1px dotted rgb(255, 255, 255);
+  color: var(--text-normal) !important;
+  background-color: #0054b5e0 !important;
+  border-radius: 10% !important;
+}
+
+.theme-light .ob-comment:hover {
+  background-color: #57b2ee50 !important;
+}
+
+.theme-dark .ob-comment:hover {
+  background-color: #0062d1 !important;
+}
+
+.theme-light .ob-comment span {
+  visibility: hidden;
+  min-width: auto;
+  max-width: 500px;
+  width: max-content;
+  background-color: #c7e2f5e5 !important;
+  color: #0068c9 !important;
+  text-align: left;
+  border-radius: var(--radius-s);
+  padding: 10px 10px;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 1px 1px 10px 5px var(--background-secondary);
+  transition: opacity 1s;
+}
+
+.theme-dark .ob-comment span {
+  visibility: hidden;
+  min-width: auto;
+  max-width: 500px;
+  width: max-content;
+  background-color: #aed6f3ef !important;
+  color: #005cb3 !important;
+  text-align: left;
+  border-radius: var(--radius-s);
+  padding: 10px 10px;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 1px 1px 10px 5px var(--background-secondary);
+  transition: opacity 1s;
+}
+
+.theme-light .comment-pannel-p3 {
+  background-color: #c7e2f5e5 !important;
+  color: #0068c9 !important;
+}
+
+.theme-dark .comment-pannel-p3 {
+  background-color: #aed6f3ef !important;
+  color: #005cb3 !important;
+}
+
+.comment-pannel-bubble {
+  width: 90% !important;
+  padding: 0 5px !important;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 0 !important;
+}
+
+/* ======== tooltip ========= */
+.tooltip,
+.tooltip.mod-right {
+  color: var(--electric-blue-3);
+  background-color: var(--cerulean-2);
+}
+.tooltip .tooltip-arrow {
+  border-bottom: 5px solid var(--cerulean-2);
+}
+.tooltip.mod-right .tooltip-arrow {
+  border-right: 5px solid var(--cerulean-2);
+}
+.tooltip.mod-left .tooltip-arrow {
+  border-left: 5px solid var(--cerulean-2);
+}
+
+/* ================================== */
+/* ======== better footnote ========= */
+/* ================================== */
+:is(.markdown-preview-view,.markdown-rendered) .tippy-content {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  /*  font-size: var(--font-size-better-footnote) !important;*/
+  font-family: var(--font-family-better-footnote) !important;
+  background-color: var(--prussian-blue);
+}
+
+/*default footnote*/
+section.footnotes ol>li:not(.task-list-item) {
+  border-left: none !important;
+}
+
+.cm-s-obsidian span.cm-footref {
+  color: var(--text-accent);
+}
+.tippy-box[data-theme~="obsidian"] {
+  backdrop-filter: blur(8px);
+}
+.file-embed.mod-empty:hover {
+  backdrop-filter: blur(5px);
+}
+
+/* ======Notice================ */
+
+.notice-container {
+  z-index: var(--layer-notice);
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  padding: 0px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.notice {
+  box-shadow: none;
+  background-color: var(--indigo-blue-3);
+  color: var(--electric-blue-2);
+  border: 1px solid var(--vivid-sky-blue-2);
+}
+
+/* ================================== */
+/* ============ checklist =========== */
+/* ================================== */
+
+.checklist-plugin-main button {
+  box-shadow: none;
+}
+.checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li {
+  border-left: none !important;
+  font-size: var(--font-size-checklist);
+}
+
+.checklist-plugin-main {
+  --todoList-listItemBackground: var(--checklist-bg) !important;
+  --todoList-listItemBackground--hover: var(--checklist-bg-hover) !important;
+}
+
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+1) {
+  background-color: var(--checklist-color-1);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+2) {
+  background-color: var(--checklist-color-2);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+3) {
+  background-color: var(--checklist-color-3);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+4) {
+  background-color: var(--checklist-color-4);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+5) {
+  background-color: var(--checklist-color-5);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+6) {
+  background-color: var(--checklist-color-6);
+}
+body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdown-rendered) li:nth-of-type(7n+7) {
+  background-color: var(--checklist-color-7);
+}
+
+.is-mobile .checklist-plugin-main :is(.markdown-preview-view,.markdown-rendered) ul {
+  padding-inline-start: 0;
+}
+
+.is-mobile .checklist-plugin-main button.toggle {
+  width: unset;
+}
+
+.checklist-plugin-main button.toggle .checked {
+  background-color: var(--theme-color) !important;
+}
+
+/* ================================== */
+/* ============ longform ============ */
+/* ================================== */
+.workspace-leaf-content[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] li {
+  border-left: none;
+}
+
+/* ================================== */
+/* ========== Breadcrumbs =========== */
+/* ================================== */
+.workspace-leaf-content[data-type="breadcrumbs-matrix"] summary.hier-summary,
+h3.breadcrumbs-matrix-header {
+  color: var(--h3-color) !important;
+}
+
+.workspace-leaf-content[data-type="breadcrumbs-matrix"] summary {
+  color: var(--h4-color) !important;
+}
+
+/*remove H3, H5 when hovering*/
+h3.breadcrumbs-matrix-header:hover::before,
+h5.breadcrumbs-matrix-header:hover::before {
+  display: none;
+}
+
+h5.breadcrumbs-header,
+h5.breadcrumbs-matrix-header {
+  color: var(--h5-color) !important;
+}
+
+.breadcrumbs-matrix-square {
+  border: none !important;
+}
+
+.breadcrumbs-matrix ol {
+  margin-left: 8px !important;
+}
+
+/* ================================== */
+/* ===== code  block enhancer ======= */
+/* ================================== */
+.obsidian-banner-wrapper.code-block-wrap {
+  position: unset;
+}
+.code-block-wrap .code-block-linenum-wrap {
+  top: 0.4em;
+  background-color: transparent;
+}
+.code-block-wrap .code-block-lang-name {
+  top: 4px;
+  left: 2px;
+}
+.code-block-wrap .code-block-lang-name + .code-block-linenum-wrap>.code-block-linenum:first-child::before {
+  color: transparent;
+}
+

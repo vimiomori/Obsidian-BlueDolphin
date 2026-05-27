@@ -1,0 +1,400 @@
+/* colourful notes */
+/* from Notation by death_au  https://github.com/deathau/Notation-for-Obsidian */
+/* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
+/* but also with simpler classes so you can use `<span class='colour'>` as well */
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg code,
+.print pre.language-note-notice code,
+.print pre.language-note-gray-bg code,
+.print pre.language-note-brown-bg code,
+.print pre.language-note-orange-bg code,
+.print pre.language-note-yellow-bg code,
+.print pre.language-note-green-bg code,
+.print pre.language-note-blue-bg code,
+.print pre.language-note-purple-bg code,
+.print pre.language-note-pink-bg code,
+.print pre.language-note-red-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg code{
+  background: unset !important;
+  background-color:unset !important;
+  white-space: pre-wrap !important;
+  font-family: var(--font-default);
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg,
+.gray-background,
+.gray-bg,
+.print pre.language-note-gray-bg .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg {
+  background-color: var(--background-gray) !important;
+  border: 2px solid var(--pacific-cyan);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg > code,
+.gray-background > code,
+.gray-bg > code,
+.print pre.language-note-gray-bg .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-notice > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray-bg > code {
+  color: var(--electric-blue-3) !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg,
+.brown-background,
+.brown-bg,
+.print pre.language-note-brown-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg {
+  background-color: var(--background-brown) !important;
+  border: 2px solid #a36f55a3;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg > code,
+.brown-background > code,
+.brown-bg > code,
+.print pre.language-note-brown-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown-bg > code {
+  color: var(--lemon-chiffon);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg,
+.orange-background,
+.orange-bg,
+.print pre.language-note-orange-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg {
+  background-color: var(--background-orange) !important;
+  border: 2px solid rgb(170, 158, 100);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg > code,
+.orange-background > code,
+.orange-bg > code,
+.print pre.language-note-orange-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange-bg >code {
+  color: var(--papaya-whip);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg,
+.yellow-background,
+.yellow-bg,
+.print pre.language-note-yellow-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg {
+  background-color: var(--background-yellow) !important;
+  border: 2px solid rgb(173, 173, 76);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg > code,
+.yellow-background > code,
+.yellow-bg > code,
+.print pre.language-note-yellow-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow-bg > code {
+  color: var(--vanilla);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg,
+ .green-background,
+.green-bg,
+.print pre.language-note-green-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg {
+  background-color: var(--background-green) !important;
+  border: 2px solid rgb(25, 173, 127);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg > code,
+ .green-background > code,
+.green-bg > code,
+.print pre.language-note-green-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green-bg > code {
+  color: rgb(92, 255, 190);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg,
+.blue-background,
+.blue-bg,
+.print pre.language-note-blue-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg {
+  border: 2px solid var(--bleu-de-france-1);
+  background-color: var(--background-blue) !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg > code,
+.blue-background > code,
+.blue-bg > code,
+.print pre.language-note-blue-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue-bg > code {
+  color: var(--electric-blue-2);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg,
+.purple-background,
+.purple-bg,
+.print pre.language-note-purple-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg {
+  background-color: var(--background-purple) !important;
+  border: 2px solid rgb(143, 125, 243);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg > code,
+.purple-background > code,
+.purple-bg > code,
+.print pre.language-note-purple-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple-bg > code {
+  color: var(--mauve);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg,
+.pink-background,
+.pink-bg,
+.print pre.language-note-pink-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg {
+  background-color: var(--background-pink) !important;
+  border: 2px solid rgba(255, 192, 203, 0.824);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg > code,
+.pink-background > code,
+.pink-bg > code,
+.print pre.language-note-pink-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink-bg > code {
+  color: rgb(254, 219, 255);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-background,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg,
+.red-background,
+.red-bg,
+.print pre.language-note-red-bg,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-background,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg {
+  background-color: var(--background-red) !important;
+  border: 2px solid rgb(212, 108, 108);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-background > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg > code,
+.red-background > code,
+.red-bg > code,
+.print pre.language-note-red-bg > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-background > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red-bg > code {
+  color: var(--pale-dogwood);
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-important,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-imp,
+.print pre.language-note-important,
+.print pre.language-note-imp,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-important,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-imp {
+  background-color: var(--prussian-blue);
+  border: thick inset var(--note-important) !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-important > code,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-imp > code,
+.print pre.language-note-important > code,
+.print pre.language-note-imp > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-important > code,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-imp > code {
+  font-family: var(--font-default);
+  color: var(--note-important);
+}
+pre.language-note-important:before,
+pre.language-note-imp::before {
+  font-family: var(--font-default);
+  content: "Important !";
+  color: var(--note-important)  !important;
+  font-weight: 800;
+  top: -1px;
+}
+
+/*colourful text*/
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red,
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan,
+.print pre.language-note-gray,
+.print pre.language-note-brown,
+.print pre.language-note-orange,
+.print pre.language-note-yellow,
+.print pre.language-note-green,
+.print pre.language-note-blue,
+.print pre.language-note-purple,
+.print pre.language-note-pink,
+.print pre.language-note-red,
+.print pre.language-note-cyan,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red {
+  font-family: var(--font-default);
+  background-color: transparent  !important;
+  margin: 3px 0;
+  padding: 5px 10px;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray code.language-note-gray,
+.print code.language-note-gray,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray code.language-note-gray {
+  color: var(--text-gray) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown code.language-note-brown,
+.print code.language-note-brown,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown code.language-note-brown {
+  color: var(--text-brown) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange code.language-note-orange,
+.print code.language-note-orange,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange code.language-note-orange {
+  color: var(--text-orange) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow code.language-note-yellow,
+.print code.language-note-yellow,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow code.language-note-yellow {
+  color: var(--text-yellow) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green code.language-note-green,
+.print code.language-note-green,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green code.language-note-green {
+  color: var(--text-green) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue code.language-note-blue,
+.print code.language-note-blue,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue code.language-note-blue {
+  color: var(--text-blue) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple code.language-note-purple,
+.print code.language-note-purple,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple code.language-note-purple {
+  color: var(--text-purple) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink code.language-note-pink,
+.print code.language-note-pink,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink code.language-note-pink {
+  color: var(--text-pink) !important;
+  background: unset !important;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red code.language-note-red,
+.print code.language-note-red,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red code.language-note-red {
+  color: var(--text-red) !important;
+  background: unset !important;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan code.language-note-cyan,
+.print code.language-note-cyan,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cyan code.language-note-cyan {
+  color: var(--text-cyan) !important;
+  background: unset !important;
+}
+
+/* cloze */
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze code.language-note-cloze,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze code.language-note-cloze {
+  color: var(--text-normal) !important;
+  background-color: var(--text-normal)!important;
+  display: block;
+  padding: 0px !important;
+  text-shadow: none;
+  margin: 1em 0.7em 0;
+  font-size: var(--font-size-cloze) !important;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze {
+  background-color: transparent !important;
+}
+
+code.language-note-cloze.is-loaded:hover {
+  cursor: pointer;
+}
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze code.language-note-cloze.is-loaded:active,
+.popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-cloze code.language-note-cloze.is-loaded:active {
+  background-color: transparent !important;
+}
+
+pre.language-note-cloze::before {
+  content: "TO RECALL";
+  color: var(--note-cloze);
+  font-weight: 800;
+  left: 22px;
+}
+
+/*hidden box*/
+/*改自 https://github.com/chokcoco/iCSS/issues/153 */
+@property --hibox {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 24px;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-hibox {
+  background-color: transparent;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-hibox code.language-hibox:hover {
+  color: var(--text-normal);
+  --hibox: 900px;
+  overflow: auto;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) pre.language-hibox code.language-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-015) 0, var(--theme-color-translucent-015) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.4s linear;
+  color: var(--background-code);
+  color: transparent;
+}
+
+

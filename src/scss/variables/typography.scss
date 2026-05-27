@@ -1,0 +1,69 @@
+// ── Typography ──────────────────────────────────────────────────────────────
+// Font families, type scale, and reading rhythm for Blue Dolphin.
+// Previously scattered across blockquotes.scss and override.scss.
+
+body {
+  // ── Font families ────────────────────────────────────────────────────────
+  // Wire theme fonts to Obsidian's semantic variables so they actually apply.
+  // User's Appearance > Font settings take precedence (Obsidian injects those later).
+  --font-text:          nunito, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-interface:     quicksand, "Inter", sans-serif;
+  --font-monospace:     "Anonymous Pro", "JetBrains Mono", Consolas, Monaco, monospace;
+
+  // Theme-internal aliases (used by various component rules)
+  --font-default:       nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Segoe UI Emoji", sans-serif;
+  --font-heading:       quicksand;
+  --font-text-theme:    nunito, "Inter", "Segoe UI", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji";
+  --font-monospace-theme: "Anonymous Pro", "JetBrains Mono", Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Source Code Pro", monospace;
+
+  // Per-element font overrides
+  --inline-title-font:          var(--font-default);
+  --font-family-h1:             var(--font-heading);
+  --font-family-h2:             var(--font-heading);
+  --font-family-h3:             var(--font-heading);
+  --font-family-h4:             var(--font-heading);
+  --font-family-h5:             var(--font-heading);
+  --font-family-h6:             var(--font-heading);
+  --font-family-title:          nunito;
+  --font-family-folder-file-title: nunito, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;
+  --font-family-inline-code:    var(--font-monospace-theme);
+  --font-family-tag:            nunito, "Inter", "Segoe UI", "Segoe UI Emoji", sans-serif;
+  --font-family-vault:          "Shantell";
+  --font-family-special-tag:    quicksand, nunito, "Segoe UI Emoji";
+  --font-family-YAML:           nunito;
+  --font-family-strong:         nunito, "Inter", "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
+  --font-family-em:             nunito;
+  --font-family-em-mono:        "Anonymous Pro";
+  --font-family-strong-mono:    "Anonymous Pro";
+  --font-family-better-footnote: nunito, "Source Han Sans", "Segoe UI Emoji";
+  --mermaid-font-family:        nunito, "Segoe UI", "Microsoft YaHei", "Segoe UI Emoji", verdana, Arial, cursive;
+  --font-loading-text:          var(--font-monospace-theme);
+  --font-family-list:           ;
+
+  font-weight: 400;
+
+  // ── Type scale ───────────────────────────────────────────────────────────
+  // Intentional modular scale. All headings ≥ body text (h6 was 0.9375em — a bug).
+  --h1-size: 1.75em;   // was 1.5625em — more visual presence
+  --h2-size: 1.5em;    // was 1.4375em
+  --h3-size: 1.3em;    // was 1.3125em
+  --h4-size: 1.15em;   // was 1.1875em
+  --h5-size: 1.05em;   // was 1.0625em
+  --h6-size: 1.0em;    // was 0.9375em — fixed: h6 must be ≥ body text
+
+  // ── Reading rhythm ───────────────────────────────────────────────────────
+  --line-height-main:  1.6;    // was 1.5 — more breathing room for long reading
+  --line-height-list:  1.5;    // was 1.4
+  --line-height-split: 1.3;
+  --paragraph-spacing: 1;
+  --file-line-width:   45rem;  // ~720px — comfortable prose width
+  --letter-space-main: 0;
+}
+
+// Apply body text font to editor and preview surfaces.
+// (font-family-change-to-default is never active, so this always applies.)
+:is(.markdown-preview-view, .markdown-rendered),
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view {
+  font-family: var(--font-text);
+}

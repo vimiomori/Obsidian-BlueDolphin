@@ -1,0 +1,286 @@
+/****dataview table***/
+table.table-view-table > thead > tr > th {
+  font-size: 0.9em;
+}
+table.table-view-table > tbody > tr > td {
+  font-size: 0.85em;
+}
+
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table {
+  counter-reset: sec;
+}
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
+  counter-increment: sec;
+  content:counter(sec) ". ";
+}
+
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table {
+  counter-reset: section;
+}
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
+  counter-increment: section;
+  content:counter(section) ". ";
+}
+
+:is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td,
+.markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
+  max-width: 18em;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:nth-child(odd),
+.markdown-source-view table tbody>tr:nth-child(odd) {
+  background-color: var(--table-background-color-odd);
+  color: var(--electric-blue-2)
+}
+
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr,
+.markdown-source-view table tbody>tr {
+  background-color: var(--table-background-color);
+  color: var(--electric-blue-2)
+}
+
+:is(.markdown-preview-view,.markdown-rendered) :is(th,td) {
+  padding: 4px 10px;
+  border: none;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) th,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) thead tr > th:nth-child(2n+2) {
+  background-color: var(--table-thead-background-color);
+  font-family: var(--font-family-strong);
+}
+
+/*table hover*/
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) td:hover,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) thead tr > th:nth-child(2n+2):hover {
+  color: var(--vivid-sky-blue);
+}
+
+/*table raw hover*/
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) th:hover {
+  background-color: var(--table-hover-thead-color);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover,
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover{
+  background: var(--table-hover-raw-color);
+  transform: scale(1.02);
+  transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody td:hover{
+  background: var(--table-hover-color);
+  transform: scale(1.02);
+  transition: transform 0.1s cubic-bezier(0.22, 0.66, 0.46, 0.66);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) table {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) th,
+body.table-style-three .markdown-source-view th,
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) th:hover,
+body.table-style-three .markdown-source-view th:hover,
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) td:hover,
+body.table-style-three .markdown-source-view td:hover,
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover,
+body.table-style-three .markdown-source-view table tbody>tr:hover,
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) table tbody>tr:nth-child(odd),
+body.table-style-three .markdown-source-view table tbody>tr:nth-child(odd),
+body.table-style-three :is(.markdown-preview-view,.markdown-rendered) table tbody>tr,
+body.table-style-three .markdown-source-view table tbody>tr {
+  background-color: transparent !important;
+}
+
+/*table hover*/
+:is(.markdown-preview-view,.markdown-rendered) td:hover,
+.markdown-source-view td:hover {
+  background-color: var(--table-hover-color);
+}
+
+/*table raw hover*/
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover,
+.markdown-source-view table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) th:hover,
+.markdown-source-view th:hover {
+  background-color: var(--table-thead-background-color);
+  color: var(--vivid-sky-blue-2);
+}
+
+/*Full-width table dvtable callout backlinks layout*/
+/*modified from https://github.com/efemkay */
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widge {
+  max-width: 100%;
+  /* width: 100%;  ob1.0*/
+}
+
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div {
+  max-width: 100%;
+  margin-inline: auto;
+  width: 100%;
+}
+
+/*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line {
+  max-width: var(--file-line-width);
+  margin-inline: auto !important;
+} /* important for margin needed because app.css:2842 use it */
+
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div {
+  max-width: 100%;
+}
+
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+  max-width: var(--file-line-width);
+  margin-inline: auto;
+}
+
+/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width,
+		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-backlinks)	div.markdown-preview-view:not(.wide-page) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) {
+  max-width: var(--file-line-width);
+  margin-inline: auto;
+}
+
+
+body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
+body.full-width-table .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is([data-callout],.admonition-parent),
+body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks) {
+  max-width: 100%!important;
+}
+
+/*Full-width table dvtable callout backlinks layout*/
+/*modified from https://github.com/efemkay */
+
+/*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget {
+  max-width: 100%;
+  /* width: 100%;  ob1.0*/
+}
+
+/*	Reading View -- similar to Editing View, set the RLL to 100% for any css class with "wide" word in it. "width:100%" added for Blue Topaz */
+div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer,
+div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div {
+  max-width: 100%;
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* === Wide Dataview, Table & Backlink === */
+/*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line {
+  max-width: var(--file-line-width);
+  margin-inline: auto !important;
+} /* important for margin needed because app.css:2842 use it */
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div {
+  max-width: 100%;
+}
+
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+  max-width: var(--file-line-width);
+  margin-inline: auto;
+}
+
+/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
+div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div {
+  max-width: var(--file-line-width);
+  margin-inline: auto;
+}
+div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
+div[class*="-table"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
+div[class*="-callout"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is([data-callout],.admonition-parent),
+div[class*="-backlinks"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks) {
+  max-width: 100%!important;
+}
+
+/***end--Full-width table display--end****/
+
+.popover mark {
+  color: var(--text-normal);
+}
+
+.theme-dark :is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark {
+  background-color: hsla(var(--text-highlight-bg-h-dark), calc(var(--text-highlight-bg-s-dark)*1.5), calc(var(--text-highlight-bg-l-dark)*1.1), calc(var(--text-highlight-bg-a-dark)*0.55));
+}
+
+body .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+body:is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark,
+:is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
+  background-color: var(--bg-color-highlight-1);
+  color: var(--color-highlight-1);
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-1);
+}
+body :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
+  border-radius: var(--radius-xs);
+}
+
+body.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+.markdown-source-view .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+body:is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark,
+:is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark {
+  background-color: var(--bg-color-highlight-2) !important;
+  color: var(--color-highlight-2) !important;
+  font-weight: var(--font-weight-highlight-2);
+}
+
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body:is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark,
+:is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark {
+  background-color: var(--bg-color-highlight-3) !important;
+  color: var(--color-highlight-3) !important;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-3);
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]) {
+  padding: 1px 0;
+}
+
+.status-bar,
+.side-dock.mod-right,
+.side-dock.mod-left {
+  border-color: var(--panel-border-color);
+  border-width: 1px;
+}

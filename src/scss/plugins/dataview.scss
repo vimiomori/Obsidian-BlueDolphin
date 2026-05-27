@@ -1,0 +1,96 @@
+/* ================================== */
+/* ============ Dataview ============ */
+/* ================================== */
+span.dataview.small-text {
+  position: relative;
+  font-size: 70%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -.5em;
+  color: var(--text-accent);
+  border-radius: 3px;
+  text-align: center;
+  padding: 0 0.2em;
+  margin: 0 1px;
+  font-variant-numeric: ordinal;
+  opacity: 0.6;
+}
+
+.dataview-container .internal-link {
+  font-size:0.88em;
+}
+
+:is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul.dataview.list-view-ul>li:not(.task-list-item) {
+  border-left: none !important;
+  margin-left: -1em;
+}
+
+li.dataview-result-list-li ul>li:not(.task-list-item) {
+  border-left: none !important;
+}
+
+ul.dataview.list-view-ul>li:not(.task-list-item)::before {
+  font-family: "fa-solid";
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+}
+
+body ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
+  font-family: "fa-solid";
+  content: '\e168';
+  color: var(--electric-blue-2);
+}
+body ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
+  font-family: "fa-solid";
+  content: '\e168';
+  color: var(--bleu-de-france-1);
+}
+body ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
+  font-family: "fa-solid";
+  content: '\e168';
+  color: var(--doger);
+}
+body ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
+  font-family: "fa-solid";
+  content: '\e168';
+  color:  var(--electric-blue-2);
+}
+
+body ul.dataview.list-view-ul {
+  list-style: none;
+}
+
+div.dataview-error-box {
+  border: 2px dashed var(--midnight-green);
+}
+
+ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li {
+  border-left: none !important;
+  margin: 0;
+  padding-left: 0em;
+}
+
+ul.dataview.dataview-ul.dataview-result-list-root-ul {
+  list-style: none;
+}
+
+.CodeMirror-code .CodeMirror-linewidget.rendered-block-embed.rendered-widget {
+  background-color: var(--embed-color);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--embed-color);
+}
+
+body table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
+body .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
+  border-left: none;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) .dataview.inline-field-standalone-value {
+  background-color:  transparent;
+}
+

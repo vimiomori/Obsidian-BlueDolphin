@@ -1,0 +1,61 @@
+/* ================================== */
+/* ======= Banner ======= */
+/* ================================== */
+
+.show-inline-title .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-center, 
+.show-inline-title  .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-custom {
+  margin-top: calc(-1em - 6px);
+}
+.show-inline-title .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-above {
+  margin-top: calc(-2em - 12px);
+}
+/* ====cssclass background 属性可以使得banner作为笔记背景  ===== */
+.markdown-preview-view.background .obsidian-banner-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.8;
+  background-attachment:fixed;
+}
+
+.markdown-preview-view.background .obsidian-banner {
+  top: -310px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.is-live-preview.background .has-banner .obsidian-banner {
+  position: absolute!important;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+}
+.is-live-preview.background .has-banner .cm-hmd-frontmatter {
+  display: none;
+}
+.is-live-preview.background .has-banner .obsidian-banner.cm6-banner {
+  opacity: 0.5;
+  height: 100%;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) img.banner-image.full-width{
+  max-width: none;
+}
+/* ==修复新弹出窗口banner位置错位===================== */
+body.is-popout-window {
+  --banner-height: 300px;
+  --banner-internal-embed-height: 200px;
+  --banner-preview-embed-height: 120px;
+}
+
+

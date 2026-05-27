@@ -1,0 +1,185 @@
+/* blockquote */
+:is(.markdown-preview-view,.markdown-rendered) blockquote {
+  padding: 0.5em 0.5em 0.5em 0.6em;
+  border-right-width: 0;
+  border-left: solid;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 5px;
+  border-color: var(--theme-color);
+  background-color: var(--background-blockquote);
+  border-radius: var(--radius-s);
+  margin-inline-start: 2.5%;
+  margin-inline-end: 2.5%;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) blockquote > p {
+  margin-left: 1px;
+  margin-right: 0;
+  font-size: var(--font-size-preview-blockquote);
+}
+
+
+/* preview page */
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width :is(.markdown-preview-section,.markdown-rendered),
+.markdown-source-view.is-readable-line-width .CodeMirror,
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width .markdown-preview-sizer,
+:is(.markdown-preview-view,.markdown-rendered) :is(.markdown-preview-section,.markdown-rendered),
+.markdown-source-view .CodeMirror,
+:is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.cm-s-obsidian.is-folding.is-readable-line-width .markdown-reading-view {
+  line-height: var(--line-height-main);
+  letter-spacing: calc(var(--letter-space-main) * 0.03em);
+  /*text-align: var();*/
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width .CodeMirror,
+:is(.markdown-preview-view,.markdown-rendered) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered),
+:is(.markdown-preview-view,.markdown-rendered) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) > div,
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) {
+  width: var(--file-line-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
+  max-width: var(--file-line-width);
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-content {
+/*   width: var(--file-line-width);
+  max-width: 100%; */
+  margin: 0 auto;
+}
+
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width: 100%;
+}
+
+body.workspace>.workspace-split:not(.mod-root) .CodeMirror,
+body.workspace>.workspace-split:not(.mod-root) .cm-scroller,
+body.workspace>.workspace-split:not(.mod-root) .markdown-preview-sizer {
+  line-height: var(--line-height-split);
+  font-size: var(--font-size-split);
+}
+body.workspace>.workspace-split:not(.mod-root) :is(.markdown-preview-view,.markdown-rendered) {
+  padding: 7px 9px 7px 19px;
+}
+body.workspace>.workspace-split:not(.mod-root) .cm-scroller {
+  padding: 7px 10px 7px 30px;
+}
+body.workspace>.workspace-split:not(.mod-root) .cm-gutters {
+  padding-right: 10px;
+}
+body.workspace>.workspace-split:not(.mod-root) .cm-lineNumbers .cm-gutterElement {
+  padding: 0;
+}
+
+/*style settings blockquote quotation marks*/
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before,
+body .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+  border-left: none;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) blockquote {
+  color: var(--electric-blue);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) blockquote {
+  padding-left: 35px;
+  padding-right: 10px;
+  margin-inline-start: 1%;
+  margin-inline-end: 1%;
+  border-left-width: 0px;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) blockquote > p {
+  position: relative;
+  margin-left: 0.7em;
+  margin-right: 0;
+  font-size: var(--font-size-preview-blockquote);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) blockquote > p:first-of-type::before {
+  content: '\ee81';
+  font-size: 2em;
+  font-family: boxicons;
+  color: var(--text-folder-file-icon);
+  position: absolute;
+  top: -0.4em;
+  left: -1.2em;
+}
+
+/*style settings blockquote quotation marks for cm6 live preview*/
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  padding-left: 2.3em !important;
+  border-left-width: 0px;
+}
+/* body .markdown-source-view.mod-cm6.is-live-preview
+.HyperMD-quote span.cm-quote:not(.cm-formatting){
+  display: inline;
+  position: relative;
+  padding-top: 5px;
+  font-size: var(--font-size-preview-blockquote);
+}  */
+
+body
+.markdown-source-view.mod-cm6.is-live-preview
+.HyperMD-quote:not(.cm-active) > .cm-formatting.cm-formatting-quote.cm-quote::before {
+  content: '\ee81';
+  font-size: 1.5em;
+  font-family: boxicons;
+  color: var(--text-folder-file-icon);
+  position: absolute;
+  margin-left: -0.8em;
+}
+
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote > .cm-formatting.cm-formatting-quote.cm-quote::before {
+  display: none;
+}
+body .markdown-source-view.mod-cm6.is-live-preview .cm-content div.HyperMD-quote .cm-blockquote-border {
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+/*blockquote-style-border-left*/
+body.blockquote-style-border-left :is(.markdown-preview-view,.markdown-rendered) blockquote {
+  border-left: 3px solid var(--robin-egg);
+  background-color: transparent;
+  border-radius: 0;
+}
+.titlebar-inner {
+  -webkit-app-region: drag;
+  display: flex;
+  flex-grow: 1;
+  color: var(--text-normal);
+
+}
+body .titlebar,
+ body .workspace-ribbon.mod-left {
+  --titlebar-background: var(--titlebar-background-focused);
+}
+
+body.simple-titlebar .titlebar {
+  background-color: var(--titlebar-bg);
+  border: none;
+}
+
+body.simple-titlebar .titlebar::before {
+  content: '';
+  background-color: var(--titlebar-bg);
+}
+
+
+/*==========*/

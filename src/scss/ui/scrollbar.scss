@@ -1,0 +1,82 @@
+/*adapted from the CSS snippet created by @subframe7536 https://forum-zh.obsidian.md/t/topic/11164*/
+body :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container,.workspace-leaf-content .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion,
+.prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container)::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px !important;
+  background-color: transparent !important;
+}
+
+body .community-modal-info div[class^='community-modal-info-']
+{
+  color:var(--text-normal);
+}
+body .canvas-node-content  .markdown-preview-view
+{
+  overflow-y: auto!important;
+}
+body :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container) {
+  color: transparent;
+  transition: color var(--anim-duration-fast) var(--anim-motion-smooth);
+  overflow-y: overlay;
+}
+body :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container):hover {
+  color: var(--scrollbar-thumb);
+}
+body :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper,.tag-container) > :not(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-normal);
+}
+
+body :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container)::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-active) !important;
+}
+
+body .popover.hover-popover > .markdown-embed > .markdown-embed-content > .markdown-preview-view {
+  color: transparent !important;
+}
+body .popover.hover-popover > .markdown-embed > .markdown-embed-content > .markdown-preview-view:hover {
+  color: var(--scrollbar-thumb) !important;
+}
+
+
+.workspace-split::-webkit-scrollbar:vertical {
+  display: none;
+}
+
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::before,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar-thumb,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::marker {
+  color: transparent !important;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.plugin-sliding-panes.transparent-panes .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
+  background-color: transparent;
+}
+
+body.plugin-sliding-panes.transparent-panes .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  width: 0;
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  border-right-width: 2px;
+}
+
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  border-left-width: 2px;
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  width: 2px;
+}
+
+body.plugin-sliding-panes.plugin-sliding-panes.transparent-panes.theme-light .workspace-split.mod-vertical>.workspace-leaf {
+  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/*==========================*/

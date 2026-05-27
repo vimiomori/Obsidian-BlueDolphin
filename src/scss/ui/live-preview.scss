@@ -1,0 +1,37 @@
+/*===================================================*/
+/*=================   Live Preview   ================*/
+/*===================================================*/
+.markdown-source-view.is-live-preview span.cm-quote::before {
+  all: initial;
+}
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  background-color: transparent !important;
+  color: #9dfcff73 !important;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-color: var(--theme-color);
+  background-color: var(--background-blockquote);
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-quote.cm-quote {
+  color: var(--red);
+}
+
+.markdown-source-view.is-live-preview span.code-block-flair {
+  color: var(--code-language);
+}
+
+.markdown-source-view.is-live-preview .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom: none;
+}
+
+.markdown-source-view.cm-s-obsidian.mod-cm6 .HyperMD-codeblock {
+  font-size: var(--font-size-code);
+}
+

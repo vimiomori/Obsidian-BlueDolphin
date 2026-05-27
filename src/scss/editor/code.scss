@@ -1,0 +1,730 @@
+/* code */
+.cm-s-obsidian .hmd-fold-html-stub,
+.cm-s-obsidian .hmd-fold-code-stub,
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
+body .cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian .cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-hr,
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-hmd-orgmode-markup,
+.cm-s-obsidian .cm-formatting-code,
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .CodeMirror-linewidget kbd,
+.cm-s-obsidian .hmd-fold-html kbd {
+  font-family: var(--font-monospace);
+}
+.is-live-preview .admonition-content .math-block>mjx-container {
+  padding: 0.3em 0;
+}
+
+.math.math-block mjx-container[jax='CHTML'] {
+  outline: none;
+  font-size: var(--font-size-latex);
+}
+
+
+.markdown-source-view mjx-math,
+:is(.markdown-preview-view,.markdown-rendered) :not(:is(h1,h2,h3,h4,h5,h6))>.math>mjx-container>mjx-math {
+  color: var(--mjx-inline-math-color);
+}
+.markdown-source-view .cm-header-1 ~ .math  mjx-math {
+  color: var(--print-h1-color);
+}
+.markdown-source-view .cm-header-2 ~ .math  mjx-math {
+  color: var(--print-h2-color);
+}
+.markdown-source-view .cm-header-3 ~ .math  mjx-math {
+  color: var(--print-h3-color);
+}
+.markdown-source-view .cm-header-4 ~ .math  mjx-math {
+  color: var(--print-h4-color);
+}
+.markdown-source-view .cm-header-5 ~ .math  mjx-math {
+  color: var(--print-h5-color);
+}
+.markdown-source-view .cm-header-6 ~ .math  mjx-math {
+  color: var(--print-h6-color);
+}
+
+div.math.math-block mjx-math{
+  color: var(--mjx-math-color);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock,
+:is(.markdown-preview-view,.markdown-rendered) code,
+.markdown-rendered code {
+  color: var(--text-color-code);
+  font-size: var(--font-size-code) !important;
+  font-family: var(--font-monospace);
+  text-align: start;
+}
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end)
+{
+  font-size: var(--font-size-code) !important;
+  font-family: var(--font-monospace);
+  text-align: start;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) pre {
+  background-color: var(--background-code);
+  padding: 1em 1.5em;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) code {
+  vertical-align: auto;
+  background-color: var(--background-code-2) ;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) pre code {
+  background-color: transparent !important;
+  color:var(--code-normal);
+}
+
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-formatting.cm-formatting-code.cm-inline-code {
+  color: var(--text-color-code);
+  background-color: var(--background-code-2);
+}
+
+.cm-s-obsidian .cm-inline-code.cm-strong {
+  color: var(--text-color-code) !important;
+}
+
+/*******codebox settings*******/
+/* ================================== */
+/* ===== editor syntax highlight ==== */
+/* ================================== */
+body.theme-dark {
+  --code-tag: var(--red);
+}
+
+body {
+  --code-selection-background: var(--midnight-green-2);
+  --code-qualifier: var(--aqua);
+  --code-value: var(--green);
+  --code-tag: var( --purple);
+  --code-operator: var(--code-property);
+  --code-punctuation: var(--jasmine-1);
+  --code-parameter: #c2c3ff;
+  --code-hr: var(--code-punctuation);
+  --code-string-2: var(--aquamarine-1);
+  --code-language: var(--text-muted);
+  --code-attribute: var(--lavender-pink);
+  --code-atom: var(--orange-1);
+  --code-comment: var(--darkgreen);
+  --code-control: #4ac4fc;
+  --code-keyword: var(--bleu-de-france-1);
+  --code-atom: var(--melon);
+  --code-number: var(--melon);
+  --code-type: #43ffb7;
+  --code-class: #6AFFB4;
+  --code-def: #2aa198;
+  --code-variable: var(--vanilla);
+  --code-variable-2: var(--fairy-tale);
+  --code-variable-3: var(--lavender-pink);
+  --code-function: #50e5ff;
+  --code-callee: #89ddff;
+  --code-operator: var(--aquamarine-1);
+  --code-hr: #98e342;
+  --code-link: var(--doger);
+  --code-error-bg: var(--apricot);
+  --code-header: var(--bleu-de-france);
+  --code-builtin: var(--electric-blue-3);
+  --code-meta: var(--thistle);
+  --code-matching-bracket: var(--spring-green);
+  --code-tag: var(--melon);
+  --code-tag-in-comment: var(--electric-blue-2);
+  --code-bracket: var(--vanilla);
+  --code-comment: #c0f6ff4c;
+  --code-string: var(--spring-green-2);
+  --code-attribute-in-comment: #c792ea;
+  --background-code: #fdf6e3e1;
+  --code-active-line-background-color: #fffcf4;
+  --code-property: var(--code-variable-2);
+}
+
+body {
+  --cm-background-color: var(--code-background) !important;
+  --cm-foreground-color: var(--celeste) !important;
+  --cm-font-monospace: var(--font-monospace-theme) !important;
+  --cm-variable: var(--code-variable) !important;
+  --cm-operator: var(--code-operator) !important;
+  --cm-keyword: var(--code-keyword) !important;
+  --cm-number: var(--code-number) !important;
+  --cm-def: var(--code-function) !important;
+  --cm-type: var(--code-type) !important;
+  --cm-property: var(--code-property) !important;
+  --cm-string: var(--code-string) !important;
+  --cm-meta: var(--code-meta) !important;
+  --cm-comment: var(--code-comment) !important;
+  --cm-builtin: var(--code-builtin) !important;
+  --cm-attribute: var(--code-attribute) !important;
+  --cm-variable-2: var(--code-variable-2) !important;
+  --cm-string-2: var(--code-string-2) !important;
+}
+
+code span {
+  font-weight: 400;
+}
+
+.cm-s-obsidian span.cm-variable {
+  color: var(--code-variable);
+}
+.cm-s-obsidian span.cm-variable-2 {
+  color: var(--code-variable-2);
+}
+
+.cm-s-obsidian span.cm-variable-3 {
+  color: var(---code-variable-3);
+}
+
+span.cm-variable + .cm-hmd-codeblock + span.cm-variable
+{
+  color: var(--code-variable-2);
+}
+
+span.cm-variable + .cm-hmd-codeblock + span.cm-variable + .cm-hmd-codeblock + span.cm-variable
+{
+  color: var(--code-variable-3);
+}
+span.cm-type {
+  color: var(--code-type);
+  font-style: italic;
+  font-weight: bold;
+}
+span.cm-def {
+  color:var(--code-function);
+}
+
+.cm-type {
+  color: var(--code-type);
+  font-weight: 800;
+}
+.token.atrule,
+.token.attr-value,
+.cm-attribute {
+  color: var(--code-attribute);
+}
+
+.cm-qualifier {
+  color: var(--code-qualifier);
+}
+
+.cm-operator
+{
+  color:var(--code-operator);
+}
+
+.cm-property {
+  color: var(--code-property) !important;
+}
+
+.cm-hr {
+  color: var(--code-hr);
+}
+.cm-string-2 {
+  color: var(--code-string-2);
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
+.cm-s-obsidian .cm-templater-command.cm-atom,
+.cm-s-obsidian .cm-math.cm-atom,
+.cm-s-obsidian .HyperMD-codeblock .cm-atom,
+.markdown-preview-view pre.cm-s-obsidian .cm-atom {
+  color: var(--code-atom);
+}
+
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-meta,
+.cm-s-obsidian .cm-templater-command.cm-meta,
+.cm-s-obsidian .cm-math.cm-meta,
+.cm-s-obsidian .HyperMD-codeblock .cm-meta,
+.markdown-preview-view pre.cm-s-obsidian .cm-meta {
+  color: var(--code-meta);
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-builtin,
+.cm-s-obsidian .cm-templater-command.cm-builtin,
+.cm-s-obsidian .cm-math.cm-builtin,
+.cm-s-obsidian .HyperMD-codeblock .cm-builtin,
+.markdown-preview-view pre.cm-s-obsidian .cm-builtin,
+.markdown-preview-view pre code span.builtin  {
+  color: var(--code-builtin);
+  font-style: italic;
+}
+
+
+.markdown-preview-view pre code span.class {
+  color: var(--code-class);
+}
+
+.markdown-preview-view pre code span.function {
+  color: var(--code-property);
+}
+
+.markdown-preview-view pre code span.punctuation {
+  color: var(--code-punctuation);
+}
+
+.markdown-preview-view pre code span.operator {
+  color: var(--code-operator);
+  background: transparent;
+}
+
+.markdown-preview-view pre code span.entity {
+  color: var(--code-attribute);
+}
+
+.markdown-preview-view pre code span.parameter {
+  color: var(--code-parameter);
+}
+
+.markdown-preview-view pre code span.property {
+  color: var(--code-property);
+}
+
+.markdown-preview-view pre code span.important {
+  color: var(--code-important);
+}
+
+.markdown-preview-view pre code span.attr-name {
+  color: var(--code-tag);
+}
+
+.markdown-preview-view pre code span.attr-value {
+  color: var(--code-string);
+}
+
+.markdown-preview-view pre code span.builtin {
+  color: var(--code-builtin);
+  font-style: italic;
+}
+
+.markdown-preview-view pre code span.unit {
+  color: var(--code-value);
+}
+
+.markdown-preview-view  span.token.macro-name {
+  color: var(--code-important);
+}
+
+span.token.directive-hash {
+  color: var(--code-tag);
+}
+.cm-s-obsidian span.cm-comment {
+  color: var(--code-comment);
+}
+
+.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg::before {
+  display: none;
+}
+.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg {
+  background-color: var(--code-active-line-background-color);
+  --text-selection: var(--code-selection-background) !important;
+  z-index: -1;
+}
+
+pre code[class*="language-"] {
+  padding: 1em 0.5em;
+  --code-normal: var(--papaya-whip) !important;
+}
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  background: var(--midnight-green);
+}
+
+/*Advanced Codeblock */
+.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line span.live-preview-codeblock-line-nums {
+  margin-left: -1.5em;
+}
+
+
+.code-line-number .HyperMD-codeblock-begin {
+  counter-reset: line-numbers;
+}
+
+.code-line-number .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  padding-left: 3em;
+  position: relative;
+}
+
+.code-line-number .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+  align-items: flex-start;
+  color: var(--text-faint);
+  content: counter(line-numbers);
+  counter-increment: line-numbers;
+  display: flex;
+  font-size: 0.8em;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  width: 2em;
+  padding-right: 0.5em;
+  bottom: -2px;
+  border-right: 1px solid var(--scrollbar-thumb-bg);
+}
+
+.code-line-number .HyperMD-codeblock.cm-line.cm-active:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+  color: var(--color-accent);
+}
+
+.code-line-number .HyperMD-codeblock .cm-foldPlaceholder::before {
+  display: none;
+}
+
+
+
+/* ================================== */
+.cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
+.cm-s-obsidian .cm-math.cm-qualifier,
+.cm-s-obsidian .cm-qualifier {
+  color: var(--yellow) ;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock .cm-qualifier {
+  color: var(--code-qualifier) ;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-property,
+.cm-s-obsidian .cm-math.cm-property,
+.cm-s-obsidian pre.HyperMD-codeblock .cm-property {
+  color: var(--code-property) ;
+}
+
+.cm-s-obsidian .cm-math.cm-atom,
+.cm-s-obsidian pre.HyperMD-codeblock .cm-atom {
+  color: var(--text-normal) ;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-number,
+.cm-s-obsidian .cm-math.cm-number,
+.cm-s-obsidian pre.HyperMD-codeblock .cm-number {
+  color: var(--code-value) ;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-comment,
+.cm-s-obsidian .cm-math.cm-comment,
+.cm-s-obsidian pre.HyperMD-codeblock .cm-comment {
+  color: var(--code-comment) ;
+}
+
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag,
+.theme-dark .cm-s-obsidian .cm-math.cm-tag,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
+  color: var(--code-tag) ;
+}
+
+.theme-light .cm-s-obsidian .cm-hmd-frontmatter.cm-tag,
+.theme-light .cm-s-obsidian .cm-math.cm-tag,
+.theme-light .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
+  color: var(--code-tag) ;
+}
+
+.cm-atom.cm-hmd-frontmatter {
+  color: var(--code-atom)  ;
+}
+
+.cm-meta.cm-hmd-frontmatter {
+  color: var(--code-meta)  ;
+}
+.token.punctuation,
+.cm-punctuation,
+.cm-bracket {
+  color: var(--code-punctuation)  !important ;
+}
+
+.theme-dark .cm-s-obsidian span.cm-keyword {
+  font-weight: 600 ;
+}
+
+
+/* ================================== */
+/* ================================== */
+
+/*inline code*/
+.cm-s-obsidian.mod-cm6 .HyperMD-codeblock span.cm-inline-code {
+  display: inline-block;
+  padding: unset;
+}
+
+.cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+  color: var(--text-muted);
+  border-radius: 3px 0 0 3px;
+}
+
+.cm-s-obsidian span[class="cm-inline-code"]+span.cm-formatting-code.cm-inline-code,
+.cm-s-obsidian span[class*="cm-inline-code"][class*="cm-list"]+span.cm-formatting-code.cm-inline-code,
+.cm-s-obsidian span[class*="cm-inline-code"][class*="cm-quote"]+span.cm-formatting-code.cm-inline-code,
+.cm-s-obsidian span[class*="cm-inline-code"][class*="cm-header"]+span.cm-formatting-code.cm-inline-code,
+.cm-s-obsidian span[class*="cm-inline-code"][class*="cm-em"]+span.cm-formatting-code.cm-inline-code,
+.cm-s-obsidian span[class*="cm-inline-code"][class*="cm-strong"]+span.cm-formatting-code.cm-inline-code {
+  color: var(--text-muted);
+  border-radius: 0 3px 3px 0;
+}
+
+.cm-formatting.cm-formatting-code-block.cm-hmd-codeblock {
+  color: var(--code-language);
+}
+.cm-hmd-frontmatter {
+  color: var(--code-normal);
+}
+.cm-hmd-frontmatter.cm-string {
+  color: var(--code-string);
+}
+/*bold code text except code language*/
+:not(pre)>code:not([class*='language-']) {
+  font-weight: var(--font-weight-inline-code);
+  padding: 2px 3px 1px;
+  font-family: var(--font-family-inline-code) !important;
+}
+
+.cm-s-obsidian span.cm-inline-code {
+  padding: 2px 0 1px;
+  color: var(--text-color-code);
+  font-weight: var(--font-weight-inline-code);
+  font-family: var(--font-family-inline-code) !important;
+  font-size: var(--font-size-code) !important;
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  color: var(--list-ol-number-color);
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  margin-left: -2px;
+}
+
+
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+  min-width: max-content;
+  white-space: pre-wrap;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line.cm-line {
+  font-family: var(--font-family-list);
+}
+
+li {
+  line-height: var(--line-height-list);
+  font-family: var(--font-family-list);
+}
+
+li>p:not(.task-list-item) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.markdown-source-view ol > li,
+.markdown-source-view ul > li,
+.markdown-preview-view ol > li,
+.markdown-preview-view ul > li,
+.markdown-rendered ul > li,
+.mod-cm6 .HyperMD-list-line.cm-line {
+  padding-top: calc(var(--list-spacing-bt) * 0.075em);
+  padding-bottom: calc(var(--list-spacing-bt) * 0.075em);
+}
+
+body ul,
+body ol ul,
+body ol ol ul,
+body ol ol ol ul {
+  list-style-type: disc;
+}
+body ul ul,
+body ol ul ul,
+body ul ol ul,
+body ol ol ul ul {
+  list-style-type: circle;
+}
+body ul ul ul,
+body ol ul ul ul,
+body ul ol ul ul,
+body ul ul ol ul {
+  list-style: square;
+}
+body ul ul ul ul,
+body ol ul ul ul ul,
+body ul ol ul ul ul,
+body ul ul ol ul ul,
+body ul ul ul ol ul {
+  list-style: circle;
+}
+
+@counter-style decimal-lv2 {
+  system: extends decimal;
+  suffix: ") ";
+}
+@counter-style lower-latin-lv2 {
+  system: extends lower-latin;
+  suffix: ") ";
+}
+@counter-style lower-roman-lv2 {
+  system: extends lower-roman;
+  suffix: ") ";
+}
+@counter-style decimal-lv3 {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-latin-lv3 {
+  system: extends lower-latin;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-roman-lv3 {
+  system: extends lower-roman;
+  prefix: "(";
+  suffix: ") ";
+}
+
+body ol {
+  list-style: var(--list-ol-marker-1);
+}
+body ul ol,
+body ol ol {
+  list-style: var(--list-ol-marker-2);
+}
+body ul ul ol,
+body ul ol ol,
+body ol ol ol,
+body ol ul ol {
+  list-style: var(--list-ol-marker-3);
+}
+
+body code[class*='language-'],
+body pre[class*='language-'] {
+  word-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+/* Inline code */
+:not(pre)>code[class*='language-'] {
+  padding: .1em !important;
+  border-radius: var(--radius-s) !important;
+  white-space: normal !important;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold !important;
+}
+
+.token.italic {
+  font-style: italic !important;
+}
+
+.token.entity {
+  cursor: help !important;
+}
+
+/*show language type in preview mode*/
+/*Thanks to elutao from https://snippets.cacher.io/snippet/018387c872dc39277996 */
+pre::before {
+  font-family: var(--font-default);
+  color: var(--aquamarine-1);
+  opacity: 0.7;
+  font-size: 0.85em;
+  font-weight: 600;
+  position: absolute;
+  right: 48px;
+  top: 0.05em;
+}
+
+pre {
+  position: relative;
+}
+
+pre[class~='language-c']::before {
+  content: "C";
+}
+pre[class~='language-py']::before,
+pre[class~='language-python']::before {
+  content: "PYTHON";
+}
+pre[class~='language-nginx']::before {
+  content: "NGINX";
+}
+pre[class~='language-css']::before {
+  content: "CSS";
+}
+pre[class~='language-javascript']::before {
+  content: "JS";
+}
+pre[class~='language-js']::before {
+  content: "JS";
+}
+pre[class~='language-php']::before {
+  content: "PHP";
+}
+pre[class~='language-shell']::before,
+pre[class~='language-sh']::before,
+pre[class~='language-bash']::before {
+  content: "SHELL";
+}
+pre[class~='language-flow']::before {
+  content: "FLOW";
+}
+pre[class~='language-sequence']::before {
+  content: "SEQUENCE";
+}
+pre[class~='language-sql']::before {
+  content: "SQL";
+}
+pre[class~='language-yaml']::before {
+  content: "YAML";
+}
+pre[class~='language-ini']::before {
+  content: "INI";
+}
+pre[class~='language-xml']::before {
+  content: "XML";
+}
+pre[class~='language-git']::before {
+  content: "GIT";
+}
+pre[class~='language-cs']::before {
+  content: "C#";
+}
+pre[class~='language-cpp']::before {
+  content: "C++";
+}
+pre[class~='language-java']::before {
+  content: "JAVA";
+}
+pre[class~='language-html']::before {
+  content: "HTML";
+}
+pre[class~='language-txt']::before {
+  content: "TXT";
+}
+pre[class~='language-r']::before {
+  content: "R";
+}
+pre[class~='language-matlab']::before {
+  content: "MATLAB";
+}
+pre[class~='language-rust']::before {
+  content: "RUST";
+}
+pre[class~='language-go']::before {
+  content: "GO";
+}
+pre[class~='language-clojure']::before {
+  content: "CLOJURE";
+}
+

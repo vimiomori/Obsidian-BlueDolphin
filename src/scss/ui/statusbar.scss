@@ -1,0 +1,94 @@
+/* ----状态栏透明开关----------- */
+
+.status-bar {
+  --bar-vertical-padding: 5px;
+  --bar-height: calc(22px + (var(--bar-vertical-padding)));
+  line-height: 1;
+  height: var(--bar-height);
+  max-height: var(--bar-height);
+  min-height: var(--bar-height);
+  overflow: hidden;
+  color: var(--status-bar-text-color);
+  border-top: 1px solid var(--panel-border-color);
+  background-color: var(--status-bar-bg);
+}
+
+.is-translucent .status-bar {
+  margin: 0;
+}
+
+.nav-folder-title-content.is-being-renamed {
+  white-space: break-spaces;
+}
+
+@keyframes filemove {
+  0% {transform: translate(0, 0);}
+  100% {transform: translate(calc(-100% + 200px), 0);}
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+  border-radius: var(--radius-m);
+}
+
+.item-list {
+  padding: 0;
+}
+
+.item-list .nav-file-icon {
+  margin-left: 2px;
+}
+
+.nav-file-title.is-active {
+  color: var(--vanilla);
+  background-color: var(--midnight-green);
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background-color: var(--indigo-blue);
+  color: var(--electric-blue-2);
+  font-weight: bold;
+}
+
+.nav-folder-title.is-being-dragged-over {
+  border-radius: var(--radius-xs);
+  color: var(--theme-color);
+  background: var(--theme-color-translucent-015);
+}
+
+body:not(.is-grabbing) .nav-file-title.is-being-dragged,
+body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
+.nav-file-title.is-being-dragged, .nav-folder-title.is-being-dragged {
+  border-radius: var(--radius-xs);
+  color: var(--theme-color);
+  background-color: var(--cerulean) !important;
+}
+
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-file-title:hover,
+.nav-file:not(.is-active):hover .nav-file-title,
+.nav-folder:hover .nav-folder-content {
+  background-color: var(--indigo-blue);
+  font-weight: 500;
+}
+
+body.is-grabbing .nav-folder-title:hover,
+body.is-grabbing .nav-file-title:hover {
+  font-weight: bold !important;
+  color: var(--theme-color);
+  filter: hue-rotate(160deg);
+  background-color: var(--theme-color-translucent-015);
+  opacity: 1;
+}
+
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+  background-color: var(--theme-color-translucent-015);
+}
+
+.side-dock-plugin-panel-inner {
+  padding-left: 6px;
+}
+

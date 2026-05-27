@@ -1,0 +1,1266 @@
+/*ob关闭按钮顺序调整*/
+body.reversal-titlebar .titlebar-button-container.mod-right {
+  direction: rtl;
+}
+body.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+  background-color:transparent;
+}
+
+/* head-tag-style*/
+
+body :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sup {
+  background-color: var(--text-accent-hover);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  line-height: calc(var(--paragraph-spacing) + 0.7);
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  font-family:  var(--font-default);
+}
+body :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sub {
+  background-color: var( --simple-orange);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  line-height: calc(var(--paragraph-spacing) + 0.7);
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  font-family: var(--font-default);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sup {
+  background-color: var(--text-accent-hover);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  margin-top: -0.2em;
+  line-height: calc(var(--line-height-main) - 0.7);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sub {
+  background-color: var( --simple-orange);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  margin-top: -0.2em;
+  line-height: calc(var(--line-height-main) - 0.7);
+}
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) :is(sub,sup)>.tag:not(.token) {
+  padding: 0;
+  background-color: transparent;
+}
+
+body .cm-s-obsidian .cm-header ~  span.cm-hashtag {
+  font-size: calc(var(--font-size-tag) - 0.3em)!important;
+  vertical-align: top;
+}
+body .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
+body .cm-s-obsidian .cm-hashtag.cm-header {
+  vertical-align: top;
+}
+
+
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token) {
+  font-size: calc(var(--font-size-tag) - 0.3em);
+  vertical-align: top;
+}
+
+.cm-s-obsidian
+.cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
+.cm-s-obsidian .cm-hashtag.cm-header {
+  font-size: calc(var(--font-size-tag) - 0.3em)!important;
+  vertical-align: middle;
+  margin-top: -0.3em;
+}
+
+
+
+body .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
+body .cm-s-obsidian .cm-hashtag.cm-header {
+  vertical-align: top;
+}
+
+
+:is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token) {
+  font-size: calc(var(--font-size-tag) - 0.2em);
+  vertical-align: middle;
+}
+
+/****** 网络图片标题样式********/
+[data-dv-key="img-caption"] + span.dataview>span {
+  margin: 0.5rem 0;
+  display: block;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.dataview.inline-field-key[data-dv-key="img-caption"] + .dataview.inline-field-value {
+  background-color:unset;
+  border-radius: 0px;
+  padding: 0;
+  font-family: var(--font-text);
+}
+
+.dataview.inline-field-key[data-dv-key="img-caption"] {
+  display:none;
+  background-color:unset;
+  font-size: 0px;
+  padding: 0;
+  border-radius: 0px;
+}
+
+.dataview.inline-field-key[data-dv-key="img-caption"] {
+  display:none;
+  background-color:unset;
+  font-size: 0px;
+  padding: 0;
+  border-radius: 0px;
+}
+
+
+body.markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
+  background: transparent;
+}
+
+.clickable-icon.is-active,
+.clickable-icon.has-active-menu,
+.clickable-icon:active,
+.clickable-icon:hover {
+  background-color: var(--cerulean);
+  color: var(--electric-blue-2);
+}
+
+.workspace.is-left-sidedock-open .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button .clickable-icon,
+.workspace-split.mod-horizontal .sidebar-toggle-button .clickable-icon,
+.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right .clickable-icon {
+  color: var(--electric-blue);
+}
+
+.view-header-nav-buttons .clickable-icon[aria-disabled='true'] {
+  color: var(--electric-blue-2);
+  opacity: unset;
+}
+
+.view-header-nav-buttons .clickable-icon[aria-disabled='true']:hover {
+  color: var(--bleu-de-france);
+}
+.workspace-tabs .view-header {
+  margin: 0;
+  padding: 0 var(--size-4-2);
+}
+
+.workspace-split.mod-root .workspace-tab-header.is-active {
+  border: none;
+  z-index: var(--layer-popover);
+  color: var(--text-normal);
+  box-shadow: var(--window-shadow);
+}
+.is-mobile  .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
+{
+  z-index: 29;
+}
+
+.is-focused .workspace-tab-header {
+  color: var(--vivid-sky-blue);
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  background-color: var(--background-primary);
+  border-right: 1px solid var(--page-border-bottom);
+  box-shadow: -1px 0 10px 0 var(--tab-stacked-shadow);
+  backdrop-filter: blur(6px);
+}
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:first-child {
+  border-left: 1px solid var(--page-border-bottom);
+}
+
+.titlebar-button:hover {
+  background-color: unset;
+}
+
+.list-bullet::before {
+  display: none;
+}
+
+.markdown-rendered .list-bullet::after {
+  content: '\2022';
+  font-size: var(--list-ul-marker-size);
+  font-family: Inter;
+  width: unset;
+  height: unset;
+  border: none;
+  background: transparent;
+  color: var(--list-ul-marker-color);
+  margin-left: 0.13em;
+  margin-top: calc(0.466em * var(--line-height-list) - 0.286em);
+  line-height: 0.55;
+  transition: all 0.15s ease;
+}
+
+.list-bullet::after {
+  content: '\2022';
+  font-size: var(--list-ul-marker-size);
+  font-family: Inter;
+  width: unset;
+  border: none;
+  background: transparent;
+  color: var(--list-ul-marker-color);
+/*   margin-left: -0.03em;
+  margin-top: -0.15em; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 43%;
+  transition: all 0.15s ease;
+}
+
+.has-list-bullet .list-bullet::after,
+.has-list-bullet .has-list-bullet .list-bullet::after,
+.has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+.has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after {
+  top: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  width: 0;
+}
+
+/* 
+colorful indentation lines in editing mode
+*/
+
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(1)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-1), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(2)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-2), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(3)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-3), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(4)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-4), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(5)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-5), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(6)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-6), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(7)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-7), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(8)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-8), 0.5);
+}
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+.cm-indent:nth-of-type(9)::before {
+  border-right: 1px solid rgba(var(--rainbow-rgb-1), 0.5);
+}
+
+.is-focused .mod-active .workspace-tab-header.is-active
+.workspace-tab-header-inner-icon {
+  color: var(--theme-color);
+}
+
+.workspace-ribbon.mod-left {
+  margin-top: calc(var(--header-height)*0.98);
+}
+
+/* .has-list-bullet .list-bullet:after {
+  margin-left: -10px;
+} */
+
+.list-collapse-indicator:hover ~ .list-bullet:after,
+.cm-fold-indicator:hover ~ .list-bullet:after,
+.list-collapse-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+.cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after {
+  box-shadow: -0.02em 0.058em 0 2px var(--background-modifier-hover);
+  background-color: var(--background-modifier-hover);
+}
+
+li.is-collapsed .list-collapse-indicator:hover ~ .list-bullet:after,
+li.is-collapsed .cm-fold-indicator:hover ~ .list-bullet:after,
+.list-collapse-indicator:hover.is-collapsed ~ .list-bullet:after,
+.cm-fold-indicator:hover.is-collapsed ~ .list-bullet:after,
+li.is-collapsed .list-collapse-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+li.is-collapsed .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+.list-collapse-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+.cm-fold-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+li.is-collapsed .list-bullet:after,
+.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+.markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .is-collapsed .list-bullet::after {
+  color: var(--list-marker-color-collapsed);
+  box-shadow: -0.02em 0.058em 0 2px var(--background-modifier-active-hover);
+  background-color: var(--background-modifier-active-hover);
+}
+
+
+body .markdown-source-view.mod-cm6 .list-bullet::after {
+  content: var(--list-ul-colorful-marker-content);
+}
+
+body .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
+  color: var(--list-colorful-marker-1);
+}
+
+body .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-2);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-3);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-4);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-5);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-6);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-7);
+}
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+  color: var(--list-colorful-marker-8);
+}
+
+body li.is-collapsed .list-collapse-indicator:hover ~ .list-bullet:after,
+body li.is-collapsed .cm-fold-indicator:hover ~ .list-bullet:after,
+body .list-collapse-indicator:hover.is-collapsed ~ .list-bullet:after,
+body .cm-fold-indicator:hover.is-collapsed ~ .list-bullet:after,
+body li.is-collapsed .list-collapse-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+body li.is-collapsed .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+body .list-collapse-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+body .cm-fold-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+
+body li.is-collapsed .list-bullet:after,
+body .is-collapsed ~ .cm-formatting-list .list-bullet:after,
+body .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .is-collapsed .list-bullet::after {
+  color: var(--list-marker-color-collapsed);
+  box-shadow: -0.02em 0.058em 0 2px var(--background-modifier-active-hover);
+  background-color: var(--background-modifier-active-hover);
+}
+
+body.list-bracket-style .markdown-rendered.show-indentation-guide li:not(.task-list-item) > :is(ol,ul)::before{
+  border: none;
+}
+
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+  content: "\200B";
+  position: absolute;
+  display: block;
+  left: -1em;
+  top: 0;
+  bottom: 0;
+  border-right: var(--indentation-guide-width) solid var(--indentation-guide-color);
+}
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ul>li:not(.task-list-item)::marker {
+  font-size: 0.9em;
+}
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered):not(.kanban) li:not(.task-list-item) {
+  padding-left: 0.3rem;
+}
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul>li:not(.task-list-item) {
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+  transition: all 300ms ease-in-out;
+  border-left: 0.125em solid var(--list-ul-block-color);
+}
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul>li:not(.task-list-item):hover {
+  border-color: var(--list-ul-hover);
+}
+
+
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ol:not(.contains-task-list)>li:not(.task-list-item) {
+  border-left: 0.125em solid var(--list-ol-block-color);
+  border-radius: var(--radius-s);
+  padding-left: 0.3rem;
+  border-radius: var(--radius-s);
+  transition: all 300ms ease-in-out;
+}
+
+body.list-bracket-style ol.contains-task-list ol li:not(.task-list-item) {
+  border-left: none !important;
+  padding-left: 0.25em;
+}
+
+body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ol:not(.contains-task-list)>li:not(.task-list-item):hover {
+  border-color: var(--list-ol-hover);
+}
+
+
+
+
+body ol li::marker,
+body ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-1);
+}
+
+body ol ol li::marker,
+body ul ol li::marker {
+  color: var(--list-colorful-marker-2);
+}
+body ol ol li::before,
+body ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-2);
+}
+
+body ol ol ol li::marker,
+body ol ul ol li::marker,
+body ul ul ol li::marker,
+body ul ol ol li::marker {
+  color: var(--list-colorful-marker-3);
+}
+body ol ol ol li::before,
+body ol ul ol li::before,
+body ul ul ol li::before,
+body ul ol ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-3);
+}
+
+body ol ol ol ol li::marker,
+body ol ol ul ol li::marker,
+body ol ul ol ol li::marker,
+body ul ol ol ol li::marker,
+body ol ul ul ol li::marker,
+body ul ol ul ol li::marker,
+body ul ul ol ol li::marker,
+body ul ul ul ol li::marker {
+  color: var(--list-colorful-marker-4);
+}
+body ol ol ol ol li::before,
+body ol ol ul ol li::before,
+body ol ul ol ol li::before,
+body ul ol ol ol li::before,
+body ol ul ul ol li::before,
+body ul ol ul ol li::before,
+body ul ul ol ol li::before,
+body ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-4);
+}
+
+body ol ol ol ol ol li::marker,
+body ol ol ol ul ol li::marker,
+body ol ol ul ol ol li::marker,
+body ol ul ol ol ol li::marker,
+body ol ol ul ul ol li::marker,
+body ol ul ol ul ol li::marker,
+body ol ul ul ol ol li::marker,
+body ol ul ul ul ol li::marker,
+body ul ol ol ol ol li::marker,
+body ul ol ol ul ol li::marker,
+body ul ol ul ol ol li::marker,
+body ul ul ol ol ol li::marker,
+body ul ol ul ul ol li::marker,
+body ul ul ol ul ol li::marker,
+body ul ul ul ol ol li::marker,
+body ul ul ul ul ol li::marker {
+  color: var(--list-colorful-marker-5);
+}
+body ol ol ol ol ol li::before,
+body ol ol ol ul ol li::before,
+body ol ol ul ol ol li::before,
+body ol ul ol ol ol li::before,
+body ol ol ul ul ol li::before,
+body ol ul ol ul ol li::before,
+body ol ul ul ol ol li::before,
+body ol ul ul ul ol li::before,
+body ul ol ol ol ol li::before,
+body ul ol ol ul ol li::before,
+body ul ol ul ol ol li::before,
+body ul ul ol ol ol li::before,
+body ul ol ul ul ol li::before,
+body ul ul ol ul ol li::before,
+body ul ul ul ol ol li::before,
+body ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-5);
+}
+
+body ol ol ol ol ol ol li::marker,
+body ol ol ol ol ul ol li::marker,
+body ol ol ol ul ol ol li::marker,
+body ol ol ul ol ol ol li::marker,
+body ol ol ol ul ul ol li::marker,
+body ol ol ul ol ul ol li::marker,
+body ol ol ul ul ol ol li::marker,
+body ol ol ul ul ul ol li::marker,
+body ol ul ol ol ol ol li::marker,
+body ol ul ol ol ul ol li::marker,
+body ol ul ol ul ol ol li::marker,
+body ol ul ul ol ol ol li::marker,
+body ol ul ol ul ul ol li::marker,
+body ol ul ul ol ul ol li::marker,
+body ol ul ul ul ol ol li::marker,
+body ol ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol li::marker,
+body ul ol ol ol ul ol li::marker,
+body ul ol ol ul ol ol li::marker,
+body ul ol ul ol ol ol li::marker,
+body ul ol ol ul ul ol li::marker,
+body ul ol ul ol ul ol li::marker,
+body ul ol ul ul ol ol li::marker,
+body ul ol ul ul ul ol li::marker,
+body ul ul ol ol ol ol li::marker,
+body ul ul ol ol ul ol li::marker,
+body ul ul ol ul ol ol li::marker,
+body ul ul ul ol ol ol li::marker,
+body ul ul ol ul ul ol li::marker,
+body ul ul ul ol ul ol li::marker,
+body ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ol li::marker {
+  color: var(--list-colorful-marker-6);
+}
+
+body ol ol ol ol ol ol li::before,
+body ol ol ol ol ul ol li::before,
+body ol ol ol ul ol ol li::before,
+body ol ol ul ol ol ol li::before,
+body ol ol ol ul ul ol li::before,
+body ol ol ul ol ul ol li::before,
+body ol ol ul ul ol ol li::before,
+body ol ol ul ul ul ol li::before,
+body ol ul ol ol ol ol li::before,
+body ol ul ol ol ul ol li::before,
+body ol ul ol ul ol ol li::before,
+body ol ul ul ol ol ol li::before,
+body ol ul ol ul ul ol li::before,
+body ol ul ul ol ul ol li::before,
+body ol ul ul ul ol ol li::before,
+body ol ul ul ul ul ol li::before,
+body ul ol ol ol ol ol li::before,
+body ul ol ol ol ul ol li::before,
+body ul ol ol ul ol ol li::before,
+body ul ol ul ol ol ol li::before,
+body ul ol ol ul ul ol li::before,
+body ul ol ul ol ul ol li::before,
+body ul ol ul ul ol ol li::before,
+body ul ol ul ul ul ol li::before,
+body ul ul ol ol ol ol li::before,
+body ul ul ol ol ul ol li::before,
+body ul ul ol ul ol ol li::before,
+body ul ul ul ol ol ol li::before,
+body ul ul ol ul ul ol li::before,
+body ul ul ul ol ul ol li::before,
+body ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-6);
+}
+
+body ol ol ol ol ol ol ol li::marker,
+body ol ol ol ol ol ul ol li::marker,
+body ol ol ol ol ul ol ol li::marker,
+body ol ol ol ul ol ol ol li::marker,
+body ol ol ol ol ul ul ol li::marker,
+body ol ol ol ul ol ul ol li::marker,
+body ol ol ol ul ul ol ol li::marker,
+body ol ol ol ul ul ul ol li::marker,
+body ol ol ul ol ol ol ol li::marker,
+body ol ol ul ol ol ul ol li::marker,
+body ol ol ul ol ul ol ol li::marker,
+body ol ol ul ul ol ol ol li::marker,
+body ol ol ul ol ul ul ol li::marker,
+body ol ol ul ul ol ul ol li::marker,
+body ol ol ul ul ul ol ol li::marker,
+body ol ol ul ul ul ul ol li::marker,
+body ol ul ol ol ol ol ol li::marker,
+body ol ul ol ol ol ul ol li::marker,
+body ol ul ol ol ul ol ol li::marker,
+body ol ul ol ul ol ol ol li::marker,
+body ol ul ol ol ul ul ol li::marker,
+body ol ul ol ul ol ul ol li::marker,
+body ol ul ol ul ul ol ol li::marker,
+body ol ul ol ul ul ul ol li::marker,
+body ol ul ul ol ol ol ol li::marker,
+body ol ul ul ol ol ul ol li::marker,
+body ol ul ul ol ul ol ol li::marker,
+body ol ul ul ul ol ol ol li::marker,
+body ol ul ul ol ul ul ol li::marker,
+body ol ul ul ul ol ul ol li::marker,
+body ol ul ul ul ul ol ol li::marker,
+body ol ul ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol ol li::marker,
+body ul ol ol ol ol ul ol li::marker,
+body ul ol ol ol ul ol ol li::marker,
+body ul ol ol ul ol ol ol li::marker,
+body ul ol ol ol ul ul ol li::marker,
+body ul ol ol ul ol ul ol li::marker,
+body ul ol ol ul ul ol ol li::marker,
+body ul ol ol ul ul ul ol li::marker,
+body ul ol ul ol ol ol ol li::marker,
+body ul ol ul ol ol ul ol li::marker,
+body ul ol ul ol ul ol ol li::marker,
+body ul ol ul ul ol ol ol li::marker,
+body ul ol ul ol ul ul ol li::marker,
+body ul ol ul ul ol ul ol li::marker,
+body ul ol ul ul ul ol ol li::marker,
+body ul ol ul ul ul ul ol li::marker,
+body ul ul ol ol ol ol ol li::marker,
+body ul ul ol ol ol ul ol li::marker,
+body ul ul ol ol ul ol ol li::marker,
+body ul ul ol ul ol ol ol li::marker,
+body ul ul ol ol ul ul ol li::marker,
+body ul ul ol ul ol ul ol li::marker,
+body ul ul ol ul ul ol ol li::marker,
+body ul ul ol ul ul ul ol li::marker,
+body ul ul ul ol ol ol ol li::marker,
+body ul ul ul ol ol ul ol li::marker,
+body ul ul ul ol ul ol ol li::marker,
+body ul ul ul ul ol ol ol li::marker,
+body ul ul ul ol ul ul ol li::marker,
+body ul ul ul ul ol ul ol li::marker,
+body ul ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ul ol li::marker {
+  color: var(--list-colorful-marker-7);
+}
+
+
+body ol ol ol ol ol ol ol li::before,
+body ol ol ol ol ol ul ol li::before,
+body ol ol ol ol ul ol ol li::before,
+body ol ol ol ul ol ol ol li::before,
+body ol ol ol ol ul ul ol li::before,
+body ol ol ol ul ol ul ol li::before,
+body ol ol ol ul ul ol ol li::before,
+body ol ol ol ul ul ul ol li::before,
+body ol ol ul ol ol ol ol li::before,
+body ol ol ul ol ol ul ol li::before,
+body ol ol ul ol ul ol ol li::before,
+body ol ol ul ul ol ol ol li::before,
+body ol ol ul ol ul ul ol li::before,
+body ol ol ul ul ol ul ol li::before,
+body ol ol ul ul ul ol ol li::before,
+body ol ol ul ul ul ul ol li::before,
+body ol ul ol ol ol ol ol li::before,
+body ol ul ol ol ol ul ol li::before,
+body ol ul ol ol ul ol ol li::before,
+body ol ul ol ul ol ol ol li::before,
+body ol ul ol ol ul ul ol li::before,
+body ol ul ol ul ol ul ol li::before,
+body ol ul ol ul ul ol ol li::before,
+body ol ul ol ul ul ul ol li::before,
+body ol ul ul ol ol ol ol li::before,
+body ol ul ul ol ol ul ol li::before,
+body ol ul ul ol ul ol ol li::before,
+body ol ul ul ul ol ol ol li::before,
+body ol ul ul ol ul ul ol li::before,
+body ol ul ul ul ol ul ol li::before,
+body ol ul ul ul ul ol ol li::before,
+body ol ul ul ul ul ul ol li::before,
+body ul ol ol ol ol ol ol li::before,
+body ul ol ol ol ol ul ol li::before,
+body ul ol ol ol ul ol ol li::before,
+body ul ol ol ul ol ol ol li::before,
+body ul ol ol ol ul ul ol li::before,
+body ul ol ol ul ol ul ol li::before,
+body ul ol ol ul ul ol ol li::before,
+body ul ol ol ul ul ul ol li::before,
+body ul ol ul ol ol ol ol li::before,
+body ul ol ul ol ol ul ol li::before,
+body ul ol ul ol ul ol ol li::before,
+body ul ol ul ul ol ol ol li::before,
+body ul ol ul ol ul ul ol li::before,
+body ul ol ul ul ol ul ol li::before,
+body ul ol ul ul ul ol ol li::before,
+body ul ol ul ul ul ul ol li::before,
+body ul ul ol ol ol ol ol li::before,
+body ul ul ol ol ol ul ol li::before,
+body ul ul ol ol ul ol ol li::before,
+body ul ul ol ul ol ol ol li::before,
+body ul ul ol ol ul ul ol li::before,
+body ul ul ol ul ol ul ol li::before,
+body ul ul ol ul ul ol ol li::before,
+body ul ul ol ul ul ul ol li::before,
+body ul ul ul ol ol ol ol li::before,
+body ul ul ul ol ol ul ol li::before,
+body ul ul ul ol ul ol ol li::before,
+body ul ul ul ul ol ol ol li::before,
+body ul ul ul ol ul ul ol li::before,
+body ul ul ul ul ol ul ol li::before,
+body ul ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-7);
+}
+
+body ol ol ol ol ol ol ol ol li::before,
+body ol ol ol ol ol ol ul ol li::before,
+body ol ol ol ol ol ul ol ol li::before,
+body ol ol ol ol ul ol ol ol li::before,
+body ol ol ol ol ol ul ul ol li::before,
+body ol ol ol ol ul ol ul ol li::before,
+body ol ol ol ol ul ul ol ol li::before,
+body ol ol ol ol ul ul ul ol li::before,
+body ol ol ol ul ol ol ol ol li::before,
+body ol ol ol ul ol ol ul ol li::before,
+body ol ol ol ul ol ul ol ol li::before,
+body ol ol ol ul ul ol ol ol li::before,
+body ol ol ol ul ol ul ul ol li::before,
+body ol ol ol ul ul ol ul ol li::before,
+body ol ol ol ul ul ul ol ol li::before,
+body ol ol ol ul ul ul ul ol li::before,
+body ol ol ul ol ol ol ol ol li::before,
+body ol ol ul ol ol ol ul ol li::before,
+body ol ol ul ol ol ul ol ol li::before,
+body ol ol ul ol ul ol ol ol li::before,
+body ol ol ul ol ol ul ul ol li::before,
+body ol ol ul ol ul ol ul ol li::before,
+body ol ol ul ol ul ul ol ol li::before,
+body ol ol ul ol ul ul ul ol li::before,
+body ol ol ul ul ol ol ol ol li::before,
+body ol ol ul ul ol ol ul ol li::before,
+body ol ol ul ul ol ul ol ol li::before,
+body ol ol ul ul ul ol ol ol li::before,
+body ol ol ul ul ol ul ul ol li::before,
+body ol ol ul ul ul ol ul ol li::before,
+body ol ol ul ul ul ul ol ol li::before,
+body ol ol ul ul ul ul ul ol li::before,
+body ol ul ol ol ol ol ol ol li::before,
+body ol ul ol ol ol ol ul ol li::before,
+body ol ul ol ol ol ul ol ol li::before,
+body ol ul ol ol ul ol ol ol li::before,
+body ol ul ol ol ol ul ul ol li::before,
+body ol ul ol ol ul ol ul ol li::before,
+body ol ul ol ol ul ul ol ol li::before,
+body ol ul ol ol ul ul ul ol li::before,
+body ol ul ol ul ol ol ol ol li::before,
+body ol ul ol ul ol ol ul ol li::before,
+body ol ul ol ul ol ul ol ol li::before,
+body ol ul ol ul ul ol ol ol li::before,
+body ol ul ol ul ol ul ul ol li::before,
+body ol ul ol ul ul ol ul ol li::before,
+body ol ul ol ul ul ul ol ol li::before,
+body ol ul ol ul ul ul ul ol li::before,
+body ol ul ul ol ol ol ol ol li::before,
+body ol ul ul ol ol ol ul ol li::before,
+body ol ul ul ol ol ul ol ol li::before,
+body ol ul ul ol ul ol ol ol li::before,
+body ol ul ul ol ol ul ul ol li::before,
+body ol ul ul ol ul ol ul ol li::before,
+body ol ul ul ol ul ul ol ol li::before,
+body ol ul ul ol ul ul ul ol li::before,
+body ol ul ul ul ol ol ol ol li::before,
+body ol ul ul ul ol ol ul ol li::before,
+body ol ul ul ul ol ul ol ol li::before,
+body ol ul ul ul ul ol ol ol li::before,
+body ol ul ul ul ol ul ul ol li::before,
+body ol ul ul ul ul ol ul ol li::before,
+body ol ul ul ul ul ul ol ol li::before,
+body ol ul ul ul ul ul ul ol li::before,
+body ul ol ol ol ol ol ol ol li::before,
+body ul ol ol ol ol ol ul ol li::before,
+body ul ol ol ol ol ul ol ol li::before,
+body ul ol ol ol ul ol ol ol li::before,
+body ul ol ol ol ol ul ul ol li::before,
+body ul ol ol ol ul ol ul ol li::before,
+body ul ol ol ol ul ul ol ol li::before,
+body ul ol ol ol ul ul ul ol li::before,
+body ul ol ol ul ol ol ol ol li::before,
+body ul ol ol ul ol ol ul ol li::before,
+body ul ol ol ul ol ul ol ol li::before,
+body ul ol ol ul ul ol ol ol li::before,
+body ul ol ol ul ol ul ul ol li::before,
+body ul ol ol ul ul ol ul ol li::before,
+body ul ol ol ul ul ul ol ol li::before,
+body ul ol ol ul ul ul ul ol li::before,
+body ul ol ul ol ol ol ol ol li::before,
+body ul ol ul ol ol ol ul ol li::before,
+body ul ol ul ol ol ul ol ol li::before,
+body ul ol ul ol ul ol ol ol li::before,
+body ul ol ul ol ol ul ul ol li::before,
+body ul ol ul ol ul ol ul ol li::before,
+body ul ol ul ol ul ul ol ol li::before,
+body ul ol ul ol ul ul ul ol li::before,
+body ul ol ul ul ol ol ol ol li::before,
+body ul ol ul ul ol ol ul ol li::before,
+body ul ol ul ul ol ul ol ol li::before,
+body ul ol ul ul ul ol ol ol li::before,
+body ul ol ul ul ol ul ul ol li::before,
+body ul ol ul ul ul ol ul ol li::before,
+body ul ol ul ul ul ul ol ol li::before,
+body ul ol ul ul ul ul ul ol li::before,
+body ul ul ol ol ol ol ol ol li::before,
+body ul ul ol ol ol ol ul ol li::before,
+body ul ul ol ol ol ul ol ol li::before,
+body ul ul ol ol ul ol ol ol li::before,
+body ul ul ol ol ol ul ul ol li::before,
+body ul ul ol ol ul ol ul ol li::before,
+body ul ul ol ol ul ul ol ol li::before,
+body ul ul ol ol ul ul ul ol li::before,
+body ul ul ol ul ol ol ol ol li::before,
+body ul ul ol ul ol ol ul ol li::before,
+body ul ul ol ul ol ul ol ol li::before,
+body ul ul ol ul ul ol ol ol li::before,
+body ul ul ol ul ol ul ul ol li::before,
+body ul ul ol ul ul ol ul ol li::before,
+body ul ul ol ul ul ul ol ol li::before,
+body ul ul ol ul ul ul ul ol li::before,
+body ul ul ul ol ol ol ol ol li::before,
+body ul ul ul ol ol ol ul ol li::before,
+body ul ul ul ol ol ul ol ol li::before,
+body ul ul ul ol ul ol ol ol li::before,
+body ul ul ul ol ol ul ul ol li::before,
+body ul ul ul ol ul ol ul ol li::before,
+body ul ul ul ol ul ul ol ol li::before,
+body ul ul ul ol ul ul ul ol li::before,
+body ul ul ul ul ol ol ol ol li::before,
+body ul ul ul ul ol ol ul ol li::before,
+body ul ul ul ul ol ul ol ol li::before,
+body ul ul ul ul ul ol ol ol li::before,
+body ul ul ul ul ol ul ul ol li::before,
+body ul ul ul ul ul ol ul ol li::before,
+body ul ul ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+  color: var(--list-colorful-marker-1);
+}
+
+body ol ol ol ol ol ol ol ol li::marker,
+body ol ol ol ol ol ol ul ol li::marker,
+body ol ol ol ol ol ul ol ol li::marker,
+body ol ol ol ol ul ol ol ol li::marker,
+body ol ol ol ol ol ul ul ol li::marker,
+body ol ol ol ol ul ol ul ol li::marker,
+body ol ol ol ol ul ul ol ol li::marker,
+body ol ol ol ol ul ul ul ol li::marker,
+body ol ol ol ul ol ol ol ol li::marker,
+body ol ol ol ul ol ol ul ol li::marker,
+body ol ol ol ul ol ul ol ol li::marker,
+body ol ol ol ul ul ol ol ol li::marker,
+body ol ol ol ul ol ul ul ol li::marker,
+body ol ol ol ul ul ol ul ol li::marker,
+body ol ol ol ul ul ul ol ol li::marker,
+body ol ol ol ul ul ul ul ol li::marker,
+body ol ol ul ol ol ol ol ol li::marker,
+body ol ol ul ol ol ol ul ol li::marker,
+body ol ol ul ol ol ul ol ol li::marker,
+body ol ol ul ol ul ol ol ol li::marker,
+body ol ol ul ol ol ul ul ol li::marker,
+body ol ol ul ol ul ol ul ol li::marker,
+body ol ol ul ol ul ul ol ol li::marker,
+body ol ol ul ol ul ul ul ol li::marker,
+body ol ol ul ul ol ol ol ol li::marker,
+body ol ol ul ul ol ol ul ol li::marker,
+body ol ol ul ul ol ul ol ol li::marker,
+body ol ol ul ul ul ol ol ol li::marker,
+body ol ol ul ul ol ul ul ol li::marker,
+body ol ol ul ul ul ol ul ol li::marker,
+body ol ol ul ul ul ul ol ol li::marker,
+body ol ol ul ul ul ul ul ol li::marker,
+body ol ul ol ol ol ol ol ol li::marker,
+body ol ul ol ol ol ol ul ol li::marker,
+body ol ul ol ol ol ul ol ol li::marker,
+body ol ul ol ol ul ol ol ol li::marker,
+body ol ul ol ol ol ul ul ol li::marker,
+body ol ul ol ol ul ol ul ol li::marker,
+body ol ul ol ol ul ul ol ol li::marker,
+body ol ul ol ol ul ul ul ol li::marker,
+body ol ul ol ul ol ol ol ol li::marker,
+body ol ul ol ul ol ol ul ol li::marker,
+body ol ul ol ul ol ul ol ol li::marker,
+body ol ul ol ul ul ol ol ol li::marker,
+body ol ul ol ul ol ul ul ol li::marker,
+body ol ul ol ul ul ol ul ol li::marker,
+body ol ul ol ul ul ul ol ol li::marker,
+body ol ul ol ul ul ul ul ol li::marker,
+body ol ul ul ol ol ol ol ol li::marker,
+body ol ul ul ol ol ol ul ol li::marker,
+body ol ul ul ol ol ul ol ol li::marker,
+body ol ul ul ol ul ol ol ol li::marker,
+body ol ul ul ol ol ul ul ol li::marker,
+body ol ul ul ol ul ol ul ol li::marker,
+body ol ul ul ol ul ul ol ol li::marker,
+body ol ul ul ol ul ul ul ol li::marker,
+body ol ul ul ul ol ol ol ol li::marker,
+body ol ul ul ul ol ol ul ol li::marker,
+body ol ul ul ul ol ul ol ol li::marker,
+body ol ul ul ul ul ol ol ol li::marker,
+body ol ul ul ul ol ul ul ol li::marker,
+body ol ul ul ul ul ol ul ol li::marker,
+body ol ul ul ul ul ul ol ol li::marker,
+body ol ul ul ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol ol ol li::marker,
+body ul ol ol ol ol ol ul ol li::marker,
+body ul ol ol ol ol ul ol ol li::marker,
+body ul ol ol ol ul ol ol ol li::marker,
+body ul ol ol ol ol ul ul ol li::marker,
+body ul ol ol ol ul ol ul ol li::marker,
+body ul ol ol ol ul ul ol ol li::marker,
+body ul ol ol ol ul ul ul ol li::marker,
+body ul ol ol ul ol ol ol ol li::marker,
+body ul ol ol ul ol ol ul ol li::marker,
+body ul ol ol ul ol ul ol ol li::marker,
+body ul ol ol ul ul ol ol ol li::marker,
+body ul ol ol ul ol ul ul ol li::marker,
+body ul ol ol ul ul ol ul ol li::marker,
+body ul ol ol ul ul ul ol ol li::marker,
+body ul ol ol ul ul ul ul ol li::marker,
+body ul ol ul ol ol ol ol ol li::marker,
+body ul ol ul ol ol ol ul ol li::marker,
+body ul ol ul ol ol ul ol ol li::marker,
+body ul ol ul ol ul ol ol ol li::marker,
+body ul ol ul ol ol ul ul ol li::marker,
+body ul ol ul ol ul ol ul ol li::marker,
+body ul ol ul ol ul ul ol ol li::marker,
+body ul ol ul ol ul ul ul ol li::marker,
+body ul ol ul ul ol ol ol ol li::marker,
+body ul ol ul ul ol ol ul ol li::marker,
+body ul ol ul ul ol ul ol ol li::marker,
+body ul ol ul ul ul ol ol ol li::marker,
+body ul ol ul ul ol ul ul ol li::marker,
+body ul ol ul ul ul ol ul ol li::marker,
+body ul ol ul ul ul ul ol ol li::marker,
+body ul ol ul ul ul ul ul ol li::marker,
+body ul ul ol ol ol ol ol ol li::marker,
+body ul ul ol ol ol ol ul ol li::marker,
+body ul ul ol ol ol ul ol ol li::marker,
+body ul ul ol ol ul ol ol ol li::marker,
+body ul ul ol ol ol ul ul ol li::marker,
+body ul ul ol ol ul ol ul ol li::marker,
+body ul ul ol ol ul ul ol ol li::marker,
+body ul ul ol ol ul ul ul ol li::marker,
+body ul ul ol ul ol ol ol ol li::marker,
+body ul ul ol ul ol ol ul ol li::marker,
+body ul ul ol ul ol ul ol ol li::marker,
+body ul ul ol ul ul ol ol ol li::marker,
+body ul ul ol ul ol ul ul ol li::marker,
+body ul ul ol ul ul ol ul ol li::marker,
+body ul ul ol ul ul ul ol ol li::marker,
+body ul ul ol ul ul ul ul ol li::marker,
+body ul ul ul ol ol ol ol ol li::marker,
+body ul ul ul ol ol ol ul ol li::marker,
+body ul ul ul ol ol ul ol ol li::marker,
+body ul ul ul ol ul ol ol ol li::marker,
+body ul ul ul ol ol ul ul ol li::marker,
+body ul ul ul ol ul ol ul ol li::marker,
+body ul ul ul ol ul ul ol ol li::marker,
+body ul ul ul ol ul ul ul ol li::marker,
+body ul ul ul ul ol ol ol ol li::marker,
+body ul ul ul ul ol ol ul ol li::marker,
+body ul ul ul ul ol ul ol ol li::marker,
+body ul ul ul ul ul ol ol ol li::marker,
+body ul ul ul ul ol ul ul ol li::marker,
+body ul ul ul ul ul ol ul ol li::marker,
+body ul ul ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ul ul ol li::marker {
+  color: var(--list-colorful-marker-1);
+}
+
+
+@property --colorA {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #9800f021;
+}
+@property --colorB {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #0048f021;
+}
+@property --colorC {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #00f02c21;
+}
+
+@keyframes rainbow-change {
+  20% {
+    --colorA: #f0000015;
+    --colorB: #88f00015;
+    --colorC: #0048f015;
+  }
+  40% {
+    --colorA: #10f00015;
+    --colorB: #007cf015;
+    --colorC: #6400f015;
+  }
+  60% {
+    --colorA: #d4f00015;
+    --colorB: #f0780015;
+    --colorC: #f0003c15;
+  }
+  80% {
+    --colorA: #0060f015;
+    --colorB: #f0700015;
+    --colorC: #00d0f015;
+  }
+}
+
+@keyframes bead-1 {
+  0% {
+    transform: scale(1);
+    visibility: visible;
+  }
+  25% {
+    margin-left: 20px;
+    margin-top: 20px;
+    transform: scale(0);
+    visibility: hidden;
+  }
+  50% {
+    margin: 0px;
+    transform: scale(1);
+    visibility: visible;
+  }
+  100% {
+    margin-left: 20px;
+    margin-top: -20px;
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+@keyframes bead-2 {
+  0% {
+    transform: scale(1);
+    visibility: visible;
+  }
+  25% {
+    margin-left: -20px;
+    margin-top: -20px;
+    transform: scale(0);
+    visibility: hidden;
+  }
+  50% {
+    margin: 0px;
+    transform: scale(1);
+    visibility: visible;
+  }
+  100% {
+    margin-left: -20px;
+    margin-top: 20px;
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+/**ob 1.0 **/
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right:hover {
+  background-color: var(--titlebar-background-focused);
+}
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+  background-color: transparent;
+}
+.is-hidden-frameless.mod-windows .titlebar-button {
+  background-color: transparent;
+}
+
+.markdown-preview-view progress, .markdown-rendered progress, .markdown-source-view.is-live-preview progress {
+  overflow: unset;
+  vertical-align:top;
+}
+
+.search-input-container input {
+  border: none;
+  background: var(--background-secondary);
+}
+.search-input-container input:hover {
+  box-shadow: var(--window-shadow-hover);
+}
+.menu{
+  background-color:var(--color-base-10);
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  box-shadow: none;
+}
+
+select.dropdown {
+  border: 1px solid var(--cerulean-2);
+  border-radius: var(--radius-s);
+  box-shadow: none;
+}
+
+select:hover,
+.dropdown:hover {
+  box-shadow: none;
+  border: 1px solid var(--sky-blue);
+  color: var(--electric-blue-2);
+}
+select:focus,
+.dropdown:focus {
+  box-shadow: none;
+}
+
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+  box-shadow: none;
+}
+
+.nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+  padding-left: var(--size-2-3);
+}
+
+.nav-folder.mod-root > .nav-folder-children {
+  padding: 0 0.8em 0 0.8em;
+  margin-left: 2px;
+}
+
+.nav-folder .nav-folder-children[style="height: 0px;"]
+{
+  height: auto !important;
+}
+
+textarea:active,
+input[type='text']:active,
+input[type='search']:active,
+input[type='email']:active,
+input[type='password']:active,
+input[type='number']:active,
+textarea:focus,
+input[type='text']:focus,
+input[type='search']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+textarea:focus-visible,
+input[type='text']:focus-visible,
+input[type='search']:focus-visible,
+input[type='email']:focus-visible,
+input[type='password']:focus-visible,
+input[type='number']:focus-visible {
+  box-shadow: none;
+}
+
+.prompt {
+  border: 1px solid var(--midnight-green);
+}
+
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
+  display: block;
+  margin-left:5px;
+  margin-top: 6px;
+}
+
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-ribbon.mod-left {
+  padding-top: 26px;
+}
+
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
+  padding-top: 56px;
+}
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left.is-collapsed .sidebar-toggle-button {
+  padding-top: 54px;
+}
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions {
+  padding-top: 12px;
+}
+body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover) {
+  transform: translateY(calc( -1 * var(--header-height) + 6px));
+  transition: all 0.6s linear;
+}
+
+body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
+  top: -20px;
+}
+
+body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: unset;
+}
+body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover .titlebar-button-container.mod-right {
+  transition: all 0.1s linear;
+  transform:translateY(-15px);
+  background: var(--titlebar-background-focused);
+  opacity: 0.8;
+}
+body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
+body.hide-titlebar-close-btn.is-hidden-frameless.mod-windows .titlebar-button {
+  padding-bottom: 6px;
+  align-items: flex-end;
+}
+
+.theme-light .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar) input:is(.web-browser-search-bar,.wb-search-bar) {
+  background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position:  4px 7.5px;
+  background-size: 14px;
+  opacity: 0.6;
+  padding: 0 0 0 22px;
+  border: none;
+}
+
+.theme-dark .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar) {
+  background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 4px 7.5px;
+  background-size: 14px;
+  opacity: 0.6;
+  padding: 0 0 0 22px;
+  border: none;
+  background-color: transparent;
+}
+.view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar):focus {
+  opacity: 1;
+}
+.view-header .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar):hover {
+  border:none;
+}
+
+.view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  .view-header-title-parent:before {
+  content: ' ';
+  margin-left: 10px;
+  color: var(--text-faint);
+  width:10px;
+  height: 6px;
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+}

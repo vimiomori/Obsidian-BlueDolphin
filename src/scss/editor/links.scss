@@ -1,0 +1,418 @@
+/*internal link with strong&em*/
+strong>em>.internal-link,
+.cm-strong.cm-em.cm-hmd-internal-link {
+  -webkit-text-fill-color: initial;
+  text-decoration: underline !important;
+}
+
+.markdown-source-view.mod-cm5 span.cm-formatting.cm-formatting-strong.cm-strong,
+.markdown-source-view.mod-cm5 span.cm-formatting.cm-formatting-em.cm-em {
+  opacity: 0.2;
+}
+
+.theme-dark .markdown-source-view.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 0.2;
+  -webkit-text-fill-color: var(--green);
+}
+
+.theme-light .markdown-source-view.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 0.2;
+  -webkit-text-fill-color: var(--orange);
+}
+
+a:not([class*="is-unresolved"]).internal-link>strong,
+a.external-link>strong,
+a:not([class*="is-unresolved"]).internal-link>em,
+a.external-link>em {
+  color: var(--text-accent);
+}
+
+body.remove-external-link-icon a.external-link {
+  background-image: none;
+}
+body.remove-external-link-icon span.external-link
+{
+  background-image: none;
+}
+/*link format [[]]*/
+.cm-formatting-link.cm-strong.cm-em {
+  -webkit-text-fill-color: var(--text-faint);
+  opacity: 0.2;
+}
+
+div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-em {
+  opacity: 1;
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
+  opacity: 1;
+  color: var(--text-accent);
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
+  opacity: 1;
+  color: var(--text-orange);
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 1;
+  color: var(--green);
+}
+
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
+  opacity: 1;
+  color: var(--orange);
+}
+
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em,
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 1;
+  color: var(--orange);
+}
+
+.workspace>.workspace-split>.workspace-leaf:first-of-type:last-of-type .view-header {
+  border: none;
+  background: var(--background-primary);
+}
+
+.view-header {
+  background-color: var(--background-secondary-alt);
+}
+
+.is-focused .workspace-leaf.mod-active .view-header {
+  background-color: var(--background-secondary-alt);
+}
+
+/*smaller header title*/
+.view-header-title {
+  font-size: var(--font-size-file-header-title);
+}
+
+.popover.hover-popover {
+  position: absolute;
+  min-height: 50px;
+  width: 500px;
+  box-shadow: 0 0 6px 6px var(--theme-color-translucent-015);
+}
+
+/*hover editor plugin*/
+.popover.hover-editor .popover-title:after {
+  background: none !important;
+}
+
+body.popover h1:hover::before,
+body.markdown-embed h1:hover::before,
+body.markdown-preview-view .callout-content h1:hover::before {
+  content: 'H1';
+  position: absolute;
+  font-size: 0.4em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+body.popover h2:hover::before,
+body.markdown-embed h2:hover::before,
+body.markdown-preview-view .callout-content h2:hover::before {
+  content: 'H2';
+  position: absolute;
+  font-size: 0.45em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+body.popover h3:hover::before,
+body.markdown-embed h3:hover::before,
+body.markdown-preview-view .callout-content h3:hover::before {
+  content: 'H3';
+  position: absolute;
+  font-size: 0.45em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+body.popover h4:hover::before,
+body.markdown-embed h4:hover::before,
+body.markdown-preview-view .callout-content h4:hover::before {
+  content: 'H4';
+  position: absolute;
+  font-size: 0.5em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+body.popover h5:hover::before,
+body.markdown-embed h5:hover::before,
+body.markdown-preview-view .callout-content h5:hover::before {
+  content: 'H5';
+  position: absolute;
+  font-size: 0.55em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+body.popover h6:hover::before,
+body.markdown-embed h6:hover::before,
+body.markdown-preview-view .callout-content h6:hover::before {
+  content: 'H6';
+  position: absolute;
+  font-size: 0.6em;
+  width: auto;
+  border: 1px solid;
+  padding: 0 2px;
+  border-radius: var(--radius-xs);
+  top: -1.1em;
+}
+
+body.markdown-embed :is(h1, h2, h3, h4, h5, h6):hover::before,
+body.callout-content :is(h1, h2, h3, h4, h5, h6):hover::before{
+  margin-left: 0 !important;
+}
+body.callout-content :is(h1, h2, h3, h4, h5, h6):hover::before {
+  top: -1.25em;
+}
+
+:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  margin: 20px auto;
+}
+
+:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table):active,
+:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table):hover {
+  overflow: hidden;
+  resize: both !important;
+}
+
+body .markdown-preview-view th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
+body .table-view-table>thead>tr>th {
+  background-image: none;
+}
+/*修复Itinerary插件显示问题*/
+:is(.markdown-preview-view,.markdown-rendered) :is(.markdown-preview-section,.markdown-rendered) .block-language-itinerary.fc table {
+  overflow: unset;
+}
+
+/*link*/
+:is(.markdown-preview-view,.markdown-rendered) .internal-link {
+  font-family: var(--font-family-strong) !important;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
+body *>.internal-link.is-unresolved,
+body .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved {
+  color: var(--unresolved-link) !important;
+}
+
+body .markdown-source-view.mod-cm6 .is-unresolved,
+body :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved {
+  opacity: 1;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
+body *>.internal-link.is-unresolved,
+body .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved,
+body .markdown-source-view.mod-cm6 .is-unresolved,
+body :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved,
+body .cm-hmd-internal-link .is-unresolved .cm-underline {
+  color: var(--unresolved-link) !important;
+  text-decoration: none !important;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) mark .internal-link.is-unresolved {
+  opacity: 0.9;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved:hover {
+  opacity: 1 !important;
+}
+
+a.internal-link,
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--internal-link-color);
+}
+/* internal link in highlight
+.cm-highlight.cm-hmd-internal-link,
+:is(.markdown-preview-view,.markdown-rendered) mark .internal-link:not(.is-unresolved) {
+  color: var(--internal-link-color-in-highlight) !important;
+}
+*/
+
+:is(.markdown-preview-view,.markdown-rendered) a:hover {
+  color: var(--text-accent);
+  border-radius: var(--radius-xs);
+  text-decoration: none !important;
+  transition: all 0.4s ease-in-out;
+  text-shadow: var(--window-shadow-hover);
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) a:hover {
+  color: var(--fairy-tale);
+  animation: 2s colorful-link infinite;
+}
+
+@keyframes colorful-link {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+a.external-link {
+  text-decoration: underline;
+  color: var(--external-link-color);
+}
+
+
+
+.cm-url:hover {
+  transition: all 600ms;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background: var(--background-code);
+}
+
+.theme-dark :not(pre)>code[class*='language-'],
+.theme-dark pre[class*='language-'] {
+  background: var(--background-code) ;
+  border-radius: var(--radius-m);
+}
+
+.theme-light :not(pre)>code[class*='language-'],
+.theme-light pre[class*='language-'] {
+  background: var(--background-code);
+  border-radius: var(--radius-m);
+}
+
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow: none;
+  color: var(--code-normal);
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
+}
+
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"] {
+  color: var(--code-normal);
+  text-shadow: none;
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
+}
+
+code[class*="language-"] {
+  padding: 1em 0.5em;
+}
+
+.popover.hover-popover :is(.markdown-preview-view,.markdown-rendered) .markdown-embed,
+.popover .markdown-preview-sizer:is(.markdown-preview-section,.markdown-rendered) {
+  height: auto;
+  min-height: min-content !important;
+}
+
+body .markdown-embed:not(.canvas-node-content),
+body .popover.hover-popover .markdown-embed .markdown-embed {
+  padding:  0 0 0 1em;
+  margin-left: 0.5em;
+}
+
+.markdown-embed:not(.canvas-node-content),
+.popover.hover-popover .markdown-embed .markdown-embed {
+  background-color: var(--background-popover);
+  border: 1px solid var(--robin-egg);
+  border-radius: var(--radius-xs);
+  margin-bottom: 0;
+  padding: 0  0.5em  0 1em;
+  margin-top: 0;
+}
+
+.popover.hover-popover,
+.popover.hover-popover .markdown-embed {
+  background-color: var(--background-popover);
+}
+
+
+.markdown-embed-link,
+.file-embed-link {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: var(--text-faint);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.markdown-embed:hover .markdown-embed-link,
+.markdown-embed:hover .file-embed-link {
+  opacity: 1;
+}
+
+.markdown-source-view .markdown-embed {
+  border-color: transparent;
+  border-radius: var(--radius-xs);
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.cm-s-obsidian) .file-embed {
+  border: 2px solid var(--embed-color);
+  border-radius: var(--radius-l);
+  padding: 0.1em 0.5em;
+  margin: 0.1em 0;
+  background-color: transparent;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.cm-s-obsidian) .file-embed:hover {
+  border: 2px solid var(--theme-color-translucent-04);
+  background-color: var(--prussian-blue);
+  border-radius: var(--radius-l);
+}
+
+.markdown-embed .markdown-preview-sizer:is(.markdown-preview-section,.markdown-rendered):first-child :is(h1,h2,h3,h4,h5,h6) {
+  margin-block-start: 0.5em;
+}
+
+:is(.markdown-preview-view,.markdown-rendered) .markdown-embed-content p:first-child {
+  margin-top: 0.25em;
+}
+
+.markdown-embed-content p:last-child,
+:is(.markdown-preview-view,.markdown-rendered) .markdown-embed-content p:last-child {
+  margin-bottom: 0.4em;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) .markdown-embed-content {
+  padding-right: 0;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.file-embed-icon {
+  color: var(--theme-color);
+  vertical-align: middle;
+}
+
+.markdown-embed-title {
+  font-weight: 600;
+  font-size: var(--font-size-embed-title-size);
+  line-height: inherit;
+  height: unset;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.file-embed-title {
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.5em;
+  font-size: var(--font-size-embed-file);
+}
+

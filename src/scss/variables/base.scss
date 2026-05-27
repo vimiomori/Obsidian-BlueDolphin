@@ -1,0 +1,252 @@
+// ── Base variables ───────────────────────────────────────────────────────────
+// Theme-internal sizing, spacing, radii, component config, and legacy palette
+// aliases. Typography (font families, type scale, line-heights) lives in
+// variables/typography.scss. Dark-mode semantic color remaps live in
+// variables/semantic.scss. The palette itself lives in variables/colors.scss.
+
+body {
+  --file-margins: 4em;
+  --list-indent: 1.5em;
+
+  // ── Component font-sizes ─────────────────────────────────────────────────
+  --font-size-vault-name: 0.95em;
+  --font-size-file-header-title: 0.9em;
+  --font-size-embed-title-size: 1.3em;
+  --font-size-embed-file: 1.25em;
+  --font-size-folder-and-file: 0.87em;
+  --font-size-edit-normal: 1em;
+  --font-size-preview-normal: 1em;
+  --font-size-tag: 0.85em;
+  --font-size-emoji-after-tag: 1.5625em;
+  --font-size-list: 1em;
+  --font-size-preview-blockquote: 1em;
+  --font-size-edit-blockquote: 1em;
+  --font-size-code: 1em;
+  --font-size-latex: 1.25em;
+  --font-size-cloze: 0.9375em;
+  --font-size-better-footnote: 1.3em;
+  --font-size-checklist: 0.85em;
+  --font-size-split: 0.85em;
+  --font-size-loading-diy-text: 3em;
+  --font-size-loading-add: 1.5em;
+  --table-header-size: inherit;
+
+  // ── Radii ────────────────────────────────────────────────────────────────
+  --radius-xs: 3px;
+  --radius-s: 5px;
+  --radius-m: 7px;
+  --radius-l: 15px;
+  --toggle-radius: var(--radius-m);
+  --toggle-thumb-radius: var(--radius-s);
+
+  // ── HR decorations ───────────────────────────────────────────────────────
+  --fancy-dolphin-hr: '🐬';
+  --three-dolphins-hr: '\e168 \0020\0020\0020\0020 \e168 \0020\0020\0020\0020 \e168';
+  --fancy-hr-rotate: 0deg;
+
+  // ── Spacing / letter-spacing ─────────────────────────────────────────────
+  --letter-space-main: 1;
+  --letter-space-code: 0;
+
+  // ── Font weights ─────────────────────────────────────────────────────────
+  --font-weight-highlight-1: normal;
+  --font-weight-highlight-2: normal;
+  --font-weight-highlight-3: normal;
+  --font-weight-inline-code: bold;
+  --font-weight-h1: 600;
+  --font-weight-h2: 600;
+  --font-weight-h3: 600;
+  --font-weight-h4: 600;
+  --font-weight-h5: 600;
+  --font-weight-h6: 600;
+  --font-weight-strong: bold;
+  --font-style-em: italic;
+
+  // ── Images / canvas ──────────────────────────────────────────────────────
+  --image-max-width: 100%;
+  --canvas-card-opacity: 0.1;
+
+  // ── Checkboxes ───────────────────────────────────────────────────────────
+  --checkbox-size: 0.9rem;
+
+  // ── Semantic color remaps (base) ─────────────────────────────────────────
+  // These are Obsidian variables wired to the palette; dark-mode overrides
+  // live in variables/semantic.scss.
+  --text-normal: var(--vivid-sky-blue-0);
+  --interactive-accent: var(--robin-egg);
+  --color-accent: var(--vivid-sky-blue);
+  --background-modifier-hover: var(--cerulean);
+  --background-modifier-border-checkbox: var(--electric-blue-2);
+  --background-modifier-border-focus: var(--sky-blue);
+  --code-background: var(--background-code);
+
+  // ── Tab chrome ───────────────────────────────────────────────────────────
+  --tab-outline-width: 1.5px;
+  --tab-divider-color: var(--celeste-translucent);
+  --tab-width: 150px;
+  --tab-max-width: 150px;
+
+  // ── Loading page ─────────────────────────────────────────────────────────
+  --loading-page-custom-gif-caption: " ";
+  --loading-page-custom-gif-caption-alt: " ";
+  --loading-page-custom-gif-url: url(https://);
+  --loading-page-custom-gif-url-alt: url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif);
+  --loading-add-text-color: #d47e86;
+  --loading-add-text-color-alt: #a4e39c;
+
+  // ── Misc pixel / accent constants ────────────────────────────────────────
+  --pixel: 20px;
+  --c-1: #da2400;
+  --c-2: #ffb623;
+  --c-3: #8c6e22;
+
+  // ── Nord legacy aliases ──────────────────────────────────────────────────
+  // These map to raw hex so components that still use --nordN continue to work.
+  // Gradually migrate callers to the bluedolphin.nvim palette in colors.scss.
+  --nord0: var(--prussian-blue);
+  --nord1: #3B4252;
+  --nord1-1: #3B425251;
+  --nord2: #434C5E;
+  --nord3: #4C566A;
+  --nord3-1: #717a91;
+  --nord4: #d8dee9;
+  --nord4-1: #d8dee95c;
+  --nord5: #E5E9F0;
+  --nord5-1: #E5E9F053;
+  --nord6: #ECEFF4;
+  --nord6-1: #ECEFF46c;
+  --nord6-2: #ECEFF43c;
+  --nord7: #8fbcbb;
+  --nord7-transparent: #8fbcbb2f;
+  --nord8: #88C0D0;
+  --nord8-0: #65afc4;
+  --nord9: #81a1c1;
+  --nord9-1: #81a1c16c;
+  --nord9-2: #81a1c13c;
+  --nord10: #5e81ac;
+  --nord11: #BF616A;
+  --nord11-1: #BF616A4b;
+  --nord12: #D08770;
+  --nord13: #EBCB8B;
+  --nord13-0: #e2b65e;
+  --nord13-1: #ebca894b;
+  --nord14: #A3BE8C;
+  --nord14-0: #95b677;
+  --nord15: #B48EAD;
+
+  // ── HR icon colors ───────────────────────────────────────────────────────
+  --hr-color-icon-1: var(--theme-color);
+  --hr-color-icon-2: var(--theme-color);
+  --hr-color-icon-3: var(--theme-color);
+  --hr-color-icon-4: var(--theme-color);
+
+  // ── Cloze ────────────────────────────────────────────────────────────────
+  --cloze-bg-color: var(--rich-black-2);
+  --cloze-decoration: wavy;
+  --cloze-decoration-color: var(--pale-dogwood);
+  --cloze-decoration-2: double;
+  --cloze-decoration-color-2: var(--theme-color);
+  --cloze-bg-color-3: transparent;
+  --cloze-decoration-3: dotted;
+  --cloze-decoration-color-3: var(--theme-color);
+
+  // ── Titlebar ─────────────────────────────────────────────────────────────
+  --titlebar-bg: var(--background-secondary-alt);
+
+  // ── Text highlight (HSL components for JS callers) ───────────────────────
+  --text-highlight-bg-h-dark: 57;
+  --text-highlight-bg-s-dark: 40%;
+  --text-highlight-bg-l-dark: 38%;
+  --text-highlight-bg-a-dark: 0.541;
+  --text-highlight-bg-h-light: 34;
+  --text-highlight-bg-s-light: 100%;
+  --text-highlight-bg-l-light: 80%;
+  --text-highlight-bg-a-light: 0.847;
+
+  // ── Cursor ───────────────────────────────────────────────────────────────
+  --cursor-color: var(--electric-blue-3);
+  --cursor-color-temp: var(--electric-blue-3);
+
+  // ── Status bar ───────────────────────────────────────────────────────────
+  --status-bar-bg: var(--midnight-green);
+  --status-bar-text-color: var(--electric-blue);
+
+  // ── List markers ─────────────────────────────────────────────────────────
+  --list-ol-marker-1: decimal;
+  --list-ol-marker-2: lower-latin;
+  --list-ol-marker-3: lower-roman;
+  --list-ol-marker-4: decimal;
+  --list-ul-marker-1: '\2022';
+  --list-ul-marker-2: '\25E6';
+  --list-ul-marker-3: '\25AA';
+  --list-ul-marker-4: '\25E6';
+  --list-ul-marker-color: var(--electric-blue-3);
+  --list-marker-color-collapsed: var(--pacific-cyan);
+
+  // ── Colorful list markers ────────────────────────────────────────────────
+  --list-ul-colorful-marker-content: '\2022';
+  --list-colorful-marker-1: var(--electric-blue-3);
+  --list-colorful-marker-2: var(--aquamarine);
+  --list-colorful-marker-3: var(--vanilla);
+  --list-colorful-marker-4: var(--apricot);
+  --list-colorful-marker-5: var(--tea-rose);
+  --list-colorful-marker-6: var(--fairy-tale);
+  --list-colorful-marker-7: var(--thistle);
+  --list-colorful-marker-8: var(--vivid-sky-blue);
+
+  // ── Rainbow RGB base values ──────────────────────────────────────────────
+  --rainbow-rgb-1: 0, 255, 255;   /* electric blue 3 */
+  --rainbow-rgb-2: 127, 255, 212; /* aquamarine */
+  --rainbow-rgb-3: 247, 227, 126; /* vanilla */
+  --rainbow-rgb-4: 255, 204, 171; /* apricot */
+  --rainbow-rgb-5: 255, 198, 198; /* tea rose */
+  --rainbow-rgb-6: 255, 203, 230; /* fairy tale */
+  --rainbow-rgb-7: 238, 212, 255; /* thistle */
+  --rainbow-rgb-8: 71, 210, 234;  /* vivid sky blue */
+
+  // ── Rainbow tag colors ───────────────────────────────────────────────────
+  --rainbow-tag-1: var(--electric-blue-3);
+  --rainbow-tag-2: var(--aquamarine-2);
+  --rainbow-tag-3: var(--vanilla);
+  --rainbow-tag-4: var(--pale-dogwood);
+  --rainbow-tag-5: var(--fairy-tale);
+
+  // ── Heading editor tab chrome ────────────────────────────────────────────
+  --he-title-bar-active-bg: var(--theme-color-translucent-005);
+  --he-title-bar-active-pinned-bg: var(--theme-color-translucent-005);
+  --he-title-bar-inactive-bg: var(--theme-color-translucent-001);
+  --he-title-bar-inactive-pinned-bg: var(--theme-color-translucent-001);
+  --he-title-bar-inactive-action: var(--text-normal);
+  --he-title-bar-active-action: var(--theme-color);
+  --he-title-bar-active-fg: var(--text-normal);
+  --he-title-bar-inactive-fg: var(--text-muted);
+
+  // ── List layout ──────────────────────────────────────────────────────────
+  --list-spacing-bt: 1;
+
+  // ── Background primary/secondary (light-mode defaults) ───────────────────
+  --background-primary-bg-4-bt: var(--prussian-blue-3);
+  --background-primary-alt-bg-4-bt: var(--teal);
+  --background-secondary-bg-4-bt: var(--prussian-blue-2);
+  --background-secondary-alt-bg-4-bt: var(--prussian-blue);
+
+  // ── Callout layout ───────────────────────────────────────────────────────
+  --callout-min-width: 200px;
+  --callout-nowrap-min-width: 250px;
+  --callout-gap: 0.5rem;
+  --callout-margin: 5px;
+  --float-small-width: 300px;
+  --float-medium-width: 400px;
+  --float-large-width: 600px;
+
+  // ── Multi-column layout ──────────────────────────────────────────────────
+  --list-min-width: 200px;
+  --col-rule-color: var(--background-modifier-border);
+  --col-rule-width: 1px;
+  --list-grid-min-width: 250px;
+  --mcl-card-header-border-width: 1px;
+  --mcl-card-bg-color: var(--background-secondary);
+  --mcl-card-gap: 0.2em;
+  --mcl-card-border-width: 1px;
+  --mcl-card-border-color: var(--background-modifier-border);
+}

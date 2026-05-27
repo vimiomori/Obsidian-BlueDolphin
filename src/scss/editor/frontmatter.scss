@@ -1,0 +1,185 @@
+/* Hover fontmatter from Bubble Theme
+ https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/Mini%20Snippet%20Store/Hover%20Frontmatter.css
+*/
+
+body .frontmatter-container * {
+  z-index: 1000;
+}
+
+body {
+  --right-normal: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
+  --right-add: 4em;
+  --top-add: 0.8em;
+  --dolphin-position-right: calc(var(--right-normal) + var(--right-add));
+  --dolphin-position-right-wide: calc(var(--file-margins) + var(--right-add));
+  --dolphin-position-top: calc(var(--file-margins) - var(--top-add));
+}
+
+body :not(.wide-page) .frontmatter-container {
+  float: right;
+  position: absolute;
+  right: var(--dolphin-position-right);
+  width: 50px;
+  height: 50px;
+  top: var(--dolphin-position-top);
+  overflow: hidden;
+  padding: 6px 40px 7px 9px;
+  border: none !important;
+}
+
+body .wide-page .frontmatter-container {
+  right: var(--dolphin-position-right-wide);
+}
+
+body .frontmatter-container::before {
+  border: none;
+  font-family: "fa-solid";
+  content: '\e168';
+  color: var(--theme-color) ;
+  font-size: 30px;
+  text-shadow: 2px 2px 1px var(--cerulean);
+}
+
+body .frontmatter-container:hover .frontmatter-section {
+  align-items: stretch;
+}
+
+body .frontmatter-container:hover .frontmatter-container-header {
+  font-size: 1em;
+  font-family: var(--font-space-header);
+  color: var(--h2-color);
+  margin-top: -4px;
+  border-bottom: none;
+  background: none !important;
+}
+
+body .frontmatter-container:hover .frontmatter-section-label {
+  color: var(--bleu-de-france-1);
+  font-size: 0.8em;
+  flex-basis: 7em;
+}
+
+body .frontmatter-container .frontmatter-section-data {
+  max-height: 0px;
+  visibility: hidden;
+}
+
+body .frontmatter-container:hover .frontmatter-section-data {
+  max-height: 1000px;
+  visibility: visible;
+  font-size: 0.8em;
+  color: var(--electric-blue);
+  transition-property: max-height, visibility;
+  transition-duration: 300ms;
+  transition-delay: 100ms, 200ms;
+  transition-timing-function: ease-in, ease-in;
+}
+
+body .frontmatter-container:hover::before {
+  position: absolute;
+  right: 0px;
+  top: -5px;
+  padding: 9px 9px 2px 16px;
+}
+
+
+body .frontmatter-container:hover {
+  position: absolute;
+  margin-left: 1.3em;
+  margin-bottom: 0.5em;
+  right: var(--dolphin-position-right);
+  top: var(--dolphin-position-top);
+  background-color: var(--prussian-blue-1);
+  width: 300px;
+  height: unset;
+  padding: 1.2em;
+  padding-top: 1.5em;
+  z-index: 1;
+  border: 2px var(--theme-color) inset !important;
+  border-radius: 1.5em;
+  transition-property: width;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+}
+
+body .wide-page .frontmatter-container:hover {
+  right: var(--dolphin-position-right-wide);
+}
+
+pre.frontmatter.language-yaml::before {
+  content: "YAML";
+  font-family: var(--font-family-YAML);
+  top: 1px;
+  right: 36px;
+  color: var(--color-specification);
+}
+
+.frontmatter-container .frontmatter-alias {
+  line-height: 1.2;
+  white-space: initial;
+}
+
+.frontmatter-container .frontmatter-container-header {
+  color: var(--doger);
+  border-bottom: 1px solid var(--cerulean);
+}
+
+.frontmatter-container .frontmatter-section-label {
+  flex-basis: 8em;
+}
+
+.frontmatter-container .frontmatter-section-label {
+  color: var(--bleu-de-france-1);
+  font-size: 0.8em;
+}
+
+.frontmatter-container .frontmatter-section-data{
+  font-size: 0.8em;
+  color: var(--electric-blue);
+}
+
+/* 
+pre.frontmatter {
+  float: right;
+  position: relative;
+  width: 3em;
+  height: 5em;
+  overflow: hidden;
+  border: none !important;
+  background-color: var(--background-primary) !important;
+}
+
+pre.frontmatter::-webkit-scrollbar {
+  display: none;
+}
+pre.frontmatter .code,
+pre.frontmatter::-webkit-scrollbar,
+pre.frontmatter button {
+  display: none;
+} */
+/* 
+pre.frontmatter::before {
+  border: none;
+  font-family: "fa-solid";
+  content: '\e168'; */
+  /* color: rgb(170, 93, 206) ;
+  font-size: 45px; */
+/* } */
+/* 
+pre.frontmatter:hover {
+  border: 2px gray dotted !important;
+  background-color: var(--background-secondary);
+  filter: drop-shadow(-0.1rem 0.1rem 0.1rem var(--background-secondary-alt));
+  width: unset;
+  height: unset;
+  z-index: 3;
+} */
+
+/* pre.frontmatter:hover::before {
+  display: none;
+} */
+/* pre.frontmatter:hover .code {
+  visibility: visible;
+}
+*/
+

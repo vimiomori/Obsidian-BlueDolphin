@@ -1,0 +1,344 @@
+/* ================================== */
+/* ============= kanban ============= */
+/* ================================== */
+.kanban-plugin__markdown-preview-view {
+  font-family: var(--font-text) !important;
+}
+
+.workspace-leaf .kanban-plugin__lane {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-plugin {
+  background-color: var(--background-secondary) !important;
+}
+
+.kanban-plugin__item-title ol:not(.contains-task-list)>li:not(.task-list-item),
+.kanban-plugin__item-title ul:not(.contains-task-list)>li:not(.task-list-item) {
+  border-left: none;
+  padding: 0 1px;
+  margin-left: 0px;
+}
+
+.kanban-plugin .task-list-item-checkbox {
+  margin: 0px 7px 0px 0;
+}
+
+.kanban-plugin__markdown-preview-view blockquote {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.kanban-plugin__lane-header-wrapper {
+  /* background: var(--theme-color-translucent-015) !important; */
+  padding: 8px 11px !important;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 0px !important;
+  z-index: 100 !important;
+  border-bottom: none !important;
+}
+
+.theme-dark .kanban-plugin__lane-header-wrapper {
+  background: unset !important;
+  padding: 8px 11px 0 !important;
+}
+
+.kanban-plugin__checkbox-wrapper {
+  background: var(--background-transparent-black-or-white-2);
+}
+
+.kanban-plugin__item {
+  border: none !important;
+  z-index: 100 !important;
+  border-radius: var(--radius-xs);
+}
+
+.kanban-plugin__item-title {
+  width: 100%;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.kanban-plugin__item-title :is(.markdown-preview-view,.markdown-rendered).kanban-plugin__markdown-preview-view.kanban-plugin__item-markdown {
+  font-size: .875rem;
+}
+
+.kanban-plugin__item-content-wrapper:hover,
+.kanban-plugin__item-title-wrapper:hover {
+  background: var(--background-transparent-black-or-white-3) !important;
+}
+
+.kanban-plugin__item-button-wrapper {
+  /* background: var(--background-transparent-black-or-white-2) !important; */
+  padding: 5px !important;
+  border-radius: 0 0 5px 5px;
+}
+
+button.kanban-plugin__new-item-button {
+  background-color: var(--transparent-2);
+  color: var(--text-muted) !important;
+  font-weight: bold;
+  font-size: 0.8em;
+  z-index: 100 !important;
+}
+
+button.kanban-plugin__new-item-button:hover {
+  color: var(--accent-strong) !important;
+  box-shadow: none !important;
+  background-color: var(--transparent-1) !important;
+}
+
+.kanban-plugin__lane {
+  border: none !important;
+}
+
+.kanban-plugin__lane-items {
+  padding: 4px !important;
+}
+
+.kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
+.kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
+  margin-left: unset;
+  padding-left: unset;
+  margin-bottom: unset;
+  margin-top: unset;
+}
+
+/*meta*/
+.kanban-plugin__meta-row {
+  background: transparent !important;
+}
+
+.kanban-plugin__item-metadata-wrapper:not(:empty) {
+  background: var(--dark-sky-blue) !important;
+}
+
+.kanban-plugin__lane-wrapper {
+  border-radius: var(--radius-xs);
+}
+
+.kanban-plugin__lane-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* checkbox */
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+  margin: 4px 7px 4px 0;
+  width: 15px;
+  height: 15px;
+  filter: hue-rotate(var(--theme-color)) !important;
+}
+
+.kanban-plugin__lane {
+  border: none !important;
+}
+
+.markdown-preview-view .markdown-embed-content, 
+.markdown-preview-view .markdown-embed-content>.markdown-preview-view,
+.kanban-plugin__markdown-preview-view {
+  max-height: unset;
+}
+
+.kanban-plugin__item,
+.kanban-plugin__lane {
+  border: 1px solid var(--background-modifier-border) !important
+}
+
+.kanban-plugin__lane-wrapper {
+  background-image: unset !important;
+  background-color: transparent !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-1) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-2) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-3) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-4) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-5) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-6) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-7) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-sky-blue) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-title-wrapper {
+  background-color: var(--midnight-green) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-aquamarine) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-vanilla);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-atomic-tangerine);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-melon);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-title-wrapper {
+  background-color: var(--dark-heliotrope);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button span {
+  color: var(--electric-blue) !important;
+  border-color: var(--electric-blue) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button span {
+  color: var(--electric-blue-3) !important;
+  border-color: var(--electric-blue-3) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button span {
+  color: var(--aquamarine-1) !important;
+  border-color: var(--aquamarine-1) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button span {
+  color: var(--lemon-chiffon) !important;
+  border-color: var(--lemon-chiffon) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button span {
+  color: var(--champagne-pink) !important;
+  border-color: var(--champagne-pink);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button span {
+  color: var(--fairy-tale) !important;
+  border-color: var(--fairy-tale) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button span {
+  color: var(--lavender-pink) !important;
+  border-color: var(--lavender-pink);
+}
+
+.kanban-plugin__item, .kanban-plugin__lane > * {
+  border: none !important;
+}
+
+/* Kanban Neon, v0.5, copied from Blue Topaz, modified from https://codepen.io/Chokcoco/pen/BaQzBEG by @Chokcoco */
+body {
+  --background-transparent-black-or-white-1: #232323c2;
+  --background-transparent-black-or-white-2: #0f0f0f69;
+  --background-transparent-black-or-white-3: #2222224d;
+  --background-transparent-blue: #3bb4ff80;
+}
+
+.kanban-plugin__lane-header-wrapper {
+  padding: 5px 11px!important;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 5px !important;
+}
+
+.kanban-plugin__lane-wrapper:nth-child(n) {
+  position: relative;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0px 0px 5px 1px var(--kanban-shadow);
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-1) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-2) !important;
+}
+
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-3) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-4) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-5) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-6) !important;
+}
+body .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin__lane {
+  background-color: var(--kanban-color-7) !important;
+}
+

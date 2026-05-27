@@ -1,0 +1,290 @@
+/* obsidian-calendar-plugin */
+/*==========================*/
+#calendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-day: transparent;
+  --color-background-weekend: transparent;
+
+  --color-dot: var(--text-accent);
+  --color-arrow: currentColor;
+  --color-button: var(--text-muted);
+  --color-text-weeknum: var(--calendar-week-color);
+
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-normal);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-accent);
+
+  padding: 0 8px 0 8px;
+  margin: -21px -8px 0px -8px;
+  line-height: 0.6;
+}
+
+.theme-dark #calendar-container {
+  --color-tr: #11111166;
+  --color-tr-odd: #1e1e1e93;
+  --color-calendar-weekends: #cc8484;
+  --color-calendar-weekends-2: #ff9f9f21;
+  --calendar-today-background-color: #00b3005e;
+  --theme-color-translucent-3: #217cc769;
+}
+
+.theme-light #calendar-container {
+  --color-tr: #ffffff6a;
+  --color-tr-odd: #eeeeeea2;
+  --color-calendar-weekends: #c74a4a;
+  --color-calendar-weekends-2: #fdadad21;
+  --theme-color-translucent-3: #91c2eb80;
+}
+
+#calendar-container .calendar {
+  background-color: transparent;
+  padding: 0 4px 2px 4px;
+  margin-top: -8px;
+  margin-left: 2px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#calendar-container .calendar tr {
+  background-color: transparent;
+}
+
+/*表格调整*/
+/*星期*/
+#calendar-container th:first-of-type {
+  border-top-left-radius: 3px !important;
+}
+
+#calendar-container th:last-of-type {
+  border-top-right-radius: 3px !important;
+}
+
+#calendar-container th {
+  padding: 8px 0;
+  border-bottom: 2px solid var(--text-accent);
+  border-radius: 0 !important;
+}
+
+/*天*/
+#calendar-container td {
+  width: 12.5%;
+  border-right: none;
+  padding: 0 !important;
+  line-height: 23px;
+}
+
+#calendar-container tr {
+  background-color: var(--color-tr);
+}
+
+#calendar-container .day {
+  padding: 2px 0 0 !important;
+}
+
+#calendar-container .day.has-note.active:not(.today) {
+  background-color: var(--theme-color-translucent-015) !important;
+  color: var(--text-normal) !important;
+  font-weight: 700;
+}
+
+#calendar-container .day:not(:empty):hover {
+  background-color: var(--cerulean);
+}
+
+#calendar-container .day:active,
+#calendar-container .active,
+#calendar-container .active.today {
+  background-color: var(--theme-color-translucent-015) !important;
+  color: var(--text-accent) !important;
+  font-weight: 700;
+}
+
+#calendar-container .active.today,
+#calendar-container .day.has-note.active {
+  color: var(--text-accent) !important;
+  font-weight: 700;
+}
+
+#calendar-container .today {
+  font-weight: bolder;
+}
+
+/*“Today”*/
+#calendar-container .reset-button {
+  font-size: 14px !important;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/*悬停Today*/
+#calendar-container .reset-button:hover {
+  color: var(--sliding-panes-header-color);
+  background-color: var(--table-hover-raw-color);
+}
+
+/*悬停arrow*/
+#calendar-container .arrow:hover {
+  color: var(--theme-color);
+}
+
+/*dot*/
+#calendar-container .dot {
+  stroke: transparent;
+  margin: -3px 0 2px !important;
+}
+
+#calendar-container .hollow {
+  margin: -3px 0 2px !important;
+}
+
+#calendar-container .dot-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*月份调整 month*/
+#calendar-container .month {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/*年份调整 year*/
+#calendar-container .year {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/*星期数 week*/
+#calendar-container .week-num {
+  border-right: 1px solid var(--calendar-week-background-color) !important;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+#calendar-container .week-num.active {
+  background-color: var(--calendar-week-background-color) !important;
+  color: var(--color-text-weeknum) !important;
+  font-weight: 800;
+}
+
+/*星期数悬停 week hover*/
+#calendar-container .week-num:hover {
+  background-color: var(--calendar-week-hover) !important;
+}
+
+/*===========================*/
+/*copy button for code blocks*/
+/*===========================*/
+button.copy-code-button:not([style="right: 32pt"]) {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVRYhe2WMU4CQRSG/2eMjQRptQB7j8AJnIbKEq/A2qg0SjRROgauYGljTMALLN7AA7Ak1oRIY7HPYt0IuzPLMgxggK97u2/e/PPv25kBNh0yGSSavQqYqkHEDx2n0FqaANH0SmC8RIqU2k7+1YqAs9rH3uggcw+iMoBD7UDyi75PRESuLoeBT4CeMoPhzXPt5FuVsxt98JXL3hH4cpryduX4HQCE9LQ5BBwBfDXKZRlANZUAgMtAsMJwkt+JGAA6Tn7CtTBWvT9t9IpE5DL4XCdgR636b4Xz8HZR6I7XVKFwIJlwpbaIObBsUjsQ/fa2WLkDWwEz/wWzMq13Vu6AsQAh+10hPdc0nlsAwEwAm8cahPTY9m6XxPr0gGm+xR6wlL/tgbQsrAeCi2RwnUouaacHYvu0kP1HgK91ZWzfC2IO7A+GtwDVQyf+Let7FmwcPzCZvMtlTU3QAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  color: transparent;
+  height: 1.6em;
+  width: 1.2em;
+  padding: 8px 10px;
+  margin: 0.5em 1em;
+  border-color: var(--doger);
+}
+
+button.copy-code-button:hover {
+  background-color: var(--bleu-de-france);
+}
+
+.obsidian-banner-wrapper.has-copy-button {
+  position:unset;
+}
+
+/*====================*/
+/*day planner plugin*/
+/*====================*/
+.day-planner-status-bar-text {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.progress-pie.day-planner {
+  background-color: var(--day-planner-pie);
+  float: left;
+  height: 20px;
+  margin: 0.3px 10px 0.3px 0;
+  width: 20px;
+  display: none;
+}
+
+#scroll-controls input#auto-scroll.toggle {
+  background-image: none;
+}
+
+.aside__line {
+  background: var(--day-planner-dot) !important;
+  left: 35px !important;
+}
+
+.ei_Dot {
+  background-color: var(--day-planner-line) !important;
+  left: 28px !important;
+}
+
+.ei_Title {
+  font-size: 15px !important;
+  margin-left: -10px !important;
+}
+
+.ei_Copy {
+  font-size: 15px !important;
+  margin-left: 5px !important;
+}
+
+.event_item {
+  overflow: hidden !important;
+}
+
+#now-line, .timeline-time {
+  background-color: var(--day-planner-timeline) !important;
+}
+
+.event_item:hover {
+  background-color: var(--day-planner-item-hover) !important;
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+
+.event_item_color1 {
+  background-color: var(--event-item-color1) !important;
+}
+.event_item_color2 {
+  background-color: var(--event-item-color2) !important;
+}
+.event_item_color3 {
+  background-color: var(--event-item-color3) !important;
+}
+.event_item_color4 {
+  background-color: var(--event-item-color4) !important;
+}
+.event_item_color5 {
+  background-color: var(--event-item-color5) !important;
+}
+.event_item_color6 {
+  background-color: var(--event-item-color6) !important;
+}
+.event_item_color7 {
+  background-color: var(--event-item-color7) !important;
+}
+.event_item_color8 {
+  background-color: var(--event-item-color8) !important;
+}
+.event_item_color9 {
+  background-color: var(--event-item-color9) !important;
+}
+.event_item_color10 {
+  background-color: var(--event-item-color10) !important;
+}
+

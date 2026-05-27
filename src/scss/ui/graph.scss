@@ -1,0 +1,70 @@
+/* ======= graph view ==============*/
+.workspace-leaf-content[data-type="graph"] .graph-controls {
+  background-color: var(--graph-control-bg);
+  border: none;
+}
+.workspace-split.mod-root .workspace-leaf-content[data-type="graph"] .view-content {
+  background-color: var(--graph-canvas-bg);
+}
+
+body.colorful-graph {
+  --graph-tag: var(--peach);
+  --graph-attach: var(--aquamarine-1);
+  --graph-unresolved: var(--fairy-tale);
+}
+
+.graph-view.color-fill {
+  color: var(--graph-circle);
+}
+.graph-view.color-circle {
+  color: var(--graph-circle-outline);
+}
+.graph-view.color-line {
+  color: var(--graph-line);
+}
+.graph-view.color-text {
+  color: var(--graph-text-color);
+}
+.graph-view.color-fill-highlight {
+  color: var(--graph-circle-fill-highlight);
+}
+.graph-view.color-line-highlight {
+  color: var(--graph-line-fill-highlight);
+}
+.graph-view.color-fill-tag {
+  color: var(--graph-tag) !important;
+}
+.graph-view.color-fill-attachment {
+  color: var(--graph-attach) !important;
+}
+.graph-view.color-fill-unresolved {
+  color: var(--graph-unresolved);
+  opacity: 1;
+}
+.graph-view.color-arrow {
+  color: var(--graph-arrow);
+  opacity: 1;
+}
+
+/*Horizontal line in edit mode. Changes --- to full-width line*/
+/*thanks to Piotr from obsidian forum*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
+  color: transparent;
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: var(--text-muted);
+  left: 0;
+  top: 50%;
+}
+
+/*change collapse icon position in left side*/
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  margin-top: 0;
+  padding: 7px 6px 2px 6px;
+}
+

@@ -1,0 +1,403 @@
+/*----file explorer smaller fonts & line height----*/
+.nav-file-title,
+.nav-folder-title {
+  font-size: var(--font-size-folder-and-file);
+  font-family: var(--font-family-folder-file-title);
+  cursor: pointer;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 0;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.nav-file-title {
+  padding: 1px 5px 3px 4px;
+  color: var(--text-folder-file);
+}
+
+.nav-folder-title {
+  font-weight: 600;
+  padding: 2px 5px 2px 23px;
+  color: var(--electric-blue-2);
+}
+
+.nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+  font-weight: bold;
+}
+
+/*rename*/
+.nav-file-title-content.is-being-renamed {
+  margin-left: 1em;
+}
+
+.nav-file-title-content.is-being-renamed,
+.nav-folder-title-content.is-being-renamed {
+  cursor: text;
+  border: 1px solid var(--electric-blue-2);
+  background-color: var(--midnight-green-2);
+  color: var(--celeste);
+}
+
+.nav-file-title-content.is-being-renamed::selection,
+.nav-folder-title-content.is-being-renamed::selection {
+  background-color: var(--moonstone);
+  color: var(--prussian-blue-2);
+}
+
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within,
+.workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within {
+  box-shadow: none;
+  background-color: var(--midnight-green-2);
+}
+
+/*---- nav arrows adjust location ----*/
+body .nav-folder-collapse-indicator {
+  position: absolute;
+  top: 1px;
+  transition: transform 20ms linear 0s;
+}
+
+body .nav-folder-collapse-indicator:hover {
+  position: absolute;
+  top: 1px;
+  transition: transform 20ms linear 0s;
+}
+
+body .nav-folder-collapse-indicator::after {
+  position: absolute;
+  content: "↓";
+  top: 1px;
+  font-size: 0.9em;
+  font-family: 'Inter';
+  font-weight: bold;
+  color: var(--electric-blue-2);
+  transition: transform 10ms linear 0s;
+}
+
+body .nav-folder-collapse-indicator svg {
+  display: none;
+  color: var(--accent-strong);
+  height: 7px;
+  width: 7px;
+}
+
+body:not(.is-grabbing) .nav-folder.is-collapsed .nav-folder-title-content:not(.is-being-renamed) {
+  color: var(--bleu-de-france-1);
+}
+
+
+body .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
+  transform: rotate(-90deg);
+  /* opacity: 0.55; */
+  color: var(--bleu-de-france-1);
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover > .nav-folder-collapse-indicator::after,
+body:not(.is-grabbing) .nav-folder-title:hover > .nav-folder-title-content {
+  color: var(--nav-item-color-hover) !important;
+  font-weight: bold;
+}
+
+/*search icon 1*/
+body .backlink-pane .search-result-container .collapse-icon {
+  left: 0;
+  top: 7px;
+  margin-top: 0;
+  transition: transform 20ms linear 0s;
+}
+
+body .backlink-pane .search-result-container .collapse-icon::before {
+  content: "↓";
+  font-size: 14px;
+  font-family: 'Inter';
+  font-weight: bold;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+body .backlink-pane .search-result-container .collapse-icon svg {
+  display: none;
+  color: var(--accent-strong);
+  height: 7px;
+  width: 7px;
+}
+
+body .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
+  opacity: 0.5;
+}
+
+/* search panel icons */
+body .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
+  left: 0;
+  top: 7px;
+  margin-top: 0;
+  transition: transform 20ms linear 0s;
+}
+
+body .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
+  content: "↓";
+  font-size: 14px;
+  margin-left: 0px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+body .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
+  display: none;
+  color: var(--accent-strong);
+  height: 7px;
+  width: 7px;
+}
+
+body .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
+  opacity: 0.5;
+}
+
+/* header collaspe indicators */
+:is(.markdown-preview-view,.markdown-rendered) div.is-collapsed :is(h1,h2,h3,h4,h5,h6)::after,
+:is(.markdown-preview-view,.markdown-rendered) :is(ol,ul) .is-collapsed::after {
+  content: "...";
+  padding: 5px;
+  color: var(--text-faint);
+}
+
+body div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  margin: 15px 0 0 -20px;
+  padding: 0;
+  transition: transform 20ms linear 0s;
+}
+
+body :is(h1,h2) div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  transition: transform 20ms linear 0s;
+}
+
+body div.heading-collapse-indicator.collapse-indicator::before {
+  content: "↓";
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+  opacity: 0;
+}
+
+body .heading-collapse-indicator.collapse-indicator.collapse-icon svg {
+  display: none;
+}
+
+body div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(7px) translateY(7px) rotate(-90deg);
+}
+
+body div.is-collapsed div.heading-collapse-indicator.collapse-indicator::before,
+body :is(h1,h2,h3,h4,h5,h6):hover div.heading-collapse-indicator.collapse-indicator::before {
+  opacity: 1;
+}
+
+body .outline .tree-item .collapse-icon {
+  padding: 0;
+  transition: transform 20ms linear 0s;
+}
+
+body .outline .tree-item .collapse-icon::before {
+  content: "↓";
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+body .outline .tree-item .collapse-icon svg {
+  display: none;
+  color: var(--accent-strong);
+  height: 7px;
+  width: 7px;
+}
+
+body .outline .tree-item.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
+  opacity: 0.5;
+}
+
+/*vertical lines in outline page*/
+.outline .tree-item-children {
+  margin-left: 14px;
+  border-left: 1px solid #94949433;
+  border-radius: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.outline .tree-item-children:hover {
+  border-left-color: var(--theme-color-translucent-04);
+}
+
+.tree-item-flair {
+  line-height: 17px;
+  padding-top: 3px;
+  height: 1.45rem;
+}
+
+/*tag collapse indicator*/
+.tag-container .tree-item-children {
+  border-left: 1px solid #94949433;
+  border-radius: 0 3px 3px 0;
+  transition: all 300ms ease-in-out;
+}
+
+.tag-container .tree-item-children > div[style="width: 1px; height: 0.1px; margin-bottom: 0px;"] {
+  height: 0 !important;
+}
+
+.tag-container .tree-item-self .tree-item-icon svg {
+  display: none;
+}
+
+.tag-container .tree-item-self .tree-item-icon::before {
+  content: "#";
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+.tag-container .tree-item-children:hover {
+  border-left-color: var(--theme-color);
+}
+
+.tag-container .tree-item.is-collapsed .collapse-icon {
+  opacity: 0.5;
+}
+
+/*setting panel*/
+
+.modal  .modal-title {
+  margin-left: 0.2em;
+}
+
+.modal-content .cmdr-setting-content {
+  height: auto;
+}
+
+[class='modal']{
+  max-width: unset ;
+  width: unset;
+  min-width: var(--dialog-width);
+}
+
+.modal-container.mod-dim .modal {
+  box-shadow: var(--shadow-l);
+}
+
+.modal.mod-narrow .modal-content {
+  overflow: hidden;
+}
+
+.vertical-tab-nav-item {
+  padding: 6px 6px 6px 24px;
+  margin-bottom: 0;
+}
+
+
+.modal.mod-settings .vertical-tab-content-container {
+  padding: 0;
+}
+
+.vertical-tab-content-container::before {
+  position: relative;
+  z-index: var(--layer-status-bar);
+  display: block;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 1.5em;
+  content: "Blue Dolphin Theme";
+  text-align: center;
+  padding: 1.1em 0 0.8em 0;
+  font-family: var(--font-interface);
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--electric-blue-2);
+  background: var(--background-secondary-alt);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+
+.modal.mod-settings .vertical-tab-header::before {
+  position: sticky;
+  top: -1em;
+  z-index: var(--layer-cover);
+  display: block;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 2.5em;
+  /* margin-bottom: -1px; */
+  padding-bottom: 1em;
+  content: "";
+  background: var(--background-secondary-alt);
+}
+
+.is-phone .modal.mod-settings .modal-title::after,
+.modal.mod-settings .vertical-tab-header::after {
+  position: absolute;
+  top: var(--size-4-2);
+  left: var(--size-4-2);
+  z-index: var(--layer-sidedock);
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+  height: 24px;
+  padding: 4px 8px 0px 8px;
+  margin: 0.3em 0.3em;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-monospace-theme);
+  color: var(--pacific-blue);
+  border: 1px solid var(--midnight-green-2);
+  content: var(--theme-info);
+  background: var(--indigo-blue);
+  border-radius: var(--radius-m);
+}
+
+.modal-content .cmdr-setting-content {
+  height: auto;
+}
+
+.is-phone .setting-item-heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.modal button:not(.mod-cta):not(.mod-warning):hover {
+  background-color: var(--cerulean-2);
+  border: 1px solid var(--robin-egg);
+  color: var(--electric-blue-3);
+}
+.modal .community-modal-details {
+  background-color: var(--background-primary);
+}
+.community-theme-container .clickable-icon {
+  color: var(--electric-blue)
+}
+
+.community-item.is-selected {
+  background-color: var(--sky-blue);
+}
+
+.dropdown {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSI2NDAuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAxMjgwLjAwMDAwMCA2NDAuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+CjxtZXRhZGF0YT4KQ3JlYXRlZCBieSBwb3RyYWNlIDEuMTUsIHdyaXR0ZW4gYnkgUGV0ZXIgU2VsaW5nZXIgMjAwMS0yMDE3CjwvbWV0YWRhdGE+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDY0MC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMyMTk2ZjMiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMCA2MzkyIGMwIC00IDE0MzggLTE0NDUgMzE5NSAtMzIwMiBsMzE5NSAtMzE5NCAzMTk1IDMxOTQgYzE3NTcKMTc1NyAzMTk1IDMxOTggMzE5NSAzMjAyIDAgNSAtMjg3NSA4IC02MzkwIDggLTM1MTUgMCAtNjM5MCAtMyAtNjM5MCAtOHoiLz4KPC9nPgo8L3N2Zz4K);
+}
+

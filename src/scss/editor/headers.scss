@@ -1,0 +1,434 @@
+/* headers */
+/*编辑状态是否显示H1 H2标记*/
+/*适配Live preview模式*/
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
+  font-size: 0.6rem;
+  width: auto;
+  margin-right: 1px;
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  overflow: visible;
+  font-family: var(--font-default);
+  font-weight: normal !important;
+}
+
+body div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header ~ span.cm-header::before,
+body div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header.cm-hmd-internal-link::before {
+  display: none;
+}
+
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
+  content: 'H1';
+  margin-top: calc(var(--h1-size) - 0.1em);
+}
+
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
+  content: 'H2';
+  margin-top: calc(var(--h2-size) - 0.2em);
+}
+
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
+  content: 'H3';
+  margin-top: calc(var(--h3-size) - 0.2em);
+}
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
+  content: 'H4';
+  margin-top: calc(var(--h4-size) - 0.3em);
+}
+
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
+  content: 'H5';
+  margin-top: calc(var(--h5-size) - 0.4em);
+}
+
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
+  content: 'H6';
+  margin-top: calc(var(--h6-size) - 0.4em);
+}
+
+/*适配source mode 模式*/
+body div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header ~ span.cm-header::before
+{
+  display: none;
+}
+body div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span.cm-formatting-header {
+  display:none;
+}
+/*适配传统模式*/
+body div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line span.cm-formatting-header::before {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -18px;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  overflow: visible;
+  font-family: var(--font-default);
+  font-weight: normal !important;
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line) span.cm-formatting-header::before {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -6px;
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  overflow: visible;
+  font-family: var(--font-default);
+  font-weight: normal !important;
+}
+
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header {
+  color: transparent !important;
+  background: none;
+}
+
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-1::before {
+  content: 'H1';
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-2::before {
+  content: 'H2';
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-3::before {
+  content: 'H3';
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-4::before {
+  content: 'H4';
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-5::before {
+  content: 'H5';
+}
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-6::before {
+  content: 'H6';
+}
+
+:is(.markdown-preview-view,.markdown-rendered) h1 {
+  font-size: var(--h1-size);
+  line-height: 1.2;
+  padding-bottom: 1px;
+  font-family: var(--font-family-h1);
+  color: var(--h1-color);
+  font-weight: var(--font-weight-h1);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) h2 {
+  font-size: var(--h2-size);
+  line-height: 1.2;
+  padding-bottom: 1px;
+  font-family: var(--font-family-h2);
+  color: var(--h2-color);
+  font-weight: var(--font-weight-h2);
+}
+
+body.h1-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h1,
+body.h1-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line {
+  border-bottom: 2px solid var(--h1-color);
+}
+body.h2-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h2,
+body.h2-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
+  border-bottom: 1px solid var(--h2-color);
+}
+body.h3-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h3,
+body.h3-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-3.cm-line {
+  border-bottom: 1px solid var(--h3-color);
+}
+body.h4-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h4,
+body.h4-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-4.cm-line {
+  border-bottom: 1px solid var(--h2-color);
+}
+body.h5-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h5,
+body.h5-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-5.cm-line {
+  border-bottom: 1px solid var(--h5-color);
+}
+body.h6-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h6,
+body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-6.cm-line {
+  border-bottom: 1px solid var(--h6-color);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) h3 {
+  font-size: var(--h3-size);
+  font-family: var(--font-family-h3);
+  color: var(--h3-color);
+  font-weight: var(--font-weight-h3);
+}
+:is(.markdown-preview-view,.markdown-rendered) h4 {
+  font-size: var(--h4-size);
+  font-family: var(--font-family-h4);
+  color: var(--h4-color);
+  font-weight: var(--font-weight-h4);
+}
+:is(.markdown-preview-view,.markdown-rendered) h5 {
+  font-size: var(--h5-size);
+  font-family: var(--font-family-h5);
+  color: var(--h5-color);
+  font-weight: var(--font-weight-h5);
+}
+:is(.markdown-preview-view,.markdown-rendered) h6 {
+  font-size: var(--h6-size);
+  font-family: var(--font-family-h6);
+  color: var(--h6-color);
+  font-weight: var(--font-weight-h6);
+}
+
+body.header-1-background .cm-header-1,
+body.header-1-background :is(.markdown-preview-view,.markdown-rendered) h1 {
+  background-color: var(--h1-bg-color);
+}
+body.header-2-background .cm-header-2,
+body.header-2-background :is(.markdown-preview-view,.markdown-rendered) h2 {
+  background-color: var(--h2-bg-color);
+}
+body.header-3-background .cm-header-3,
+body.header-3-background :is(.markdown-preview-view,.markdown-rendered) h3 {
+  background-color: var(--h3-bg-color);
+}
+body.header-4-background .cm-header-4,
+body.header-4-background :is(.markdown-preview-view,.markdown-rendered) h4 {
+  background-color: var(--h4-bg-color);
+}
+body.header-5-background .cm-header-5,
+body.header-5-background :is(.markdown-preview-view,.markdown-rendered) h5 {
+  background-color: var(--h5-bg-color);
+}
+body.header-6-background .cm-header-6,
+body.header-6-background :is(.markdown-preview-view,.markdown-rendered) h6 {
+  background-color: var(--h6-bg-color);
+}
+
+body:not(.vim-monospace .cm-vimMode).cm-header-1 {
+  font-size: var(--h1-size) !important;
+  position: relative;
+  font-family: var(--font-family-h1) !important;
+  color: var(--h1-color);
+  font-weight: var(--font-weight-h1);
+}
+body:not(.vim-monospace .cm-vimMode).cm-header-2 {
+  font-size: var(--h2-size) !important;
+  position: relative;
+  font-family: var(--font-family-h2) !important;
+  color: var(--h2-color);
+  font-weight: var(--font-weight-h2);
+}
+body:not(.vim-monospace .cm-vimMode).cm-header-3 {
+  font-size: var(--h3-size) !important;
+  position: relative;
+  font-family: var(--font-family-h3) !important;
+  color: var(--h3-color);
+  font-weight: var(--font-weight-h3);
+}
+body:not(.vim-monospace .cm-vimMode).cm-header-4 {
+  font-size: var(--h4-size) !important;
+  position: relative;
+  font-family: var(--font-family-h4) !important;
+  color: var(--h4-color);
+  font-weight: var(--font-weight-h4);
+}
+body:not(.vim-monospace .cm-vimMode).cm-header-5 {
+  font-size: var(--h5-size) !important;
+  position: relative;
+  font-family: var(--font-family-h5) !important;
+  color: var(--h5-color);
+  font-weight: var(--font-weight-h5);
+}
+body:not(.vim-monospace .cm-vimMode).cm-header-6 {
+  font-size: var(--h6-size) !important;
+  position: relative;
+  font-family: var(--font-family-h6) !important;
+  color: var(--h6-color);
+  font-weight: var(--font-weight-h6);
+}
+.cm-contentContainer :is(.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4) {
+  line-height: calc(var(--paragraph-spacing) + 0.5);
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-1 {
+  font-size: var(--h1-size) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-2 {
+  font-size: var(--h2-size) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-3 {
+  font-size: var(--h3-size) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-4 {
+  font-size: var(--h4-size) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-5 {
+  font-size: var(--h5-size) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-6 {
+  font-size: var(--h6-size) !important;
+}
+
+body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-center .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-center .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-center .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-center .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-center :is(.markdown-preview-view,.markdown-rendered) h1,
+body.h2-text-align-center :is(.markdown-preview-view,.markdown-rendered) h2,
+body.h3-text-align-center :is(.markdown-preview-view,.markdown-rendered) h3,
+body.h4-text-align-center :is(.markdown-preview-view,.markdown-rendered) h4,
+body.h5-text-align-center :is(.markdown-preview-view,.markdown-rendered) h5,
+body.h6-text-align-center :is(.markdown-preview-view,.markdown-rendered) h6 {
+  text-align: center;
+}
+body.h1-text-align-end .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-end .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-end .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-end .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-end .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-end .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-end :is(.markdown-preview-view,.markdown-rendered) h1,
+body.h2-text-align-end :is(.markdown-preview-view,.markdown-rendered) h2,
+body.h3-text-align-end :is(.markdown-preview-view,.markdown-rendered) h3,
+body.h4-text-align-end :is(.markdown-preview-view,.markdown-rendered) h4,
+body.h5-text-align-end :is(.markdown-preview-view,.markdown-rendered) h5,
+body.h6-text-align-end :is(.markdown-preview-view,.markdown-rendered) h6 {
+  text-align: end;
+}
+
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) em,
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) strong,
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) strong em,
+body .cm-s-obsidian .cm-header[class*="cm-em"],
+body .cm-s-obsidian .cm-header[class*="cm-strong"] {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: initial;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h1 em,
+body :is(.markdown-preview-view,.markdown-rendered) h1 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h1 strong em,
+body .cm-s-obsidian .cm-header.cm-header-1[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-1[class*="cm-strong"] {
+  color: var(--h1-color) !important;
+  font-family: var(--font-family-h1) !important;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h2 em,
+body :is(.markdown-preview-view,.markdown-rendered) h2 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h2 strong em,
+body .cm-s-obsidian .cm-header.cm-header-2[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-2[class*="cm-strong"] {
+  color: var(--h2-color) !important;
+  font-family: var(--font-family-h2) !important;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h3 em,
+body :is(.markdown-preview-view,.markdown-rendered) h3 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h3 strong em,
+body .cm-s-obsidian .cm-header.cm-header-3[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-3[class*="cm-strong"] {
+  color: var(--h3-color) !important;
+  font-family: var(--font-family-h3) !important;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h4 em,
+body :is(.markdown-preview-view,.markdown-rendered) h4 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h4 strong em,
+body .cm-s-obsidian .cm-header.cm-header-4[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-4[class*="cm-strong"] {
+  color: var(--h4-color) !important;
+  font-family: var(--font-family-h4) !important;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h5 em,
+body :is(.markdown-preview-view,.markdown-rendered) h5 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h5 strong em,
+body .cm-s-obsidian .cm-header.cm-header-5[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-5[class*="cm-strong"] {
+  color: var(--h5-color) !important;
+  font-family: var(--font-family-h5) !important;
+}
+body :is(.markdown-preview-view,.markdown-rendered) h6 em,
+body :is(.markdown-preview-view,.markdown-rendered) h6 strong,
+body :is(.markdown-preview-view,.markdown-rendered) h6 strong em,
+body .cm-s-obsidian .cm-header.cm-header-6[class*="cm-em"],
+body .cm-s-obsidian .cm-header.cm-header-6[class*="cm-strong"] {
+  color: var(--h6-color) !important;
+  font-family: var(--font-family-h6) !important;
+}
+
+:is(.markdown-preview-section,.markdown-rendered):not(:first-child) :is(h1,h2,h3,h4,h5) {
+  margin-top: 13px !important;
+}
+
+:is(.markdown-preview-section,.markdown-rendered):not(:first-child) h6 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/*preview Header hover*/
+/* adapted from Obsidian-Typora-Vue https://github.com/ZekunC/Obsidian-Typora-Vue-Theme */
+:is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) {
+  position: relative;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h1:hover::before {
+  content: 'H1';
+  position: absolute;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -24px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 25px;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h2:hover::before {
+  content: 'H2';
+  position: absolute;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -25px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 23px;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h3:hover::before {
+  content: 'H3';
+  position: absolute;
+  font-size: 0.65rem;
+  width: auto;
+  margin-left: -25px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 22px;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h4:hover::before {
+  content: 'H4';
+  position: absolute;
+  font-size: 0.6rem;
+  width: auto;
+  margin-left: -25px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 22px;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h5:hover::before {
+  content: 'H5';
+  position: absolute;
+  font-size: 0.6rem;
+  width: auto;
+  margin-left: -25px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 22px;
+}
+body:is(.markdown-preview-view,.markdown-rendered) h6:hover::before {
+  content: 'H6';
+  position: absolute;
+  font-size: 0.6rem;
+  width: auto;
+  margin-left: -25px;
+  border: 1px solid;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  top: 22px;
+}
+
