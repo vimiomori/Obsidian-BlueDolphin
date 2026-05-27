@@ -192,7 +192,7 @@ body {
 
   // ── Background primary/secondary (light-mode defaults) ───────────────────
   --background-primary-bg-4-bt: var(--prussian-blue-3);
-  --background-primary-alt-bg-4-bt: var(--teal);
+  --background-primary-alt-bg-4-bt: var(--prussian-blue-3);  /* tightly paired with primary; card bg handled by direct rule */
   --background-secondary-bg-4-bt: var(--prussian-blue-2);
   --background-secondary-alt-bg-4-bt: var(--prussian-blue);
 

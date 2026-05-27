@@ -7,14 +7,18 @@
 
 body.theme-dark {
   // ── Obsidian color-base scale ────────────────────────────────────────────
+  // NOTE: Obsidian 1.5+ uses --color-base-40 / --color-base-50 directly as
+  // modal and settings-panel backgrounds. Keep these in the dark-navy family
+  // (desaturated relative to the teal accent palette) so surfaces stay dark
+  // rather than washing teal.
   --color-base-00: #001722;
   --color-base-10: #002a3e;
   --color-base-20: #00283f;
   --color-base-25: #002f47;
   --color-base-30: #00334d;
   --color-base-35: #003955;
-  --color-base-40: #004f6b;
-  --color-base-50: #016986ff;
+  --color-base-40: #003d58;   /* was #004f6b (midnight-green) — too teal for surfaces */
+  --color-base-50: #004060;   /* was #016986 (cerulean)       — dark navy, not teal   */
   --color-base-60: #018eb1;
   --color-base-70: #2CC6DB;
   --color-base-100: #87ecff;
@@ -68,6 +72,15 @@ body.theme-dark {
   --background-modifier-active-hover: var(--cerulean);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
 
+  // ── Modal / settings chrome (Obsidian 1.5+) ──────────────────────────────
+  // Obsidian 1.5+ introduced --modal-background and --background-modifier-form-field
+  // as explicit hooks for settings panels. Without these the values fall through
+  // to the color-base scale which was too teal in BlueDolphin.
+  --modal-background: var(--background-secondary);
+  --background-modifier-form-field: var(--prussian-blue-1);
+  --background-modifier-form-field-highlighted: var(--prussian-blue-2);
+  --settings-item-background: transparent;
+
   // ── Text colors ──────────────────────────────────────────────────────────
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
@@ -91,8 +104,8 @@ body.theme-dark {
   --interactive-accent-rgb: 129, 161, 193;
   --interactive-accent-hover: var(--sky-blue);
   --interactive-accent-hsl: 195.69, 67.4%, 44.51%;
-  --interactive-normal: var(--midnight-green);
-  --interactive-hover: var(--cerulean);
+  --interactive-normal: var(--prussian-blue-2);  /* was midnight-green — too teal for setting card resting bg */
+  --interactive-hover: var(--midnight-green);    /* was cerulean — now teal is the *hover* state */
 
   // ── Theme color + translucent scale ─────────────────────────────────────
   --theme-color: var(--interactive-accent);

@@ -315,6 +315,34 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   padding: 0;
 }
 
+// ── Settings panel layout (Obsidian 1.5+) ────────────────────────────────
+// Match the "grouped card" style: card groups slightly elevated above the
+// modal bg, rows separated by thin lines, section headings flat above cards.
+.modal.mod-settings .vertical-tab-content {
+  background-color: var(--background-primary);
+}
+
+// Grouped card — slightly darker than the modal bg (prussian-blue-2 vs primary prussian-blue-3)
+.modal.mod-settings .setting-items {
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+// Row dividers — one step darker still
+.modal.mod-settings .setting-items .setting-item:not(:last-child) {
+  border-bottom: 1px solid var(--prussian-blue-1);
+}
+.modal.mod-settings .setting-items .setting-item:last-child {
+  border-bottom: none;
+}
+
+// Section headings sit flat above their card group
+.modal.mod-settings .setting-item-heading {
+  background-color: transparent;
+  border-bottom: none;
+}
+
 .vertical-tab-content-container::before {
   position: relative;
   z-index: var(--layer-status-bar);
@@ -345,7 +373,7 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   /* margin-bottom: -1px; */
   padding-bottom: 1em;
   content: "";
-  background: var(--background-secondary-alt);
+  background: transparent;
 }
 
 .is-phone .modal.mod-settings .modal-title::after,

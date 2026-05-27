@@ -351,7 +351,7 @@ body {
   --he-title-bar-inactive-fg: var(--text-muted);
   --list-spacing-bt: 1;
   --background-primary-bg-4-bt: var(--prussian-blue-3);
-  --background-primary-alt-bg-4-bt: var(--teal);
+  --background-primary-alt-bg-4-bt: var(--prussian-blue-3); /* tightly paired with primary; card bg handled by direct rule */
   --background-secondary-bg-4-bt: var(--prussian-blue-2);
   --background-secondary-alt-bg-4-bt: var(--prussian-blue);
   --callout-min-width: 200px;
@@ -430,8 +430,8 @@ body.theme-dark {
   --color-base-25: #002f47;
   --color-base-30: #00334d;
   --color-base-35: #003955;
-  --color-base-40: #004f6b;
-  --color-base-50: #016986ff;
+  --color-base-40: #003d58; /* was #004f6b (midnight-green) — too teal for surfaces */
+  --color-base-50: #004060; /* was #016986 (cerulean)       — dark navy, not teal   */
   --color-base-60: #018eb1;
   --color-base-70: #2CC6DB;
   --color-base-100: #87ecff;
@@ -478,6 +478,10 @@ body.theme-dark {
   --background-modifier-box-shadow: rgba(172, 248, 242, 0.14);
   --background-modifier-active-hover: var(--cerulean);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --modal-background: var(--background-secondary);
+  --background-modifier-form-field: var(--prussian-blue-1);
+  --background-modifier-form-field-highlighted: var(--prussian-blue-2);
+  --settings-item-background: transparent;
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
   --text-highlight: var(--text-normal);
@@ -498,8 +502,8 @@ body.theme-dark {
   --interactive-accent-rgb: 129, 161, 193;
   --interactive-accent-hover: var(--sky-blue);
   --interactive-accent-hsl: 195.69, 67.4%, 44.51%;
-  --interactive-normal: var(--midnight-green);
-  --interactive-hover: var(--cerulean);
+  --interactive-normal: var(--prussian-blue-2); /* was midnight-green — too teal for setting card resting bg */
+  --interactive-hover: var(--midnight-green); /* was cerulean — now teal is the *hover* state */
   --theme-color: var(--interactive-accent);
   --theme-color-translucent-06: hsla(var(--interactive-accent-hsl),0.6);
   --theme-color-translucent-04: hsla(var(--interactive-accent-hsl),0.4);
@@ -1762,6 +1766,29 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   padding: 0;
 }
 
+.modal.mod-settings .vertical-tab-content {
+  background-color: var(--background-primary);
+}
+
+.modal.mod-settings .setting-items {
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.modal.mod-settings .setting-items .setting-item:not(:last-child) {
+  border-bottom: 1px solid var(--prussian-blue-1);
+}
+
+.modal.mod-settings .setting-items .setting-item:last-child {
+  border-bottom: none;
+}
+
+.modal.mod-settings .setting-item-heading {
+  background-color: transparent;
+  border-bottom: none;
+}
+
 .vertical-tab-content-container::before {
   position: relative;
   z-index: var(--layer-status-bar);
@@ -1792,7 +1819,7 @@ body .outline .tree-item.is-collapsed .collapse-icon::before {
   /* margin-bottom: -1px; */
   padding-bottom: 1em;
   content: "";
-  background: var(--background-secondary-alt);
+  background: transparent;
 }
 
 .is-phone .modal.mod-settings .modal-title::after,
@@ -3241,10 +3268,6 @@ body.is-mobile .markdown-reading-view img:not([class*=emoji]):active {
 
 .checkbox-container.is-enabled {
   border-color: var(--electric-blue);
-}
-
-.checkbox-container:after {
-  margin: 1px 0 0 -1px;
 }
 
 input[type=range] {
