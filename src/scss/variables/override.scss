@@ -40,8 +40,8 @@ body {
   --toggle-radius: var(--radius-m);
   --toggle-thumb-radius: var(--radius-s);
 
-  --fancy-dolphin-hr: "🐬";
-  --three-dolphins-hr: "        ";
+  --fancy-dolphin-hr: '🐬';
+  --three-dolphins-hr: '\e168 \0020\0020\0020\0020 \e168 \0020\0020\0020\0020 \e168';
   --fancy-hr-rotate: 0deg;
   --line-height-main: 1.5;
   --line-height-list: 1.4;
@@ -152,14 +152,14 @@ body {
   --list-ol-marker-2: lower-latin;
   --list-ol-marker-3: lower-roman;
   --list-ol-marker-4: decimal;
-  --list-ul-marker-1: "•";
-  --list-ul-marker-2: "◦";
-  --list-ul-marker-3: "▪";
-  --list-ul-marker-4: "◦";
+  --list-ul-marker-1: '\2022';
+  --list-ul-marker-2: '\25E6';
+  --list-ul-marker-3: '\25AA';
+  --list-ul-marker-4: '\25E6';
   --list-ul-marker-color: var(--electric-blue-3);
   --list-marker-color-collapsed: var(--pacific-cyan);
 
-  --list-ul-colorful-marker-content: "•";
+  --list-ul-colorful-marker-content: '\2022';
   --list-colorful-marker-1: var(--electric-blue-3);
   --list-colorful-marker-2: var(--aquamarine);
   --list-colorful-marker-3: var(--vanilla);
@@ -234,15 +234,14 @@ body {
 	--mcl-card-border-color: var(--background-modifier-border);
 }
 
-.theme-dark,
-.theme-light {
-  --color-base-00: #001422;
-  --color-base-10: #00273e;
-  --color-base-20: #00283f;
-  --color-base-25: #002a42;
-  --color-base-30: #002f4b;
-  --color-base-35: #003955;
-  --color-base-40: #00496b;
+body.theme-dark {
+  --color-base-00: #001722;
+  --color-base-10: #002a3e;
+  --color-base-20: #002b3fff;
+  --color-base-25: #002d42;
+  --color-base-30: #00354B;
+  --color-base-35: #003950ff;
+  --color-base-40: #004f6b;
   --color-base-50: #016986ff;
   --color-base-60: #018eb1;
   --color-base-70: #2CC6DB;
@@ -292,7 +291,7 @@ body {
   --background-modifier-error-rgb: #ff8e8e8c;
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --text-highlight: var(--electric-blue-2);
+  --text-highlight: var(--text-normal);
   --background-modifier-box-shadow: rgba(172, 248, 242, 0.14);
   --background-modifier-active-hover: var(--cerulean);
   --indentation-guide-color: var(--indigo-blue);
@@ -319,7 +318,7 @@ body {
   --icon-color: var(--electric-blue-2);
   --icon-color-focused: var(--electric-blue-3);
 
-  --text-highlight-bg: var(--background-blue);
+  --text-highlight-bg: var(--cerulean);
   --mark-highlight-strong-em: var(--electric-blue-2);
   --text-search-highlight-bg: var(--cerulean);
 
