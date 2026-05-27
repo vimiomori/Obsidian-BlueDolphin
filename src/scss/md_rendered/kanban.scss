@@ -181,10 +181,10 @@ body:is(.p-kanban-style-rainbow-cards, .p-kanban-style-blue-cards) .kanban > div
   border-width: 2px;
 }
 
-body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+1)::before {
+body .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+1)::before {
   color: var(--electric-blue-2) !important;
 }
-body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+2)::before {
+body .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(2n+2)::before {
   color: var(--electric-blue-3) !important;
 }
 body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"]) ul ul li:not(.task-list-item):nth-of-type(7n+1)::before {
@@ -209,7 +209,7 @@ body.p-kanban-style-rainbow-cards .kanban > div:not([data-callout="multi-column"
   color: var(--thistle) !important;
 }
 
-body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul:not(.contains-task-list) ul li:not(.task-list-item):nth-of-type(2n+1) {
+body .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul:not(.contains-task-list) ul li:not(.task-list-item):nth-of-type(2n+1) {
   background: var(--kanban-card-color-1) !important;
   color: var(--electric-blue-3);
   --internal-link-color: var(--electric-blue-3);
@@ -217,7 +217,7 @@ body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) 
   border-color: var(--kanban-card-border-color-1);
 }
 
-body.p-kanban-style-blue-cards .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul:not(.contains-task-list) ul li:not(.task-list-item):nth-of-type(2n+2) {
+body .kanban > div:not([data-callout="multi-column"]) > div.el-ul ul:not(.contains-task-list) ul li:not(.task-list-item):nth-of-type(2n+2) {
   background: var(--kanban-card-color-blue-2) !important;
   color: var(--electric-blue-2);
   --internal-link-color: var(--electric-blue-2);

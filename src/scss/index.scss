@@ -1,8 +1,4 @@
 
-// Style Settings
-@use "style_settings/config.scss";
-@use "style_settings/style.scss";
-
 // Fonts
 @use "fonts/quicksand.scss";
 @use "fonts/nunito.scss";
@@ -338,8 +334,8 @@ input[type=checkbox]:checked {
   background-color: var(--checkbox-color-0);
 }
 
-body.checkbox-animation .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover,
-body.checkbox-animation input.task-list-item-checkbox[type=checkbox]:checked:hover {
+body .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover,
+body input.task-list-item-checkbox[type=checkbox]:checked:hover {
   animation: tada 1s;
   filter: saturate(200%) opacity(110%);
 }
@@ -431,7 +427,7 @@ body input[type=checkbox] {
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
 /*适配Live preview模式*/
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
   font-size: 0.6rem;
   width: auto;
   margin-right: 1px;
@@ -442,50 +438,50 @@ body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-h
   font-weight: normal !important;
 }
 
-body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header ~ span.cm-header::before,
-body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header.cm-hmd-internal-link::before {
+body div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header ~ span.cm-header::before,
+body div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header.cm-hmd-internal-link::before {
   display: none;
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
   content: 'H1';
   margin-top: calc(var(--h1-size) - 0.1em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
   content: 'H2';
   margin-top: calc(var(--h2-size) - 0.2em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
   content: 'H3';
   margin-top: calc(var(--h3-size) - 0.2em);
 }
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
   content: 'H4';
   margin-top: calc(var(--h4-size) - 0.3em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
   content: 'H5';
   margin-top: calc(var(--h5-size) - 0.4em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
+body div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
   content: 'H6';
   margin-top: calc(var(--h6-size) - 0.4em);
 }
 
 /*适配source mode 模式*/
-body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header ~ span.cm-header::before
+body div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header ~ span.cm-header::before
 {
   display: none;
 }
-body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span.cm-formatting-header {
+body div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span.cm-formatting-header {
   display:none;
 }
 /*适配传统模式*/
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line span.cm-formatting-header::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line span.cm-formatting-header::before {
   position: absolute;
   margin-top: 10px;
   font-size: 0.7rem;
@@ -498,7 +494,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-
   font-family: var(--font-default);
   font-weight: normal !important;
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line) span.cm-formatting-header::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line) span.cm-formatting-header::before {
   position: absolute;
   margin-top: 10px;
   font-size: 0.7rem;
@@ -511,27 +507,27 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(
   font-weight: normal !important;
 }
 
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header {
   color: transparent !important;
   background: none;
 }
 
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-1::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-1::before {
   content: 'H1';
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-2::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-2::before {
   content: 'H2';
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-3::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-3::before {
   content: 'H3';
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-4::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-4::before {
   content: 'H4';
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-5::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-5::before {
   content: 'H5';
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-6::before {
+body div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-6::before {
   content: 'H6';
 }
 
@@ -873,7 +869,7 @@ body.obsidian-default-hr .markdown-rendered hr {
 }
 
 /* inspired by Obsidianite */
-body.fancy-dolphin-hr .markdown-rendered hr {
+body .markdown-rendered hr {
   overflow: initial;
   margin-block-start: 2.5em;
   margin-block-end: 2.5em;
@@ -886,7 +882,7 @@ body.fancy-dolphin-hr .markdown-rendered hr {
   border-image: linear-gradient(to right, transparent 0%, var(--hr-color-icon-1) 30%, var(--hr-color-icon-2) 46%, transparent 46%, transparent 54%, var(--hr-color-icon-3) 54%, var(--hr-color-icon-4) 70%, transparent 100%) 1;
 }
 
-body.fancy-dolphin-hr .markdown-rendered hr::after {
+body .markdown-rendered hr::after {
   content: var(--fancy-dolphin-hr);
   display: inline-block;
   position: relative;
@@ -898,16 +894,16 @@ body.fancy-dolphin-hr .markdown-rendered hr::after {
   color: var(--theme-color);
 }
 
-body.fancy-dolphin-hr div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
+body div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
   opacity: 0;
   position: relative;
 }
 
-body.fancy-dolphin-hr div > .CodeMirror-line span.cm-hr {
+body div > .CodeMirror-line span.cm-hr {
   display: inline-block;
 }
 
-body.fancy-dolphin-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+body div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -917,7 +913,7 @@ body.fancy-dolphin-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
   top: 50%;
 }
 
-body.fancy-dolphin-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+body div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
   content: var(--fancy-dolphin-hr);
   display: inline-block;
   position: absolute;
@@ -930,12 +926,12 @@ body.fancy-dolphin-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
   color: var(--theme-color);
 }
 
-body.fancy-dolphin-hr .cm-s-obsidian hr {
+body .cm-s-obsidian hr {
   border-image: linear-gradient(to right, transparent 0%, var(--hr-color-icon-1) 30%, var(--hr-color-icon-2) 46%, transparent 46%, transparent 54%, var(--hr-color-icon-3) 54%, var(--hr-color-icon-4) 70%, transparent 100%) 1;
   border-width: 2px;
 }
 
-body.fancy-dolphin-hr .markdown-source-view.mod-cm6 .hr::after {
+body .markdown-source-view.mod-cm6 .hr::after {
   content: var(--fancy-dolphin-hr);
   display: inline-block;
   position: absolute;
@@ -948,7 +944,7 @@ body.fancy-dolphin-hr .markdown-source-view.mod-cm6 .hr::after {
   color: var(--theme-color);
 }
 
-body.fancy-dolphin-hr .markdown-rendered hr {
+body .markdown-rendered hr {
   overflow: initial;
   margin-block-start: 2.5em;
   margin-block-end: 2.5em;
@@ -1344,7 +1340,7 @@ body {
   --code-property: var(--code-variable-2);
 }
 
-body.replace-code-mirror-theme {
+body {
   --cm-background-color: var(--code-background) !important;
   --cm-foreground-color: var(--celeste) !important;
   --cm-font-monospace: var(--font-monospace-theme) !important;
@@ -2086,11 +2082,11 @@ ul > li.is-collapsed::marker,
 }
 
 /* obsidian default */
-body:not(.colorful-indentation-lines) ul>li:not(.task-list-item) {
+body.__disabled-was-not-colorful-indentation-lines ul>li:not(.task-list-item) {
   border-left: none !important;
 }
 
-body:not(.colorful-indentation-lines) ol>li {
+body.__disabled-was-not-colorful-indentation-lines ol>li {
   border-left: none !important;
 }
 
@@ -2101,11 +2097,11 @@ body:not(.colorful-indentation-lines) ol>li {
   --list-padding: 24px;
 }
 
-body.colorful-indentation-lines :is(ol,ul) :is(ol,ul) {
+body :is(ol,ul) :is(ol,ul) {
   position: relative;
 }
 
-body.colorful-indentation-lines :is(ol,ul) :is(ol,ul)::before{
+body :is(ol,ul) :is(ol,ul)::before{
   content: '';
   border-right: 1.5px solid rgba(var(--rainbow-rgb-1), 0.5);
   position: absolute;
@@ -2113,19 +2109,19 @@ body.colorful-indentation-lines :is(ol,ul) :is(ol,ul)::before{
   height: 100%;
 }
 
-body.colorful-indentation-lines .kanban > div:not([data-callout="multi-column"]) :is(ol,ul) ul::before {
+body .kanban > div:not([data-callout="multi-column"]) :is(ol,ul) ul::before {
   display: none;
 }
 
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul>li:not(.task-list-item) {
+body :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ul>li:not(.task-list-item) {
   border-left: none !important;
 }
 
-body.colorful-indentation-lines ol>li {
+body ol>li {
   border-left: none !important;
 }
 
-body.colorful-indentation-lines ol>li::marker {
+body ol>li::marker {
   font-weight: normal;
   color: var(--text-normal);
 }
@@ -2238,66 +2234,66 @@ body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
 } */
 
 /*无序列表 大纲线*/
-body.colorful-indentation-lines ol::before {
+body ol::before {
   border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
-body.colorful-indentation-lines ul ul::before {
+body ul ul::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul::before {
+body li ul ul::before {
   border-color: rgba(var(--rainbow-rgb-2),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul::before {
+body li ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-3),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul::before {
+body li ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-4),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul ul::before {
+body li ul ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-5),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul ul ul::before {
+body li ul ul ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-6),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul ul ul ul::before {
+body li ul ul ul ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul ul ul ul ul::before {
+body li ul ul ul ul ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
-body.colorful-indentation-lines li ul ul ul ul ul ul ul ul ul::before {
+body li ul ul ul ul ul ul ul ul ul::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
 }
 
 /*任务有序列表 大纲线*/
-body.colorful-indentation-lines ul::before {
+body ul::before {
   border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
-body.colorful-indentation-lines ol ol::before {
+body ol ol::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol::before {
+body li ol ol::before {
   border-color: rgba(var(--rainbow-rgb-2),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol ol::before {
+body li ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-3),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol::before {
+body li ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-4),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol ol::before {
+body li ol ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-5),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol ol ol::before {
+body li ol ol ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-6),0.3) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol ol ol ol::before {
+body li ol ol ol ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-7),0.5) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol ol ol ol ol::before {
+body li ol ol ol ol ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-8),0.5) !important;
 }
-body.colorful-indentation-lines li ol ol ol ol ol ol ol ol::before {
+body li ol ol ol ol ol ol ol ol::before {
   border-color: rgba(var(--rainbow-rgb-1),0.5) !important;
 }
 
@@ -2353,28 +2349,28 @@ body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li
   border-color: rgba(var(--rainbow-rgb-8)) !important;
 }
 
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-1));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-2));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-3));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-4));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-5));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-6));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-7));
 }
-body.colorful-indentation-lines :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--rainbow-rgb-8));
 }
 
@@ -2717,14 +2713,14 @@ body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.tab
   background-color: var(--table-hover-thead-color);
 }
 
-body.enable-table-animation :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover,
-body.enable-table-animation :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover{
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover,
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover{
   background: var(--table-hover-raw-color);
   transform: scale(1.02);
   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
 
-body.enable-table-animation :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody td:hover{
+body :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody td:hover{
   background: var(--table-hover-color);
   transform: scale(1.02);
   transition: transform 0.1s cubic-bezier(0.22, 0.66, 0.46, 0.66);
@@ -3123,7 +3119,7 @@ a.internal-link,
   text-shadow: var(--window-shadow-hover);
 }
 
-body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
+body :is(.markdown-preview-view,.markdown-rendered) a:hover {
   color: var(--fairy-tale);
   animation: 2s colorful-link infinite;
 }
@@ -3138,9 +3134,9 @@ a.external-link {
   color: var(--external-link-color);
 }
 
-body:not(.link-underline-external) .markdown-source-view.mod-cm6 .cm-link .cm-underline,
+body.__disabled-was-not-link-underline-external .markdown-source-view.mod-cm6 .cm-link .cm-underline,
 body.link-underline-externa .markdown-source-view.mod-cm6 .cm-url .cm-underline,
-body:not(.link-underline-external)  a.external-link,
+body.__disabled-was-not-link-underline-external  a.external-link,
 body:not(.link-underline-internal) .markdown-source-view.mod-cm6 .cm-hmd-internal-link >*:not(.is-unresolved).cm-underline,
 body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered) .internal-link:not(.is-unresolved) {
   text-decoration-line:none;
@@ -3288,8 +3284,8 @@ body :is(.markdown-preview-view,.markdown-rendered) .markdown-embed-content {
 }
 
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
-body:not(.whole-code-wrap) code[class*='language-'],
-body:not(.whole-code-wrap) pre[class*='language-'] {
+body.__disabled-was-not-whole-code-wrap code[class*='language-'],
+body.__disabled-was-not-whole-code-wrap pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: break-word;
@@ -3299,8 +3295,8 @@ body:not(.whole-code-wrap) pre[class*='language-'] {
   tab-size: 4 !important;
 }
 
-body.whole-code-wrap code[class*='language-'],
-body.whole-code-wrap pre[class*='language-'] {
+body code[class*='language-'],
+body pre[class*='language-'] {
   word-spacing: normal;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -3506,7 +3502,7 @@ body .nav-file * {
   /* transition: all .15s; */
 }
 
-body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
+body .nav-folder.mod-root>.nav-folder-title {
   display: none;
 }
 
@@ -5593,165 +5589,165 @@ button.kanban-plugin__new-item-button:hover {
 }
 
 
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-1) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-1) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-2) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-3) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-4) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-5) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-6) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-7) !important;
 }
 
 /* Kanban Cards */
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-title-wrapper {
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-sky-blue) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-sky-blue) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-title-wrapper {
   background-color: var(--midnight-green) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-aquamarine) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-vanilla);
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-atomic-tangerine);
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-melon);
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-title-wrapper {
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-title-wrapper {
   background-color: var(--dark-heliotrope);
 }
 
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-content-wrapper p,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-title-text p,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-title-count,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__lane-grip > svg,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button,
-body:not(.rainbow-kanban).kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button span {
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-content-wrapper p,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__lane-title-text p,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__lane-title-count,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__lane-grip > svg,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button,
+body.__disabled-was-not-rainbow-kanban.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper button span {
   color: var(--electric-blue) !important;
   border-color: var(--electric-blue) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__item-button-wrapper button span {
   color: var(--electric-blue) !important;
   border-color: var(--electric-blue) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__item-button-wrapper button span {
   color: var(--electric-blue-3) !important;
   border-color: var(--electric-blue-3) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__item-button-wrapper button span {
   color: var(--aquamarine-1) !important;
   border-color: var(--aquamarine-1) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__item-button-wrapper button span {
   color: var(--lemon-chiffon) !important;
   border-color: var(--lemon-chiffon) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__item-button-wrapper button span {
   color: var(--champagne-pink) !important;
   border-color: var(--champagne-pink);
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__item-button-wrapper button span {
   color: var(--fairy-tale) !important;
   border-color: var(--fairy-tale) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-content-wrapper p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-text p,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-count,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-grip > svg,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button,
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button span {
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-content-wrapper p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-postfix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-prefix-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-text p,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-title-count,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-settings-button>.kanban-plugin__icon,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__lane-grip > svg,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button,
+body .kanban-plugin__lane-wrapper:nth-child(7n+7) .kanban-plugin__item-button-wrapper button span {
   color: var(--lavender-pink) !important;
   border-color: var(--lavender-pink);
 }
@@ -5783,30 +5779,30 @@ body {
   box-shadow: 0px 0px 5px 1px var(--kanban-shadow);
 }
 
-body:not(.rainbow-kanban) .kanban-plugin__lane {
+body.__disabled-was-not-rainbow-kanban .kanban-plugin__lane {
   background-color: var(--midnight-green-2) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+1) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+1) > .kanban-plugin__lane {
   background-color: var(--kanban-color-1) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+2) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+2) > .kanban-plugin__lane {
   background-color: var(--kanban-color-2) !important;
 }
 
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+3) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+3) > .kanban-plugin__lane {
   background-color: var(--kanban-color-3) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+4) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+4) > .kanban-plugin__lane {
   background-color: var(--kanban-color-4) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+5) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+5) > .kanban-plugin__lane {
   background-color: var(--kanban-color-5) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n+6) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n+6) > .kanban-plugin__lane {
   background-color: var(--kanban-color-6) !important;
 }
-body.rainbow-kanban .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin__lane {
+body .kanban-plugin__lane-wrapper:nth-child(7n) > .kanban-plugin__lane {
   background-color: var(--kanban-color-7) !important;
 }
 
@@ -6313,28 +6309,28 @@ ul.dataview.list-view-ul>li:not(.task-list-item)::before {
   text-rendering: auto;
 }
 
-body.dolphin-dataview-list ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
+body ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
   font-family: "fa-solid";
   content: '\e168';
   color: var(--electric-blue-2);
 }
-body.dolphin-dataview-list ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
+body ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
   font-family: "fa-solid";
   content: '\e168';
   color: var(--bleu-de-france-1);
 }
-body.dolphin-dataview-list ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
+body ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
   font-family: "fa-solid";
   content: '\e168';
   color: var(--doger);
 }
-body.dolphin-dataview-list ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
+body ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
   font-family: "fa-solid";
   content: '\e168';
   color:  var(--electric-blue-2);
 }
 
-body.dolphin-dataview-list ul.dataview.list-view-ul {
+body ul.dataview.list-view-ul {
   list-style: none;
 }
 
@@ -6358,8 +6354,8 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   border: 1px solid var(--embed-color);
 }
 
-body:is(.colorful-indentation-lines) table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
-body:is(.colorful-indentation-lines) .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
+body table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
+body .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
   border-left: none;
 }
 
@@ -8449,13 +8445,13 @@ body.is-mobile .nav-folder-collapse-indicator::after {
 }
 
 /*dialogue-style-chat*/
-body.dialogue-style-chat .dialogue-plugin-wrapper{
+body .dialogue-plugin-wrapper{
   font-family: nunito;
   letter-spacing: 1.1px;
   font-size: 1.1em;
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
+body .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
   border-radius:12px;
   border-bottom-left-radius: 0px;
   margin-left: 6px;
@@ -8466,7 +8462,7 @@ body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-
   box-shadow: 0px 2px 1px 0px var(--prussian-blue),0px 2px 1px 0px var(--prussian-blue);
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message {
+body .dialogue-plugin-message-wrapper-right .dialogue-plugin-message {
   border-radius: 12px;
   border-bottom-right-radius: 0px;
   margin-right: 6px;
@@ -8476,17 +8472,17 @@ body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin
   background-image: -webkit-linear-gradient(left, var(--cerulean),var(--cerulean));
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message-title {
+body .dialogue-plugin-message-wrapper-left .dialogue-plugin-message-title {
   color: var(--vivid-sky-blue-2);
   background-color: var(--rich-black-0);
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-right.dialogue-plugin-message-title {
+body .dialogue-plugin-message-wrapper-right.dialogue-plugin-message-title {
   color: var(--electric-blue);
   background-color: var(--midnight-green);
 }
 
-body.dialogue-style-chat .dialogue-plugin-message-title {
+body .dialogue-plugin-message-title {
   font-size: 16px;
   letter-spacing: 2px;
   text-align: center;
@@ -8936,17 +8932,17 @@ body .nav-view-outer .tree-item.is-collapsed .tree-item-icon.collapse-icon {
 }
 
 /*style settings blockquote quotation marks*/
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before,
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before,
+body .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
   border-left: none;
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body :is(.markdown-preview-view,.markdown-rendered) blockquote {
   color: var(--electric-blue);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body :is(.markdown-preview-view,.markdown-rendered) blockquote {
   padding-left: 35px;
   padding-right: 10px;
   margin-inline-start: 1%;
@@ -8954,14 +8950,14 @@ body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-render
   border-left-width: 0px;
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote > p {
+body :is(.markdown-preview-view,.markdown-rendered) blockquote > p {
   position: relative;
   margin-left: 0.7em;
   margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
 }
 
-body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote > p:first-of-type::before {
+body :is(.markdown-preview-view,.markdown-rendered) blockquote > p:first-of-type::before {
   content: '\ee81';
   font-size: 2em;
   font-family: boxicons;
@@ -8972,11 +8968,11 @@ body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-render
 }
 
 /*style settings blockquote quotation marks for cm6 live preview*/
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   padding-left: 2.3em !important;
   border-left-width: 0px;
 }
-/* body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview
+/* body .markdown-source-view.mod-cm6.is-live-preview
 .HyperMD-quote span.cm-quote:not(.cm-formatting){
   display: inline;
   position: relative;
@@ -8984,7 +8980,7 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
   font-size: var(--font-size-preview-blockquote);
 }  */
 
-body.blockquote-style-quotation-mark
+body
 .markdown-source-view.mod-cm6.is-live-preview
 .HyperMD-quote:not(.cm-active) > .cm-formatting.cm-formatting-quote.cm-quote::before {
   content: '\ee81';
@@ -8995,10 +8991,10 @@ body.blockquote-style-quotation-mark
   margin-left: -0.8em;
 }
 
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote > .cm-formatting.cm-formatting-quote.cm-quote::before {
+body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote > .cm-formatting.cm-formatting-quote.cm-quote::before {
   display: none;
 }
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .cm-content div.HyperMD-quote .cm-blockquote-border {
+body .markdown-source-view.mod-cm6.is-live-preview .cm-content div.HyperMD-quote .cm-blockquote-border {
   border: none;
 }
 
@@ -9473,7 +9469,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     page-break-inside: avoid;
   }
 
-  body.fancy-dolphin-hr .markdown-rendered hr {
+  body .markdown-rendered hr {
     border-image-source: linear-gradient(to right, var(--background-primary) 0%, var(--hr-color-icon-1) 30%, var(--hr-color-icon-2) 46%, transparent 46%, transparent 54%, var(--hr-color-icon-3) 54%, var(--hr-color-icon-4) 70%, var(--background-primary) 100%);
   }
 
@@ -9503,12 +9499,12 @@ body.admonition-bg-color-same .callout {
   border-width: var(--callout-border-width);
 }
 
-body.shade-callout-style .callout {
+body .callout {
   border:none;
   background-color: rgba(var(--callout-color), 0.2);
 }
 
-body.shade-callout-style div:not([data-callout="multi-column"], [data-callout*=blank], [data-callout*=noborder]).callout {
+body div:not([data-callout="multi-column"], [data-callout*=blank], [data-callout*=noborder]).callout {
   box-shadow: inset 0 0 0 2px rgba(var(--callout-color), 0.25), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -9516,7 +9512,7 @@ div.el-div[data-callout="multi-column"] {
   margin-bottom: 1em;
 }
 
-body.shade-callout-style  .callout .callout-title {
+body  .callout .callout-title {
   padding: 6px;
   background-color: rgba(var(--callout-color), 0.4);
 }
@@ -10932,7 +10928,7 @@ body.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-contain
 
 /* head-tag-style*/
 
-body.head-tag-style :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sup {
+body :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sup {
   background-color: var(--text-accent-hover);
   color: #fff;
   vertical-align: top;
@@ -10944,7 +10940,7 @@ body.head-tag-style :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sup {
   letter-spacing: .1em;
   font-family:  var(--font-default);
 }
-body.head-tag-style :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sub {
+body :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sub {
   background-color: var( --simple-orange);
   color: #fff;
   vertical-align: top;
@@ -10957,7 +10953,7 @@ body.head-tag-style :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sub {
   font-family: var(--font-default);
 }
 
-body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sup {
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sup {
   background-color: var(--text-accent-hover);
   color: #fff;
   vertical-align: top;
@@ -10970,7 +10966,7 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
   line-height: calc(var(--line-height-main) - 0.7);
 }
 
-body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sub {
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sub {
   background-color: var( --simple-orange);
   color: #fff;
   vertical-align: top;
@@ -10982,17 +10978,17 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
   margin-top: -0.2em;
   line-height: calc(var(--line-height-main) - 0.7);
 }
-body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) :is(sub,sup)>.tag:not(.token) {
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) :is(sub,sup)>.tag:not(.token) {
   padding: 0;
   background-color: transparent;
 }
 
-body.head-tag-style .cm-s-obsidian .cm-header ~  span.cm-hashtag {
+body .cm-s-obsidian .cm-header ~  span.cm-hashtag {
   font-size: calc(var(--font-size-tag) - 0.3em)!important;
   vertical-align: top;
 }
-body.head-tag-style .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
-body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header {
+body .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
+body .cm-s-obsidian .cm-hashtag.cm-header {
   vertical-align: top;
 }
 
@@ -11002,7 +10998,7 @@ body:not(.tag-default) .cm-s-obsidian .cm-header ~  span.cm-hashtag {
 }
 
 
-body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token) {
+body :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token) {
   font-size: calc(var(--font-size-tag) - 0.3em);
   vertical-align: top;
 }
@@ -11017,8 +11013,8 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
 
 
 
-body.head-tag-style .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
-body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header {
+body .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header,
+body .cm-s-obsidian .cm-hashtag.cm-header {
   vertical-align: top;
 }
 
@@ -11171,39 +11167,39 @@ body.markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
 colorful indentation lines in editing mode
 */
 
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(1)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-1), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(2)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-2), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(3)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-3), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(4)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-4), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(5)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-5), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(6)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-6), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(7)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-7), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(8)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-8), 0.5);
 }
-body.colorful-indentation-lines-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
+body-source .markdown-source-view.mod-cm6 span[class*="cm-hmd-list-indent-"]
 .cm-indent:nth-of-type(9)::before {
   border-right: 1px solid rgba(var(--rainbow-rgb-1), 0.5);
 }
@@ -11246,64 +11242,64 @@ li.is-collapsed .list-bullet:after,
 }
 
 
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .list-bullet::after {
+body .markdown-source-view.mod-cm6 .list-bullet::after {
   content: var(--list-ul-colorful-marker-content);
 }
 
-body.colorful-unordered-list .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
+body .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
   color: var(--list-colorful-marker-1);
 }
 
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-2);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-3);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-4);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-5);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-6);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-7);
 }
-body.colorful-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-body.colorful-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+body .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   color: var(--list-colorful-marker-8);
 }
 
-body.colorful-unordered-list li.is-collapsed .list-collapse-indicator:hover ~ .list-bullet:after,
-body.colorful-unordered-list li.is-collapsed .cm-fold-indicator:hover ~ .list-bullet:after,
-body.colorful-unordered-list .list-collapse-indicator:hover.is-collapsed ~ .list-bullet:after,
-body.colorful-unordered-list .cm-fold-indicator:hover.is-collapsed ~ .list-bullet:after,
-body.colorful-unordered-list li.is-collapsed .list-collapse-indicator:hover ~ .cm-formatting-list .list-bullet:after,
-body.colorful-unordered-list li.is-collapsed .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
-body.colorful-unordered-list .list-collapse-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
-body.colorful-unordered-list .cm-fold-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+body li.is-collapsed .list-collapse-indicator:hover ~ .list-bullet:after,
+body li.is-collapsed .cm-fold-indicator:hover ~ .list-bullet:after,
+body .list-collapse-indicator:hover.is-collapsed ~ .list-bullet:after,
+body .cm-fold-indicator:hover.is-collapsed ~ .list-bullet:after,
+body li.is-collapsed .list-collapse-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+body li.is-collapsed .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+body .list-collapse-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
+body .cm-fold-indicator:hover.is-collapsed ~ .cm-formatting-list .list-bullet:after,
 
-body.colorful-unordered-list li.is-collapsed .list-bullet:after,
-body.colorful-unordered-list .is-collapsed ~ .cm-formatting-list .list-bullet:after,
-body.colorful-unordered-list .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .is-collapsed .list-bullet::after {
+body li.is-collapsed .list-bullet:after,
+body .is-collapsed ~ .cm-formatting-list .list-bullet:after,
+body .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .is-collapsed .list-bullet::after {
   color: var(--list-marker-color-collapsed);
   box-shadow: -0.02em 0.058em 0 2px var(--background-modifier-active-hover);
   background-color: var(--background-modifier-active-hover);
@@ -11366,572 +11362,572 @@ body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ol:not(.c
 
 
 
-body.colorful-ordered-list ol li::marker,
-body.colorful-ordered-list ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol li::marker,
+body ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-1);
 }
 
-body.colorful-ordered-list ol ol li::marker,
-body.colorful-ordered-list ul ol li::marker {
+body ol ol li::marker,
+body ul ol li::marker {
   color: var(--list-colorful-marker-2);
 }
-body.colorful-ordered-list ol ol li::before,
-body.colorful-ordered-list ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol li::before,
+body ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-2);
 }
 
-body.colorful-ordered-list ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol li::marker {
+body ol ol ol li::marker,
+body ol ul ol li::marker,
+body ul ul ol li::marker,
+body ul ol ol li::marker {
   color: var(--list-colorful-marker-3);
 }
-body.colorful-ordered-list ol ol ol li::before,
-body.colorful-ordered-list ol ul ol li::before,
-body.colorful-ordered-list ul ul ol li::before,
-body.colorful-ordered-list ul ol ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol li::before,
+body ol ul ol li::before,
+body ul ul ol li::before,
+body ul ol ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-3);
 }
 
-body.colorful-ordered-list ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol li::marker {
+body ol ol ol ol li::marker,
+body ol ol ul ol li::marker,
+body ol ul ol ol li::marker,
+body ul ol ol ol li::marker,
+body ol ul ul ol li::marker,
+body ul ol ul ol li::marker,
+body ul ul ol ol li::marker,
+body ul ul ul ol li::marker {
   color: var(--list-colorful-marker-4);
 }
-body.colorful-ordered-list ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol ol li::before,
+body ol ol ul ol li::before,
+body ol ul ol ol li::before,
+body ul ol ol ol li::before,
+body ol ul ul ol li::before,
+body ul ol ul ol li::before,
+body ul ul ol ol li::before,
+body ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-4);
 }
 
-body.colorful-ordered-list ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol li::marker {
+body ol ol ol ol ol li::marker,
+body ol ol ol ul ol li::marker,
+body ol ol ul ol ol li::marker,
+body ol ul ol ol ol li::marker,
+body ol ol ul ul ol li::marker,
+body ol ul ol ul ol li::marker,
+body ol ul ul ol ol li::marker,
+body ol ul ul ul ol li::marker,
+body ul ol ol ol ol li::marker,
+body ul ol ol ul ol li::marker,
+body ul ol ul ol ol li::marker,
+body ul ul ol ol ol li::marker,
+body ul ol ul ul ol li::marker,
+body ul ul ol ul ol li::marker,
+body ul ul ul ol ol li::marker,
+body ul ul ul ul ol li::marker {
   color: var(--list-colorful-marker-5);
 }
-body.colorful-ordered-list ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol ol ol li::before,
+body ol ol ol ul ol li::before,
+body ol ol ul ol ol li::before,
+body ol ul ol ol ol li::before,
+body ol ol ul ul ol li::before,
+body ol ul ol ul ol li::before,
+body ol ul ul ol ol li::before,
+body ol ul ul ul ol li::before,
+body ul ol ol ol ol li::before,
+body ul ol ol ul ol li::before,
+body ul ol ul ol ol li::before,
+body ul ul ol ol ol li::before,
+body ul ol ul ul ol li::before,
+body ul ul ol ul ol li::before,
+body ul ul ul ol ol li::before,
+body ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-5);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol li::marker {
+body ol ol ol ol ol ol li::marker,
+body ol ol ol ol ul ol li::marker,
+body ol ol ol ul ol ol li::marker,
+body ol ol ul ol ol ol li::marker,
+body ol ol ol ul ul ol li::marker,
+body ol ol ul ol ul ol li::marker,
+body ol ol ul ul ol ol li::marker,
+body ol ol ul ul ul ol li::marker,
+body ol ul ol ol ol ol li::marker,
+body ol ul ol ol ul ol li::marker,
+body ol ul ol ul ol ol li::marker,
+body ol ul ul ol ol ol li::marker,
+body ol ul ol ul ul ol li::marker,
+body ol ul ul ol ul ol li::marker,
+body ol ul ul ul ol ol li::marker,
+body ol ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol li::marker,
+body ul ol ol ol ul ol li::marker,
+body ul ol ol ul ol ol li::marker,
+body ul ol ul ol ol ol li::marker,
+body ul ol ol ul ul ol li::marker,
+body ul ol ul ol ul ol li::marker,
+body ul ol ul ul ol ol li::marker,
+body ul ol ul ul ul ol li::marker,
+body ul ul ol ol ol ol li::marker,
+body ul ul ol ol ul ol li::marker,
+body ul ul ol ul ol ol li::marker,
+body ul ul ul ol ol ol li::marker,
+body ul ul ol ul ul ol li::marker,
+body ul ul ul ol ul ol li::marker,
+body ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ol li::marker {
   color: var(--list-colorful-marker-6);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol ol ol ol li::before,
+body ol ol ol ol ul ol li::before,
+body ol ol ol ul ol ol li::before,
+body ol ol ul ol ol ol li::before,
+body ol ol ol ul ul ol li::before,
+body ol ol ul ol ul ol li::before,
+body ol ol ul ul ol ol li::before,
+body ol ol ul ul ul ol li::before,
+body ol ul ol ol ol ol li::before,
+body ol ul ol ol ul ol li::before,
+body ol ul ol ul ol ol li::before,
+body ol ul ul ol ol ol li::before,
+body ol ul ol ul ul ol li::before,
+body ol ul ul ol ul ol li::before,
+body ol ul ul ul ol ol li::before,
+body ol ul ul ul ul ol li::before,
+body ul ol ol ol ol ol li::before,
+body ul ol ol ol ul ol li::before,
+body ul ol ol ul ol ol li::before,
+body ul ol ul ol ol ol li::before,
+body ul ol ol ul ul ol li::before,
+body ul ol ul ol ul ol li::before,
+body ul ol ul ul ol ol li::before,
+body ul ol ul ul ul ol li::before,
+body ul ul ol ol ol ol li::before,
+body ul ul ol ol ul ol li::before,
+body ul ul ol ul ol ol li::before,
+body ul ul ul ol ol ol li::before,
+body ul ul ol ul ul ol li::before,
+body ul ul ul ol ul ol li::before,
+body ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-6);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ol li::marker {
+body ol ol ol ol ol ol ol li::marker,
+body ol ol ol ol ol ul ol li::marker,
+body ol ol ol ol ul ol ol li::marker,
+body ol ol ol ul ol ol ol li::marker,
+body ol ol ol ol ul ul ol li::marker,
+body ol ol ol ul ol ul ol li::marker,
+body ol ol ol ul ul ol ol li::marker,
+body ol ol ol ul ul ul ol li::marker,
+body ol ol ul ol ol ol ol li::marker,
+body ol ol ul ol ol ul ol li::marker,
+body ol ol ul ol ul ol ol li::marker,
+body ol ol ul ul ol ol ol li::marker,
+body ol ol ul ol ul ul ol li::marker,
+body ol ol ul ul ol ul ol li::marker,
+body ol ol ul ul ul ol ol li::marker,
+body ol ol ul ul ul ul ol li::marker,
+body ol ul ol ol ol ol ol li::marker,
+body ol ul ol ol ol ul ol li::marker,
+body ol ul ol ol ul ol ol li::marker,
+body ol ul ol ul ol ol ol li::marker,
+body ol ul ol ol ul ul ol li::marker,
+body ol ul ol ul ol ul ol li::marker,
+body ol ul ol ul ul ol ol li::marker,
+body ol ul ol ul ul ul ol li::marker,
+body ol ul ul ol ol ol ol li::marker,
+body ol ul ul ol ol ul ol li::marker,
+body ol ul ul ol ul ol ol li::marker,
+body ol ul ul ul ol ol ol li::marker,
+body ol ul ul ol ul ul ol li::marker,
+body ol ul ul ul ol ul ol li::marker,
+body ol ul ul ul ul ol ol li::marker,
+body ol ul ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol ol li::marker,
+body ul ol ol ol ol ul ol li::marker,
+body ul ol ol ol ul ol ol li::marker,
+body ul ol ol ul ol ol ol li::marker,
+body ul ol ol ol ul ul ol li::marker,
+body ul ol ol ul ol ul ol li::marker,
+body ul ol ol ul ul ol ol li::marker,
+body ul ol ol ul ul ul ol li::marker,
+body ul ol ul ol ol ol ol li::marker,
+body ul ol ul ol ol ul ol li::marker,
+body ul ol ul ol ul ol ol li::marker,
+body ul ol ul ul ol ol ol li::marker,
+body ul ol ul ol ul ul ol li::marker,
+body ul ol ul ul ol ul ol li::marker,
+body ul ol ul ul ul ol ol li::marker,
+body ul ol ul ul ul ul ol li::marker,
+body ul ul ol ol ol ol ol li::marker,
+body ul ul ol ol ol ul ol li::marker,
+body ul ul ol ol ul ol ol li::marker,
+body ul ul ol ul ol ol ol li::marker,
+body ul ul ol ol ul ul ol li::marker,
+body ul ul ol ul ol ul ol li::marker,
+body ul ul ol ul ul ol ol li::marker,
+body ul ul ol ul ul ul ol li::marker,
+body ul ul ul ol ol ol ol li::marker,
+body ul ul ul ol ol ul ol li::marker,
+body ul ul ul ol ul ol ol li::marker,
+body ul ul ul ul ol ol ol li::marker,
+body ul ul ul ol ul ul ol li::marker,
+body ul ul ul ul ol ul ol li::marker,
+body ul ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ul ol li::marker {
   color: var(--list-colorful-marker-7);
 }
 
 
-body.colorful-ordered-list ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol ol ol ol ol li::before,
+body ol ol ol ol ol ul ol li::before,
+body ol ol ol ol ul ol ol li::before,
+body ol ol ol ul ol ol ol li::before,
+body ol ol ol ol ul ul ol li::before,
+body ol ol ol ul ol ul ol li::before,
+body ol ol ol ul ul ol ol li::before,
+body ol ol ol ul ul ul ol li::before,
+body ol ol ul ol ol ol ol li::before,
+body ol ol ul ol ol ul ol li::before,
+body ol ol ul ol ul ol ol li::before,
+body ol ol ul ul ol ol ol li::before,
+body ol ol ul ol ul ul ol li::before,
+body ol ol ul ul ol ul ol li::before,
+body ol ol ul ul ul ol ol li::before,
+body ol ol ul ul ul ul ol li::before,
+body ol ul ol ol ol ol ol li::before,
+body ol ul ol ol ol ul ol li::before,
+body ol ul ol ol ul ol ol li::before,
+body ol ul ol ul ol ol ol li::before,
+body ol ul ol ol ul ul ol li::before,
+body ol ul ol ul ol ul ol li::before,
+body ol ul ol ul ul ol ol li::before,
+body ol ul ol ul ul ul ol li::before,
+body ol ul ul ol ol ol ol li::before,
+body ol ul ul ol ol ul ol li::before,
+body ol ul ul ol ul ol ol li::before,
+body ol ul ul ul ol ol ol li::before,
+body ol ul ul ol ul ul ol li::before,
+body ol ul ul ul ol ul ol li::before,
+body ol ul ul ul ul ol ol li::before,
+body ol ul ul ul ul ul ol li::before,
+body ul ol ol ol ol ol ol li::before,
+body ul ol ol ol ol ul ol li::before,
+body ul ol ol ol ul ol ol li::before,
+body ul ol ol ul ol ol ol li::before,
+body ul ol ol ol ul ul ol li::before,
+body ul ol ol ul ol ul ol li::before,
+body ul ol ol ul ul ol ol li::before,
+body ul ol ol ul ul ul ol li::before,
+body ul ol ul ol ol ol ol li::before,
+body ul ol ul ol ol ul ol li::before,
+body ul ol ul ol ul ol ol li::before,
+body ul ol ul ul ol ol ol li::before,
+body ul ol ul ol ul ul ol li::before,
+body ul ol ul ul ol ul ol li::before,
+body ul ol ul ul ul ol ol li::before,
+body ul ol ul ul ul ul ol li::before,
+body ul ul ol ol ol ol ol li::before,
+body ul ul ol ol ol ul ol li::before,
+body ul ul ol ol ul ol ol li::before,
+body ul ul ol ul ol ol ol li::before,
+body ul ul ol ol ul ul ol li::before,
+body ul ul ol ul ol ul ol li::before,
+body ul ul ol ul ul ol ol li::before,
+body ul ul ol ul ul ul ol li::before,
+body ul ul ul ol ol ol ol li::before,
+body ul ul ul ol ol ul ol li::before,
+body ul ul ul ol ul ol ol li::before,
+body ul ul ul ul ol ol ol li::before,
+body ul ul ul ol ul ul ol li::before,
+body ul ul ul ul ol ul ol li::before,
+body ul ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-7);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ul ol li::before,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
-body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+body ol ol ol ol ol ol ol ol li::before,
+body ol ol ol ol ol ol ul ol li::before,
+body ol ol ol ol ol ul ol ol li::before,
+body ol ol ol ol ul ol ol ol li::before,
+body ol ol ol ol ol ul ul ol li::before,
+body ol ol ol ol ul ol ul ol li::before,
+body ol ol ol ol ul ul ol ol li::before,
+body ol ol ol ol ul ul ul ol li::before,
+body ol ol ol ul ol ol ol ol li::before,
+body ol ol ol ul ol ol ul ol li::before,
+body ol ol ol ul ol ul ol ol li::before,
+body ol ol ol ul ul ol ol ol li::before,
+body ol ol ol ul ol ul ul ol li::before,
+body ol ol ol ul ul ol ul ol li::before,
+body ol ol ol ul ul ul ol ol li::before,
+body ol ol ol ul ul ul ul ol li::before,
+body ol ol ul ol ol ol ol ol li::before,
+body ol ol ul ol ol ol ul ol li::before,
+body ol ol ul ol ol ul ol ol li::before,
+body ol ol ul ol ul ol ol ol li::before,
+body ol ol ul ol ol ul ul ol li::before,
+body ol ol ul ol ul ol ul ol li::before,
+body ol ol ul ol ul ul ol ol li::before,
+body ol ol ul ol ul ul ul ol li::before,
+body ol ol ul ul ol ol ol ol li::before,
+body ol ol ul ul ol ol ul ol li::before,
+body ol ol ul ul ol ul ol ol li::before,
+body ol ol ul ul ul ol ol ol li::before,
+body ol ol ul ul ol ul ul ol li::before,
+body ol ol ul ul ul ol ul ol li::before,
+body ol ol ul ul ul ul ol ol li::before,
+body ol ol ul ul ul ul ul ol li::before,
+body ol ul ol ol ol ol ol ol li::before,
+body ol ul ol ol ol ol ul ol li::before,
+body ol ul ol ol ol ul ol ol li::before,
+body ol ul ol ol ul ol ol ol li::before,
+body ol ul ol ol ol ul ul ol li::before,
+body ol ul ol ol ul ol ul ol li::before,
+body ol ul ol ol ul ul ol ol li::before,
+body ol ul ol ol ul ul ul ol li::before,
+body ol ul ol ul ol ol ol ol li::before,
+body ol ul ol ul ol ol ul ol li::before,
+body ol ul ol ul ol ul ol ol li::before,
+body ol ul ol ul ul ol ol ol li::before,
+body ol ul ol ul ol ul ul ol li::before,
+body ol ul ol ul ul ol ul ol li::before,
+body ol ul ol ul ul ul ol ol li::before,
+body ol ul ol ul ul ul ul ol li::before,
+body ol ul ul ol ol ol ol ol li::before,
+body ol ul ul ol ol ol ul ol li::before,
+body ol ul ul ol ol ul ol ol li::before,
+body ol ul ul ol ul ol ol ol li::before,
+body ol ul ul ol ol ul ul ol li::before,
+body ol ul ul ol ul ol ul ol li::before,
+body ol ul ul ol ul ul ol ol li::before,
+body ol ul ul ol ul ul ul ol li::before,
+body ol ul ul ul ol ol ol ol li::before,
+body ol ul ul ul ol ol ul ol li::before,
+body ol ul ul ul ol ul ol ol li::before,
+body ol ul ul ul ul ol ol ol li::before,
+body ol ul ul ul ol ul ul ol li::before,
+body ol ul ul ul ul ol ul ol li::before,
+body ol ul ul ul ul ul ol ol li::before,
+body ol ul ul ul ul ul ul ol li::before,
+body ul ol ol ol ol ol ol ol li::before,
+body ul ol ol ol ol ol ul ol li::before,
+body ul ol ol ol ol ul ol ol li::before,
+body ul ol ol ol ul ol ol ol li::before,
+body ul ol ol ol ol ul ul ol li::before,
+body ul ol ol ol ul ol ul ol li::before,
+body ul ol ol ol ul ul ol ol li::before,
+body ul ol ol ol ul ul ul ol li::before,
+body ul ol ol ul ol ol ol ol li::before,
+body ul ol ol ul ol ol ul ol li::before,
+body ul ol ol ul ol ul ol ol li::before,
+body ul ol ol ul ul ol ol ol li::before,
+body ul ol ol ul ol ul ul ol li::before,
+body ul ol ol ul ul ol ul ol li::before,
+body ul ol ol ul ul ul ol ol li::before,
+body ul ol ol ul ul ul ul ol li::before,
+body ul ol ul ol ol ol ol ol li::before,
+body ul ol ul ol ol ol ul ol li::before,
+body ul ol ul ol ol ul ol ol li::before,
+body ul ol ul ol ul ol ol ol li::before,
+body ul ol ul ol ol ul ul ol li::before,
+body ul ol ul ol ul ol ul ol li::before,
+body ul ol ul ol ul ul ol ol li::before,
+body ul ol ul ol ul ul ul ol li::before,
+body ul ol ul ul ol ol ol ol li::before,
+body ul ol ul ul ol ol ul ol li::before,
+body ul ol ul ul ol ul ol ol li::before,
+body ul ol ul ul ul ol ol ol li::before,
+body ul ol ul ul ol ul ul ol li::before,
+body ul ol ul ul ul ol ul ol li::before,
+body ul ol ul ul ul ul ol ol li::before,
+body ul ol ul ul ul ul ul ol li::before,
+body ul ul ol ol ol ol ol ol li::before,
+body ul ul ol ol ol ol ul ol li::before,
+body ul ul ol ol ol ul ol ol li::before,
+body ul ul ol ol ul ol ol ol li::before,
+body ul ul ol ol ol ul ul ol li::before,
+body ul ul ol ol ul ol ul ol li::before,
+body ul ul ol ol ul ul ol ol li::before,
+body ul ul ol ol ul ul ul ol li::before,
+body ul ul ol ul ol ol ol ol li::before,
+body ul ul ol ul ol ol ul ol li::before,
+body ul ul ol ul ol ul ol ol li::before,
+body ul ul ol ul ul ol ol ol li::before,
+body ul ul ol ul ol ul ul ol li::before,
+body ul ul ol ul ul ol ul ol li::before,
+body ul ul ol ul ul ul ol ol li::before,
+body ul ul ol ul ul ul ul ol li::before,
+body ul ul ul ol ol ol ol ol li::before,
+body ul ul ul ol ol ol ul ol li::before,
+body ul ul ul ol ol ul ol ol li::before,
+body ul ul ul ol ul ol ol ol li::before,
+body ul ul ul ol ol ul ul ol li::before,
+body ul ul ul ol ul ol ul ol li::before,
+body ul ul ul ol ul ul ol ol li::before,
+body ul ul ul ol ul ul ul ol li::before,
+body ul ul ul ul ol ol ol ol li::before,
+body ul ul ul ul ol ol ul ol li::before,
+body ul ul ul ul ol ul ol ol li::before,
+body ul ul ul ul ul ol ol ol li::before,
+body ul ul ul ul ol ul ul ol li::before,
+body ul ul ul ul ul ol ul ol li::before,
+body ul ul ul ul ul ul ol ol li::before,
+body ul ul ul ul ul ul ul ol li::before,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+body .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker-1);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
+body ol ol ol ol ol ol ol ol li::marker,
+body ol ol ol ol ol ol ul ol li::marker,
+body ol ol ol ol ol ul ol ol li::marker,
+body ol ol ol ol ul ol ol ol li::marker,
+body ol ol ol ol ol ul ul ol li::marker,
+body ol ol ol ol ul ol ul ol li::marker,
+body ol ol ol ol ul ul ol ol li::marker,
+body ol ol ol ol ul ul ul ol li::marker,
+body ol ol ol ul ol ol ol ol li::marker,
+body ol ol ol ul ol ol ul ol li::marker,
+body ol ol ol ul ol ul ol ol li::marker,
+body ol ol ol ul ul ol ol ol li::marker,
+body ol ol ol ul ol ul ul ol li::marker,
+body ol ol ol ul ul ol ul ol li::marker,
+body ol ol ol ul ul ul ol ol li::marker,
+body ol ol ol ul ul ul ul ol li::marker,
+body ol ol ul ol ol ol ol ol li::marker,
+body ol ol ul ol ol ol ul ol li::marker,
+body ol ol ul ol ol ul ol ol li::marker,
+body ol ol ul ol ul ol ol ol li::marker,
+body ol ol ul ol ol ul ul ol li::marker,
+body ol ol ul ol ul ol ul ol li::marker,
+body ol ol ul ol ul ul ol ol li::marker,
+body ol ol ul ol ul ul ul ol li::marker,
+body ol ol ul ul ol ol ol ol li::marker,
+body ol ol ul ul ol ol ul ol li::marker,
+body ol ol ul ul ol ul ol ol li::marker,
+body ol ol ul ul ul ol ol ol li::marker,
+body ol ol ul ul ol ul ul ol li::marker,
+body ol ol ul ul ul ol ul ol li::marker,
+body ol ol ul ul ul ul ol ol li::marker,
+body ol ol ul ul ul ul ul ol li::marker,
+body ol ul ol ol ol ol ol ol li::marker,
+body ol ul ol ol ol ol ul ol li::marker,
+body ol ul ol ol ol ul ol ol li::marker,
+body ol ul ol ol ul ol ol ol li::marker,
+body ol ul ol ol ol ul ul ol li::marker,
+body ol ul ol ol ul ol ul ol li::marker,
+body ol ul ol ol ul ul ol ol li::marker,
+body ol ul ol ol ul ul ul ol li::marker,
+body ol ul ol ul ol ol ol ol li::marker,
+body ol ul ol ul ol ol ul ol li::marker,
+body ol ul ol ul ol ul ol ol li::marker,
+body ol ul ol ul ul ol ol ol li::marker,
+body ol ul ol ul ol ul ul ol li::marker,
+body ol ul ol ul ul ol ul ol li::marker,
+body ol ul ol ul ul ul ol ol li::marker,
+body ol ul ol ul ul ul ul ol li::marker,
+body ol ul ul ol ol ol ol ol li::marker,
+body ol ul ul ol ol ol ul ol li::marker,
+body ol ul ul ol ol ul ol ol li::marker,
+body ol ul ul ol ul ol ol ol li::marker,
+body ol ul ul ol ol ul ul ol li::marker,
+body ol ul ul ol ul ol ul ol li::marker,
+body ol ul ul ol ul ul ol ol li::marker,
+body ol ul ul ol ul ul ul ol li::marker,
+body ol ul ul ul ol ol ol ol li::marker,
+body ol ul ul ul ol ol ul ol li::marker,
+body ol ul ul ul ol ul ol ol li::marker,
+body ol ul ul ul ul ol ol ol li::marker,
+body ol ul ul ul ol ul ul ol li::marker,
+body ol ul ul ul ul ol ul ol li::marker,
+body ol ul ul ul ul ul ol ol li::marker,
+body ol ul ul ul ul ul ul ol li::marker,
+body ul ol ol ol ol ol ol ol li::marker,
+body ul ol ol ol ol ol ul ol li::marker,
+body ul ol ol ol ol ul ol ol li::marker,
+body ul ol ol ol ul ol ol ol li::marker,
+body ul ol ol ol ol ul ul ol li::marker,
+body ul ol ol ol ul ol ul ol li::marker,
+body ul ol ol ol ul ul ol ol li::marker,
+body ul ol ol ol ul ul ul ol li::marker,
+body ul ol ol ul ol ol ol ol li::marker,
+body ul ol ol ul ol ol ul ol li::marker,
+body ul ol ol ul ol ul ol ol li::marker,
+body ul ol ol ul ul ol ol ol li::marker,
+body ul ol ol ul ol ul ul ol li::marker,
+body ul ol ol ul ul ol ul ol li::marker,
+body ul ol ol ul ul ul ol ol li::marker,
+body ul ol ol ul ul ul ul ol li::marker,
+body ul ol ul ol ol ol ol ol li::marker,
+body ul ol ul ol ol ol ul ol li::marker,
+body ul ol ul ol ol ul ol ol li::marker,
+body ul ol ul ol ul ol ol ol li::marker,
+body ul ol ul ol ol ul ul ol li::marker,
+body ul ol ul ol ul ol ul ol li::marker,
+body ul ol ul ol ul ul ol ol li::marker,
+body ul ol ul ol ul ul ul ol li::marker,
+body ul ol ul ul ol ol ol ol li::marker,
+body ul ol ul ul ol ol ul ol li::marker,
+body ul ol ul ul ol ul ol ol li::marker,
+body ul ol ul ul ul ol ol ol li::marker,
+body ul ol ul ul ol ul ul ol li::marker,
+body ul ol ul ul ul ol ul ol li::marker,
+body ul ol ul ul ul ul ol ol li::marker,
+body ul ol ul ul ul ul ul ol li::marker,
+body ul ul ol ol ol ol ol ol li::marker,
+body ul ul ol ol ol ol ul ol li::marker,
+body ul ul ol ol ol ul ol ol li::marker,
+body ul ul ol ol ul ol ol ol li::marker,
+body ul ul ol ol ol ul ul ol li::marker,
+body ul ul ol ol ul ol ul ol li::marker,
+body ul ul ol ol ul ul ol ol li::marker,
+body ul ul ol ol ul ul ul ol li::marker,
+body ul ul ol ul ol ol ol ol li::marker,
+body ul ul ol ul ol ol ul ol li::marker,
+body ul ul ol ul ol ul ol ol li::marker,
+body ul ul ol ul ul ol ol ol li::marker,
+body ul ul ol ul ol ul ul ol li::marker,
+body ul ul ol ul ul ol ul ol li::marker,
+body ul ul ol ul ul ul ol ol li::marker,
+body ul ul ol ul ul ul ul ol li::marker,
+body ul ul ul ol ol ol ol ol li::marker,
+body ul ul ul ol ol ol ul ol li::marker,
+body ul ul ul ol ol ul ol ol li::marker,
+body ul ul ul ol ul ol ol ol li::marker,
+body ul ul ul ol ol ul ul ol li::marker,
+body ul ul ul ol ul ol ul ol li::marker,
+body ul ul ul ol ul ul ol ol li::marker,
+body ul ul ul ol ul ul ul ol li::marker,
+body ul ul ul ul ol ol ol ol li::marker,
+body ul ul ul ul ol ol ul ol li::marker,
+body ul ul ul ul ol ul ol ol li::marker,
+body ul ul ul ul ul ol ol ol li::marker,
+body ul ul ul ul ol ul ul ol li::marker,
+body ul ul ul ul ul ol ul ol li::marker,
+body ul ul ul ul ul ul ol ol li::marker,
+body ul ul ul ul ul ul ul ol li::marker {
   color: var(--list-colorful-marker-1);
 }
 
@@ -12544,25 +12540,25 @@ div#popup-search {
 
 /* monospace in editing mode */
 
-/* body.vim-monospace .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line { */
-body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line {
+/* body .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line { */
+body .markdown-source-view.mod-cm6 div.cm-line {
   font-family: var(--font-monospace);
 }
 
-/* body.vim-monospace .markdown-source-view.mod-cm6 .cm-vimMode
+/* body .markdown-source-view.mod-cm6 .cm-vimMode
 span:is(div.cm-line, .cm-em, .cm-strong) {
   --font-family-strong: var(--font-monospace);
   font-family: var(--font-monospace);
 } */
 
-/* body.vim-monospace .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line > span { */
-body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line > span {
+/* body .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line > span { */
+body .markdown-source-view.mod-cm6 div.cm-line > span {
   --font-family-strong: var(--font-monospace);
   font-family: var(--font-monospace);
 }
 
-/* body.vim-monospace .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line span.cm-strong.cm-em { */
-body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-em {
+/* body .markdown-source-view.mod-cm6:not(.is-live-preview) div.cm-line span.cm-strong.cm-em { */
+body .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-em {
   font-family: "Anonymous Pro Bold Italic" !important;
   font-style: italic !important;
   font-weight: bold !important;
@@ -12703,11 +12699,11 @@ body.vim-monospace .markdown-source-view.mod-cm6 div.cm-line span.cm-strong.cm-e
  https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/Mini%20Snippet%20Store/Hover%20Frontmatter.css
 */
 
-body.dolphin-metadata .frontmatter-container * {
+body .frontmatter-container * {
   z-index: 1000;
 }
 
-body.dolphin-metadata {
+body {
   --right-normal: calc(calc(100% - calc(var(--file-margins) * 2) - var(--file-line-width)) / 2);
   --right-add: 4em;
   --top-add: 0.8em;
@@ -12716,7 +12712,7 @@ body.dolphin-metadata {
   --dolphin-position-top: calc(var(--file-margins) - var(--top-add));
 }
 
-body.dolphin-metadata :not(.wide-page) .frontmatter-container {
+body :not(.wide-page) .frontmatter-container {
   float: right;
   position: absolute;
   right: var(--dolphin-position-right);
@@ -12728,11 +12724,11 @@ body.dolphin-metadata :not(.wide-page) .frontmatter-container {
   border: none !important;
 }
 
-body.dolphin-metadata .wide-page .frontmatter-container {
+body .wide-page .frontmatter-container {
   right: var(--dolphin-position-right-wide);
 }
 
-body.dolphin-metadata .frontmatter-container::before {
+body .frontmatter-container::before {
   border: none;
   font-family: "fa-solid";
   content: '\e168';
@@ -12741,11 +12737,11 @@ body.dolphin-metadata .frontmatter-container::before {
   text-shadow: 2px 2px 1px var(--cerulean);
 }
 
-body.dolphin-metadata .frontmatter-container:hover .frontmatter-section {
+body .frontmatter-container:hover .frontmatter-section {
   align-items: stretch;
 }
 
-body.dolphin-metadata .frontmatter-container:hover .frontmatter-container-header {
+body .frontmatter-container:hover .frontmatter-container-header {
   font-size: 1em;
   font-family: var(--font-space-header);
   color: var(--h2-color);
@@ -12754,18 +12750,18 @@ body.dolphin-metadata .frontmatter-container:hover .frontmatter-container-header
   background: none !important;
 }
 
-body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-label {
+body .frontmatter-container:hover .frontmatter-section-label {
   color: var(--bleu-de-france-1);
   font-size: 0.8em;
   flex-basis: 7em;
 }
 
-body.dolphin-metadata .frontmatter-container .frontmatter-section-data {
+body .frontmatter-container .frontmatter-section-data {
   max-height: 0px;
   visibility: hidden;
 }
 
-body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data {
+body .frontmatter-container:hover .frontmatter-section-data {
   max-height: 1000px;
   visibility: visible;
   font-size: 0.8em;
@@ -12776,7 +12772,7 @@ body.dolphin-metadata .frontmatter-container:hover .frontmatter-section-data {
   transition-timing-function: ease-in, ease-in;
 }
 
-body.dolphin-metadata .frontmatter-container:hover::before {
+body .frontmatter-container:hover::before {
   position: absolute;
   right: 0px;
   top: -5px;
@@ -12784,7 +12780,7 @@ body.dolphin-metadata .frontmatter-container:hover::before {
 }
 
 
-body.dolphin-metadata .frontmatter-container:hover {
+body .frontmatter-container:hover {
   position: absolute;
   margin-left: 1.3em;
   margin-bottom: 0.5em;
@@ -12803,7 +12799,7 @@ body.dolphin-metadata .frontmatter-container:hover {
   transition-timing-function: ease-out;
 }
 
-body.dolphin-metadata .wide-page .frontmatter-container:hover {
+body .wide-page .frontmatter-container:hover {
   right: var(--dolphin-position-right-wide);
 }
 
